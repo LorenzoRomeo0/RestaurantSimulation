@@ -256,7 +256,7 @@
 		<Y>-210</Y>
 		<Label>
 			<X>-10</X>
-			<Y>-15</Y>
+			<Y>-2</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
@@ -378,8 +378,8 @@
 	</EmbeddedObject>
 	<EmbeddedObject>
 		<Id>1756500551438</Id>
-		<Name><![CDATA[sink]]></Name>
-		<X>1870</X>
+		<Name><![CDATA[exit]]></Name>
+		<X>1940</X>
 		<Y>-110</Y>
 		<Label>
 			<X>-15</X>
@@ -437,7 +437,7 @@
 		<Y>-180</Y>
 		<Label>
 			<X>0</X>
-			<Y>-16</Y>
+			<Y>-6</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
@@ -558,8 +558,8 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 		<X>250</X>
 		<Y>-250</Y>
 		<Label>
-			<X>-10</X>
-			<Y>-15</Y>
+			<X>-8</X>
+			<Y>-8</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
@@ -976,8 +976,8 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 		<X>620</X>
 		<Y>-160</Y>
 		<Label>
-			<X>-5</X>
-			<Y>-15</Y>
+			<X>-4</X>
+			<Y>-4</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
@@ -1299,7 +1299,7 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 		<Y>-120</Y>
 		<Label>
 			<X>-15</X>
-			<Y>-15</Y>
+			<Y>-4</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
@@ -2096,7 +2096,7 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 		<Y>-140</Y>
 		<Label>
 			<X>0</X>
-			<Y>-15</Y>
+			<Y>-4</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
@@ -2210,8 +2210,8 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 		<X>450</X>
 		<Y>-180</Y>
 		<Label>
-			<X>-10</X>
-			<Y>-20</Y>
+			<X>-8</X>
+			<Y>-6</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
@@ -2280,7 +2280,7 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 		<Y>-130</Y>
 		<Label>
 			<X>-10</X>
-			<Y>-15</Y>
+			<Y>-4</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
@@ -3535,115 +3535,13 @@ send(msg, unit);
 		<QuantityColumn/>
 	</EmbeddedObject>
 	<EmbeddedObject>
-		<Id>1769808720610</Id>
-		<Name><![CDATA[waitingForTable]]></Name>
-		<X>515</X>
-		<Y>-245</Y>
-		<Label>
-			<X>-9</X>
-			<Y>-7</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<ActiveObjectClass>
-			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
-			<ClassName>Queue</ClassName>
-		</ActiveObjectClass>
-		<GenericParameterSubstitute>
-			<GenericParameterSubstituteReference>
-				<PackageName>com.anylogic.libraries.processmodeling</PackageName>
-				<ClassName>Queue</ClassName>
-				<ItemName>1412336242932</ItemName>
-			</GenericParameterSubstituteReference>
-		</GenericParameterSubstitute>
-		<Parameters>
-			<Parameter>
-				<Name><![CDATA[capacity]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[maximumCapacity]]></Name>
-				<Value Class="CodeValue">
-					<Code><![CDATA[true]]></Code>
-				</Value>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[entityLocation]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[queuing]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[priority]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[comparison]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[enableTimeout]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[timeout]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[enablePreemption]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[restoreEntityLocationOnExit]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[forceStatisticsCollection]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[onEnter]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[onAtExit]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[onExit]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[onExitTimeout]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[onExitPreempted]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[onRemove]]></Name>
-			</Parameter>
-		</Parameters>
-		<ReplicationFlag>false</ReplicationFlag>
-		<Replication Class="CodeValue">
-			<Code><![CDATA[100]]></Code>
-		</Replication>
-		<CollectionType>ARRAY_LIST_BASED</CollectionType>
-		<InitialLocationType>XYZ</InitialLocationType>
-		<ColumnCode Class="CodeValue">
-			<Code><![CDATA[0]]></Code>
-		</ColumnCode>
-		<RowCode Class="CodeValue">
-			<Code><![CDATA[0]]></Code>
-		</RowCode>
-		<LocationNameCode Class="CodeValue">
-			<Code><![CDATA[""]]></Code>
-		</LocationNameCode>
-		<InitializationType>SPECIFIED_NUMBER</InitializationType>
-		<InitializationDatabaseTableQuery>
-			<Id>1769808720608</Id>
-			<TableReference/>
-		</InitializationDatabaseTableQuery>
-		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-		<QuantityColumn/>
-	</EmbeddedObject>
-	<EmbeddedObject>
 		<Id>1769809995626</Id>
-		<Name><![CDATA[selectOutput]]></Name>
-		<X>570</X>
-		<Y>-315</Y>
+		<Name><![CDATA[table_check]]></Name>
+		<X>635</X>
+		<Y>-270</Y>
 		<Label>
-			<X>-40</X>
-			<Y>-25</Y>
+			<X>-39</X>
+			<Y>-12</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
@@ -3722,9 +3620,9 @@ send(msg, unit);
 	</EmbeddedObject>
 	<EmbeddedObject>
 		<Id>1769810223407</Id>
-		<Name><![CDATA[sink1]]></Name>
-		<X>615</X>
-		<Y>-290</Y>
+		<Name><![CDATA[no_table]]></Name>
+		<X>730</X>
+		<Y>-270</Y>
 		<Label>
 			<X>-9</X>
 			<Y>-12</Y>
@@ -3776,7 +3674,7 @@ send(msg, unit);
 	</EmbeddedObject>
 	<EmbeddedObject>
 		<Id>1769812048786</Id>
-		<Name><![CDATA[hasTable]]></Name>
+		<Name><![CDATA[has_table]]></Name>
 		<X>890</X>
 		<Y>-110</Y>
 		<Label>
@@ -3824,6 +3722,9 @@ send(msg, unit);
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onExitTrue]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[agent.entrancePriority = 1;]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onExitFalse]]></Name>

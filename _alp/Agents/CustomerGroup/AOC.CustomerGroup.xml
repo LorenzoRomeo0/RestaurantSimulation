@@ -790,11 +790,11 @@ currentWaiter = (Waiter) msg;</Action>
 				</Point>
 				<Point>
 					<X>-115</X>
-					<Y>-30</Y>
+					<Y>-95</Y>
 				</Point>
 			</Points>
 			<IconOffset>60.0</IconOffset>
-			<Properties Source="1769811935339" Target="1756502010349" Trigger="condition">
+			<Properties Source="1769811935339" Target="1756745241484" Trigger="condition">
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="TimeUnits">MINUTE</Unit>
