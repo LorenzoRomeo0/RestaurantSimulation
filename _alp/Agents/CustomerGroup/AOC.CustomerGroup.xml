@@ -98,8 +98,8 @@
 		<StatechartElement Class="FinalState" ParentState="ROOT_NODE">
 			<Id>1756501830269</Id>
 			<Name><![CDATA[finalState]]></Name>
-			<X>215</X>
-			<Y>850</Y>
+			<X>310</X>
+			<Y>855</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -112,7 +112,7 @@
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1756502010349</Id>
 			<Name><![CDATA[inside]]></Name>
-			<X>170</X>
+			<X>265</X>
 			<Y>160</Y>
 			<Label>
 				<X>10</X>
@@ -132,8 +132,8 @@ main.inside_restaurant.free(this);</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1756745241484</Id>
 			<Name><![CDATA[outside]]></Name>
-			<X>155</X>
-			<Y>65</Y>
+			<X>250</X>
+			<Y>70</Y>
 			<Label>
 				<X>10</X>
 				<Y>10</Y>
@@ -153,8 +153,8 @@ for(int i=0; i&lt;size; i++){
 		<StatechartElement Class="Branch" ParentState="ROOT_NODE">
 			<Id>1756801120070</Id>
 			<Name><![CDATA[branch]]></Name>
-			<X>215</X>
-			<Y>255</Y>
+			<X>310</X>
+			<Y>260</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -167,8 +167,8 @@ for(int i=0; i&lt;size; i++){
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1756801201983</Id>
 			<Name><![CDATA[walkToTable]]></Name>
-			<X>165</X>
-			<Y>300</Y>
+			<X>260</X>
+			<Y>305</Y>
 			<Label>
 				<X>9</X>
 				<Y>10</Y>
@@ -188,8 +188,8 @@ shapeBody.setFillColor(mediumOrchid);
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1756802739713</Id>
 			<Name><![CDATA[ordering]]></Name>
-			<X>170</X>
-			<Y>460</Y>
+			<X>265</X>
+			<Y>465</Y>
 			<Label>
 				<X>10</X>
 				<Y>10</Y>
@@ -219,8 +219,8 @@ main.welcoming_wait.free(this);</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1757341017786</Id>
 			<Name><![CDATA[miniwait]]></Name>
-			<X>165</X>
-			<Y>380</Y>
+			<X>260</X>
+			<Y>385</Y>
 			<Label>
 				<X>9</X>
 				<Y>10</Y>
@@ -235,8 +235,8 @@ main.welcoming_wait.free(this);</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1757695059990</Id>
 			<Name><![CDATA[getOut]]></Name>
-			<X>175</X>
-			<Y>765</Y>
+			<X>270</X>
+			<Y>770</Y>
 			<Label>
 				<X>11</X>
 				<Y>11</Y>
@@ -256,8 +256,8 @@ main.eating_wait.free(this);</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1758097318122</Id>
 			<Name><![CDATA[eating]]></Name>
-			<X>170</X>
-			<Y>670</Y>
+			<X>265</X>
+			<Y>675</Y>
 			<Label>
 				<X>10</X>
 				<Y>10</Y>
@@ -274,8 +274,8 @@ main.ordering_wait.free(this);</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1758098699987</Id>
 			<Name><![CDATA[orderingProcess]]></Name>
-			<X>170</X>
-			<Y>545</Y>
+			<X>265</X>
+			<Y>550</Y>
 			<Label>
 				<X>10</X>
 				<Y>11</Y>
@@ -308,11 +308,29 @@ send(order,currentWaiter);
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
+		<StatechartElement Class="State" ParentState="ROOT_NODE">
+			<Id>1769811935339</Id>
+			<Name><![CDATA[backToQueue]]></Name>
+			<X>410</X>
+			<Y>200</Y>
+			<Label>
+				<X>10</X>
+				<Y>10</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Properties Width="140" Height="30">
+				<EntryAction>traceln("?? " + getId() + " received a null table...");
+main.welcoming_wait.free(this);</EntryAction>
+				<FillColor/>
+			</Properties>
+		</StatechartElement>
 		<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
 			<Id>1756501767496</Id>
 			<Name><![CDATA[statechart]]></Name>
-			<X>215</X>
-			<Y>25</Y>
+			<X>310</X>
+			<Y>30</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -335,7 +353,7 @@ send(order,currentWaiter);
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1756502083772</Id>
 			<Name><![CDATA[transition2]]></Name>
-			<X>215</X>
+			<X>310</X>
 			<Y>190</Y>
 			<Label>
 				<X>10</X>
@@ -351,13 +369,15 @@ send(order,currentWaiter);
 				</Point>
 				<Point>
 					<X>0</X>
-					<Y>55</Y>
+					<Y>60</Y>
 				</Point>
 			</Points>
 			<IconOffset>20.0</IconOffset>
 			<Properties Source="1756502010349" Target="1756801120070" Trigger="message">
-				<Action>table = msg;
-if(table != null){
+				<Action>
+
+table = (Table) msg;
+if(table != null &amp;&amp; !(table instanceof NoTable)){
 	traceln("customer "+ getId() + " was assigned "+ table.getId());
 } else {
 	traceln("customer "+ getId() + " was assigned null");
@@ -382,8 +402,8 @@ if(table != null){
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1756745221146</Id>
 			<Name><![CDATA[transition]]></Name>
-			<X>215</X>
-			<Y>100</Y>
+			<X>310</X>
+			<Y>105</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -398,7 +418,7 @@ if(table != null){
 				</Point>
 				<Point>
 					<X>0</X>
-					<Y>60</Y>
+					<Y>55</Y>
 				</Point>
 			</Points>
 			<IconOffset>20.0</IconOffset>
@@ -422,8 +442,8 @@ if(table != null){
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1756801135500</Id>
 			<Name><![CDATA[transition1]]></Name>
-			<X>215</X>
-			<Y>265</Y>
+			<X>310</X>
+			<Y>270</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -462,8 +482,8 @@ if(table != null){
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1756801145940</Id>
 			<Name><![CDATA[transition3]]></Name>
-			<X>227</X>
-			<Y>255</Y>
+			<X>322</X>
+			<Y>260</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -477,25 +497,21 @@ if(table != null){
 					<Y>0</Y>
 				</Point>
 				<Point>
-					<X>73</X>
+					<X>158</X>
 					<Y>0</Y>
 				</Point>
 				<Point>
-					<X>73</X>
-					<Y>-85</Y>
-				</Point>
-				<Point>
-					<X>43</X>
-					<Y>-85</Y>
+					<X>158</X>
+					<Y>-30</Y>
 				</Point>
 			</Points>
 			<IconOffset>20.0</IconOffset>
-			<Properties Source="1756801120070" Target="1756502010349" Trigger="timeout">
+			<Properties Source="1756801120070" Target="1769811935339" Trigger="timeout">
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="TimeUnits">MINUTE</Unit>
 				</Timeout>
-				<Condition>table == null</Condition>
+				<Condition>table == null || table instanceof NoTable</Condition>
 				<Rate Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="RateUnits">PER_MINUTE</Unit>
@@ -510,8 +526,8 @@ if(table != null){
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1756801255720</Id>
 			<Name><![CDATA[transition4]]></Name>
-			<X>215</X>
-			<Y>330</Y>
+			<X>310</X>
+			<Y>335</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -529,7 +545,7 @@ if(table != null){
 					<Y>50</Y>
 				</Point>
 			</Points>
-			<IconOffset>15.0</IconOffset>
+			<IconOffset>20.0</IconOffset>
 			<Properties Source="1756801201983" Target="1757341017786" Trigger="arrival">
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[20]]></Code>
@@ -550,8 +566,8 @@ if(table != null){
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1756802755977</Id>
 			<Name><![CDATA[transition5]]></Name>
-			<X>215</X>
-			<Y>490</Y>
+			<X>310</X>
+			<Y>495</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -592,8 +608,8 @@ currentWaiter = (Waiter) msg;</Action>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1757341033983</Id>
 			<Name><![CDATA[transition6]]></Name>
-			<X>215</X>
-			<Y>410</Y>
+			<X>310</X>
+			<Y>415</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -632,8 +648,8 @@ currentWaiter = (Waiter) msg;</Action>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1757695079462</Id>
 			<Name><![CDATA[transition7]]></Name>
-			<X>215</X>
-			<Y>795</Y>
+			<X>310</X>
+			<Y>800</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -672,8 +688,8 @@ currentWaiter = (Waiter) msg;</Action>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1758097385031</Id>
 			<Name><![CDATA[transition8]]></Name>
-			<X>215</X>
-			<Y>700</Y>
+			<X>310</X>
+			<Y>705</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -714,8 +730,8 @@ currentWaiter = (Waiter) msg;</Action>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1758098856479</Id>
 			<Name><![CDATA[transition9]]></Name>
-			<X>215</X>
-			<Y>575</Y>
+			<X>310</X>
+			<Y>580</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -748,6 +764,50 @@ currentWaiter = (Waiter) msg;</Action>
 				<DefaultTransition>true</DefaultTransition>
 				<FilterType>equalsTo</FilterType>
 				<EqualsExpression>"foodReady"</EqualsExpression>
+				<SatisfiesExpression>true</SatisfiesExpression>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+			<Id>1769811983571</Id>
+			<Name><![CDATA[transition10]]></Name>
+			<X>480</X>
+			<Y>200</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>0</X>
+					<Y>-30</Y>
+				</Point>
+				<Point>
+					<X>-115</X>
+					<Y>-30</Y>
+				</Point>
+			</Points>
+			<IconOffset>60.0</IconOffset>
+			<Properties Source="1769811935339" Target="1756502010349" Trigger="condition">
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</Timeout>
+				<Condition>true</Condition>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MINUTE</Unit>
+				</Rate>
+				<MessageType>Object</MessageType>
+				<DefaultTransition>true</DefaultTransition>
+				<FilterType>unconditionally</FilterType>
+				<EqualsExpression>"text"</EqualsExpression>
 				<SatisfiesExpression>true</SatisfiesExpression>
 			</Properties>
 		</StatechartElement>

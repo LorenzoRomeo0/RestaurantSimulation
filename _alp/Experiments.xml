@@ -54,6 +54,9 @@
 			<Parameter>
 				<ParameterName>barTablesNr</ParameterName>
 			</Parameter>
+			<Parameter>
+				<ParameterName>tableSearchTime</ParameterName>
+			</Parameter>
 		</Parameters>
 		<PresentationProperties>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>
