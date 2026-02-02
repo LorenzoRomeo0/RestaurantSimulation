@@ -8,3 +8,43 @@ for(Table t : insideTablesPool){
 return maxSize;
 /*ALCODEEND*/}
 
+Table tableSelection(CustomerGroup customerGroup)
+{/*ALCODESTART::1770025342170*/
+int n = 0;
+for (Table t : insideTablesPool){
+	if (t.isFree) n++;
+}
+for (Table t : outsideTablesPool){
+	if (t.isFree) n++;
+}
+for (Table t : barTablesPool){
+	if (t.isFree) n++;
+}
+System.out.println("Available tables: " + n);
+
+//usare resourcepool?
+
+for(Table t : insideTablesPool){
+	if(t.isFree && t.size >= customerGroup.size){
+		t.isFree = false;
+		return t;
+	}
+}
+
+for(Table t : outsideTablesPool){
+	if(t.isFree && t.size >= customerGroup.size){
+		t.isFree = false;
+		return t;
+	}
+}
+
+for(Table t : barTablesPool){
+	if(t.isFree && t.size >= customerGroup.size){
+		t.isFree = false;
+		return t;
+	}
+}
+
+return null;
+/*ALCODEEND*/}
+

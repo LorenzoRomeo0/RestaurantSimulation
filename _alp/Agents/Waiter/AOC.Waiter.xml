@@ -134,36 +134,7 @@ traceln("waiter "+ getId() + " seizedAtEntrance")</EntryAction>
 currentCustomers = main.customersAtEntrance;
 System.out.println(getId() + " is welcoming " + currentCustomers.getId());
 
-
-//spostare questo in una funzione?
-int n = 0;
-for (Table t : main.insideTablesPool){
-	if (t.isFree) n++;
-}
-System.out.println("Available tables: " + n);
-
-//usare resourcepool?
-//Table foundTable = null;
-
-for(Table t : main.insideTablesPool){
-	if(t.isFree &amp;&amp; t.size &gt;= currentCustomers.size){
-		t.isFree = false;
-		foundTable = t;
-		break;
-	}
-}
-
-//if(tableFound == null){
-	//System.out.println("No suitable tables found for " + cg.getId());
-//	send(null, cg);
-	//logica del tavolo non trovato
-//}else{
-	//System.out.println("Table " + tableFound.getId() + " assinged to " + cg.getId());
-//	moveTo(tableFound);
-//}
-
-//send(tableFound, cg);
-</EntryAction>
+foundTable = main.tableSelection(currentCustomers);</EntryAction>
 				<FillColor>-256</FillColor>
 			</Properties>
 		</StatechartElement>
