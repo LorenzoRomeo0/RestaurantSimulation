@@ -26,11 +26,14 @@
 		<Parameters>
 			<Parameter>
 				<Name><![CDATA[arrivalType]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[self.RATE_SCHEDULE]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[rate]]></Name>
 				<Value Class="CodeUnitValue">
-					<Code><![CDATA[100]]></Code>
+					<Code><![CDATA[arrivals_schedule.getValue()]]></Code>
 					<Unit Class="RateUnits">PER_HOUR</Unit>
 				</Value>
 			</Parameter>
@@ -45,6 +48,9 @@
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[rateSchedule]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[arrivals_schedule]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[modifyRate]]></Name>

@@ -96,6 +96,60 @@
 	<ConnectionsId>1756479932270</ConnectionsId>
 	<Variables xmlns:al="http://anylogic.com"/>
 	<Functions xmlns:al="http://anylogic.com"/>
+	<Schedules>
+		<Schedule>
+			<Id>1770220504060</Id>
+			<Name><![CDATA[arrivals_schedule]]></Name>
+			<X>20</X>
+			<Y>370</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<ValueType>double_</ValueType>
+			<UnitType>RATE</UnitType>
+			<UnitOfValue Class="RateUnits">PER_HOUR</UnitOfValue>
+			<DefaultValue>0.0</DefaultValue>
+			<RepresentationMode>intervals</RepresentationMode>
+			<RepresentationType>calendar</RepresentationType>
+			<FirstDayOfWeek>monday</FirstDayOfWeek>
+			<TimeUnitsInterval>hours</TimeUnitsInterval>
+			<RepeatTime>604800000</RepeatTime>
+			<RepeatTimeInterval>weeks</RepeatTimeInterval>
+			<IsSnapTo>false</IsSnapTo>
+			<SnapTo>1770220734229</SnapTo>
+			<SnapToTimeUnits>minutes</SnapToTimeUnits>
+			<AllDayExceptionMode>false</AllDayExceptionMode>
+			<LoadFromDatabase>true</LoadFromDatabase>
+			<IntervalsQuery>
+				<Id>1770220504058</Id>
+				<TableReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>arrival_rate_complete</ClassName>
+				</TableReference>
+				<StartColumnReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>arrival_rate_complete</ClassName>
+					<ItemName>start_timestamp</ItemName>
+				</StartColumnReference>
+				<EndColumnReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>arrival_rate_complete</ClassName>
+					<ItemName>end_timestamp</ItemName>
+				</EndColumnReference>
+				<ValueColumnReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>arrival_rate_complete</ClassName>
+					<ItemName>arrival_rate</ItemName>
+				</ValueColumnReference>
+			</IntervalsQuery>
+			<Intervals/>
+			<Exceptions/>
+		</Schedule>
+	</Schedules>
 	<AgentLinks>
 		<AgentLink>
 			<Id>1756479932270</Id>
