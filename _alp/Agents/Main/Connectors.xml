@@ -970,8 +970,8 @@
 	<Connector>
 		<Id>1770364468186</Id>
 		<Name><![CDATA[connector18]]></Name>
-		<X>470</X>
-		<Y>60</Y>
+		<X>450</X>
+		<Y>40</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -992,11 +992,11 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>kitchen_source</ItemName>
+			<ItemName>kitchen_enter</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
-			<ClassName>Source</ClassName>
+			<ClassName>Enter</ClassName>
 			<ItemName>out</ItemName>
 		</TargetConnectableItemReference>
 		<Points>
@@ -1013,8 +1013,8 @@
 	<Connector>
 		<Id>1770364488739</Id>
 		<Name><![CDATA[connector19]]></Name>
-		<X>530</X>
-		<Y>80</Y>
+		<X>510</X>
+		<Y>60</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -1056,8 +1056,8 @@
 	<Connector>
 		<Id>1770364524735</Id>
 		<Name><![CDATA[connector23]]></Name>
-		<X>590</X>
-		<Y>100</Y>
+		<X>570</X>
+		<Y>80</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -1099,8 +1099,8 @@
 	<Connector>
 		<Id>1770364546112</Id>
 		<Name><![CDATA[connector24]]></Name>
-		<X>650</X>
-		<Y>120</Y>
+		<X>630</X>
+		<Y>100</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -1142,8 +1142,8 @@
 	<Connector>
 		<Id>1770364632860</Id>
 		<Name><![CDATA[connector25]]></Name>
-		<X>710</X>
-		<Y>140</Y>
+		<X>690</X>
+		<Y>120</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -1185,8 +1185,8 @@
 	<Connector>
 		<Id>1770364686951</Id>
 		<Name><![CDATA[connector26]]></Name>
-		<X>770</X>
-		<Y>160</Y>
+		<X>750</X>
+		<Y>140</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -1226,10 +1226,96 @@
 		</Points>
 	</Connector>
 	<Connector>
-		<Id>1770364726039</Id>
+		<Id>1770366050748</Id>
 		<Name><![CDATA[connector27]]></Name>
-		<X>840</X>
+		<X>810</X>
+		<Y>160</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<SourceEmbeddedObjectReference>
+			<PackageName>restaurant_2025</PackageName>
+			<ClassName>Main</ClassName>
+			<ItemName>bring_food</ItemName>
+		</SourceEmbeddedObjectReference>
+		<SourceConnectableItemReference>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>Wait</ClassName>
+			<ItemName>in</ItemName>
+		</SourceConnectableItemReference>
+		<TargetEmbeddedObjectReference>
+			<PackageName>restaurant_2025</PackageName>
+			<ClassName>Main</ClassName>
+			<ItemName>waiter_seize</ItemName>
+		</TargetEmbeddedObjectReference>
+		<TargetConnectableItemReference>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>Seize</ClassName>
+			<ItemName>out</ItemName>
+		</TargetConnectableItemReference>
+		<Points>
+			<Point>
+				<X>0</X>
+				<Y>0</Y>
+			</Point>
+			<Point>
+				<X>-20</X>
+				<Y>-20</Y>
+			</Point>
+		</Points>
+	</Connector>
+	<Connector>
+		<Id>1770366063154</Id>
+		<Name><![CDATA[connector28]]></Name>
+		<X>870</X>
 		<Y>180</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<SourceEmbeddedObjectReference>
+			<PackageName>restaurant_2025</PackageName>
+			<ClassName>Main</ClassName>
+			<ItemName>waiter_release</ItemName>
+		</SourceEmbeddedObjectReference>
+		<SourceConnectableItemReference>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>Release</ClassName>
+			<ItemName>in</ItemName>
+		</SourceConnectableItemReference>
+		<TargetEmbeddedObjectReference>
+			<PackageName>restaurant_2025</PackageName>
+			<ClassName>Main</ClassName>
+			<ItemName>bring_food</ItemName>
+		</TargetEmbeddedObjectReference>
+		<TargetConnectableItemReference>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>Wait</ClassName>
+			<ItemName>out</ItemName>
+		</TargetConnectableItemReference>
+		<Points>
+			<Point>
+				<X>0</X>
+				<Y>0</Y>
+			</Point>
+			<Point>
+				<X>-20</X>
+				<Y>-20</Y>
+			</Point>
+		</Points>
+	</Connector>
+	<Connector>
+		<Id>1770366081223</Id>
+		<Name><![CDATA[connector29]]></Name>
+		<X>930</X>
+		<Y>200</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -1250,11 +1336,11 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>waiter_seize</ItemName>
+			<ItemName>waiter_release</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
-			<ClassName>Seize</ClassName>
+			<ClassName>Release</ClassName>
 			<ItemName>out</ItemName>
 		</TargetConnectableItemReference>
 		<Points>
@@ -1263,7 +1349,7 @@
 				<Y>0</Y>
 			</Point>
 			<Point>
-				<X>-30</X>
+				<X>-20</X>
 				<Y>-20</Y>
 			</Point>
 		</Points>

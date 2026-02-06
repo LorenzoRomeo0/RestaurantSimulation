@@ -98,7 +98,7 @@
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1756758042710</Id>
 			<Name><![CDATA[seizedAtEntrance]]></Name>
-			<X>275</X>
+			<X>655</X>
 			<Y>150</Y>
 			<Label>
 				<X>10</X>
@@ -117,7 +117,7 @@ traceln("waiter "+ getId() + " seizedAtEntrance")</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1756758054649</Id>
 			<Name><![CDATA[assignTable]]></Name>
-			<X>270</X>
+			<X>650</X>
 			<Y>230</Y>
 			<Label>
 				<X>10</X>
@@ -141,7 +141,7 @@ foundTable = main.tableSelection(currentCustomers);</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1756758068267</Id>
 			<Name><![CDATA[other]]></Name>
-			<X>270</X>
+			<X>650</X>
 			<Y>570</Y>
 			<Label>
 				<X>10</X>
@@ -158,7 +158,7 @@ foundTable = main.tableSelection(currentCustomers);</EntryAction>
 		<StatechartElement Class="FinalState" ParentState="ROOT_NODE">
 			<Id>1756758181551</Id>
 			<Name><![CDATA[finalState]]></Name>
-			<X>330</X>
+			<X>710</X>
 			<Y>660</Y>
 			<Label>
 				<X>10</X>
@@ -172,7 +172,7 @@ foundTable = main.tableSelection(currentCustomers);</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1756758518168</Id>
 			<Name><![CDATA[waiting]]></Name>
-			<X>275</X>
+			<X>655</X>
 			<Y>65</Y>
 			<Label>
 				<X>11</X>
@@ -192,7 +192,7 @@ currentCustomers = null;</EntryAction>
 		<StatechartElement Class="Branch" ParentState="ROOT_NODE">
 			<Id>1757583106574</Id>
 			<Name><![CDATA[branch]]></Name>
-			<X>325</X>
+			<X>705</X>
 			<Y>310</Y>
 			<Label>
 				<X>10</X>
@@ -206,7 +206,7 @@ currentCustomers = null;</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1757583310554</Id>
 			<Name><![CDATA[sendTable]]></Name>
-			<X>285</X>
+			<X>665</X>
 			<Y>355</Y>
 			<Label>
 				<X>10</X>
@@ -225,7 +225,7 @@ send(foundTable, currentCustomers);
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1758095672440</Id>
 			<Name><![CDATA[seizedAtTable]]></Name>
-			<X>70</X>
+			<X>450</X>
 			<Y>140</Y>
 			<Label>
 				<X>10</X>
@@ -244,7 +244,7 @@ this.moveTo(currentCustomers);</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1758096946730</Id>
 			<Name><![CDATA[exchange]]></Name>
-			<X>80</X>
+			<X>460</X>
 			<Y>225</Y>
 			<Label>
 				<X>10</X>
@@ -261,7 +261,7 @@ this.moveTo(currentCustomers);</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1758283887335</Id>
 			<Name><![CDATA[prepareOrder]]></Name>
-			<X>85</X>
+			<X>465</X>
 			<Y>305</Y>
 			<Label>
 				<X>10</X>
@@ -278,7 +278,7 @@ this.moveTo(currentCustomers);</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1758283902548</Id>
 			<Name><![CDATA[giveOrderToKitchen]]></Name>
-			<X>85</X>
+			<X>465</X>
 			<Y>380</Y>
 			<Label>
 				<X>10</X>
@@ -288,13 +288,14 @@ this.moveTo(currentCustomers);</EntryAction>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
+				<EntryAction>main.kitchen_enter.take(currentOrder);</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1758283999372</Id>
 			<Name><![CDATA[bringOrder]]></Name>
-			<X>90</X>
+			<X>470</X>
 			<Y>460</Y>
 			<Label>
 				<X>10</X>
@@ -312,7 +313,7 @@ this.moveTo(currentCustomers);</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1758284301017</Id>
 			<Name><![CDATA[notifyOrderDone]]></Name>
-			<X>90</X>
+			<X>470</X>
 			<Y>525</Y>
 			<Label>
 				<X>10</X>
@@ -329,7 +330,7 @@ this.moveTo(currentCustomers);</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1769808256279</Id>
 			<Name><![CDATA[freeEntrance]]></Name>
-			<X>285</X>
+			<X>665</X>
 			<Y>485</Y>
 			<Label>
 				<X>1</X>
@@ -346,7 +347,7 @@ this.moveTo(currentCustomers);</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1769808342899</Id>
 			<Name><![CDATA[wait]]></Name>
-			<X>375</X>
+			<X>755</X>
 			<Y>405</Y>
 			<Label>
 				<X>9</X>
@@ -363,7 +364,7 @@ this.moveTo(currentCustomers);</EntryAction>
 		<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
 			<Id>1756758039787</Id>
 			<Name><![CDATA[waiter_statechart]]></Name>
-			<X>320</X>
+			<X>700</X>
 			<Y>25</Y>
 			<Label>
 				<X>10</X>
@@ -387,7 +388,7 @@ this.moveTo(currentCustomers);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1756758049889</Id>
 			<Name><![CDATA[transition]]></Name>
-			<X>325</X>
+			<X>705</X>
 			<Y>180</Y>
 			<Label>
 				<X>10</X>
@@ -427,7 +428,7 @@ this.moveTo(currentCustomers);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1756758086605</Id>
 			<Name><![CDATA[transition1]]></Name>
-			<X>330</X>
+			<X>710</X>
 			<Y>385</Y>
 			<Label>
 				<X>10</X>
@@ -467,7 +468,7 @@ this.moveTo(currentCustomers);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1756758185581</Id>
 			<Name><![CDATA[transition2]]></Name>
-			<X>330</X>
+			<X>710</X>
 			<Y>600</Y>
 			<Label>
 				<X>10</X>
@@ -507,7 +508,7 @@ this.moveTo(currentCustomers);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1756758544748</Id>
 			<Name><![CDATA[transition3]]></Name>
-			<X>320</X>
+			<X>700</X>
 			<Y>95</Y>
 			<Label>
 				<X>10</X>
@@ -547,7 +548,7 @@ this.moveTo(currentCustomers);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1757345942076</Id>
 			<Name><![CDATA[transition4]]></Name>
-			<X>405</X>
+			<X>785</X>
 			<Y>585</Y>
 			<Label>
 				<X>10</X>
@@ -595,7 +596,7 @@ this.moveTo(currentCustomers);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1757583130407</Id>
 			<Name><![CDATA[transition5]]></Name>
-			<X>325</X>
+			<X>705</X>
 			<Y>260</Y>
 			<Label>
 				<X>10</X>
@@ -635,7 +636,7 @@ this.moveTo(currentCustomers);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1757583151033</Id>
 			<Name><![CDATA[transition6]]></Name>
-			<X>325</X>
+			<X>705</X>
 			<Y>320</Y>
 			<Label>
 				<X>10</X>
@@ -675,7 +676,7 @@ this.moveTo(currentCustomers);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1757583157873</Id>
 			<Name><![CDATA[transition7]]></Name>
-			<X>337</X>
+			<X>717</X>
 			<Y>310</Y>
 			<Label>
 				<X>10</X>
@@ -719,7 +720,7 @@ this.moveTo(currentCustomers);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1758095704913</Id>
 			<Name><![CDATA[transition9]]></Name>
-			<X>295</X>
+			<X>675</X>
 			<Y>95</Y>
 			<Label>
 				<X>10</X>
@@ -768,7 +769,7 @@ this.moveTo(currentCustomers);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1758096085790</Id>
 			<Name><![CDATA[transition10]]></Name>
-			<X>135</X>
+			<X>515</X>
 			<Y>170</Y>
 			<Label>
 				<X>10</X>
@@ -808,7 +809,7 @@ this.moveTo(currentCustomers);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1758096971026</Id>
 			<Name><![CDATA[transition11]]></Name>
-			<X>135</X>
+			<X>515</X>
 			<Y>255</Y>
 			<Label>
 				<X>10</X>
@@ -849,7 +850,7 @@ this.moveTo(currentCustomers);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1758283913844</Id>
 			<Name><![CDATA[transition12]]></Name>
-			<X>135</X>
+			<X>515</X>
 			<Y>335</Y>
 			<Label>
 				<X>10</X>
@@ -889,7 +890,7 @@ this.moveTo(currentCustomers);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1758283979757</Id>
 			<Name><![CDATA[transition13]]></Name>
-			<X>135</X>
+			<X>515</X>
 			<Y>410</Y>
 			<Label>
 				<X>10</X>
@@ -929,7 +930,7 @@ this.moveTo(currentCustomers);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1758284027163</Id>
 			<Name><![CDATA[transition14]]></Name>
-			<X>145</X>
+			<X>525</X>
 			<Y>555</Y>
 			<Label>
 				<X>10</X>
@@ -973,7 +974,7 @@ this.moveTo(currentCustomers);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1758284306693</Id>
 			<Name><![CDATA[transition15]]></Name>
-			<X>140</X>
+			<X>520</X>
 			<Y>485</Y>
 			<Label>
 				<X>10</X>
@@ -1013,7 +1014,7 @@ this.moveTo(currentCustomers);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1769808309094</Id>
 			<Name><![CDATA[transition8]]></Name>
-			<X>330</X>
+			<X>710</X>
 			<Y>515</Y>
 			<Label>
 				<X>10</X>
@@ -1053,7 +1054,7 @@ this.moveTo(currentCustomers);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1769808372268</Id>
 			<Name><![CDATA[transition16]]></Name>
-			<X>390</X>
+			<X>770</X>
 			<Y>435</Y>
 			<Label>
 				<X>10</X>

@@ -106,7 +106,8 @@
 			</JavaClass>
 			<JavaClass>
 				<Id>1758281721248</Id>
-				<Name><![CDATA[Order]]></Name>
+				<Name><![CDATA[Order_old]]></Name>
+				<ExcludeFromBuild>true</ExcludeFromBuild>
 			</JavaClass>
 			<JavaClass>
 				<Id>1769862315165</Id>
