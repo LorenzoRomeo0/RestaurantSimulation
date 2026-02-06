@@ -84,7 +84,7 @@
 		<PresentationFlag>false</PresentationFlag>
 		<ShowLabel>false</ShowLabel>
 		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-		<Length>100</Length>
+		<Length>50</Length>
 		<Rotation>0</Rotation>
 		<ScaleType>BASED_ON_LENGTH</ScaleType>
 		<ModelLength>10</ModelLength>

@@ -2620,7 +2620,7 @@
 		<Z>0</Z>
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
-		<Text><![CDATA[usare distrubuzione per dire quanti tavoli di una determinata dimensione ci sono (oppure farlo fisso?)]]></Text>
+		<Text><![CDATA[usare distrubuzione per dire quanti tavoli di una determinata dimensione ci sono (oppure farlo fisso? Rendere parametrico per fare esperimenti)]]></Text>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
 			<Size>10</Size>
@@ -2652,7 +2652,7 @@
 	</EmbeddedObjectPresentation>
 	<EmbeddedObjectPresentation>
 		<Id>1757582111635</Id>
-		<Name><![CDATA[waiter_presentation]]></Name>
+		<Name><![CDATA[waiters_presentation]]></Name>
 		<X>10</X>
 		<Y>-340</Y>
 		<Label>
@@ -2675,8 +2675,8 @@
 	<Group>
 		<Id>1770028206143</Id>
 		<Name><![CDATA[clock]]></Name>
-		<X>300</X>
-		<Y>310</Y>
+		<X>280</X>
+		<Y>260</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -3019,8 +3019,8 @@
 	<Text>
 		<Id>1770051566110</Id>
 		<Name><![CDATA[text1]]></Name>
-		<X>360</X>
-		<Y>300</Y>
+		<X>340</X>
+		<Y>250</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3045,8 +3045,8 @@
 	<Text>
 		<Id>1770051794926</Id>
 		<Name><![CDATA[text2]]></Name>
-		<X>360</X>
-		<Y>280</Y>
+		<X>340</X>
+		<Y>230</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3089,7 +3089,7 @@
 Cambiare calcolo della distribuzione degli arrivi (rendere più sofisticato)
 cambiare la dimensione media del gruppo durante il giorno (a colazione spesso in 1 o 2 max)
 Calcolare il numero di camerieri per tenere conto delle possibili assenze (malattia ecc)
-Modellare la cucina (usare un source "order" che al sink viene restituito ad un camerire?)
+(OK) Modellare la cucina (usare un source "order" che al sink viene restituito ad un camerire?)
 Modellare la cassa (tempo per pagare proporzionale al numero di persone nel gruppo)
 Modellare la selezione dei tavoli in base allora del giorno
 Modellare il tempo trascorso nel ristorante in base al momento della giornata (colazione veloce, cena molto lenta)]]></Text>
@@ -3103,8 +3103,8 @@ Modellare il tempo trascorso nel ristorante in base al momento della giornata (c
 	<Text>
 		<Id>1770364271713</Id>
 		<Name><![CDATA[text3]]></Name>
-		<X>130</X>
-		<Y>1370</Y>
+		<X>50</X>
+		<Y>910</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3118,6 +3118,102 @@ Modellare il tempo trascorso nel ristorante in base al momento della giornata (c
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
 		<Text><![CDATA[creare scheule per i cooks (pochi a colazione, tanti a cena. usare distribuzione) ]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>10</Size>
+			<Style>0</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<EmbeddedObjectPresentation>
+		<Id>1770368817449</Id>
+		<Name><![CDATA[cook_presentation]]></Name>
+		<X>0</X>
+		<Y>0</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+		<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+		<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+		<Latitude>0.0</Latitude>
+		<Longitude>0.0</Longitude>
+	</EmbeddedObjectPresentation>
+	<EmbeddedObjectPresentation>
+		<Id>1770373497345</Id>
+		<Name><![CDATA[orders_presentation]]></Name>
+		<X>0</X>
+		<Y>0</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+		<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+		<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+		<Latitude>0.0</Latitude>
+		<Longitude>0.0</Longitude>
+	</EmbeddedObjectPresentation>
+	<Text>
+		<Id>1770374931654</Id>
+		<Name><![CDATA[text5]]></Name>
+		<X>640</X>
+		<Y>1070</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[questo serve per reinserire nella queue i gruppi che non hanno trovato un tavolo (dandogli priorità maggiore nella coda).
+Il wait serve  a non bloccare la coda (perché altrimenti continueremmo a riprovare quelli con priorità maggiore. 
+Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di tavoli più piccoli)]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>10</Size>
+			<Style>0</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1770375657785</Id>
+		<Name><![CDATA[text6]]></Name>
+		<X>50</X>
+		<Y>930</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[rendere menu_reading proporzionale alla dimensione del gruppo]]></Text>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
 			<Size>10</Size>

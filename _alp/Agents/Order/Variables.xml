@@ -2,7 +2,7 @@
 <Variables>
 	<Variable Class="Parameter">
 		<Id>1770365298098</Id>
-		<Name><![CDATA[CustomerGroup]]></Name>
+		<Name><![CDATA[customerGroup]]></Name>
 		<X>50</X>
 		<Y>50</Y>
 		<Label>

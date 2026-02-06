@@ -113,6 +113,14 @@
 				<Id>1769862315165</Id>
 				<Name><![CDATA[NoTable]]></Name>
 			</JavaClass>
+			<JavaClass>
+				<Id>1770366419132</Id>
+				<Name><![CDATA[goCook]]></Name>
+			</JavaClass>
+			<JavaClass>
+				<Id>1770367742899</Id>
+				<Name><![CDATA[GoBringFood]]></Name>
+			</JavaClass>
 		</JavaClasses>
 		<RequiredLibraryReference>
 			<LibraryName>com.anylogic.libraries.modules.markup_descriptors</LibraryName>
