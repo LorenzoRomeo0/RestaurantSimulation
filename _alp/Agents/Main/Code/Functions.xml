@@ -4,7 +4,7 @@
 		<ReturnModificator>RETURNS_VALUE</ReturnModificator>
 		<ReturnType>int</ReturnType>
 		<Id>1769810442527</Id>
-		<Name><![CDATA[insideTableMaxSize]]></Name>
+		<Name><![CDATA[tablesMaxSize]]></Name>
 		<X>20</X>
 		<Y>280</Y>
 		<Label>

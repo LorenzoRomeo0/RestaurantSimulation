@@ -706,6 +706,9 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[capacityDefinitionType]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[self.CAPACITY_SCHEDULE_ON_OFF]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[capacity]]></Name>
@@ -721,9 +724,15 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[capacityScheduleOnOff]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[inside_schedule]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[capacityOnValue]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[insideTablesNr]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[shiftGroupSchedules]]></Name>
@@ -2875,6 +2884,9 @@ send(msg, unit);
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[capacityDefinitionType]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[self.CAPACITY_SCHEDULE_ON_OFF]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[capacity]]></Name>
@@ -2890,9 +2902,15 @@ send(msg, unit);
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[capacityScheduleOnOff]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[outside_schedule]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[capacityOnValue]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[outsideTablesNr]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[shiftGroupSchedules]]></Name>
@@ -3177,6 +3195,9 @@ send(msg, unit);
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[capacityDefinitionType]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[self.CAPACITY_SCHEDULE_ON_OFF]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[capacity]]></Name>
@@ -3192,9 +3213,15 @@ send(msg, unit);
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[capacityScheduleOnOff]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[bar_schedule]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[capacityOnValue]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[barTablesNr]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[shiftGroupSchedules]]></Name>
@@ -3480,7 +3507,7 @@ send(msg, unit);
 			<Parameter>
 				<Name><![CDATA[condition]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[agent.size > insideTableMaxSize()]]></Code>
+					<Code><![CDATA[agent.size > tablesMaxSize()]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>

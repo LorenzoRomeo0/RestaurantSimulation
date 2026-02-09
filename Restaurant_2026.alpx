@@ -84,6 +84,16 @@
 					<ExternalTableName>"arrival_rate_week_groupsize (2)"</ExternalTableName>
 					<AutoImport>false</AutoImport>
 				</TableImportSettings>
+				<TableImportSettings>
+					<Id>1770643758838</Id>
+					<TableReference>
+						<PackageName>restaurant_2025</PackageName>
+						<ClassName>tables_selection</ClassName>
+					</TableReference>
+					<ConnectionIndex>0</ConnectionIndex>
+					<ExternalTableName>"tables_selection"</ExternalTableName>
+					<AutoImport>false</AutoImport>
+				</TableImportSettings>
 			</ImportSettings>
 			<ExportSettings/>
 		</Database>
