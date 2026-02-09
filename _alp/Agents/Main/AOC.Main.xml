@@ -149,6 +149,58 @@
 			<Intervals/>
 			<Exceptions/>
 		</Schedule>
+		<Schedule>
+			<Id>1770633020320</Id>
+			<Name><![CDATA[groupsize_schedule]]></Name>
+			<X>20</X>
+			<Y>420</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<ValueType>double_</ValueType>
+			<UnitType>NONE</UnitType>
+			<UnitOfValue Class="RateUnits">PER_HOUR</UnitOfValue>
+			<DefaultValue>0.0</DefaultValue>
+			<RepresentationMode>intervals</RepresentationMode>
+			<RepresentationType>calendar</RepresentationType>
+			<FirstDayOfWeek>monday</FirstDayOfWeek>
+			<TimeUnitsInterval>hours</TimeUnitsInterval>
+			<RepeatTime>604800000</RepeatTime>
+			<RepeatTimeInterval>weeks</RepeatTimeInterval>
+			<IsSnapTo>false</IsSnapTo>
+			<SnapTo>1770220734229</SnapTo>
+			<SnapToTimeUnits>minutes</SnapToTimeUnits>
+			<AllDayExceptionMode>false</AllDayExceptionMode>
+			<LoadFromDatabase>true</LoadFromDatabase>
+			<IntervalsQuery>
+				<Id>1770633020318</Id>
+				<TableReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>arrival_rate_week_groupsize</ClassName>
+				</TableReference>
+				<StartColumnReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>arrival_rate_week_groupsize</ClassName>
+					<ItemName>start_timestamp</ItemName>
+				</StartColumnReference>
+				<EndColumnReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>arrival_rate_week_groupsize</ClassName>
+					<ItemName>end_timestamp</ItemName>
+				</EndColumnReference>
+				<ValueColumnReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>arrival_rate_week_groupsize</ClassName>
+					<ItemName>avg_group_size</ItemName>
+				</ValueColumnReference>
+			</IntervalsQuery>
+			<Intervals/>
+			<Exceptions/>
+		</Schedule>
 	</Schedules>
 	<AgentLinks>
 		<AgentLink>

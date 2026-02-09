@@ -248,7 +248,7 @@
 		<TextCode>getId() + " " + size + " " + (statechart.getActiveSimpleState().name())</TextCode>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
-			<Size>5</Size>
+			<Size>10</Size>
 			<Style>0</Style>
 		</Font>
 		<Alignment>LEFT</Alignment>

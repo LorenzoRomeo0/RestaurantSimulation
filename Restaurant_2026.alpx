@@ -30,7 +30,7 @@
 			<ShutdownCompact>false</ShutdownCompact>
 			<ImportSettings>
 				<ExternalConnection>
-					<Id>1770220531287</Id>
+					<Id>1770629155953</Id>
 					<Name><![CDATA[database]]></Name>
 					<X>0</X>
 					<Y>0</Y>
@@ -47,7 +47,7 @@
 					<DatabaseName/>
 					<ResourceReference>
 						<PackageName>restaurant_2025</PackageName>
-						<ClassName>C:/Users/loren/Desktop/arrival_rates.xlsx</ClassName>
+						<ClassName>scripts/arrival_rates.xlsx</ClassName>
 					</ResourceReference>
 					<Host>localhost</Host>
 					<JdbcDriverClassName>net.sourceforge.jtds.jdbc.Driver</JdbcDriverClassName>
@@ -55,7 +55,7 @@
 					<Password/>
 				</ExternalConnection>
 				<TableImportSettings>
-					<Id>1770220988053</Id>
+					<Id>1770632895149</Id>
 					<TableReference>
 						<PackageName>restaurant_2025</PackageName>
 						<ClassName>arrival_rate_week_converted</ClassName>
@@ -65,13 +65,23 @@
 					<AutoImport>false</AutoImport>
 				</TableImportSettings>
 				<TableImportSettings>
-					<Id>1770220988056</Id>
+					<Id>1770632895152</Id>
 					<TableReference>
 						<PackageName>restaurant_2025</PackageName>
 						<ClassName>arrival_rate_complete</ClassName>
 					</TableReference>
 					<ConnectionIndex>0</ConnectionIndex>
 					<ExternalTableName>"arrival_rate_complete"</ExternalTableName>
+					<AutoImport>false</AutoImport>
+				</TableImportSettings>
+				<TableImportSettings>
+					<Id>1770632895146</Id>
+					<TableReference>
+						<PackageName>restaurant_2025</PackageName>
+						<ClassName>arrival_rate_week_groupsize</ClassName>
+					</TableReference>
+					<ConnectionIndex>0</ConnectionIndex>
+					<ExternalTableName>"arrival_rate_week_groupsize (2)"</ExternalTableName>
 					<AutoImport>false</AutoImport>
 				</TableImportSettings>
 			</ImportSettings>

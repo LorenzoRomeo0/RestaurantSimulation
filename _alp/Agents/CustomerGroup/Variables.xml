@@ -17,7 +17,9 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[(int) normal(2, 10, 4, 1.5)]]></Code>
+				<Code><![CDATA[//(int) normal(2, 10, 4, 1.5)
+(int) normal(1, 12, main.groupsize_schedule.getValue(), 1)
+]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1756800672142</Id>

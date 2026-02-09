@@ -26,6 +26,9 @@
 		<Parameters>
 			<Parameter>
 				<Name><![CDATA[arrivalType]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[self.RATE_SCHEDULE]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[rate]]></Name>

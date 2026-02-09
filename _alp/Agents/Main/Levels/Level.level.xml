@@ -2675,8 +2675,8 @@
 	<Group>
 		<Id>1770028206143</Id>
 		<Name><![CDATA[clock]]></Name>
-		<X>280</X>
-		<Y>260</Y>
+		<X>580</X>
+		<Y>200</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -3019,8 +3019,8 @@
 	<Text>
 		<Id>1770051566110</Id>
 		<Name><![CDATA[text1]]></Name>
-		<X>340</X>
-		<Y>250</Y>
+		<X>640</X>
+		<Y>190</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3034,7 +3034,8 @@
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
 		<Text><![CDATA[text]]></Text>
-		<TextCode>"Arrival rate: "+ arrivals_schedule.getValue()</TextCode>
+		<TextCode>"Arrival rate: "+ arrivals_schedule.getValue() +
+"\nAvg group size: " + groupsize_schedule.getValue()</TextCode>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
 			<Size>10</Size>
@@ -3045,8 +3046,8 @@
 	<Text>
 		<Id>1770051794926</Id>
 		<Name><![CDATA[text2]]></Name>
-		<X>340</X>
-		<Y>230</Y>
+		<X>640</X>
+		<Y>170</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3085,10 +3086,9 @@
 		<Z>0</Z>
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
-		<Text><![CDATA[Calcolare il numero di persone che vanno via dopo le 23 di sera
-Cambiare calcolo della distribuzione degli arrivi (rendere più sofisticato)
-cambiare la dimensione media del gruppo durante il giorno (a colazione spesso in 1 o 2 max)
-Calcolare il numero di camerieri per tenere conto delle possibili assenze (malattia ecc)
+		<Text><![CDATA[Calcolare il numero di persone che vanno via dopo le 23 di sera\
+(OK) Cambiare calcolo della distribuzione degli arrivi (rendere più sofisticato)
+(OK)cambiare la dimensione media del gruppo durante il giorno (a colazione spesso in 1 o 2 max)
 (OK) Modellare la cucina (usare un source "order" che al sink viene restituito ad un camerire?)
 Modellare la cassa (tempo per pagare proporzionale al numero di persone nel gruppo)
 Modellare la selezione dei tavoli in base allora del giorno
@@ -3104,7 +3104,7 @@ Modellare il tempo trascorso nel ristorante in base al momento della giornata (c
 		<Id>1770364271713</Id>
 		<Name><![CDATA[text3]]></Name>
 		<X>50</X>
-		<Y>910</Y>
+		<Y>970</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3117,7 +3117,8 @@ Modellare il tempo trascorso nel ristorante in base al momento della giornata (c
 		<Z>0</Z>
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
-		<Text><![CDATA[creare scheule per i cooks (pochi a colazione, tanti a cena. usare distribuzione) ]]></Text>
+		<Text><![CDATA[creare scheule per i cooks e camerieri (pochi a colazione, tanti a cena. usare distribuzione) 
+Calcolare il numero di camerieri per tenere conto delle possibili assenze (malattia ecc)]]></Text>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
 			<Size>10</Size>
@@ -3213,7 +3214,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Z>0</Z>
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
-		<Text><![CDATA[rendere menu_reading proporzionale alla dimensione del gruppo]]></Text>
+		<Text><![CDATA[rendere menu_reading proporzionale alla dimensione del gruppo (non di molto perché è un attività che si fa in parallelo, più che altro per simulare l'allungarsi del dare l'ordine al cameriere)]]></Text>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
 			<Size>10</Size>
