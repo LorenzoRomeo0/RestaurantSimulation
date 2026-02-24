@@ -1329,6 +1329,9 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 				<ClassName>Release</ClassName>
 				<ItemName>1412336243154</ItemName>
 			</GenericParameterSubstituteReference>
+			<GenericParameterSubstituteValue Class="CodeValue">
+				<Code><![CDATA[CustomerGroup]]></Code>
+			</GenericParameterSubstituteValue>
 		</GenericParameterSubstitute>
 		<Parameters>
 			<Parameter>
@@ -1357,9 +1360,15 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[movingGoHome]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[false]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[wrapUpTaskPolicyType]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[self.WRAP_UP_IF_NO_TASKS]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[wrapUpTaskPriority]]></Name>
@@ -1744,9 +1753,16 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[customizeRequestChoice]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[true]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[requestChoiceCondition]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[unit.inState(unit.waiting)
+&& !unit.isMoving()]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[addToCustomPopulation]]></Name>
@@ -1863,6 +1879,12 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[currentOrder]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[targetNode]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[isWaiting]]></Name>
 			</Parameter>
 		</Parameters>
 		<ReplicationFlag>true</ReplicationFlag>

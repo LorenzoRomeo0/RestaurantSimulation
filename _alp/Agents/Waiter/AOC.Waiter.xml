@@ -108,7 +108,9 @@
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="160" Height="30">
-				<EntryAction>_ps7.setFillColor(gold);
+				<EntryAction>traceln(this +" "+this.getId() + " SEIZED AT ENTRANCE");
+_ps7.setFillColor(gold);
+targetNode = "entrance";
 this.moveTo(main.entrance_node);
 //traceln("waiter "+ getId() + " seizedAtEntrance")</EntryAction>
 				<FillColor>-10496</FillColor>
@@ -127,10 +129,11 @@ this.moveTo(main.entrance_node);
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="115" Height="30">
-				<EntryAction>_ps7.setFillColor(yellow);
+				<EntryAction>targetNode = "none";
+_ps7.setFillColor(yellow);
 
-//CustomerGroup cg = main.customersAtEntrance;
-//System.out.println(getId() + " is welcoming " + cg.getId());
+CustomerGroup cg = main.customersAtEntrance;
+System.out.println(getId() + " is welcoming " + cg.getId());
 currentCustomers = main.customersAtEntrance;
 //System.out.println(getId() + " is welcoming " + currentCustomers.getId());
 
@@ -151,7 +154,8 @@ foundTable = main.tableSelection(currentCustomers);</EntryAction>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="135" Height="30">
-				<EntryAction>_ps7.setFillColor(green);</EntryAction>
+				<EntryAction>targetNode = "none";
+_ps7.setFillColor(green);</EntryAction>
 				<FillColor>-16744448</FillColor>
 			</Properties>
 		</StatechartElement>
@@ -182,11 +186,23 @@ foundTable = main.tableSelection(currentCustomers);</EntryAction>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
-				<EntryAction>_ps7.setFillColor(dodgerBlue);
+				<EntryAction>this.stop();
+
+_ps7.setFillColor(dodgerBlue);
 
 foundTable = null;
 currentCustomers = null;
-currentOrder = null;</EntryAction>
+currentOrder = null;
+
+//isWaiting = true;
+traceln(this +" "+this.getId() + " IS WAITING");
+//main.hold_wrapup.recalculateConditions();
+//traceln(this.getId() + " ASKED FOR FREEDOM");
+//main.wait_wrapup.free(this);
+//traceln(this.getId() + " ASKED FOR FREEDOM --");
+</EntryAction>
+				<ExitAction>//isWaiting = false;
+traceln(this +" "+ this.getId() + " IS NO MORE WAITING");</ExitAction>
 				<FillColor>-14774017</FillColor>
 			</Properties>
 		</StatechartElement>
@@ -217,8 +233,10 @@ currentOrder = null;</EntryAction>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
-				<EntryAction>moveTo(foundTable);
+				<EntryAction>targetNode = "table " + foundTable.getId();
+traceln(getId() + " Bringing " + currentCustomers.getId() + " to " + foundTable.getId());
 send(foundTable, currentCustomers);
+moveTo(foundTable);
 </EntryAction>
 				<FillColor/>
 			</Properties>
@@ -236,8 +254,10 @@ send(foundTable, currentCustomers);
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="135" Height="30">
-				<EntryAction>_ps7.setFillColor(lavender);
+				<EntryAction>traceln(this +" "+this.getId() + " SEIZED AT TABLE");
+_ps7.setFillColor(lavender);
 //traceln("---&gt; Waiter " + getId() + " -&gt; ordering task -&gt; Customer " + currentCustomers.getId());
+targetNode = currentCustomers.getId() +"";
 this.moveTo(currentCustomers);</EntryAction>
 				<FillColor>-1644806</FillColor>
 			</Properties>
@@ -255,7 +275,8 @@ this.moveTo(currentCustomers);</EntryAction>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
-				<EntryAction>send(this, currentCustomers);</EntryAction>
+				<EntryAction>targetNode = "none";
+send(this, currentCustomers);</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
@@ -272,9 +293,10 @@ this.moveTo(currentCustomers);</EntryAction>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
-				<EntryAction>moveTo(main.kitchen_node);
+				<EntryAction>targetNode = "kitchen";
+moveTo(main.kitchen_node);
 //traceln("-----&gt; " +getId()+ " take this order: "+ currentOrder);
-main.kitchen_enter.take(currentOrder);
+
 //traceln("-----&gt; " +getId()+ " take this order: "+ currentOrder);</EntryAction>
 				<FillColor/>
 			</Properties>
@@ -292,7 +314,8 @@ main.kitchen_enter.take(currentOrder);
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
-				<EntryAction>main.give_order.free(currentCustomers);</EntryAction>
+				<EntryAction>main.kitchen_enter.take(currentOrder);
+main.give_order.free(currentCustomers);</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
@@ -343,7 +366,8 @@ main.kitchen_enter.take(currentOrder);
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
-				<EntryAction>this.moveTo(currentOrder.customerGroup);</EntryAction>
+				<EntryAction>targetNode = currentOrder.customerGroup.getId() +"";
+this.moveTo(currentOrder.customerGroup);</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
@@ -360,7 +384,8 @@ main.kitchen_enter.take(currentOrder);
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
-				<EntryAction>send("foodReady", currentOrder.customerGroup);
+				<EntryAction>targetNode = "none";
+send("foodReady", currentOrder.customerGroup);
 main.bring_food.free(currentOrder);</EntryAction>
 				<FillColor/>
 			</Properties>
@@ -378,7 +403,9 @@ main.bring_food.free(currentOrder);</EntryAction>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
-				<EntryAction>this.moveTo(main.kitchen_node)</EntryAction>
+				<EntryAction>traceln(this +" "+this.getId() + " TAKE FOOD");
+targetNode = "kitchen";
+this.moveTo(main.kitchen_node)</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
@@ -1269,6 +1296,22 @@ main.bring_food.free(currentOrder);</EntryAction>
 			<Z>0</Z>
 			<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
 			<Presentation xmlns:al="http://anylogic.com"/>
+		</Level>
+		<Level>
+			<Id>1771881286434</Id>
+			<Name><![CDATA[level1]]></Name>
+			<X>0</X>
+			<Y>0</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>true</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+			<Z>0</Z>
+			<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
 		</Level>
 	</Presentation>
 </ActiveObjectClass>

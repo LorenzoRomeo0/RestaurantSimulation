@@ -62,10 +62,10 @@
 		</PresentationProperties>
 		<ModelTimeProperties>
 			<StopOption>Stop at specified date</StopOption>
-			<InitialDate>367200000</InitialDate>
+			<InitialDate>370800000</InitialDate>
 			<InitialTime>0.0</InitialTime>
 			<FinalDate>1033200000</FinalDate>
-			<FinalTime>11100.0</FinalTime>
+			<FinalTime>11040.0</FinalTime>
 		</ModelTimeProperties>
 		<BypassInitialScreen>true</BypassInitialScreen>
 	</SimulationExperiment>
