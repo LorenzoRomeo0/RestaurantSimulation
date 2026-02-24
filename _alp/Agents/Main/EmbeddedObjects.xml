@@ -1843,7 +1843,7 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 			<Parameter>
 				<Name><![CDATA[delayTime]]></Name>
 				<Value Class="CodeUnitValue">
-					<Code><![CDATA[normal(0.5, 5, 2, 1)]]></Code>
+					<Code><![CDATA[normal(0.5, 5, 2, 1) + agent.size/5]]></Code>
 					<Unit Class="TimeUnits">MINUTE</Unit>
 				</Value>
 			</Parameter>
