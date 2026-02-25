@@ -1454,6 +1454,9 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[capacityDefinitionType]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[self.CAPACITY_SCHEDULE]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[capacity]]></Name>
@@ -1466,6 +1469,9 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[capacitySchedule]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[waiters_schedule]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[capacityScheduleOnOff]]></Name>
@@ -3647,6 +3653,9 @@ send(msg, unit);
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[capacityDefinitionType]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[self.CAPACITY_SCHEDULE]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[capacity]]></Name>
@@ -3659,6 +3668,9 @@ send(msg, unit);
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[capacitySchedule]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[cooks_schedule]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[capacityScheduleOnOff]]></Name>
@@ -3724,8 +3736,8 @@ send(msg, unit);
 			<Parameter>
 				<Name><![CDATA[speed]]></Name>
 				<Value Class="CodeUnitValue">
-					<Code><![CDATA[6]]></Code>
-					<Unit Class="SpeedUnits">MPS</Unit>
+					<Code><![CDATA[3]]></Code>
+					<Unit Class="SpeedUnits">KPH</Unit>
 				</Value>
 			</Parameter>
 			<Parameter>

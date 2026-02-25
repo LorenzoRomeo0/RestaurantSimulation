@@ -100,8 +100,8 @@
 		<Schedule>
 			<Id>1770220504060</Id>
 			<Name><![CDATA[arrivals_schedule]]></Name>
-			<X>20</X>
-			<Y>370</Y>
+			<X>190</X>
+			<Y>190</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -152,8 +152,8 @@
 		<Schedule>
 			<Id>1770633020320</Id>
 			<Name><![CDATA[groupsize_schedule]]></Name>
-			<X>20</X>
-			<Y>400</Y>
+			<X>190</X>
+			<Y>220</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -358,7 +358,7 @@
 			<Id>1771950500906</Id>
 			<Name><![CDATA[eating_time_schedule]]></Name>
 			<X>190</X>
-			<Y>190</Y>
+			<Y>250</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -400,6 +400,110 @@
 					<PackageName>restaurant_2025</PackageName>
 					<ClassName>eating_time</ClassName>
 					<ItemName>time_avg</ItemName>
+				</ValueColumnReference>
+			</IntervalsQuery>
+			<Intervals/>
+			<Exceptions/>
+		</Schedule>
+		<Schedule>
+			<Id>1772014207717</Id>
+			<Name><![CDATA[waiters_schedule]]></Name>
+			<X>190</X>
+			<Y>280</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<ValueType>integer</ValueType>
+			<UnitType>NONE</UnitType>
+			<UnitOfValue Class="RateUnits">PER_HOUR</UnitOfValue>
+			<DefaultValue>0</DefaultValue>
+			<RepresentationMode>intervals</RepresentationMode>
+			<RepresentationType>calendar</RepresentationType>
+			<FirstDayOfWeek>monday</FirstDayOfWeek>
+			<TimeUnitsInterval>hours</TimeUnitsInterval>
+			<RepeatTime>604800000</RepeatTime>
+			<RepeatTimeInterval>weeks</RepeatTimeInterval>
+			<IsSnapTo>false</IsSnapTo>
+			<SnapTo>1770220734229</SnapTo>
+			<SnapToTimeUnits>minutes</SnapToTimeUnits>
+			<AllDayExceptionMode>false</AllDayExceptionMode>
+			<LoadFromDatabase>true</LoadFromDatabase>
+			<IntervalsQuery>
+				<Id>1772014207715</Id>
+				<TableReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>employees_schedule</ClassName>
+				</TableReference>
+				<StartColumnReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>employees_schedule</ClassName>
+					<ItemName>start_timestamp</ItemName>
+				</StartColumnReference>
+				<EndColumnReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>employees_schedule</ClassName>
+					<ItemName>end_timestamp</ItemName>
+				</EndColumnReference>
+				<ValueColumnReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>employees_schedule</ClassName>
+					<ItemName>waiters</ItemName>
+				</ValueColumnReference>
+			</IntervalsQuery>
+			<Intervals/>
+			<Exceptions/>
+		</Schedule>
+		<Schedule>
+			<Id>1772014350792</Id>
+			<Name><![CDATA[cooks_schedule]]></Name>
+			<X>190</X>
+			<Y>310</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<ValueType>integer</ValueType>
+			<UnitType>NONE</UnitType>
+			<UnitOfValue Class="RateUnits">PER_HOUR</UnitOfValue>
+			<DefaultValue>0</DefaultValue>
+			<RepresentationMode>intervals</RepresentationMode>
+			<RepresentationType>calendar</RepresentationType>
+			<FirstDayOfWeek>monday</FirstDayOfWeek>
+			<TimeUnitsInterval>hours</TimeUnitsInterval>
+			<RepeatTime>604800000</RepeatTime>
+			<RepeatTimeInterval>weeks</RepeatTimeInterval>
+			<IsSnapTo>false</IsSnapTo>
+			<SnapTo>1770220734229</SnapTo>
+			<SnapToTimeUnits>minutes</SnapToTimeUnits>
+			<AllDayExceptionMode>false</AllDayExceptionMode>
+			<LoadFromDatabase>true</LoadFromDatabase>
+			<IntervalsQuery>
+				<Id>1772014350790</Id>
+				<TableReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>employees_schedule</ClassName>
+				</TableReference>
+				<StartColumnReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>employees_schedule</ClassName>
+					<ItemName>start_timestamp</ItemName>
+				</StartColumnReference>
+				<EndColumnReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>employees_schedule</ClassName>
+					<ItemName>end_timestamp</ItemName>
+				</EndColumnReference>
+				<ValueColumnReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>employees_schedule</ClassName>
+					<ItemName>cooks</ItemName>
 				</ValueColumnReference>
 			</IntervalsQuery>
 			<Intervals/>

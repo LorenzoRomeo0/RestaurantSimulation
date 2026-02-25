@@ -3273,13 +3273,14 @@
 		<Z>0</Z>
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
-		<Text><![CDATA[Calcolare il numero di persone che vanno via dopo le 23 di sera\
+		<Text><![CDATA[Calcolare il numero di persone che vanno via dopo le 23 di sera
+Calcolare quanto tempo in media le persone stanno nel ristorante (usare poi per ottimizzare il numero di dipendenti e tavoli)
 (OK) Cambiare calcolo della distribuzione degli arrivi (rendere più sofisticato)
 (OK) cambiare la dimensione media del gruppo durante il giorno (a colazione spesso in 1 o 2 max)
 (OK) Modellare la cucina (usare un source "order" che al sink viene restituito ad un camerire?)
 (OK) Modellare la cassa (tempo per pagare proporzionale al numero di persone nel gruppo)
 (OK) Modellare la selezione dei tavoli in base allora del giorno
-Modellare il tempo trascorso nel ristorante in base al momento della giornata (colazione veloce, cena molto lenta)]]></Text>
+(OK)Modellare il tempo trascorso nel ristorante in base al momento della giornata (colazione veloce, cena molto lenta)]]></Text>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
 			<Size>10</Size>
@@ -3468,7 +3469,7 @@ al numero di persone]]></Text>
 		<Id>1772011504639</Id>
 		<Name><![CDATA[text9]]></Name>
 		<X>40</X>
-		<Y>490</Y>
+		<Y>380</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
