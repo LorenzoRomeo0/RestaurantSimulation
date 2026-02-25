@@ -94,6 +94,16 @@
 					<ExternalTableName>"tables_selection"</ExternalTableName>
 					<AutoImport>false</AutoImport>
 				</TableImportSettings>
+				<TableImportSettings>
+					<Id>1771950486965</Id>
+					<TableReference>
+						<PackageName>restaurant_2025</PackageName>
+						<ClassName>eating_time</ClassName>
+					</TableReference>
+					<ConnectionIndex>0</ConnectionIndex>
+					<ExternalTableName>"eating_time"</ExternalTableName>
+					<AutoImport>false</AutoImport>
+				</TableImportSettings>
 			</ImportSettings>
 			<ExportSettings/>
 		</Database>

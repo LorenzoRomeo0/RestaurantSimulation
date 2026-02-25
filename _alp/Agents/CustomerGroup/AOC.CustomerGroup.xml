@@ -729,9 +729,11 @@ currentWaiter = (Waiter) msg;</Action>
 			<IconOffset>20.0</IconOffset>
 			<Properties Source="1758097318122" Target="1757695059990" Trigger="timeout">
 				<Action>//table.release(this);
-</Action>
+//double alpha = 0.15; 
+//return baseTime * (1 + alpha * log(groupSize)); è per tenere conto della time extension hypotesis
+//main.eating_time_schedule.getValue()</Action>
 				<Timeout Class="CodeUnitValue">
-					<Code><![CDATA[20]]></Code>
+					<Code><![CDATA[normal(1, 70, main.eating_time_schedule.getValue(), 10) * (1 + 0.4 * log(size))]]></Code>
 					<Unit Class="TimeUnits">MINUTE</Unit>
 				</Timeout>
 				<Condition>true</Condition>
