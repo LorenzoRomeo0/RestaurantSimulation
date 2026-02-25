@@ -59,3 +59,24 @@ for(Table t : barTablesPool){
 return null;
 /*ALCODEEND*/}
 
+double eatingTimeModel(int groupSize)
+{/*ALCODESTART::1772007563909*/
+//Funzione che modella il tempo impiegato a mangiare secondo la time expansion hypothesis
+//Potrebbe essere migliorata in quanto nei pranzi con i colleghi generalmente non si chiacchiera così tanto.
+//Di più con amici e parenti (cena e weekends)
+
+double baseMeanTime = eating_time_schedule.getValue();
+
+double minTime = lognormal(baseMeanTime, baseMeanTime*0.2, 5);
+
+double maxIncrease = 0.8; //percentuale di tempo aggiunto massima
+
+double growth = 0.35;
+
+double multiplier = 1 + maxIncrease * (1 - Math.exp(-growth * (groupSize - 1)));
+
+return baseMeanTime * multiplier;
+
+
+/*ALCODEEND*/}
+

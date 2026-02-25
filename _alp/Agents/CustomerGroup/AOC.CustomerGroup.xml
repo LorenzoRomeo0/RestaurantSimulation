@@ -731,9 +731,11 @@ currentWaiter = (Waiter) msg;</Action>
 				<Action>//table.release(this);
 //double alpha = 0.15; 
 //return baseTime * (1 + alpha * log(groupSize)); è per tenere conto della time extension hypotesis
-//main.eating_time_schedule.getValue()</Action>
+//main.eating_time_schedule.getValue()
+
+//normal(1, 70, main.eating_time_schedule.getValue(), 10) * (1 + 0.4 * log(size))</Action>
 				<Timeout Class="CodeUnitValue">
-					<Code><![CDATA[normal(1, 70, main.eating_time_schedule.getValue(), 10) * (1 + 0.4 * log(size))]]></Code>
+					<Code><![CDATA[main.eatingTimeModel(size);]]></Code>
 					<Unit Class="TimeUnits">MINUTE</Unit>
 				</Timeout>
 				<Condition>true</Condition>
