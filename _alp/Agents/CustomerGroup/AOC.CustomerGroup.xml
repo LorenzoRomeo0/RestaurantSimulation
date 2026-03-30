@@ -2,6 +2,7 @@
 <ActiveObjectClass>
 	<Id>1756480025050</Id>
 	<Name><![CDATA[CustomerGroup]]></Name>
+	<Import><![CDATA[import net.sourceforge.jtds.jdbc.DateTime;]]></Import>
 	<Generic>false</Generic>
 	<GenericParameter>
 		<Id>1756480025055</Id>
@@ -110,6 +111,10 @@
 			<Properties Width="100" Height="30">
 				<EntryAction>//System.out.println(this.getId() + " inside.");
 //setColor( Color.GREEN );
+
+entrance_time = time();
+table_wait_start_time = time();
+
 shapeBody.setFillColor(green);
 main.inside_restaurant.free(this);</EntryAction>
 				<FillColor>-16744448</FillColor>
@@ -164,6 +169,10 @@ for(int i=0; i&lt;size; i++){
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="120" Height="30">
 				<EntryAction>//traceln(getId() + " moving to table " + table.getId() + " pos: "+ table.getPosition().toString());
+table_wait_end_time = time();
+
+main.table_wait_time_ds.add(time() - table_wait_end_time);
+
 moveTo(table);
 shapeBody.setFillColor(mediumOrchid);
 //traceln("Freeing welcoming wait of " + getId()  +" - " + main.welcoming_wait.getPopulation().toString());
@@ -327,7 +336,12 @@ main.welcoming_wait.free(this);</EntryAction>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
-				<EntryAction>main.eating_wait.free(this);</EntryAction>
+				<EntryAction>main.stay_time_ds.add(time() - entrance_time);
+main.stay_time_hg.add(time() - entrance_time);
+
+main.eating_wait.free(this);
+
+</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
