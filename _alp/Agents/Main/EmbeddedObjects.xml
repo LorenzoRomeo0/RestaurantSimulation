@@ -1865,7 +1865,7 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 			<Parameter>
 				<Name><![CDATA[entityLocation]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[exit_node]]></Code>
+					<Code><![CDATA[checkout_node]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -5628,7 +5628,7 @@ send(new goCook(agent), unit);]]></Code>
 			<Parameter>
 				<Name><![CDATA[entityLocationQueue]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[checkout_node]]></Code>
+					<Code><![CDATA[exit_node]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
