@@ -5542,7 +5542,7 @@ send(new goCook(agent), unit);]]></Code>
 	<EmbeddedObject>
 		<Id>1771948324936</Id>
 		<Name><![CDATA[checkout_seize]]></Name>
-		<X>1890</X>
+		<X>1880</X>
 		<Y>1380</Y>
 		<Label>
 			<X>-5</X>
