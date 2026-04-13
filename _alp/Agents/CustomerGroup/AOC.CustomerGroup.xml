@@ -115,6 +115,10 @@
 entrance_time = time();
 table_wait_start_time = time();
 
+table_wait_start_date = date();
+
+entrance_date = date();
+
 shapeBody.setFillColor(green);
 main.inside_restaurant.free(this);</EntryAction>
 				<FillColor>-16744448</FillColor>
@@ -171,6 +175,7 @@ for(int i=0; i&lt;size; i++){
 				<EntryAction>//traceln(getId() + " moving to table " + table.getId() + " pos: "+ table.getPosition().toString());
 table_wait_end_time = time();
 
+main.register_customer_wait(table_wait_start_date, table_wait_end_date);
 main.table_wait_time_ds.add(time() - table_wait_end_time);
 
 moveTo(table);
@@ -244,7 +249,6 @@ main.welcoming_wait.free(this);</EntryAction>
 //traceln(getId() + " freed table " + table.getId());
 table = null;
 
-
 this.moveTo(main.exit_node);</EntryAction>
 				<FillColor/>
 			</Properties>
@@ -289,7 +293,7 @@ order.desserts = (short) binomial(0.5, size); //TODO: migliorare
 order.coffees = (short) binomial(0.5, size);  //TODO: migliorare
 
 //traceln("-----&gt; " +getId()+ "sent this order: "+ order);
-send(order,currentWaiter);
+send(order, currentWaiter);
 
 
 
@@ -339,6 +343,8 @@ main.welcoming_wait.free(this);</EntryAction>
 				<EntryAction>main.stay_time_ds.add(time() - entrance_time);
 main.stay_time_hg.add(time() - entrance_time);
 
+//main.register_customer_wait(entrance_date, date());
+main.register_customer_stay(entrance_date, date());
 main.eating_wait.free(this);
 
 </EntryAction>

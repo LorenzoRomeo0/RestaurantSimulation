@@ -188,7 +188,9 @@ _ps7.setFillColor(green);</EntryAction>
 			<Properties Width="100" Height="30">
 				<EntryAction>this.stop();
 
-_ps7.setFillColor(dodgerBlue);
+
+
+//if(endShiftRequested) _ps7.setFillColor(dodgerBlue); _ps7.setFillColor(red);
 
 foundTable = null;
 currentCustomers = null;
@@ -200,6 +202,8 @@ traceln(this +" "+this.getId() + " IS WAITING");
 //traceln(this.getId() + " ASKED FOR FREEDOM");
 //main.wait_wrapup.free(this);
 //traceln(this.getId() + " ASKED FOR FREEDOM --");
+
+
 </EntryAction>
 				<ExitAction>//isWaiting = false;
 traceln(this +" "+ this.getId() + " IS NO MORE WAITING");</ExitAction>
@@ -409,14 +413,68 @@ this.moveTo(main.kitchen_node)</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
+		<StatechartElement Class="State" ParentState="ROOT_NODE">
+			<Id>1775060505849</Id>
+			<Name><![CDATA[offShift]]></Name>
+			<X>780</X>
+			<Y>25</Y>
+			<Label>
+				<X>10</X>
+				<Y>10</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Properties Width="100" Height="30">
+				<EntryAction>if(!endShiftRequested){ //era overtime
+	wasOvertime = true;
+}
+
+shiftEndDate = date();
+
+main.register_waiter_shift(shiftStartDate, shiftEndDate);
+
+isOffShift = true;
+endShiftRequested = false;
+
+_ps7.setFillColor(red);
+
+this.moveTo(main.waiters_node);</EntryAction>
+				<FillColor/>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="State" ParentState="ROOT_NODE">
+			<Id>1775060659386</Id>
+			<Name><![CDATA[onShift]]></Name>
+			<X>520</X>
+			<Y>25</Y>
+			<Label>
+				<X>10</X>
+				<Y>10</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Properties Width="100" Height="30">
+				<EntryAction>isOffShift = false;
+startShiftRequested = false;
+wasOvertime = false;
+lastShiftDay = date().getDay();
+
+shiftStartDate = date();
+
+_ps7.setFillColor(dodgerBlue);</EntryAction>
+				<FillColor/>
+			</Properties>
+		</StatechartElement>
 		<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
 			<Id>1756758039787</Id>
 			<Name><![CDATA[waiter_statechart]]></Name>
 			<X>700</X>
-			<Y>25</Y>
+			<Y>5</Y>
 			<Label>
-				<X>10</X>
-				<Y>0</Y>
+				<X>-54</X>
+				<Y>-19</Y>
 			</Label>
 			<PublicFlag>false</PublicFlag>
 			<PresentationFlag>true</PresentationFlag>
@@ -428,7 +486,7 @@ this.moveTo(main.kitchen_node)</EntryAction>
 				</Point>
 				<Point>
 					<X>0</X>
-					<Y>40</Y>
+					<Y>60</Y>
 				</Point>
 			</Points>
 			<Properties Target="1756758518168"/>
@@ -535,7 +593,7 @@ this.moveTo(main.kitchen_node)</EntryAction>
 					<Y>52</Y>
 				</Point>
 			</Points>
-			<IconOffset>30.0</IconOffset>
+			<IconOffset>20.0</IconOffset>
 			<Properties Source="1756758068267" Target="1756758181551" Trigger="message">
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
@@ -597,7 +655,7 @@ this.moveTo(main.kitchen_node)</EntryAction>
 			<Id>1757345942076</Id>
 			<Name><![CDATA[transition4]]></Name>
 			<X>785</X>
-			<Y>585</Y>
+			<Y>590</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -1063,8 +1121,8 @@ this.moveTo(main.kitchen_node)</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1770367647325</Id>
 			<Name><![CDATA[transition17]]></Name>
-			<X>655</X>
-			<Y>80</Y>
+			<X>660</X>
+			<Y>85</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -1074,7 +1132,7 @@ this.moveTo(main.kitchen_node)</EntryAction>
 			<ShowLabel>false</ShowLabel>
 			<Points>
 				<Point>
-					<X>0</X>
+					<X>-5</X>
 					<Y>0</Y>
 				</Point>
 				<Point>
@@ -1083,7 +1141,7 @@ this.moveTo(main.kitchen_node)</EntryAction>
 				</Point>
 				<Point>
 					<X>-305</X>
-					<Y>60</Y>
+					<Y>55</Y>
 				</Point>
 			</Points>
 			<IconOffset>150.0</IconOffset>
@@ -1229,7 +1287,186 @@ this.moveTo(main.kitchen_node)</EntryAction>
 				<SatisfiesExpression>true</SatisfiesExpression>
 			</Properties>
 		</StatechartElement>
+		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+			<Id>1775060327923</Id>
+			<Name><![CDATA[transition13]]></Name>
+			<X>720</X>
+			<Y>65</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>0</X>
+					<Y>-30</Y>
+				</Point>
+				<Point>
+					<X>60</X>
+					<Y>-30</Y>
+				</Point>
+			</Points>
+			<IconOffset>40.0</IconOffset>
+			<Properties Source="1756758518168" Target="1775060505849" Trigger="condition">
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</Timeout>
+				<Condition>!isOffShift &amp;&amp; (endShiftRequested || (getHourOfDay() &gt;= 23 &amp;&amp; main.customersInRestaurantNr == 0))</Condition>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MINUTE</Unit>
+				</Rate>
+				<MessageType>Object</MessageType>
+				<DefaultTransition>true</DefaultTransition>
+				<FilterType>unconditionally</FilterType>
+				<EqualsExpression>"text"</EqualsExpression>
+				<SatisfiesExpression>true</SatisfiesExpression>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+			<Id>1775060569914</Id>
+			<Name><![CDATA[transition20]]></Name>
+			<X>825</X>
+			<Y>55</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>0</X>
+					<Y>20</Y>
+				</Point>
+				<Point>
+					<X>-70</X>
+					<Y>20</Y>
+				</Point>
+			</Points>
+			<IconOffset>45.0</IconOffset>
+			<Properties Source="1775060505849" Target="1756758518168" Trigger="arrival">
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</Timeout>
+				<Condition>true</Condition>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MINUTE</Unit>
+				</Rate>
+				<MessageType>Object</MessageType>
+				<DefaultTransition>true</DefaultTransition>
+				<FilterType>unconditionally</FilterType>
+				<EqualsExpression>"text"</EqualsExpression>
+				<SatisfiesExpression>true</SatisfiesExpression>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+			<Id>1775060671120</Id>
+			<Name><![CDATA[transition21]]></Name>
+			<X>675</X>
+			<Y>65</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>0</X>
+					<Y>-30</Y>
+				</Point>
+				<Point>
+					<X>-55</X>
+					<Y>-30</Y>
+				</Point>
+			</Points>
+			<IconOffset>35.0</IconOffset>
+			<Properties Source="1756758518168" Target="1775060659386" Trigger="condition">
+				<Action>traceln(lastShiftDay + " " + date().getDay())</Action>
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</Timeout>
+				<Condition>startShiftRequested || (wasOvertime &amp;&amp; getHourOfDay() &gt;= 6 &amp;&amp; lastShiftDay != date().getDay())</Condition>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MINUTE</Unit>
+				</Rate>
+				<MessageType>Object</MessageType>
+				<DefaultTransition>true</DefaultTransition>
+				<FilterType>unconditionally</FilterType>
+				<EqualsExpression>"text"</EqualsExpression>
+				<SatisfiesExpression>true</SatisfiesExpression>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+			<Id>1775060710965</Id>
+			<Name><![CDATA[transition22]]></Name>
+			<X>565</X>
+			<Y>55</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>0</X>
+					<Y>20</Y>
+				</Point>
+				<Point>
+					<X>90</X>
+					<Y>20</Y>
+				</Point>
+			</Points>
+			<IconOffset>50.0</IconOffset>
+			<Properties Source="1775060659386" Target="1756758518168" Trigger="condition">
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</Timeout>
+				<Condition>true</Condition>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MINUTE</Unit>
+				</Rate>
+				<MessageType>Object</MessageType>
+				<DefaultTransition>true</DefaultTransition>
+				<FilterType>unconditionally</FilterType>
+				<EqualsExpression>"text"</EqualsExpression>
+				<SatisfiesExpression>true</SatisfiesExpression>
+			</Properties>
+		</StatechartElement>
 	</StatechartElements>
+	<Events xmlns:al="http://anylogic.com"/>
+	<Functions xmlns:al="http://anylogic.com"/>
 	<AgentLinks>
 		<AgentLink>
 			<Id>1756480161933</Id>

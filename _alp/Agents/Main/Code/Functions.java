@@ -80,3 +80,208 @@ return baseMeanTime * multiplier;
 
 /*ALCODEEND*/}
 
+double init_statistics()
+{/*ALCODESTART::1774982011623*/
+
+/*ALCODEEND*/}
+
+double register_customer_wait(Date start,Date end)
+{/*ALCODESTART::1774982475261*/
+TimeEvent ev = new TimeEvent(start, end, TimeEvent.EventType.CUSTOMER_WAIT);
+timeEvents.add(ev);
+
+int d = ev.getEndDayOfWeek() - 1;
+int h = ev.getEndHourOfDay();
+
+double waitMin = ev.getDurationMinutes();
+
+if (d >= 0 && d < 7 && h >= 0 && h < 24 && waitMin >= 0) {
+    customer_wait_sum[d][h] += waitMin;
+    customer_wait_count[d][h] += 1;
+}
+/*ALCODEEND*/}
+
+double compute_overtime()
+{/*ALCODESTART::1775043872750*/
+List<TimeEvent.EventType> overtimeTypes = java.util.Arrays.asList(
+    TimeEvent.EventType.WAITER_SHIFT,
+    TimeEvent.EventType.COOK_SHIFT
+);
+
+List<Integer> daysOfWeek = java.util.Arrays.asList(
+    MONDAY,
+    TUESDAY,
+    WEDNESDAY,
+    THURSDAY,
+    FRIDAY,
+    SATURDAY,
+    SUNDAY
+);
+
+for (int day : daysOfWeek) {
+
+    traceln("------ " + day_to_string(day) + " ------");
+
+    for (TimeEvent.EventType eventType : overtimeTypes) {
+
+        List<TimeEvent> events = timeEvents.filterByTypeDayAndEndHour(
+            eventType,
+            day,
+            23
+        );
+
+        long count = events.size();
+
+        double avgHours = events.stream()
+            .mapToDouble(TimeEvent::getDurationHours)
+            .filter(x -> x >= 0)
+            .average()
+            .orElse(0);
+
+        traceln(
+            eventType
+            + " | count = " + count
+            + " | avg overtime hours = " + avgHours
+        );
+    }
+}
+/*ALCODEEND*/}
+
+String day_to_string(int day)
+{/*ALCODESTART::1775044645264*/
+switch (day) {
+    case MONDAY: return "MONDAY";
+    case TUESDAY: return "TUESDAY";
+    case WEDNESDAY: return "WEDNESDAY";
+    case THURSDAY: return "THURSDAY";
+    case FRIDAY: return "FRIDAY";
+    case SATURDAY: return "SATURDAY";
+    case SUNDAY: return "SUNDAY";
+    default: return "UNKNOWN";
+}
+/*ALCODEEND*/}
+
+double register_waiter_shift(Date start,Date end)
+{/*ALCODESTART::1775044771309*/
+TimeEvent ev = new TimeEvent(start, end, TimeEvent.EventType.WAITER_SHIFT);
+timeEvents.add(ev);
+/*ALCODEEND*/}
+
+double waitersDebugTextUpdater()
+{/*ALCODESTART::1775232593178*/
+StringBuilder sb = new StringBuilder();
+
+for (int i = 0; i < waiters.size(); i++) {
+    Waiter w = waiters.get(i);
+
+    sb.append(w.getId()).append(" [").append(w.getIndex()).append("] ")
+      .append(w.waiter_statechart.getActiveSimpleState().name())
+      .append("\n")
+      .append(w.isOffShift ? "offShift" : "onShift")
+      .append("\n")
+      .append("start ").append(w.shiftStartDate)
+      .append("\n")
+      .append("end ").append(w.shiftEndDate)
+      .append("\n")
+      .append("lastShift: ").append(w.lastShiftDay)
+      .append("\n")
+      .append(w.isMoving() ? "moving" : "")
+      .append("\n")
+      .append(w.endShiftRequested ? "endRequested" : "")
+      .append("\n")
+      .append(w.startShiftRequested ? "startRequested" : "")
+      .append("\n")
+      .append(w.wasOvertime ? "wasOvertime" : "");
+
+    if (i < waiters.size() - 1) {
+        sb.append("\n\n--------------------\n\n");
+    }
+}
+
+txtWaitersDebug.setText(sb.toString());
+
+/*ALCODEEND*/}
+
+double timeEventsDebugTextUpdater()
+{/*ALCODESTART::1776067186397*/
+//timeEventsDebugText.setText(timeEvents.toStringFullText());
+//timeEventsCustomerStayDebugText.setText(timeEvents.toStringByTypeAfter23(TimeEvent.EventType.CUSTOMER_STAY));
+
+	
+timeEventsCustomerStayDebugText.setText(
+	"counts =  \n "+
+	timeEvents.prettyPrintLong(
+		timeEvents.groupByDayAndFilterByEndHourAndEventTypeCount(
+			23, TimeEvent.EventType.CUSTOMER_STAY
+		)
+	)
+	+"\n" +
+	
+	"avgs = \n "+
+	timeEvents.prettyPrintDouble(
+		timeEvents.groupByDayAndFilterByEndHourAndEventTypeAvgDuration(
+			23, TimeEvent.EventType.CUSTOMER_STAY
+		)
+	)
+	+"\n" +
+	"avg delays \n"+
+	timeEvents.prettyPrintDouble(
+		timeEvents.groupByDayAndFilterDelaysAfterEndHourByEventTypeAvgMinutes(
+			23, TimeEvent.EventType.CUSTOMER_STAY
+		)
+		
+	)
+	
+	+ "\ngroups = { \n" +
+	timeEvents.prettyPrint(
+		timeEvents.groupByDayAndFilterByEndHourAndEventType(
+			23, TimeEvent.EventType.CUSTOMER_STAY
+		)
+	)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*ALCODEEND*/}
+
+double register_customer_stay(Date start,Date end)
+{/*ALCODESTART::1776067684596*/
+TimeEvent ev = new TimeEvent(start, end, TimeEvent.EventType.CUSTOMER_STAY);
+timeEvents.add(ev);
+
+/*
+int d = ev.getEndDayOfWeek() - 1;
+int h = ev.getEndHourOfDay();
+
+double waitMin = ev.getDurationMinutes();
+
+if (d >= 0 && d < 7 && h >= 0 && h < 24 && waitMin >= 0) {
+    customer_wait_sum[d][h] += waitMin;
+    customer_wait_count[d][h] += 1;
+}
+
+*/
+/*ALCODEEND*/}
+

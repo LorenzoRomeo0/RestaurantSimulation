@@ -711,8 +711,24 @@ transizione del messaggio).]]></Text>
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
 		<Text><![CDATA[text]]></Text>
-		<TextCode>getId() + " " + (waiter_statechart.getActiveSimpleState().name())
-</TextCode>
+		<TextCode>getId() +" [" + getIndex() +"] " + (waiter_statechart.getActiveSimpleState().name() 
+
+ 
+
+
+)
+
+
+/*
++ "\n" + (isOffShift ? "offShift":"onShift") + 
+"\n" + "start " + shiftStartDate +  
+"\n" + "end " + shiftEndDate + 
+"\n" + "lastShift: " + lastShiftDay	+
+"\n" + (isMoving() ? "moving":"") +
+"\n" + (endShiftRequested ? "endRequested" : "") +
+"\n" + (startShiftRequested ? "startRequested" : "") +
+"\n" + (wasOvertime ? "wasOvertime" : "") 
+*/</TextCode>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
 			<Size>8</Size>

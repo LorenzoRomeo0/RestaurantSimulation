@@ -3,6 +3,7 @@
 	<Id>1756479932269</Id>
 	<Name><![CDATA[Main]]></Name>
 	<Import><![CDATA[import org.eclipse.jetty.client.SendFailure;]]></Import>
+	<StartupCode><![CDATA[init_statistics();]]></StartupCode>
 	<Generic>false</Generic>
 	<GenericParameter>
 		<Id>1756479932274</Id>
@@ -95,6 +96,7 @@
 	<CurrentLevel>1756479932275</CurrentLevel>
 	<ConnectionsId>1756479932270</ConnectionsId>
 	<Variables xmlns:al="http://anylogic.com"/>
+	<Events xmlns:al="http://anylogic.com"/>
 	<Functions xmlns:al="http://anylogic.com"/>
 	<Schedules>
 		<Schedule>

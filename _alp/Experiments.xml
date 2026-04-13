@@ -7,6 +7,7 @@
 		<MaximumMemory>16384</MaximumMemory>
 		<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
 		<CustomGeneratorCode>new Random()</CustomGeneratorCode>
+		<AfterSimulationRunCode>root.compute_overtime();</AfterSimulationRunCode>
 		<SeedValue>1</SeedValue>
 		<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
 		<VmArgs/>
@@ -50,6 +51,15 @@
 			</Parameter>
 			<Parameter>
 				<ParameterName>barTablesNr</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>customersInRestaurantNr</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>closingTime</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>openingTime</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>
