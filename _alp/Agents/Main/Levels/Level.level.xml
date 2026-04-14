@@ -3332,8 +3332,8 @@ al numero di persone]]></Text>
 	<TimePlot>
 		<Id>1774864175722</Id>
 		<Name><![CDATA[plot]]></Name>
-		<X>1070</X>
-		<Y>460</Y>
+		<X>1350</X>
+		<Y>210</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3406,8 +3406,8 @@ al numero di persone]]></Text>
 	<Histogram>
 		<Id>1774868842760</Id>
 		<Name><![CDATA[chart]]></Name>
-		<X>1100</X>
-		<Y>240</Y>
+		<X>1350</X>
+		<Y>0</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3474,140 +3474,6 @@ al numero di persone]]></Text>
 			<Title>Title</Title>
 		</HistogramDataExpression>
 	</Histogram>
-	<TimePlot>
-		<Id>1774987192134</Id>
-		<Name><![CDATA[plot1]]></Name>
-		<X>-290</X>
-		<Y>700</Y>
-		<Label>
-			<X>0</X>
-			<Y>-10</Y>
-		</Label>
-		<PublicFlag>true</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>false</ShowLabel>
-		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-		<AutoUpdate>false</AutoUpdate>
-		<RecurrenceProperties>
-			<Id>1774987192132</Id>
-			<OccurrenceAtTime>true</OccurrenceAtTime>
-			<OccurrenceDate>1775030400000</OccurrenceDate>
-			<OccurrenceTime Class="CodeUnitValue">
-				<Code><![CDATA[0]]></Code>
-				<Unit Class="TimeUnits">MINUTE</Unit>
-			</OccurrenceTime>
-			<RecurrenceCode Class="CodeUnitValue">
-				<Code><![CDATA[1]]></Code>
-				<Unit Class="TimeUnits">MINUTE</Unit>
-			</RecurrenceCode>
-		</RecurrenceProperties>
-		<EmbeddedIcon>false</EmbeddedIcon>
-		<Width>260</Width>
-		<Height>270</Height>
-		<BackgroundColor/>
-		<BorderColor/>
-		<ChartArea>
-			<XOffset>50</XOffset>
-			<YOffset>30</YOffset>
-			<Width>180</Width>
-			<Height>130</Height>
-			<BackgroundColor>-1</BackgroundColor>
-			<BorderColor>-16777216</BorderColor>
-			<GridColor>-12566464</GridColor>
-		</ChartArea>
-		<Legend>
-			<Place>SOUTH</Place>
-			<TextColor>-16777216</TextColor>
-			<Size>80</Size>
-		</Legend>
-		<Labels>
-			<HorLabelsPosition>DEFAULT</HorLabelsPosition>
-			<VerLabelsPosition>DEFAULT</VerLabelsPosition>
-			<TextColor>-12566464</TextColor>
-		</Labels>
-		<ShowLegend>true</ShowLegend>
-		<TimeWindowsMovementType>MOVEMENT_WITH_DATA</TimeWindowsMovementType>
-		<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
-		<VerScaleFromExpression>0</VerScaleFromExpression>
-		<VerScaleToExpression>1</VerScaleToExpression>
-		<VerScaleType>AUTO</VerScaleType>
-		<DrawLine>true</DrawLine>
-		<Interpolation>LINEAR</Interpolation>
-		<DatasetExpression>
-			<Title>Monday</Title>
-			<Id>1774987193333</Id>
-			<Expression>customerWaitAvgByDay[1]</Expression>
-			<Color>-29696</Color>
-			<Expression2>0</Expression2>
-			<Expression2Flag>false</Expression2Flag>
-			<PointStyle>NONE</PointStyle>
-			<LineWidth>1.0</LineWidth>
-		</DatasetExpression>
-		<DatasetExpression>
-			<Title>Tuesday</Title>
-			<Id>1774988181247</Id>
-			<Expression>customerWaitAvgByDay[2]</Expression>
-			<Color>-12799119</Color>
-			<Expression2>customerWaitAvgByDay[2]</Expression2>
-			<Expression2Flag>false</Expression2Flag>
-			<PointStyle>NONE</PointStyle>
-			<LineWidth>1.0</LineWidth>
-		</DatasetExpression>
-		<DatasetExpression>
-			<Title>Wednesday</Title>
-			<Id>1774988190589</Id>
-			<Expression>customerWaitAvgByDay[3]</Expression>
-			<Color>-9807155</Color>
-			<Expression2>customerWaitAvgByDay[3]</Expression2>
-			<Expression2Flag>false</Expression2Flag>
-			<PointStyle>NONE</PointStyle>
-			<LineWidth>1.0</LineWidth>
-		</DatasetExpression>
-		<DatasetExpression>
-			<Title>Thursday</Title>
-			<Id>1774988219822</Id>
-			<Expression>customerWaitAvgByDay[4]</Expression>
-			<Color>-2987746</Color>
-			<Expression2>customerWaitAvgByDay[4]</Expression2>
-			<Expression2Flag>false</Expression2Flag>
-			<PointStyle>NONE</PointStyle>
-			<LineWidth>1.0</LineWidth>
-		</DatasetExpression>
-		<DatasetExpression>
-			<Title>Friday</Title>
-			<Id>1774988221028</Id>
-			<Expression>customerWaitAvgByDay[5]</Expression>
-			<Color>-2448096</Color>
-			<Expression2>customerWaitAvgByDay[5]</Expression2>
-			<Expression2Flag>false</Expression2Flag>
-			<PointStyle>NONE</PointStyle>
-			<LineWidth>1.0</LineWidth>
-		</DatasetExpression>
-		<DatasetExpression>
-			<Title>Saturday</Title>
-			<Id>1774988222156</Id>
-			<Expression>customerWaitAvgByDay[6]</Expression>
-			<Color>-9728477</Color>
-			<Expression2>customerWaitAvgByDay[6]</Expression2>
-			<Expression2Flag>false</Expression2Flag>
-			<PointStyle>NONE</PointStyle>
-			<LineWidth>1.0</LineWidth>
-		</DatasetExpression>
-		<DatasetExpression>
-			<Title>Sunday</Title>
-			<Id>1774988223508</Id>
-			<Expression>customerWaitAvgByDay[0]</Expression>
-			<Color>-16728065</Color>
-			<Expression2>customerWaitAvgByDay[0]</Expression2>
-			<Expression2Flag>false</Expression2Flag>
-			<PointStyle>NONE</PointStyle>
-			<LineWidth>1.0</LineWidth>
-		</DatasetExpression>
-		<SamplesToKeep>100</SamplesToKeep>
-		<TimeWindowExpression>100</TimeWindowExpression>
-		<FillAreaUnderLine>false</FillAreaUnderLine>
-		<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
-	</TimePlot>
 	<Text>
 		<Id>1775058310781</Id>
 		<Name><![CDATA[text]]></Name>
@@ -3661,9 +3527,9 @@ al numero di persone]]></Text>
 	</Text>
 	<Text>
 		<Id>1776067162644</Id>
-		<Name><![CDATA[timeEventsDebugText]]></Name>
-		<X>-1310</X>
-		<Y>190</Y>
+		<Name><![CDATA[timeEventsWaitersDebugText]]></Name>
+		<X>-1620</X>
+		<Y>640</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3709,4 +3575,188 @@ al numero di persone]]></Text>
 		</Font>
 		<Alignment>LEFT</Alignment>
 	</Text>
+	<Text>
+		<Id>1776167041443</Id>
+		<Name><![CDATA[text1]]></Name>
+		<X>830</X>
+		<Y>-390</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[TODO: rendere variabili]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>10</Size>
+			<Style>0</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1776167063035</Id>
+		<Name><![CDATA[text2]]></Name>
+		<X>710</X>
+		<Y>-210</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[TODO: utilizzare le variabili ovunque]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>10</Size>
+			<Style>0</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<TimePlot>
+		<Id>1776167850460</Id>
+		<Name><![CDATA[plot1]]></Name>
+		<X>1360</X>
+		<Y>440</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<AutoUpdate>false</AutoUpdate>
+		<RecurrenceProperties>
+			<Id>1776167850458</Id>
+			<OccurrenceAtTime>true</OccurrenceAtTime>
+			<OccurrenceDate>1775030400000</OccurrenceDate>
+			<OccurrenceTime Class="CodeUnitValue">
+				<Code><![CDATA[0]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</OccurrenceTime>
+			<RecurrenceCode Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</RecurrenceCode>
+		</RecurrenceProperties>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Width>260</Width>
+		<Height>270</Height>
+		<BackgroundColor/>
+		<BorderColor/>
+		<ChartArea>
+			<XOffset>50</XOffset>
+			<YOffset>30</YOffset>
+			<Width>180</Width>
+			<Height>130</Height>
+			<BackgroundColor>-1</BackgroundColor>
+			<BorderColor>-16777216</BorderColor>
+			<GridColor>-12566464</GridColor>
+		</ChartArea>
+		<Legend>
+			<Place>SOUTH</Place>
+			<TextColor>-16777216</TextColor>
+			<Size>80</Size>
+		</Legend>
+		<Labels>
+			<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+			<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+			<TextColor>-12566464</TextColor>
+		</Labels>
+		<ShowLegend>true</ShowLegend>
+		<TimeWindowsMovementType>MOVEMENT_WITH_DATA</TimeWindowsMovementType>
+		<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
+		<VerScaleFromExpression>0</VerScaleFromExpression>
+		<VerScaleToExpression>1</VerScaleToExpression>
+		<VerScaleType>AUTO</VerScaleType>
+		<DrawLine>true</DrawLine>
+		<Interpolation>LINEAR</Interpolation>
+		<DatasetExpression>
+			<Title>Monday</Title>
+			<Id>1776167850451</Id>
+			<Expression>customerWaitAvgByDay[1]</Expression>
+			<Color>-29696</Color>
+			<Expression2>0</Expression2>
+			<Expression2Flag>false</Expression2Flag>
+			<PointStyle>NONE</PointStyle>
+			<LineWidth>1.0</LineWidth>
+		</DatasetExpression>
+		<DatasetExpression>
+			<Title>Tuesday</Title>
+			<Id>1776167850452</Id>
+			<Expression>customerWaitAvgByDay[2]</Expression>
+			<Color>-12799119</Color>
+			<Expression2>customerWaitAvgByDay[2]</Expression2>
+			<Expression2Flag>false</Expression2Flag>
+			<PointStyle>NONE</PointStyle>
+			<LineWidth>1.0</LineWidth>
+		</DatasetExpression>
+		<DatasetExpression>
+			<Title>Wednesday</Title>
+			<Id>1776167850453</Id>
+			<Expression>customerWaitAvgByDay[3]</Expression>
+			<Color>-9807155</Color>
+			<Expression2>customerWaitAvgByDay[3]</Expression2>
+			<Expression2Flag>false</Expression2Flag>
+			<PointStyle>NONE</PointStyle>
+			<LineWidth>1.0</LineWidth>
+		</DatasetExpression>
+		<DatasetExpression>
+			<Title>Thursday</Title>
+			<Id>1776167850454</Id>
+			<Expression>customerWaitAvgByDay[4]</Expression>
+			<Color>-2987746</Color>
+			<Expression2>customerWaitAvgByDay[4]</Expression2>
+			<Expression2Flag>false</Expression2Flag>
+			<PointStyle>NONE</PointStyle>
+			<LineWidth>1.0</LineWidth>
+		</DatasetExpression>
+		<DatasetExpression>
+			<Title>Friday</Title>
+			<Id>1776167850455</Id>
+			<Expression>customerWaitAvgByDay[5]</Expression>
+			<Color>-2448096</Color>
+			<Expression2>customerWaitAvgByDay[5]</Expression2>
+			<Expression2Flag>false</Expression2Flag>
+			<PointStyle>NONE</PointStyle>
+			<LineWidth>1.0</LineWidth>
+		</DatasetExpression>
+		<DatasetExpression>
+			<Title>Saturday</Title>
+			<Id>1776167850456</Id>
+			<Expression>customerWaitAvgByDay[6]</Expression>
+			<Color>-9728477</Color>
+			<Expression2>customerWaitAvgByDay[6]</Expression2>
+			<Expression2Flag>false</Expression2Flag>
+			<PointStyle>NONE</PointStyle>
+			<LineWidth>1.0</LineWidth>
+		</DatasetExpression>
+		<DatasetExpression>
+			<Title>Sunday</Title>
+			<Id>1776167850457</Id>
+			<Expression>customerWaitAvgByDay[0]</Expression>
+			<Color>-16728065</Color>
+			<Expression2>customerWaitAvgByDay[0]</Expression2>
+			<Expression2Flag>false</Expression2Flag>
+			<PointStyle>NONE</PointStyle>
+			<LineWidth>1.0</LineWidth>
+		</DatasetExpression>
+		<SamplesToKeep>100</SamplesToKeep>
+		<TimeWindowExpression>100</TimeWindowExpression>
+		<FillAreaUnderLine>false</FillAreaUnderLine>
+		<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
+	</TimePlot>
 </Presentation>

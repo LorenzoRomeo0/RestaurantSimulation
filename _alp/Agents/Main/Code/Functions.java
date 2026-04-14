@@ -101,52 +101,6 @@ if (d >= 0 && d < 7 && h >= 0 && h < 24 && waitMin >= 0) {
 }
 /*ALCODEEND*/}
 
-double compute_overtime()
-{/*ALCODESTART::1775043872750*/
-List<TimeEvent.EventType> overtimeTypes = java.util.Arrays.asList(
-    TimeEvent.EventType.WAITER_SHIFT,
-    TimeEvent.EventType.COOK_SHIFT
-);
-
-List<Integer> daysOfWeek = java.util.Arrays.asList(
-    MONDAY,
-    TUESDAY,
-    WEDNESDAY,
-    THURSDAY,
-    FRIDAY,
-    SATURDAY,
-    SUNDAY
-);
-
-for (int day : daysOfWeek) {
-
-    traceln("------ " + day_to_string(day) + " ------");
-
-    for (TimeEvent.EventType eventType : overtimeTypes) {
-
-        List<TimeEvent> events = timeEvents.filterByTypeDayAndEndHour(
-            eventType,
-            day,
-            23
-        );
-
-        long count = events.size();
-
-        double avgHours = events.stream()
-            .mapToDouble(TimeEvent::getDurationHours)
-            .filter(x -> x >= 0)
-            .average()
-            .orElse(0);
-
-        traceln(
-            eventType
-            + " | count = " + count
-            + " | avg overtime hours = " + avgHours
-        );
-    }
-}
-/*ALCODEEND*/}
-
 String day_to_string(int day)
 {/*ALCODESTART::1775044645264*/
 switch (day) {
@@ -209,10 +163,11 @@ double timeEventsDebugTextUpdater()
 
 	
 timeEventsCustomerStayDebugText.setText(
+	"CUSTOMER EVENTS: "+
 	"counts =  \n "+
 	timeEvents.prettyPrintLong(
 		timeEvents.groupByDayAndFilterByEndHourAndEventTypeCount(
-			23, TimeEvent.EventType.CUSTOMER_STAY
+			closingTime, TimeEvent.EventType.CUSTOMER_STAY
 		)
 	)
 	+"\n" +
@@ -220,14 +175,14 @@ timeEventsCustomerStayDebugText.setText(
 	"avgs = \n "+
 	timeEvents.prettyPrintDouble(
 		timeEvents.groupByDayAndFilterByEndHourAndEventTypeAvgDuration(
-			23, TimeEvent.EventType.CUSTOMER_STAY
+			closingTime, TimeEvent.EventType.CUSTOMER_STAY
 		)
 	)
 	+"\n" +
 	"avg delays \n"+
 	timeEvents.prettyPrintDouble(
 		timeEvents.groupByDayAndFilterDelaysAfterEndHourByEventTypeAvgMinutes(
-			23, TimeEvent.EventType.CUSTOMER_STAY
+			closingTime, TimeEvent.EventType.CUSTOMER_STAY
 		)
 		
 	)
@@ -235,7 +190,40 @@ timeEventsCustomerStayDebugText.setText(
 	+ "\ngroups = { \n" +
 	timeEvents.prettyPrint(
 		timeEvents.groupByDayAndFilterByEndHourAndEventType(
-			23, TimeEvent.EventType.CUSTOMER_STAY
+			closingTime, TimeEvent.EventType.CUSTOMER_STAY
+		)
+	)
+);
+
+timeEventsWaitersDebugText.setText(
+	"WAITER EVENTS: "+
+	"counts =  \n "+
+	timeEvents.prettyPrintLong(
+		timeEvents.groupByDayAndFilterByEndHourAndEventTypeCount(
+			closingTime, TimeEvent.EventType.WAITER_SHIFT
+		)
+	)
+	+"\n" +
+	
+	"avgs shift length = \n "+
+	timeEvents.prettyPrintDouble(
+		timeEvents.groupByDayAndFilterByEndHourAndEventTypeAvgDuration(
+			closingTime, TimeEvent.EventType.WAITER_SHIFT
+		)
+	)
+	+"\n" +
+	"avg overtimes \n"+
+	timeEvents.prettyPrintDouble(
+		timeEvents.groupByDayAndFilterDelaysAfterEndHourByEventTypeAvgMinutes(
+			closingTime, TimeEvent.EventType.WAITER_SHIFT
+		)
+		
+	)
+	
+	+ "\ndays = { \n" +
+	timeEvents.prettyPrint(
+		timeEvents.groupByDayAndFilterByEndHourAndEventType(
+			closingTime, TimeEvent.EventType.WAITER_SHIFT
 		)
 	)
 );

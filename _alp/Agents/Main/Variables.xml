@@ -3,8 +3,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1774958349376</Id>
 		<Name><![CDATA[customer_wait_sum]]></Name>
-		<X>-300</X>
-		<Y>350</Y>
+		<X>-240</X>
+		<Y>300</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -25,8 +25,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1774958391337</Id>
 		<Name><![CDATA[customer_wait_count]]></Name>
-		<X>-300</X>
-		<Y>380</Y>
+		<X>-240</X>
+		<Y>330</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -47,8 +47,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1774982079371</Id>
 		<Name><![CDATA[customerWaitAvgByDay]]></Name>
-		<X>-290</X>
-		<Y>510</Y>
+		<X>-240</X>
+		<Y>370</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -77,8 +77,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1774982640481</Id>
 		<Name><![CDATA[timeEvents]]></Name>
-		<X>-530</X>
-		<Y>320</Y>
+		<X>-240</X>
+		<Y>60</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -99,8 +99,8 @@
 	<Variable Class="Parameter">
 		<Id>1756761690210</Id>
 		<Name><![CDATA[customersAtEntrance]]></Name>
-		<X>20</X>
-		<Y>30</Y>
+		<X>580</X>
+		<Y>-390</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -124,8 +124,8 @@
 	<Variable Class="Parameter">
 		<Id>1758114484886</Id>
 		<Name><![CDATA[outsideTablesNr]]></Name>
-		<X>20</X>
-		<Y>130</Y>
+		<X>580</X>
+		<Y>-290</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -152,8 +152,8 @@
 	<Variable Class="Parameter">
 		<Id>1758114499700</Id>
 		<Name><![CDATA[insideTablesNr]]></Name>
-		<X>20</X>
-		<Y>100</Y>
+		<X>580</X>
+		<Y>-320</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -180,8 +180,8 @@
 	<Variable Class="Parameter">
 		<Id>1758283027966</Id>
 		<Name><![CDATA[barTablesNr]]></Name>
-		<X>20</X>
-		<Y>160</Y>
+		<X>580</X>
+		<Y>-260</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -208,8 +208,8 @@
 	<Variable Class="Parameter">
 		<Id>1775058175567</Id>
 		<Name><![CDATA[customersInRestaurantNr]]></Name>
-		<X>20</X>
-		<Y>60</Y>
+		<X>580</X>
+		<Y>-370</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -236,8 +236,8 @@
 	<Variable Class="Parameter">
 		<Id>1775058764621</Id>
 		<Name><![CDATA[closingTime]]></Name>
-		<X>-130</X>
-		<Y>40</Y>
+		<X>580</X>
+		<Y>-200</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -264,8 +264,8 @@
 	<Variable Class="Parameter">
 		<Id>1775063315096</Id>
 		<Name><![CDATA[openingTime]]></Name>
-		<X>-130</X>
-		<Y>70</Y>
+		<X>580</X>
+		<Y>-220</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>

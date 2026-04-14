@@ -1,7 +1,11 @@
 # Features --
 
-Calcolare il numero di persone che vanno via dopo le 23 di sera
-    ed il tempo di servizio dell'ultimo dipendente
+Calcolare il numero di persone che vanno via dopo le 23 di sera (OK)
+    fare per stay (OK)
+    fare per wait
+    ed il tempo di servizio dell'ultimo dipendente (calcolo overtime)
+        waiters (OK)
+
     Quanti dipendenti rimangono dopo l'orario di chiusura per far finire gli ultimi clienti? (uno o due? è un parametro da ottimizzare e su cui fare esperimenti)
 
 Calcolare quanto tempo in media le persone stanno nel ristorante
