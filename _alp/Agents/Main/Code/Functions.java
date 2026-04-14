@@ -158,10 +158,6 @@ txtWaitersDebug.setText(sb.toString());
 
 double timeEventsDebugTextUpdater()
 {/*ALCODESTART::1776067186397*/
-//timeEventsDebugText.setText(timeEvents.toStringFullText());
-//timeEventsCustomerStayDebugText.setText(timeEvents.toStringByTypeAfter23(TimeEvent.EventType.CUSTOMER_STAY));
-
-	
 timeEventsCustomerStayDebugText.setText(
 	"CUSTOMER EVENTS: "+
 	"counts =  \n "+
@@ -227,6 +223,67 @@ timeEventsWaitersDebugText.setText(
 		)
 	)
 );
+
+timeEventsCooksDebugText.setText(
+	"WAITER EVENTS: "+
+	"counts =  \n "+
+	timeEvents.prettyPrintLong(
+		timeEvents.groupByDayAndFilterByEndHourAndEventTypeCount(
+			closingTime, TimeEvent.EventType.COOK_SHIFT
+		)
+	)
+	+"\n" +
+	
+	"avgs shift length = \n "+
+	timeEvents.prettyPrintDouble(
+		timeEvents.groupByDayAndFilterByEndHourAndEventTypeAvgDuration(
+			closingTime, TimeEvent.EventType.COOK_SHIFT
+		)
+	)
+	+"\n" +
+	"avg overtimes \n"+
+	timeEvents.prettyPrintDouble(
+		timeEvents.groupByDayAndFilterDelaysAfterEndHourByEventTypeAvgMinutes(
+			closingTime, TimeEvent.EventType.COOK_SHIFT
+		)
+		
+	)
+	
+	+ "\ndays = { \n" +
+	timeEvents.prettyPrint(
+		timeEvents.groupByDayAndFilterByEndHourAndEventType(
+			closingTime, TimeEvent.EventType.COOK_SHIFT
+		)
+	)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
