@@ -3868,9 +3868,16 @@ customersInRestaurantNr--;]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[customizeRequestChoice]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[true]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[requestChoiceCondition]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[unit.inState(unit.waiting)
+&& !unit.isOffShift]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[addToCustomPopulation]]></Name>
@@ -3883,6 +3890,9 @@ customersInRestaurantNr--;]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onNewUnit]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[unit.requestShiftStart();]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onDestroyUnit]]></Name>
@@ -3898,6 +3908,13 @@ customersInRestaurantNr--;]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onUnitStateChange]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[if (type == ResourceTaskType.TASK_END_OF_SHIFT && !unit.isOffShift) {
+    unit.requestShiftEnd();
+}else if (type != ResourceTaskType.TASK_END_OF_SHIFT && unit.isOffShift) {
+    unit.requestShiftStart();
+}]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onMaintenanceStart]]></Name>

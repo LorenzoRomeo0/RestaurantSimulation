@@ -273,3 +273,9 @@ if (d >= 0 && d < 7 && h >= 0 && h < 24 && waitMin >= 0) {
 */
 /*ALCODEEND*/}
 
+double register_cook_shift(Date start,Date end)
+{/*ALCODESTART::1776172006330*/
+TimeEvent ev = new TimeEvent(start, end, TimeEvent.EventType.COOK_SHIFT);
+timeEvents.add(ev);
+/*ALCODEEND*/}
+
