@@ -85,7 +85,7 @@
 					<AutoImport>false</AutoImport>
 				</TableImportSettings>
 				<TableImportSettings>
-					<Id>1770643758838</Id>
+					<Id>1776329694711</Id>
 					<TableReference>
 						<PackageName>restaurant_2025</PackageName>
 						<ClassName>tables_selection</ClassName>
@@ -112,6 +112,16 @@
 					</TableReference>
 					<ConnectionIndex>0</ConnectionIndex>
 					<ExternalTableName>"employees_schedule"</ExternalTableName>
+					<AutoImport>false</AutoImport>
+				</TableImportSettings>
+				<TableImportSettings>
+					<Id>1776417617741</Id>
+					<TableReference>
+						<PackageName>restaurant_2025</PackageName>
+						<ClassName>menu_items</ClassName>
+					</TableReference>
+					<ConnectionIndex>0</ConnectionIndex>
+					<ExternalTableName>"menu_items"</ExternalTableName>
 					<AutoImport>false</AutoImport>
 				</TableImportSettings>
 			</ImportSettings>
@@ -168,6 +178,10 @@
 			<JavaClass>
 				<Id>1774955433678</Id>
 				<Name><![CDATA[TimeEvents]]></Name>
+			</JavaClass>
+			<JavaClass>
+				<Id>1776435843339</Id>
+				<Name><![CDATA[MenuItem]]></Name>
 			</JavaClass>
 		</JavaClasses>
 		<RequiredLibraryReference>

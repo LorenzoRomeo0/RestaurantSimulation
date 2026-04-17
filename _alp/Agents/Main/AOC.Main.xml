@@ -102,8 +102,8 @@
 		<Schedule>
 			<Id>1770220504060</Id>
 			<Name><![CDATA[arrivals_schedule]]></Name>
-			<X>360</X>
-			<Y>-300</Y>
+			<X>610</X>
+			<Y>-580</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -154,8 +154,8 @@
 		<Schedule>
 			<Id>1770633020320</Id>
 			<Name><![CDATA[groupsize_schedule]]></Name>
-			<X>360</X>
-			<Y>-270</Y>
+			<X>610</X>
+			<Y>-550</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -207,7 +207,7 @@
 			<Id>1770643795202</Id>
 			<Name><![CDATA[inside_schedule]]></Name>
 			<X>360</X>
-			<Y>-390</Y>
+			<Y>-550</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -258,7 +258,7 @@
 			<Id>1770643826624</Id>
 			<Name><![CDATA[outside_schedule]]></Name>
 			<X>360</X>
-			<Y>-360</Y>
+			<Y>-520</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -309,7 +309,7 @@
 			<Id>1770643835144</Id>
 			<Name><![CDATA[bar_schedule]]></Name>
 			<X>360</X>
-			<Y>-330</Y>
+			<Y>-490</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -359,8 +359,8 @@
 		<Schedule>
 			<Id>1771950500906</Id>
 			<Name><![CDATA[eating_time_schedule]]></Name>
-			<X>360</X>
-			<Y>-240</Y>
+			<X>610</X>
+			<Y>-520</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -410,8 +410,8 @@
 		<Schedule>
 			<Id>1772014207717</Id>
 			<Name><![CDATA[waiters_schedule]]></Name>
-			<X>360</X>
-			<Y>-210</Y>
+			<X>610</X>
+			<Y>-640</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -462,8 +462,8 @@
 		<Schedule>
 			<Id>1772014350792</Id>
 			<Name><![CDATA[cooks_schedule]]></Name>
-			<X>360</X>
-			<Y>-180</Y>
+			<X>610</X>
+			<Y>-610</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -506,6 +506,159 @@
 					<PackageName>restaurant_2025</PackageName>
 					<ClassName>employees_schedule</ClassName>
 					<ItemName>cooks</ItemName>
+				</ValueColumnReference>
+			</IntervalsQuery>
+			<Intervals/>
+			<Exceptions/>
+		</Schedule>
+		<Schedule>
+			<Id>1776332307617</Id>
+			<Name><![CDATA[bar_prio_schedule]]></Name>
+			<X>360</X>
+			<Y>-640</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<ValueType>integer</ValueType>
+			<UnitType>NONE</UnitType>
+			<DefaultValue>0</DefaultValue>
+			<RepresentationMode>intervals</RepresentationMode>
+			<RepresentationType>calendar</RepresentationType>
+			<FirstDayOfWeek>sunday</FirstDayOfWeek>
+			<TimeUnitsInterval>hours</TimeUnitsInterval>
+			<RepeatTime>86400000</RepeatTime>
+			<RepeatTimeInterval>days</RepeatTimeInterval>
+			<IsSnapTo>false</IsSnapTo>
+			<SnapTo>1770643806221</SnapTo>
+			<SnapToTimeUnits>minutes</SnapToTimeUnits>
+			<AllDayExceptionMode>false</AllDayExceptionMode>
+			<LoadFromDatabase>true</LoadFromDatabase>
+			<IntervalsQuery>
+				<Id>1776332307615</Id>
+				<TableReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>tables_selection</ClassName>
+				</TableReference>
+				<StartColumnReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>tables_selection</ClassName>
+					<ItemName>start_timestamp</ItemName>
+				</StartColumnReference>
+				<EndColumnReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>tables_selection</ClassName>
+					<ItemName>end_timestamp</ItemName>
+				</EndColumnReference>
+				<ValueColumnReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>tables_selection</ClassName>
+					<ItemName>bar_prio</ItemName>
+				</ValueColumnReference>
+			</IntervalsQuery>
+			<Intervals/>
+			<Exceptions/>
+		</Schedule>
+		<Schedule>
+			<Id>1776332404624</Id>
+			<Name><![CDATA[inside_prio_schedule]]></Name>
+			<X>360</X>
+			<Y>-610</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<ValueType>integer</ValueType>
+			<UnitType>NONE</UnitType>
+			<DefaultValue>0</DefaultValue>
+			<RepresentationMode>intervals</RepresentationMode>
+			<RepresentationType>calendar</RepresentationType>
+			<FirstDayOfWeek>sunday</FirstDayOfWeek>
+			<TimeUnitsInterval>hours</TimeUnitsInterval>
+			<RepeatTime>86400000</RepeatTime>
+			<RepeatTimeInterval>days</RepeatTimeInterval>
+			<IsSnapTo>false</IsSnapTo>
+			<SnapTo>1770643806221</SnapTo>
+			<SnapToTimeUnits>minutes</SnapToTimeUnits>
+			<AllDayExceptionMode>false</AllDayExceptionMode>
+			<LoadFromDatabase>true</LoadFromDatabase>
+			<IntervalsQuery>
+				<Id>1776332404622</Id>
+				<TableReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>tables_selection</ClassName>
+				</TableReference>
+				<StartColumnReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>tables_selection</ClassName>
+					<ItemName>start_timestamp</ItemName>
+				</StartColumnReference>
+				<EndColumnReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>tables_selection</ClassName>
+					<ItemName>end_timestamp</ItemName>
+				</EndColumnReference>
+				<ValueColumnReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>tables_selection</ClassName>
+					<ItemName>inside_prio</ItemName>
+				</ValueColumnReference>
+			</IntervalsQuery>
+			<Intervals/>
+			<Exceptions/>
+		</Schedule>
+		<Schedule>
+			<Id>1776332408087</Id>
+			<Name><![CDATA[outside_prio_schedule]]></Name>
+			<X>360</X>
+			<Y>-580</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<ValueType>integer</ValueType>
+			<UnitType>NONE</UnitType>
+			<DefaultValue>0</DefaultValue>
+			<RepresentationMode>intervals</RepresentationMode>
+			<RepresentationType>calendar</RepresentationType>
+			<FirstDayOfWeek>sunday</FirstDayOfWeek>
+			<TimeUnitsInterval>hours</TimeUnitsInterval>
+			<RepeatTime>86400000</RepeatTime>
+			<RepeatTimeInterval>days</RepeatTimeInterval>
+			<IsSnapTo>false</IsSnapTo>
+			<SnapTo>1770643806221</SnapTo>
+			<SnapToTimeUnits>minutes</SnapToTimeUnits>
+			<AllDayExceptionMode>false</AllDayExceptionMode>
+			<LoadFromDatabase>true</LoadFromDatabase>
+			<IntervalsQuery>
+				<Id>1776332408085</Id>
+				<TableReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>tables_selection</ClassName>
+				</TableReference>
+				<StartColumnReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>tables_selection</ClassName>
+					<ItemName>start_timestamp</ItemName>
+				</StartColumnReference>
+				<EndColumnReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>tables_selection</ClassName>
+					<ItemName>end_timestamp</ItemName>
+				</EndColumnReference>
+				<ValueColumnReference>
+					<PackageName>restaurant_2025</PackageName>
+					<ClassName>tables_selection</ClassName>
+					<ItemName>outside_prio</ItemName>
 				</ValueColumnReference>
 			</IntervalsQuery>
 			<Intervals/>

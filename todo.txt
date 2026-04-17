@@ -3,9 +3,9 @@
 Calcolare il numero di persone che vanno via dopo le 23 di sera (OK)
     fare per stay (OK)
     fare per wait
-    ed il tempo di servizio dell'ultimo dipendente (calcolo overtime)
+    ed il tempo di servizio dell'ultimo dipendente (calcolo overtime) (da controllare)
         waiters (OK)
-        cooks
+        cooks (OK)
 
     Quanti dipendenti rimangono dopo l'orario di chiusura per far finire gli ultimi clienti? (uno o due? è un parametro da ottimizzare e su cui fare esperimenti)
 
@@ -24,7 +24,18 @@ rendere menu_reading proporzionale alla dimensione del gruppo (non di molto perc
 (OK) creare schedule per i cooks e camerieri (pochi a colazione, tanti a cena. usare distribuzione)
 Calcolare il numero di camerieri per tenere conto delle possibili assenze (malattia ecc)
 
+Modellare menù
+    con popolarità per cibo 
+    con menù diversi per diversi momenti della giornata (colazione, pranzo, break, cena)
+    complessità di preparazione per alimento e costo
+    (come modelliamo quanto tempo le persone ci mettono ad ordinare? come modellare la scelta di un primo, un secondo?)
+    aggiungere la possibilità di menù fissi a pranzo (menù lavoratori)
+        ma anche a colazione (combo brioche succo e caffè)
+    copula per elementi che spesso vengono presi insieme? (tipo cotoletta e contorno)
+
+
 # Improvements --
+Modellare l'impazienza dei clienti che aspettano fuori
 Migliorare l'eating time model
 Migliorare il calcolo del tempo pesato al numero di persone quando si paga alla cassa.
 

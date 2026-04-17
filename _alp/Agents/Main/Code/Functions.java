@@ -35,25 +35,38 @@ System.out.println("Available tables: " + n);
 
 //usare resourcepool?
 
-for(Table t : insideTablesPool){
-	if(t.isFree && t.size >= customerGroup.size){
-		t.isFree = false;
-		return t;
-	}
-}
+int insidePrio = inside_prio_schedule.getValue();
+int outsidePrio = outside_prio_schedule.getValue();
+int barPrio = bar_prio_schedule.getValue();
 
-for(Table t : outsideTablesPool){
-	if(t.isFree && t.size >= customerGroup.size){
-		t.isFree = false;
-		return t;
-	}
-}
+for (int prio = 1; prio <= 3; prio++) {
 
-for(Table t : barTablesPool){
-	if(t.isFree && t.size >= customerGroup.size){
-		t.isFree = false;
-		return t;
-	}
+    if (insidePrio == prio) {
+        for (Table t : insideTablesPool) {
+            if (t.isFree && t.size >= customerGroup.size) {
+                t.isFree = false;
+                return t;
+            }
+        }
+    }
+
+    if (outsidePrio == prio) {
+        for (Table t : outsideTablesPool) {
+            if (t.isFree && t.size >= customerGroup.size) {
+                t.isFree = false;
+                return t;
+            }
+        }
+    }
+
+    if (barPrio == prio) {
+        for (Table t : barTablesPool) {
+            if (t.isFree && t.size >= customerGroup.size) {
+                t.isFree = false;
+                return t;
+            }
+        }
+    }
 }
 
 return null;

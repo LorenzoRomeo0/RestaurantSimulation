@@ -758,6 +758,9 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[destroyExcessUnits]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[true]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[newUnit]]></Name>
@@ -2871,6 +2874,9 @@ send(msg, unit);
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[destroyExcessUnits]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[true]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[newUnit]]></Name>
@@ -3182,6 +3188,9 @@ send(msg, unit);
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[destroyExcessUnits]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[true]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[newUnit]]></Name>
