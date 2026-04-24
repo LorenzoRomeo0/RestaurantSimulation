@@ -93,9 +93,11 @@ return baseMeanTime * multiplier;
 
 /*ALCODEEND*/}
 
-double init_statistics()
+double init()
 {/*ALCODESTART::1774982011623*/
+menuItems = new MenuItems(this);
 
+traceln("INIT-------------");
 /*ALCODEEND*/}
 
 double register_customer_wait(Date start,Date end)
@@ -347,5 +349,17 @@ double register_cook_shift(Date start,Date end)
 {/*ALCODESTART::1776172006330*/
 TimeEvent ev = new TimeEvent(start, end, TimeEvent.EventType.COOK_SHIFT);
 timeEvents.add(ev);
+/*ALCODEEND*/}
+
+double menuItemsDebugTextUpdater()
+{/*ALCODESTART::1776499860026*/
+DayPartUtil.DayPart currentDayPart = DayPartUtil.getCurrentDayPart(this);
+
+MenuItems items = new MenuItems(this);
+ArrayList<MenuItem> currentItems = items.getItemsByDayPart(
+    DayPartUtil.getCurrentDayPart(this)
+);
+
+currentMenuItemsDebugText.setText(MenuItems.prettyPrintMenuItems(currentItems));
 /*ALCODEEND*/}
 

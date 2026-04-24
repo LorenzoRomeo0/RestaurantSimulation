@@ -3,13 +3,6 @@
  */
 public class MenuItem {
 
-    public enum DayPart {
-        BREAKFAST,
-        BREAK,
-        LUNCH,
-        DINNER
-    }
-
     public enum FoodCategory {
         DRINK,
         MAIN,
@@ -26,7 +19,7 @@ public class MenuItem {
     }
 
     String name;
-    DayPart dayPart;
+    DayPartUtil.DayPart dayPart;
     FoodCategory foodCategory;
     int course;
     double popularityWeight;
@@ -46,20 +39,19 @@ public class MenuItem {
 
     @Override
     public String toString() {
-        return "MenuItem{" +
-                "name='" + name + '\'' +
+        return "MenuItem[" +
+                "name=" + name +
                 ", dayPart=" + dayPart +
-                ", foodCategory=" + foodCategory +
+                ", category=" + foodCategory +
                 ", course=" + course +
-                ", popularityWeight=" + popularityWeight +
                 ", price=" + price +
-                ", prepTimeMeanMin=" + prepTimeMeanMin +
-                ", prepTimeSdMin=" + prepTimeSdMin +
+                ", popularityWeight=" + popularityWeight +
+                ", prepMeanMin=" + prepTimeMeanMin +
+                ", prepSdMin=" + prepTimeSdMin +
                 ", complexity=" + complexity +
-                ", kitchenStation=" + kitchenStation +
-                ", serviceTimeMeanMin=" + serviceTimeMeanMin +
-                ", eatingTimeMeanMin=" + eatingTimeMeanMin +
-                '}';
+                ", station=" + kitchenStation +
+                ", serviceMin=" + serviceTimeMeanMin +
+                ", eatingMin=" + eatingTimeMeanMin +
+                "]";
     }
-
 }

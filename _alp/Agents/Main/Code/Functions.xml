@@ -60,7 +60,7 @@
 		<ReturnModificator>VOID</ReturnModificator>
 		<ReturnType>double</ReturnType>
 		<Id>1774982011623</Id>
-		<Name><![CDATA[init_statistics]]></Name>
+		<Name><![CDATA[init]]></Name>
 		<X>-240</X>
 		<Y>440</Y>
 		<Label>
@@ -70,6 +70,7 @@
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
 		<ShowLabel>true</ShowLabel>
+		<Body xmlns:al="http://anylogic.com"/>
 	</Function>
 	<Function AccessType="default" StaticFunction="false">
 		<ReturnModificator>VOID</ReturnModificator>
@@ -217,6 +218,22 @@
 			<Name><![CDATA[end]]></Name>
 			<Type><![CDATA[Date]]></Type>
 		</Parameter>
+		<Body xmlns:al="http://anylogic.com"/>
+	</Function>
+	<Function AccessType="default" StaticFunction="false">
+		<ReturnModificator>VOID</ReturnModificator>
+		<ReturnType>double</ReturnType>
+		<Id>1776499860026</Id>
+		<Name><![CDATA[menuItemsDebugTextUpdater]]></Name>
+		<X>-600</X>
+		<Y>50</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
 		<Body xmlns:al="http://anylogic.com"/>
 	</Function>
 </Functions>

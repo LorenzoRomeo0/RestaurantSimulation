@@ -3,7 +3,7 @@
  */	
 public class GoBringFood {
 
-	 Order order;
+	 OrderNew order;
 
     /**
      * Default constructor
@@ -14,7 +14,7 @@ public class GoBringFood {
     /**
      * Constructor initializing the fields
      */
-    public GoBringFood(Order order) {
+    public GoBringFood(OrderNew order) {
 		this.order = order;
     }
 

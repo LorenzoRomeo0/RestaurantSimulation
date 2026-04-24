@@ -96,6 +96,28 @@
 			</InitialValue>
 		</Properties>
 	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1776444741169</Id>
+		<Name><![CDATA[menuItems]]></Name>
+		<X>40</X>
+		<Y>30</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[MenuItems]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[new MenuItems(this);]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
 	<Variable Class="Parameter">
 		<Id>1756761690210</Id>
 		<Name><![CDATA[customersAtEntrance]]></Name>

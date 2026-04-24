@@ -3332,8 +3332,8 @@ al numero di persone]]></Text>
 	<TimePlot>
 		<Id>1774864175722</Id>
 		<Name><![CDATA[plot]]></Name>
-		<X>1350</X>
-		<Y>210</Y>
+		<X>1720</X>
+		<Y>-720</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3406,8 +3406,8 @@ al numero di persone]]></Text>
 	<Histogram>
 		<Id>1774868842760</Id>
 		<Name><![CDATA[chart]]></Name>
-		<X>1350</X>
-		<Y>0</Y>
+		<X>1720</X>
+		<Y>-930</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3528,8 +3528,8 @@ al numero di persone]]></Text>
 	<Text>
 		<Id>1776067162644</Id>
 		<Name><![CDATA[timeEventsWaitersDebugText]]></Name>
-		<X>-1620</X>
-		<Y>640</Y>
+		<X>-1820</X>
+		<Y>20</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3545,7 +3545,7 @@ al numero di persone]]></Text>
 		<Text><![CDATA[timeEventsWaitersDebugText]]></Text>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
-			<Size>10</Size>
+			<Size>8</Size>
 			<Style>0</Style>
 		</Font>
 		<Alignment>LEFT</Alignment>
@@ -3553,8 +3553,8 @@ al numero di persone]]></Text>
 	<Text>
 		<Id>1776068073743</Id>
 		<Name><![CDATA[timeEventsCustomerStayDebugText]]></Name>
-		<X>-950</X>
-		<Y>640</Y>
+		<X>-2520</X>
+		<Y>20</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3570,7 +3570,7 @@ al numero di persone]]></Text>
 		<Text><![CDATA[timeEventsCustomerStayDebugText]]></Text>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
-			<Size>10</Size>
+			<Size>8</Size>
 			<Style>0</Style>
 		</Font>
 		<Alignment>LEFT</Alignment>
@@ -3628,8 +3628,8 @@ al numero di persone]]></Text>
 	<TimePlot>
 		<Id>1776167850460</Id>
 		<Name><![CDATA[plot1]]></Name>
-		<X>1360</X>
-		<Y>440</Y>
+		<X>1730</X>
+		<Y>-490</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3762,8 +3762,8 @@ al numero di persone]]></Text>
 	<Text>
 		<Id>1776172133993</Id>
 		<Name><![CDATA[timeEventsCooksDebugText]]></Name>
-		<X>-1170</X>
-		<Y>40</Y>
+		<X>-1160</X>
+		<Y>20</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3779,7 +3779,32 @@ al numero di persone]]></Text>
 		<Text><![CDATA[timeEventsCooksDebugText]]></Text>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
-			<Size>10</Size>
+			<Size>8</Size>
+			<Style>0</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1776500266077</Id>
+		<Name><![CDATA[currentMenuItemsDebugText]]></Name>
+		<X>1220</X>
+		<Y>20</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[currentMenuItemsDebugText]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>6</Size>
 			<Style>0</Style>
 		</Font>
 		<Alignment>LEFT</Alignment>

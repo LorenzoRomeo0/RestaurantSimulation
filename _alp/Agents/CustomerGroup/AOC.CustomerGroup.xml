@@ -285,7 +285,7 @@ main.ordering_wait.free(this);</EntryAction>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="150" Height="30">
 				<EntryAction>//traceln("---&gt;" + getId() + "is being served by " + currentWaiter.getId());
-
+/*
 Order order = main.add_orders();
 order.customerGroup = this;
 order.complexity = (short) normal(1, 5, 3, 1);
@@ -295,8 +295,11 @@ order.coffees = (short) binomial(0.5, size);  //TODO: migliorare
 //traceln("-----&gt; " +getId()+ "sent this order: "+ order);
 send(order, currentWaiter);
 
+*/
 
+OrderNew order = makeOrder();
 
+send(order, currentWaiter);
 
 
 
@@ -895,6 +898,7 @@ currentWaiter = (Waiter) msg;</Action>
 			</Properties>
 		</StatechartElement>
 	</StatechartElements>
+	<Functions xmlns:al="http://anylogic.com"/>
 	<AgentLinks>
 		<AgentLink>
 			<Id>1756480025051</Id>

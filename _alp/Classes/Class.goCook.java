@@ -3,7 +3,7 @@
  */	
 public class goCook {
 
-	 Order order = null;
+	 OrderNew order = null;
 
     /**
      * Default constructor
@@ -14,7 +14,7 @@ public class goCook {
     /**
      * Constructor initializing the fields
      */
-    public goCook(Order order) {
+    public goCook(OrderNew order) {
 		this.order = order;
     }
 

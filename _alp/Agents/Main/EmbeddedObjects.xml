@@ -1806,9 +1806,6 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 				<Name><![CDATA[currentCustomers]]></Name>
 			</Parameter>
 			<Parameter>
-				<Name><![CDATA[currentOrder]]></Name>
-			</Parameter>
-			<Parameter>
 				<Name><![CDATA[targetNode]]></Name>
 			</Parameter>
 			<Parameter>
@@ -4101,7 +4098,7 @@ customersInRestaurantNr--;]]></Code>
 				<ItemName>1412336243147</ItemName>
 			</GenericParameterSubstituteReference>
 			<GenericParameterSubstituteValue Class="CodeValue">
-				<Code><![CDATA[Order]]></Code>
+				<Code><![CDATA[OrderNew]]></Code>
 			</GenericParameterSubstituteValue>
 		</GenericParameterSubstitute>
 		<Parameters>
@@ -4315,7 +4312,7 @@ send(new goCook(agent), unit);]]></Code>
 				<ItemName>1412336243169</ItemName>
 			</GenericParameterSubstituteReference>
 			<GenericParameterSubstituteValue Class="CodeValue">
-				<Code><![CDATA[Order]]></Code>
+				<Code><![CDATA[OrderNew]]></Code>
 			</GenericParameterSubstituteValue>
 		</GenericParameterSubstitute>
 		<Parameters>
@@ -4753,7 +4750,7 @@ send(new goCook(agent), unit);]]></Code>
 			<Parameter>
 				<Name><![CDATA[onSeizeUnit]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[send(new GoBringFood((Order)agent), unit);]]></Code>
+					<Code><![CDATA[send(new GoBringFood((OrderNew)agent), unit);]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -4827,7 +4824,7 @@ send(new goCook(agent), unit);]]></Code>
 				<ItemName>1412336242933</ItemName>
 			</GenericParameterSubstituteReference>
 			<GenericParameterSubstituteValue Class="CodeValue">
-				<Code><![CDATA[Order]]></Code>
+				<Code><![CDATA[OrderNew]]></Code>
 			</GenericParameterSubstituteValue>
 		</GenericParameterSubstitute>
 		<Parameters>
@@ -5146,11 +5143,7 @@ send(new goCook(agent), unit);]]></Code>
 				<ItemName>1756480196657</ItemName>
 			</GenericParameterSubstituteReference>
 		</GenericParameterSubstitute>
-		<Parameters>
-			<Parameter>
-				<Name><![CDATA[currentOrder]]></Name>
-			</Parameter>
-		</Parameters>
+		<Parameters/>
 		<ReplicationFlag>true</ReplicationFlag>
 		<Replication Class="CodeValue">
 			<Code><![CDATA[100]]></Code>
@@ -5895,6 +5888,61 @@ send(new goCook(agent), unit);]]></Code>
 		<InitializationType>SPECIFIED_NUMBER</InitializationType>
 		<InitializationDatabaseTableQuery>
 			<Id>1771948599366</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1777023914756</Id>
+		<Name><![CDATA[ordersNew]]></Name>
+		<X>40</X>
+		<Y>-230</Y>
+		<Label>
+			<X>15</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<ActiveObjectClass>
+			<PackageName>restaurant_2025</PackageName>
+			<ClassName>OrderNew</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>restaurant_2025</PackageName>
+				<ClassName>OrderNew</ClassName>
+				<ItemName>1777022491559</ItemName>
+			</GenericParameterSubstituteReference>
+		</GenericParameterSubstitute>
+		<Parameters>
+			<Parameter>
+				<Name><![CDATA[customerGroup]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[menuItems]]></Name>
+			</Parameter>
+		</Parameters>
+		<ReplicationFlag>true</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InEnvironment>true</InEnvironment>
+		<InitialLocationType>XYZ</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>EMPTY</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1777023914754</Id>
 			<TableReference/>
 		</InitializationDatabaseTableQuery>
 		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>

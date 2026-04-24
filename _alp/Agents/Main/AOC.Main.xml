@@ -3,7 +3,7 @@
 	<Id>1756479932269</Id>
 	<Name><![CDATA[Main]]></Name>
 	<Import><![CDATA[import org.eclipse.jetty.client.SendFailure;]]></Import>
-	<StartupCode><![CDATA[init_statistics();]]></StartupCode>
+	<StartupCode><![CDATA[init();]]></StartupCode>
 	<Generic>false</Generic>
 	<GenericParameter>
 		<Id>1756479932274</Id>

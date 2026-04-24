@@ -130,7 +130,7 @@
 		<RunConfiguration ActiveObjectClassId="1756479932269">
 			<Id>1756479932280</Id>
 			<Name><![CDATA[RunConfiguration]]></Name>
-			<MaximumMemory>512</MaximumMemory>
+			<MaximumMemory>4096</MaximumMemory>
 			<ModelTimeProperties>
 				<StopOption>Stop at specified time</StopOption>
 				<InitialDate>1756425600000</InitialDate>
@@ -155,11 +155,6 @@
 				<Name><![CDATA[GoServeMessage]]></Name>
 			</JavaClass>
 			<JavaClass>
-				<Id>1758281721248</Id>
-				<Name><![CDATA[Order_old]]></Name>
-				<ExcludeFromBuild>true</ExcludeFromBuild>
-			</JavaClass>
-			<JavaClass>
 				<Id>1769862315165</Id>
 				<Name><![CDATA[NoTable]]></Name>
 			</JavaClass>
@@ -182,6 +177,14 @@
 			<JavaClass>
 				<Id>1776435843339</Id>
 				<Name><![CDATA[MenuItem]]></Name>
+			</JavaClass>
+			<JavaClass>
+				<Id>1776444104246</Id>
+				<Name><![CDATA[MenuItems]]></Name>
+			</JavaClass>
+			<JavaClass>
+				<Id>1776499493911</Id>
+				<Name><![CDATA[DayPartUtil]]></Name>
 			</JavaClass>
 		</JavaClasses>
 		<RequiredLibraryReference>
