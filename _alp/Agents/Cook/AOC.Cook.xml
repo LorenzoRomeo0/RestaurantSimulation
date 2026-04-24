@@ -287,7 +287,7 @@ _ps310.setFillColor(red);</EntryAction>
 			<IconOffset>20.0</IconOffset>
 			<Properties Source="1770366268946" Target="1770366275321" Trigger="timeout">
 				<Timeout Class="CodeUnitValue">
-					<Code><![CDATA[10]]></Code>
+					<Code><![CDATA[getTimeToPrepareOrder()]]></Code>
 					<Unit Class="TimeUnits">MINUTE</Unit>
 				</Timeout>
 				<Condition>true</Condition>
