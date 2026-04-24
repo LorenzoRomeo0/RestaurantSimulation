@@ -5392,7 +5392,7 @@ send(new goCook(agent), unit);]]></Code>
 	</EmbeddedObject>
 	<EmbeddedObject>
 		<Id>1770372064453</Id>
-		<Name><![CDATA[exit1]]></Name>
+		<Name><![CDATA[kitchen_exit]]></Name>
 		<X>860</X>
 		<Y>1770</Y>
 		<Label>
@@ -5903,61 +5903,6 @@ send(new goCook(agent), unit);]]></Code>
 		<InitializationType>SPECIFIED_NUMBER</InitializationType>
 		<InitializationDatabaseTableQuery>
 			<Id>1771948599366</Id>
-			<TableReference/>
-		</InitializationDatabaseTableQuery>
-		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-		<QuantityColumn/>
-	</EmbeddedObject>
-	<EmbeddedObject>
-		<Id>1777023914756</Id>
-		<Name><![CDATA[ordersNew]]></Name>
-		<X>40</X>
-		<Y>-230</Y>
-		<Label>
-			<X>15</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<ActiveObjectClass>
-			<PackageName>restaurant_2025</PackageName>
-			<ClassName>Order</ClassName>
-		</ActiveObjectClass>
-		<GenericParameterSubstitute>
-			<GenericParameterSubstituteReference>
-				<PackageName>restaurant_2025</PackageName>
-				<ClassName>Order</ClassName>
-				<ItemName>1777022491559</ItemName>
-			</GenericParameterSubstituteReference>
-		</GenericParameterSubstitute>
-		<Parameters>
-			<Parameter>
-				<Name><![CDATA[customerGroup]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[menuItems]]></Name>
-			</Parameter>
-		</Parameters>
-		<ReplicationFlag>true</ReplicationFlag>
-		<Replication Class="CodeValue">
-			<Code><![CDATA[100]]></Code>
-		</Replication>
-		<CollectionType>ARRAY_LIST_BASED</CollectionType>
-		<InEnvironment>true</InEnvironment>
-		<InitialLocationType>XYZ</InitialLocationType>
-		<ColumnCode Class="CodeValue">
-			<Code><![CDATA[0]]></Code>
-		</ColumnCode>
-		<RowCode Class="CodeValue">
-			<Code><![CDATA[0]]></Code>
-		</RowCode>
-		<LocationNameCode Class="CodeValue">
-			<Code><![CDATA[""]]></Code>
-		</LocationNameCode>
-		<InitializationType>EMPTY</InitializationType>
-		<InitializationDatabaseTableQuery>
-			<Id>1777023914754</Id>
 			<TableReference/>
 		</InitializationDatabaseTableQuery>
 		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>

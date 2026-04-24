@@ -16,5 +16,6 @@ void debugTextUpdater()
 waitersDebugTextUpdater();
 timeEventsDebugTextUpdater();
 menuItemsDebugTextUpdater();
+moneyDebugTextUpdater();
 /*ALCODEEND*/}
 

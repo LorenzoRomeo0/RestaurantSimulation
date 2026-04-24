@@ -127,7 +127,7 @@ public class MenuItems {
 
     public Order generateOrderByDayPart(DayPartUtil.DayPart dayPart) {
         //OrderNew order = new OrderNew();
-    	Order order = main.add_ordersNew();
+    	Order order = main.add_orders();
 
         ArrayList<MenuItem> candidates = getItemsByDayPart(dayPart);
         if (candidates == null || candidates.isEmpty()) {

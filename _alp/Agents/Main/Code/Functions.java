@@ -363,3 +363,16 @@ ArrayList<MenuItem> currentItems = items.getItemsByDayPart(
 currentMenuItemsDebugText.setText(MenuItems.prettyPrintMenuItems(currentItems));
 /*ALCODEEND*/}
 
+double moneyDebugTextUpdater()
+{/*ALCODESTART::1777058084938*/
+double total = 0.0;
+
+for (Order order : orders) {
+    if (order != null) {
+        total += order.getTotalPrice();
+    }
+}
+
+moneySpentText.setText("€" + total);
+/*ALCODEEND*/}
+

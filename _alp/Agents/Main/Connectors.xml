@@ -1271,7 +1271,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>exit1</ItemName>
+			<ItemName>kitchen_exit</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>

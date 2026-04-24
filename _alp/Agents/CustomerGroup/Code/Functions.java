@@ -21,6 +21,7 @@ DayPartUtil.DayPart currentDayPart = DayPartUtil.getCurrentDayPart(this);
 //MenuItems items = new MenuItems(this);
 Order order = main.menuItems.generateOrderByDayPart(currentDayPart);
 order.customerGroup = this;
+order.date = date();
 
 return order;
 

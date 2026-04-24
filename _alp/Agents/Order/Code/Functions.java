@@ -3,3 +3,20 @@ String toString()
 return "menuItems = " + menuItems + " ";
 /*ALCODEEND*/}
 
+double getTotalPrice()
+{/*ALCODESTART::1777058537593*/
+double total = 0.0;
+
+if (menuItems == null) {
+    return total;
+}
+
+for (MenuItem item : menuItems) {
+    if (item != null) {
+        total += item.price;
+    }
+}
+
+return total;
+/*ALCODEEND*/}
+
