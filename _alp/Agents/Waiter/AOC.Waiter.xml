@@ -194,7 +194,7 @@ _ps7.setFillColor(green);</EntryAction>
 
 foundTable = null;
 currentCustomers = null;
-currentOrderNew = null;
+currentOrder = null;
 
 //isWaiting = true;
 traceln(this +" "+this.getId() + " IS WAITING");
@@ -318,7 +318,7 @@ moveTo(main.kitchen_node);
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
-				<EntryAction>main.kitchen_enter.take(currentOrderNew);
+				<EntryAction>main.kitchen_enter.take(currentOrder);
 main.give_order.free(currentCustomers);</EntryAction>
 				<FillColor/>
 			</Properties>
@@ -370,8 +370,8 @@ main.give_order.free(currentCustomers);</EntryAction>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
-				<EntryAction>targetNode = currentOrderNew.customerGroup.getId() +"";
-this.moveTo(currentOrderNew.customerGroup);</EntryAction>
+				<EntryAction>targetNode = currentOrder.customerGroup.getId() +"";
+this.moveTo(currentOrder.customerGroup);</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
@@ -389,8 +389,8 @@ this.moveTo(currentOrderNew.customerGroup);</EntryAction>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
 				<EntryAction>targetNode = "none";
-send("foodReady", currentOrderNew.customerGroup);
-main.bring_food.free(currentOrderNew);</EntryAction>
+send("foodReady", currentOrder.customerGroup);
+main.bring_food.free(currentOrder);</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
@@ -936,7 +936,7 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 			</Points>
 			<IconOffset>20.0</IconOffset>
 			<Properties Source="1758096946730" Target="1758283887335" Trigger="message">
-				<Action>currentOrderNew = msg;
+				<Action>currentOrder = msg;
 //traceln("-----&gt; " +getId()+ "got this order: "+ currentOrder);</Action>
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[10]]></Code>
@@ -947,7 +947,7 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="RateUnits">PER_MINUTE</Unit>
 				</Rate>
-				<MessageType>OrderNew</MessageType>
+				<MessageType>Order</MessageType>
 				<DefaultTransition>true</DefaultTransition>
 				<FilterType>unconditionally</FilterType>
 				<EqualsExpression>"ok"</EqualsExpression>
@@ -1146,7 +1146,7 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 			</Points>
 			<IconOffset>150.0</IconOffset>
 			<Properties Source="1756758518168" Target="1770373705970" Trigger="message">
-				<Action>currentOrderNew = msg.order</Action>
+				<Action>currentOrder = msg.order</Action>
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="TimeUnits">MINUTE</Unit>

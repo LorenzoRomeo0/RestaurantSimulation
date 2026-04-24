@@ -297,7 +297,7 @@ send(order, currentWaiter);
 
 */
 
-OrderNew order = makeOrder();
+Order order = makeOrder();
 
 send(order, currentWaiter);
 

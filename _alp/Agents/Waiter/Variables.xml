@@ -156,7 +156,7 @@
 	</Variable>
 	<Variable Class="PlainVariable">
 		<Id>1777022155062</Id>
-		<Name><![CDATA[currentOrderNew]]></Name>
+		<Name><![CDATA[currentOrder]]></Name>
 		<X>-100</X>
 		<Y>120</Y>
 		<Label>
@@ -170,7 +170,7 @@
               Constant="false"
               AccessType="public"
               StaticVariable="false">
-			<Type><![CDATA[OrderNew]]></Type>
+			<Type><![CDATA[Order]]></Type>
 			<InitialValue Class="CodeValue">
 				<Code><![CDATA[null]]></Code>
 			</InitialValue>

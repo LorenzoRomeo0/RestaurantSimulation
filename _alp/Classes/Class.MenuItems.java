@@ -125,9 +125,9 @@ public class MenuItems {
         return weightedChoice(getItemsByDayPart(dayPart));
     }
 
-    public OrderNew generateOrderByDayPart(DayPartUtil.DayPart dayPart) {
+    public Order generateOrderByDayPart(DayPartUtil.DayPart dayPart) {
         //OrderNew order = new OrderNew();
-    	OrderNew order = main.add_ordersNew();
+    	Order order = main.add_ordersNew();
 
         ArrayList<MenuItem> candidates = getItemsByDayPart(dayPart);
         if (candidates == null || candidates.isEmpty()) {
@@ -160,7 +160,7 @@ public class MenuItems {
         return order;
     }
 
-    private void generateBreakfast(OrderNew order, List<MenuItem> candidates) {
+    private void generateBreakfast(Order order, List<MenuItem> candidates) {
         if (chance(P_BREAKFAST_COMBO)) {
             addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.COMBO));
             return;
@@ -175,7 +175,7 @@ public class MenuItems {
         }
     }
 
-    private void generateBreak(OrderNew order, List<MenuItem> candidates) {
+    private void generateBreak(Order order, List<MenuItem> candidates) {
         if (chance(P_BREAK_MAIN)) {
             addIfAbsent(order, weightedChoiceByCourse(candidates, 1));
         }
@@ -185,7 +185,7 @@ public class MenuItems {
         }
     }
 
-    private void generateLunch(OrderNew order, List<MenuItem> candidates) {
+    private void generateLunch(Order order, List<MenuItem> candidates) {
         if (chance(P_LUNCH_FIXED_MENU)) {
             addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.FIXED_MENU));
             return;
@@ -212,7 +212,7 @@ public class MenuItems {
         }
     }
 
-    private void generateDinner(OrderNew order, List<MenuItem> candidates) {
+    private void generateDinner(Order order, List<MenuItem> candidates) {
         if (chance(P_DINNER_FIXED_MENU)) {
             addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.FIXED_MENU));
             return;
@@ -243,13 +243,13 @@ public class MenuItems {
         return rnd.nextDouble() < p;
     }
 
-    private void ensureAtLeastOneItem(OrderNew order, List<MenuItem> candidates) {
+    private void ensureAtLeastOneItem(Order order, List<MenuItem> candidates) {
         if (order.menuItems.isEmpty()) {
             addIfAbsent(order, weightedChoice(candidates));
         }
     }
 
-    private void addIfAbsent(OrderNew order, MenuItem item) {
+    private void addIfAbsent(Order order, MenuItem item) {
         if (item == null) {
             return;
         }

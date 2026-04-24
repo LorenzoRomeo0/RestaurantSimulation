@@ -2,7 +2,7 @@
 <Functions>
 	<Function AccessType="default" StaticFunction="false">
 		<ReturnModificator>RETURNS_VALUE</ReturnModificator>
-		<ReturnType>OrderNew</ReturnType>
+		<ReturnType>Order</ReturnType>
 		<Id>1776869263596</Id>
 		<Name><![CDATA[makeOrder]]></Name>
 		<X>20</X>

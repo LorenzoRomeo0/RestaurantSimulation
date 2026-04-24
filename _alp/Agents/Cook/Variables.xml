@@ -170,7 +170,7 @@
               Constant="false"
               AccessType="public"
               StaticVariable="false">
-			<Type><![CDATA[OrderNew]]></Type>
+			<Type><![CDATA[Order]]></Type>
 			<InitialValue Class="CodeValue">
 				<Code><![CDATA[null]]></Code>
 			</InitialValue>

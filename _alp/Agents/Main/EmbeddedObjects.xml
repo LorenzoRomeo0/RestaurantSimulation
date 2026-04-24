@@ -3989,6 +3989,9 @@ customersInRestaurantNr--;]]></Code>
 				<ClassName>Queue</ClassName>
 				<ItemName>1412336242932</ItemName>
 			</GenericParameterSubstituteReference>
+			<GenericParameterSubstituteValue Class="CodeValue">
+				<Code><![CDATA[Order]]></Code>
+			</GenericParameterSubstituteValue>
 		</GenericParameterSubstitute>
 		<Parameters>
 			<Parameter>
@@ -4098,7 +4101,7 @@ customersInRestaurantNr--;]]></Code>
 				<ItemName>1412336243147</ItemName>
 			</GenericParameterSubstituteReference>
 			<GenericParameterSubstituteValue Class="CodeValue">
-				<Code><![CDATA[OrderNew]]></Code>
+				<Code><![CDATA[Order]]></Code>
 			</GenericParameterSubstituteValue>
 		</GenericParameterSubstitute>
 		<Parameters>
@@ -4312,7 +4315,7 @@ send(new goCook(agent), unit);]]></Code>
 				<ItemName>1412336243169</ItemName>
 			</GenericParameterSubstituteReference>
 			<GenericParameterSubstituteValue Class="CodeValue">
-				<Code><![CDATA[OrderNew]]></Code>
+				<Code><![CDATA[Order]]></Code>
 			</GenericParameterSubstituteValue>
 		</GenericParameterSubstitute>
 		<Parameters>
@@ -4413,6 +4416,9 @@ send(new goCook(agent), unit);]]></Code>
 				<ClassName>Release</ClassName>
 				<ItemName>1412336243154</ItemName>
 			</GenericParameterSubstituteReference>
+			<GenericParameterSubstituteValue Class="CodeValue">
+				<Code><![CDATA[Order]]></Code>
+			</GenericParameterSubstituteValue>
 		</GenericParameterSubstitute>
 		<Parameters>
 			<Parameter>
@@ -4512,6 +4518,9 @@ send(new goCook(agent), unit);]]></Code>
 				<ClassName>Queue</ClassName>
 				<ItemName>1412336242932</ItemName>
 			</GenericParameterSubstituteReference>
+			<GenericParameterSubstituteValue Class="CodeValue">
+				<Code><![CDATA[Order]]></Code>
+			</GenericParameterSubstituteValue>
 		</GenericParameterSubstitute>
 		<Parameters>
 			<Parameter>
@@ -4614,6 +4623,9 @@ send(new goCook(agent), unit);]]></Code>
 				<ClassName>Seize</ClassName>
 				<ItemName>1412336243147</ItemName>
 			</GenericParameterSubstituteReference>
+			<GenericParameterSubstituteValue Class="CodeValue">
+				<Code><![CDATA[Order]]></Code>
+			</GenericParameterSubstituteValue>
 		</GenericParameterSubstitute>
 		<Parameters>
 			<Parameter>
@@ -4750,7 +4762,7 @@ send(new goCook(agent), unit);]]></Code>
 			<Parameter>
 				<Name><![CDATA[onSeizeUnit]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[send(new GoBringFood((OrderNew)agent), unit);]]></Code>
+					<Code><![CDATA[send(new GoBringFood((Order)agent), unit);]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -4824,7 +4836,7 @@ send(new goCook(agent), unit);]]></Code>
 				<ItemName>1412336242933</ItemName>
 			</GenericParameterSubstituteReference>
 			<GenericParameterSubstituteValue Class="CodeValue">
-				<Code><![CDATA[OrderNew]]></Code>
+				<Code><![CDATA[Order]]></Code>
 			</GenericParameterSubstituteValue>
 		</GenericParameterSubstitute>
 		<Parameters>
@@ -4943,6 +4955,9 @@ send(new goCook(agent), unit);]]></Code>
 				<ClassName>Wait</ClassName>
 				<ItemName>1412336243169</ItemName>
 			</GenericParameterSubstituteReference>
+			<GenericParameterSubstituteValue Class="CodeValue">
+				<Code><![CDATA[Order]]></Code>
+			</GenericParameterSubstituteValue>
 		</GenericParameterSubstitute>
 		<Parameters>
 			<Parameter>
@@ -5042,6 +5057,9 @@ send(new goCook(agent), unit);]]></Code>
 				<ClassName>Release</ClassName>
 				<ItemName>1412336243154</ItemName>
 			</GenericParameterSubstituteReference>
+			<GenericParameterSubstituteValue Class="CodeValue">
+				<Code><![CDATA[Order]]></Code>
+			</GenericParameterSubstituteValue>
 		</GenericParameterSubstitute>
 		<Parameters>
 			<Parameter>
@@ -5394,6 +5412,9 @@ send(new goCook(agent), unit);]]></Code>
 				<ClassName>Exit</ClassName>
 				<ItemName>1412336242934</ItemName>
 			</GenericParameterSubstituteReference>
+			<GenericParameterSubstituteValue Class="CodeValue">
+				<Code><![CDATA[Order]]></Code>
+			</GenericParameterSubstituteValue>
 		</GenericParameterSubstitute>
 		<Parameters>
 			<Parameter>
@@ -5444,7 +5465,7 @@ send(new goCook(agent), unit);]]></Code>
 			<GenericParameterSubstituteReference>
 				<PackageName>restaurant_2025</PackageName>
 				<ClassName>Order</ClassName>
-				<ItemName>1770365298090</ItemName>
+				<ItemName>1777022491559</ItemName>
 			</GenericParameterSubstituteReference>
 		</GenericParameterSubstitute>
 		<Parameters>
@@ -5452,13 +5473,7 @@ send(new goCook(agent), unit);]]></Code>
 				<Name><![CDATA[customerGroup]]></Name>
 			</Parameter>
 			<Parameter>
-				<Name><![CDATA[complexity]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[desserts]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[coffees]]></Name>
+				<Name><![CDATA[menuItems]]></Name>
 			</Parameter>
 		</Parameters>
 		<ReplicationFlag>true</ReplicationFlag>
@@ -5907,12 +5922,12 @@ send(new goCook(agent), unit);]]></Code>
 		<ShowLabel>true</ShowLabel>
 		<ActiveObjectClass>
 			<PackageName>restaurant_2025</PackageName>
-			<ClassName>OrderNew</ClassName>
+			<ClassName>Order</ClassName>
 		</ActiveObjectClass>
 		<GenericParameterSubstitute>
 			<GenericParameterSubstituteReference>
 				<PackageName>restaurant_2025</PackageName>
-				<ClassName>OrderNew</ClassName>
+				<ClassName>Order</ClassName>
 				<ItemName>1777022491559</ItemName>
 			</GenericParameterSubstituteReference>
 		</GenericParameterSubstitute>
