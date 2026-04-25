@@ -27,8 +27,8 @@ Calcolare il numero di camerieri per tenere conto delle possibili assenze (malat
 Modellare menù
     con popolarità per cibo (OK)
     con menù diversi per diversi momenti della giornata (colazione, pranzo, break, cena) (OK)
-    complessità di preparazione per alimento e costo
-    (come modelliamo quanto tempo le persone ci mettono ad ordinare? come modellare la scelta di un primo, un secondo?)
+    complessità di preparazione per alimento e costo (OK)
+    (come modelliamo quanto tempo le persone ci mettono ad ordinare? come modellare la scelta di un primo, un secondo? Utilizzando altre tabelle...)
     aggiungere la possibilità di menù fissi a pranzo (menù lavoratori) (OK)
         ma anche a colazione (combo brioche succo e caffè) (OK)
     copula per elementi che spesso vengono presi insieme? (tipo cotoletta e contorno)
