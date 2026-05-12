@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Variables>
+	<Variable Class="PlainVariable">
+		<Id>1777449567725</Id>
+		<Name><![CDATA[menuCopulaGenerator]]></Name>
+		<X>260</X>
+		<Y>-210</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[MenuCopulaGenerator]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[new MenuCopulaGenerator(this)]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1777454442713</Id>
+		<Name><![CDATA[menuCopulaUpdater]]></Name>
+		<X>260</X>
+		<Y>-240</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[MenuCopulaUpdater]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[new MenuCopulaUpdater(this);]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1778578078550</Id>
+		<Name><![CDATA[csvFile]]></Name>
+		<X>260</X>
+		<Y>-270</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[String]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA["orders_history/synthetic_orders.csv"]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+</Variables>

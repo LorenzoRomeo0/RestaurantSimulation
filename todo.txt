@@ -25,13 +25,14 @@ rendere menu_reading proporzionale alla dimensione del gruppo (non di molto perc
 Calcolare il numero di camerieri per tenere conto delle possibili assenze (malattia ecc)
 
 Modellare menù
-    con popolarità per cibo (OK)
-    con menù diversi per diversi momenti della giornata (colazione, pranzo, break, cena) (OK)
-    complessità di preparazione per alimento e costo (OK)
+    (OK) con popolarità per cibo 
+    (OK) con menù diversi per diversi momenti della giornata (colazione, pranzo, break, cena) 
+    (OK)complessità di preparazione per alimento e costo 
     (come modelliamo quanto tempo le persone ci mettono ad ordinare? come modellare la scelta di un primo, un secondo? Utilizzando altre tabelle...)
-    aggiungere la possibilità di menù fissi a pranzo (menù lavoratori) (OK)
-        ma anche a colazione (combo brioche succo e caffè) (OK)
-    copula per elementi che spesso vengono presi insieme? (tipo cotoletta e contorno)
+    (OK) aggiungere la possibilità di menù fissi a pranzo (menù lavoratori) 
+        (OK) ma anche a colazione (combo brioche succo e caffè) 
+    (IN PROGRESS) copula per elementi che spesso vengono presi insieme? (tipo cotoletta e contorno) 
+        creare un generatore di matrici di correlazione da csv di ordini sintetici
     Creare del parallelismo per la preparazione di un ordine (magari hot e cold possono essere fatti simulaneamente e teniamo conto solo del tempo maggiore?)
 
 

@@ -14,13 +14,15 @@ public class MenuItems {
     Main main;
     ArrayList<MenuItem> menuItems = new ArrayList<>();
     EnumMap<DayPartUtil.DayPart, ArrayList<MenuItem>> itemsByDayPart;
+    MenuCopulaGenerator copulaGenerator;
 
     private final Random rnd = new Random();
 
     // =========================
     // Probabilità selezioni multiple
     // =========================
-
+    
+    /*
     // BREAKFAST
     private static final double P_BREAKFAST_COMBO = 0.18;
     private static final double P_BREAKFAST_MAIN = 0.75;
@@ -45,9 +47,13 @@ public class MenuItems {
     private static final double P_DINNER_SIDE = 0.40;
     private static final double P_DINNER_DRINK = 0.60;
     private static final double P_DINNER_DESSERT = 0.38;
+    */
+    
 
     public MenuItems(Main main) {
         this.main = main;
+        //copulaGenerator = new MenuCopulaGenerator(main);
+        copulaGenerator = main.menuCopulaGenerator;
         loadFromBuiltInDb();
         itemsByDayPart = getItemsByDayPart();
     }
@@ -161,6 +167,98 @@ public class MenuItems {
     }
 
     private void generateBreakfast(Order order, List<MenuItem> candidates) {
+        MenuCopulaGenerator.CopulaSample sample =
+                copulaGenerator.sample(DayPartUtil.DayPart.BREAKFAST);
+
+        if (sample.isOn("combo")) {
+            addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.COMBO));
+            return;
+        }
+
+        if (sample.isOn("main")) {
+            addIfAbsent(order, weightedChoiceByCourse(candidates, 1));
+        }
+
+        if (sample.isOn("drink")) {
+            addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.DRINK));
+        }
+    }
+    
+    private void generateBreak(Order order, List<MenuItem> candidates) {
+        MenuCopulaGenerator.CopulaSample sample =
+                copulaGenerator.sample(DayPartUtil.DayPart.BREAK);
+
+        if (sample.isOn("main")) {
+            addIfAbsent(order, weightedChoiceByCourse(candidates, 1));
+        }
+
+        if (sample.isOn("drink")) {
+            addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.DRINK));
+        }
+    }
+    
+    private void generateLunch(Order order, List<MenuItem> candidates) {
+        MenuCopulaGenerator.CopulaSample sample =
+                copulaGenerator.sample(DayPartUtil.DayPart.LUNCH);
+
+        if (sample.isOn("fixed_menu")) {
+            addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.FIXED_MENU));
+            return;
+        }
+
+        if (sample.isOn("course1")) {
+            addIfAbsent(order, weightedChoiceByCourse(candidates, 1));
+        }
+
+        if (sample.isOn("course2")) {
+            addIfAbsent(order, weightedChoiceByCourse(candidates, 2));
+        }
+
+        if (sample.isOn("side")) {
+            addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.SIDE));
+        }
+
+        if (sample.isOn("drink")) {
+            addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.DRINK));
+        }
+
+        if (sample.isOn("dessert")) {
+            addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.DESSERT));
+        }
+    }
+    
+    private void generateDinner(Order order, List<MenuItem> candidates) {
+        MenuCopulaGenerator.CopulaSample sample =
+                copulaGenerator.sample(DayPartUtil.DayPart.DINNER);
+
+        if (sample.isOn("fixed_menu")) {
+            addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.FIXED_MENU));
+            return;
+        }
+
+        if (sample.isOn("course1")) {
+            addIfAbsent(order, weightedChoiceByCourse(candidates, 1));
+        }
+
+        if (sample.isOn("course2")) {
+            addIfAbsent(order, weightedChoiceByCourse(candidates, 2));
+        }
+
+        if (sample.isOn("side")) {
+            addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.SIDE));
+        }
+
+        if (sample.isOn("drink")) {
+            addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.DRINK));
+        }
+
+        if (sample.isOn("dessert")) {
+            addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.DESSERT));
+        }
+    }
+    
+/*
+    private void generateBreakfast(Order order, List<MenuItem> candidates) {
         if (chance(P_BREAKFAST_COMBO)) {
             addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.COMBO));
             return;
@@ -238,7 +336,7 @@ public class MenuItems {
             addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.DESSERT));
         }
     }
-
+*/
     private boolean chance(double p) {
         return rnd.nextDouble() < p;
     }

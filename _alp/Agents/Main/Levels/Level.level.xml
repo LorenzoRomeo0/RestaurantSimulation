@@ -3834,4 +3834,29 @@ al numero di persone]]></Text>
 		</Font>
 		<Alignment>LEFT</Alignment>
 	</Text>
+	<Text>
+		<Id>1777316852854</Id>
+		<Name><![CDATA[menuCopulaGeneratorDebugText]]></Name>
+		<X>1630</X>
+		<Y>20</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[menuCopulaGeneratorDebugText]]></Text>
+		<Font>
+			<Name><![CDATA[Cascadia Code]]></Name>
+			<Size>10</Size>
+			<Style>0</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
 </Presentation>

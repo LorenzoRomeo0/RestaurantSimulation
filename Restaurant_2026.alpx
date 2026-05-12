@@ -20,8 +20,8 @@
 		<TimeAccuracy>1.0E-5</TimeAccuracy>
 		<Frame>
 			<Id>1756479932267</Id>
-			<Width>1150</Width>
-			<Height>1050</Height>
+			<Width>1950</Width>
+			<Height>1390</Height>
 		</Frame>
 		<Database>
 			<Id>1756479932266</Id>
@@ -124,56 +124,6 @@
 					<ExternalTableName>"menu_items"</ExternalTableName>
 					<AutoImport>false</AutoImport>
 				</TableImportSettings>
-				<TableImportSettings>
-					<Id>1777128294114</Id>
-					<TableReference>
-						<PackageName>restaurant_2025</PackageName>
-						<ClassName>copula_menu_marginals</ClassName>
-					</TableReference>
-					<ConnectionIndex>0</ConnectionIndex>
-					<ExternalTableName>"copula_menu_marginals"</ExternalTableName>
-					<AutoImport>false</AutoImport>
-				</TableImportSettings>
-				<TableImportSettings>
-					<Id>1777128294117</Id>
-					<TableReference>
-						<PackageName>restaurant_2025</PackageName>
-						<ClassName>copula_breakfast_correlation</ClassName>
-					</TableReference>
-					<ConnectionIndex>0</ConnectionIndex>
-					<ExternalTableName>"copula_breakfast_correlation"</ExternalTableName>
-					<AutoImport>false</AutoImport>
-				</TableImportSettings>
-				<TableImportSettings>
-					<Id>1777128294120</Id>
-					<TableReference>
-						<PackageName>restaurant_2025</PackageName>
-						<ClassName>copula_lunch_correlation</ClassName>
-					</TableReference>
-					<ConnectionIndex>0</ConnectionIndex>
-					<ExternalTableName>"copula_lunch_correlation"</ExternalTableName>
-					<AutoImport>false</AutoImport>
-				</TableImportSettings>
-				<TableImportSettings>
-					<Id>1777128294123</Id>
-					<TableReference>
-						<PackageName>restaurant_2025</PackageName>
-						<ClassName>copula_dinner_correlation</ClassName>
-					</TableReference>
-					<ConnectionIndex>0</ConnectionIndex>
-					<ExternalTableName>"copula_dinner_correlation"</ExternalTableName>
-					<AutoImport>false</AutoImport>
-				</TableImportSettings>
-				<TableImportSettings>
-					<Id>1777128294126</Id>
-					<TableReference>
-						<PackageName>restaurant_2025</PackageName>
-						<ClassName>copula_break_correlation</ClassName>
-					</TableReference>
-					<ConnectionIndex>0</ConnectionIndex>
-					<ExternalTableName>"copula_break_correlation"</ExternalTableName>
-					<AutoImport>false</AutoImport>
-				</TableImportSettings>
 			</ImportSettings>
 			<ExportSettings/>
 		</Database>
@@ -236,6 +186,14 @@
 				<Id>1776499493911</Id>
 				<Name><![CDATA[DayPartUtil]]></Name>
 			</JavaClass>
+			<JavaClass>
+				<Id>1777128743885</Id>
+				<Name><![CDATA[MenuCopulaGenerator]]></Name>
+			</JavaClass>
+			<JavaClass>
+				<Id>1777452343593</Id>
+				<Name><![CDATA[MenuCopulaUpdater]]></Name>
+			</JavaClass>
 		</JavaClasses>
 		<RequiredLibraryReference>
 			<LibraryName>com.anylogic.libraries.modules.markup_descriptors</LibraryName>
@@ -255,6 +213,22 @@
 			<VersionMinor>0</VersionMinor>
 			<VersionBuild>5</VersionBuild>
 		</RequiredLibraryReference>
+		<ClassPathEntry>
+			<ResourceReference>
+				<PackageName>restaurant_2025</PackageName>
+				<ClassName>commons-csv-1.14.1.jar</ClassName>
+			</ResourceReference>
+			<Imported>true</Imported>
+			<Folder>false</Folder>
+		</ClassPathEntry>
+		<ClassPathEntry>
+			<ResourceReference>
+				<PackageName>restaurant_2025</PackageName>
+				<ClassName>commons-io-2.22.0.jar</ClassName>
+			</ResourceReference>
+			<Imported>true</Imported>
+			<Folder>false</Folder>
+		</ClassPathEntry>
 	</Model>
 	<ConvertersApplied>
 		<Uuid>9f7858c9-b2c8-4ead-9244-fd08833f642b</Uuid>

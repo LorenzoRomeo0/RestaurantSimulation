@@ -376,3 +376,15 @@ for (Order order : orders) {
 moneySpentText.setText("€" + total);
 /*ALCODEEND*/}
 
+double menuCopulaGeneratorDebugTextUpdater()
+{/*ALCODESTART::1777316827810*/
+menuCopulaGeneratorDebugText.setText(
+	menuCopulaGenerator.modelPrettyString(
+		DayPartUtil.getCurrentDayPart(this), 
+		menuCopulaGenerator.getCopulaModel(
+			DayPartUtil.getCurrentDayPart(this)
+		)
+	)
+);
+/*ALCODEEND*/}
+
