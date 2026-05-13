@@ -140,6 +140,28 @@
 			</InitialValue>
 		</Properties>
 	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1778656592315</Id>
+		<Name><![CDATA[customerGroupsInRestaurant]]></Name>
+		<X>40</X>
+		<Y>100</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[ArrayList<CustomerGroup>]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[new ArrayList<>()]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
 	<Variable Class="Parameter">
 		<Id>1756761690210</Id>
 		<Name><![CDATA[customersAtEntrance]]></Name>

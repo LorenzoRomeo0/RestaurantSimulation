@@ -235,7 +235,8 @@
 			<Parameter>
 				<Name><![CDATA[onExit]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[customersInRestaurantNr++;]]></Code>
+					<Code><![CDATA[customersInRestaurantNr++;
+customerGroupsInRestaurant.add(agent);]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -419,7 +420,8 @@
 			<Parameter>
 				<Name><![CDATA[onEnter]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[customersInRestaurantNr--;]]></Code>
+					<Code><![CDATA[customersInRestaurantNr--;
+customerGroupsInRestaurant.remove(agent);]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -693,8 +695,8 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 		<X>60</X>
 		<Y>1120</Y>
 		<Label>
-			<X>-40</X>
-			<Y>-20</Y>
+			<X>-50</X>
+			<Y>-5</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
@@ -1283,6 +1285,9 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[restoreEntityLocationOnExit]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[false]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[forceStatisticsCollection]]></Name>
@@ -1295,6 +1300,10 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onExit]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[traceln("-- " + agent.getId()+" read the menu");
+]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onRemove]]></Name>
@@ -1441,7 +1450,7 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 		<Y>1300</Y>
 		<Label>
 			<X>-40</X>
-			<Y>-20</Y>
+			<Y>-10</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
@@ -1710,11 +1719,16 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 				<Name><![CDATA[onSeize]]></Name>
 				<Value Class="CodeValue">
 					<Code><![CDATA[//deliver(new Object(), unit);
-//send("goWelcome", unit);]]></Code>
+//send("goWelcome", unit);
+
+//unit.isSeized = true;]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onRelease]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[//unit.isSeized = false;]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onWrapUp]]></Name>
@@ -1968,10 +1982,10 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 				<Name><![CDATA[currentWaiter]]></Name>
 			</Parameter>
 			<Parameter>
-				<Name><![CDATA[celiacs]]></Name>
+				<Name><![CDATA[entrancePriority]]></Name>
 			</Parameter>
 			<Parameter>
-				<Name><![CDATA[entrancePriority]]></Name>
+				<Name><![CDATA[celiacs]]></Name>
 			</Parameter>
 		</Parameters>
 		<ReplicationFlag>true</ReplicationFlag>
@@ -2131,11 +2145,16 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 			<Parameter>
 				<Name><![CDATA[onEnter]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[//traceln("-- " + agent.getId()+" entered the welcoming_wait");]]></Code>
+					<Code><![CDATA[traceln("-- " + agent.getId()+" entered the welcoming_wait");
+]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onExit]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[traceln("-- " + agent.getId()+" is trying to exit the welcoming_wait");
+]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onExitTimeout]]></Name>
@@ -2633,7 +2652,7 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 			<Parameter>
 				<Name><![CDATA[onSeizeUnit]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[//traceln("---> GoServe sent from "+ agent.getId() +" to waiter " + unit.getId());
+					<Code><![CDATA[traceln("---> GoServe sent from "+ agent.getId() +" to waiter " + unit.getId());
 /*
 Waiter seizedUnit = (Waiter) unit;
 traceln("--> Agent status: " + seizedUnit.waiter_statechart.getActiveSimpleState().name());
@@ -2806,8 +2825,8 @@ send(msg, unit);
 		<X>60</X>
 		<Y>1180</Y>
 		<Label>
-			<X>-40</X>
-			<Y>-20</Y>
+			<X>-50</X>
+			<Y>-5</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
@@ -3121,7 +3140,7 @@ send(msg, unit);
 		<Y>1240</Y>
 		<Label>
 			<X>-40</X>
-			<Y>-20</Y>
+			<Y>-10</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
@@ -3537,7 +3556,8 @@ send(msg, unit);
 				<Name><![CDATA[onEnter]]></Name>
 				<Value Class="CodeValue">
 					<Code><![CDATA[traceln("customer " + agent.getId() +" is too big ("+agent.size+")");
-customersInRestaurantNr--;]]></Code>
+customersInRestaurantNr--;
+customerGroupsInRestaurant.remove(agent);]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -3655,7 +3675,7 @@ customersInRestaurantNr--;]]></Code>
 		<Y>1360</Y>
 		<Label>
 			<X>-40</X>
-			<Y>-20</Y>
+			<Y>-10</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>

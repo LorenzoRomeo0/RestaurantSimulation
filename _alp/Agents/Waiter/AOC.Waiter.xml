@@ -1319,7 +1319,7 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="TimeUnits">MINUTE</Unit>
 				</Timeout>
-				<Condition>!isOffShift &amp;&amp; (endShiftRequested || (getHourOfDay() &gt;= 23 &amp;&amp; main.customersInRestaurantNr == 0))</Condition>
+				<Condition>!isOffShift &amp;&amp; !isSeized &amp;&amp; (endShiftRequested || (getHourOfDay() &gt;= 23 &amp;&amp; main.customersInRestaurantNr == 0))</Condition>
 				<Rate Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="RateUnits">PER_MINUTE</Unit>

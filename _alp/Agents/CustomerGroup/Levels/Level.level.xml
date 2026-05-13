@@ -245,7 +245,7 @@
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
 		<Text><![CDATA[getId()]]></Text>
-		<TextCode>getId() + " " + size + " " + (statechart.getActiveSimpleState().name())</TextCode>
+		<TextCode>getId() + " [" + getIndex() +"] " +" " + size + " " + (statechart.getActiveSimpleState().name())</TextCode>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
 			<Size>10</Size>
