@@ -189,20 +189,11 @@ _ps7.setFillColor(green);</EntryAction>
 				<EntryAction>this.stop();
 
 
-
-//if(endShiftRequested) _ps7.setFillColor(dodgerBlue); _ps7.setFillColor(red);
-
 foundTable = null;
 currentCustomers = null;
 currentOrder = null;
 
-//isWaiting = true;
 traceln(this +" "+this.getId() + " IS WAITING");
-//main.hold_wrapup.recalculateConditions();
-//traceln(this.getId() + " ASKED FOR FREEDOM");
-//main.wait_wrapup.free(this);
-//traceln(this.getId() + " ASKED FOR FREEDOM --");
-
 
 </EntryAction>
 				<ExitAction>//isWaiting = false;
@@ -239,6 +230,7 @@ traceln(this +" "+ this.getId() + " IS NO MORE WAITING");</ExitAction>
 			<Properties Width="100" Height="30">
 				<EntryAction>targetNode = "table " + foundTable.getId();
 traceln(getId() + " Bringing " + currentCustomers.getId() + " to " + foundTable.getId());
+foundTable.waiterAssigner = this;
 send(foundTable, currentCustomers);
 moveTo(foundTable);
 </EntryAction>
@@ -336,7 +328,9 @@ main.give_order.free(currentCustomers);</EntryAction>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="120" Height="30">
-				<EntryAction>main.customersAtEntrance = null;</EntryAction>
+				<EntryAction>traceln("WAITER " + getId() + "freed entrance and brought to table " + main.customersAtEntrance.getId());
+//main.customersAtEntrance = null;
+</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
@@ -439,6 +433,7 @@ endShiftRequested = false;
 
 _ps7.setFillColor(red);
 
+
 this.moveTo(main.waiters_node);</EntryAction>
 				<FillColor/>
 			</Properties>
@@ -532,46 +527,6 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 			</Properties>
 		</StatechartElement>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-			<Id>1756758086605</Id>
-			<Name><![CDATA[transition1]]></Name>
-			<X>710</X>
-			<Y>385</Y>
-			<Label>
-				<X>10</X>
-				<Y>0</Y>
-			</Label>
-			<PublicFlag>false</PublicFlag>
-			<PresentationFlag>true</PresentationFlag>
-			<ShowLabel>false</ShowLabel>
-			<Points>
-				<Point>
-					<X>0</X>
-					<Y>0</Y>
-				</Point>
-				<Point>
-					<X>0</X>
-					<Y>100</Y>
-				</Point>
-			</Points>
-			<IconOffset>20.0</IconOffset>
-			<Properties Source="1757583310554" Target="1769808256279" Trigger="arrival">
-				<Timeout Class="CodeUnitValue">
-					<Code><![CDATA[1]]></Code>
-					<Unit Class="TimeUnits">MINUTE</Unit>
-				</Timeout>
-				<Condition>true</Condition>
-				<Rate Class="CodeUnitValue">
-					<Code><![CDATA[1]]></Code>
-					<Unit Class="RateUnits">PER_MINUTE</Unit>
-				</Rate>
-				<MessageType>Object</MessageType>
-				<DefaultTransition>true</DefaultTransition>
-				<FilterType>unconditionally</FilterType>
-				<EqualsExpression>"text"</EqualsExpression>
-				<SatisfiesExpression>true</SatisfiesExpression>
-			</Properties>
-		</StatechartElement>
-		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1756758185581</Id>
 			<Name><![CDATA[transition2]]></Name>
 			<X>710</X>
@@ -607,7 +562,7 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 				<MessageType>Object</MessageType>
 				<DefaultTransition>true</DefaultTransition>
 				<FilterType>equalsTo</FilterType>
-				<EqualsExpression>"endShift"</EqualsExpression>
+				<EqualsExpression>"exit"</EqualsExpression>
 				<SatisfiesExpression>true</SatisfiesExpression>
 			</Properties>
 		</StatechartElement>
@@ -1039,46 +994,6 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 			</Properties>
 		</StatechartElement>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-			<Id>1769808309094</Id>
-			<Name><![CDATA[transition8]]></Name>
-			<X>710</X>
-			<Y>515</Y>
-			<Label>
-				<X>10</X>
-				<Y>0</Y>
-			</Label>
-			<PublicFlag>false</PublicFlag>
-			<PresentationFlag>true</PresentationFlag>
-			<ShowLabel>false</ShowLabel>
-			<Points>
-				<Point>
-					<X>0</X>
-					<Y>0</Y>
-				</Point>
-				<Point>
-					<X>0</X>
-					<Y>55</Y>
-				</Point>
-			</Points>
-			<IconOffset>30.0</IconOffset>
-			<Properties Source="1769808256279" Target="1756758068267" Trigger="condition">
-				<Timeout Class="CodeUnitValue">
-					<Code><![CDATA[1]]></Code>
-					<Unit Class="TimeUnits">MINUTE</Unit>
-				</Timeout>
-				<Condition>true</Condition>
-				<Rate Class="CodeUnitValue">
-					<Code><![CDATA[1]]></Code>
-					<Unit Class="RateUnits">PER_MINUTE</Unit>
-				</Rate>
-				<MessageType>Object</MessageType>
-				<DefaultTransition>true</DefaultTransition>
-				<FilterType>unconditionally</FilterType>
-				<EqualsExpression>"text"</EqualsExpression>
-				<SatisfiesExpression>true</SatisfiesExpression>
-			</Properties>
-		</StatechartElement>
-		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1769808372268</Id>
 			<Name><![CDATA[transition16]]></Name>
 			<X>770</X>
@@ -1319,7 +1234,7 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="TimeUnits">MINUTE</Unit>
 				</Timeout>
-				<Condition>!isOffShift &amp;&amp; !isSeized &amp;&amp; (endShiftRequested || (getHourOfDay() &gt;= 23 &amp;&amp; main.customersInRestaurantNr == 0))</Condition>
+				<Condition>!isOffShift &amp;&amp; !isSeized &amp;&amp; (endShiftRequested || (getHourOfDay() &gt;= main.closingTime &amp;&amp; main.customersInRestaurantNr == 0))</Condition>
 				<Rate Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="RateUnits">PER_MINUTE</Unit>
@@ -1408,7 +1323,7 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="TimeUnits">MINUTE</Unit>
 				</Timeout>
-				<Condition>startShiftRequested || (wasOvertime &amp;&amp; getHourOfDay() &gt;= 6 &amp;&amp; lastShiftDay != date().getDay())</Condition>
+				<Condition>startShiftRequested || (wasOvertime &amp;&amp; getHourOfDay() &gt;= main.openingTime &amp;&amp; lastShiftDay != date().getDay())</Condition>
 				<Rate Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="RateUnits">PER_MINUTE</Unit>
@@ -1450,6 +1365,86 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 			<Properties Source="1775060659386" Target="1756758518168" Trigger="condition">
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</Timeout>
+				<Condition>true</Condition>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MINUTE</Unit>
+				</Rate>
+				<MessageType>Object</MessageType>
+				<DefaultTransition>true</DefaultTransition>
+				<FilterType>unconditionally</FilterType>
+				<EqualsExpression>"text"</EqualsExpression>
+				<SatisfiesExpression>true</SatisfiesExpression>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+			<Id>1779202127823</Id>
+			<Name><![CDATA[transition23]]></Name>
+			<X>705</X>
+			<Y>385</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>0</X>
+					<Y>100</Y>
+				</Point>
+			</Points>
+			<IconOffset>45.0</IconOffset>
+			<Properties Source="1757583310554" Target="1769808256279" Trigger="message">
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</Timeout>
+				<Condition>true</Condition>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MINUTE</Unit>
+				</Rate>
+				<MessageType>String</MessageType>
+				<DefaultTransition>true</DefaultTransition>
+				<FilterType>equalsTo</FilterType>
+				<EqualsExpression>"customersArrivedAtTable"</EqualsExpression>
+				<SatisfiesExpression>true</SatisfiesExpression>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+			<Id>1779219188192</Id>
+			<Name><![CDATA[transition1]]></Name>
+			<X>705</X>
+			<Y>515</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>0</X>
+					<Y>55</Y>
+				</Point>
+			</Points>
+			<IconOffset>20.0</IconOffset>
+			<Properties Source="1769808256279" Target="1756758068267" Trigger="timeout">
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[0]]></Code>
 					<Unit Class="TimeUnits">MINUTE</Unit>
 				</Timeout>
 				<Condition>true</Condition>

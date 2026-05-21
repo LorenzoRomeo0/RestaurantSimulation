@@ -137,7 +137,9 @@ main.inside_restaurant.free(this);</EntryAction>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="125" Height="35">
-				<EntryAction>shapeBody.setFillColor(orange);
+				<EntryAction>table = null;
+
+shapeBody.setFillColor(orange);
 
 for(int i=0; i&lt;size; i++){
 	celiacs+=bernoulli(0.01);
@@ -174,14 +176,13 @@ for(int i=0; i&lt;size; i++){
 			<Properties Width="120" Height="30">
 				<EntryAction>//traceln(getId() + " moving to table " + table.getId() + " pos: "+ table.getPosition().toString());
 table_wait_end_time = time();
+table_wait_end_date = date();
 
 main.register_customer_wait(table_wait_start_date, table_wait_end_date);
 main.table_wait_time_ds.add(time() - table_wait_end_time);
 
-moveTo(table);
 shapeBody.setFillColor(mediumOrchid);
-//traceln("Freeing welcoming wait of " + getId()  +" - " + main.welcoming_wait.getPopulation().toString());
-//main.welcoming_wait.free(this);</EntryAction>
+moveTo(table);</EntryAction>
 				<FillColor>-4565549</FillColor>
 			</Properties>
 		</StatechartElement>
@@ -199,21 +200,39 @@ shapeBody.setFillColor(mediumOrchid);
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
 				<EntryAction>/*
-traceln("welcoming delay: " + main.welcoming_delay.contents().toString());
-if(main.welcoming_delay.contents().contains(this)){
-	main.welcoming_delay.stopDelay(this);
-	traceln("stopping delay of " + getId());
+traceln(getId() + "BEFORE welcoming_wait size = " + main.welcoming_wait.size());
+
+for (int i = 0; i &lt; main.welcoming_wait.size(); i++) {
+    CustomerGroup cg = main.welcoming_wait.get(i);
+    traceln(
+        "  [" + i + "] id=" + cg.getId()
+        + " state=" + cg.statechart.getActiveSimpleState().name()
+        + " table=" + (cg.table == null ? "null" : cg.table.getId())
+        + " pos=" + cg.getPosition()
+    );
 }
 */
-//traceln("-- stopping delay of "+ getId());
+boolean released = main.welcoming_wait.free(this);
 
-//traceln(main.welcoming_wait.getPopulation().toString());
-//main.welcoming_wait.freeAll()
-//traceln("-- delay stopped? " + getId());
+send("customersArrivedAtTable", table.waiterAssigner);
+/*
+traceln("CUSTOMERSARRIVEDATTABLE SENT TO " + table.waiterAssigner.getId());
 
+traceln("CustomerGroup " + getId() + " free(this) returned = " + released);
 
+traceln(getId() + "AFTER welcoming_wait size = " + main.welcoming_wait.size());
 
-main.welcoming_wait.free(this);</EntryAction>
+for (int i = 0; i &lt; main.welcoming_wait.size(); i++) {
+    CustomerGroup cg = main.welcoming_wait.get(i);
+    traceln(
+        "  [" + i + "] id=" + cg.getId()
+        + " state=" + cg.statechart.getActiveSimpleState().name()
+        + " table=" + (cg.table == null ? "null" : cg.table.getId())
+        + " pos=" + cg.getPosition()
+    );
+}
+*/
+traceln("CustomerGroup "+ getId() + " is freed from welcoming_wait");</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
@@ -230,6 +249,7 @@ main.welcoming_wait.free(this);</EntryAction>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
+				<EntryAction>traceln("CustomerGroup "+ getId() + " is miniwaiting");</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
@@ -279,7 +299,7 @@ main.ordering_wait.free(this);</EntryAction>
 			<Y>550</Y>
 			<Label>
 				<X>10</X>
-				<Y>11</Y>
+				<Y>10</Y>
 			</Label>
 			<PublicFlag>false</PublicFlag>
 			<PresentationFlag>true</PresentationFlag>
@@ -344,12 +364,18 @@ main.welcoming_wait.free(this);</EntryAction>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
-				<EntryAction>main.stay_time_ds.add(time() - entrance_time);
-main.stay_time_hg.add(time() - entrance_time);
-
-//main.register_customer_wait(entrance_date, date());
-main.register_customer_stay(entrance_date, date());
-main.eating_wait.free(this);
+				<EntryAction>if( !isExitingSystem ){
+	main.stay_time_ds.add(time() - entrance_time);
+	main.stay_time_hg.add(time() - entrance_time);
+	
+	//main.register_customer_wait(entrance_date, date());
+	main.register_customer_stay(entrance_date, date());
+	main.eating_wait.free(this);
+	
+	isExitingSystem = true;
+} else {
+traceln(getId() + "TRIED TO EXIT TWICE");
+}
 
 </EntryAction>
 				<FillColor/>
@@ -417,9 +443,9 @@ main.eating_wait.free(this);
 			</Points>
 			<IconOffset>20.0</IconOffset>
 			<Properties Source="1756502010349" Target="1756801120070" Trigger="message">
-				<Action>
+				<Action>table = (Table) msg;
 
-table = (Table) msg;
+
 if(table != null &amp;&amp; !(table instanceof NoTable)){
 	traceln("customer "+ getId() + " was assigned "+ table.getId());
 } else {
@@ -554,7 +580,7 @@ if(table != null &amp;&amp; !(table instanceof NoTable)){
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="TimeUnits">MINUTE</Unit>
 				</Timeout>
-				<Condition>table == null || table instanceof NoTable</Condition>
+				<Condition>table == null || table instanceof NoTable || table.getId() == -1</Condition>
 				<Rate Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="RateUnits">PER_MINUTE</Unit>
@@ -673,7 +699,7 @@ currentWaiter = (Waiter) msg;</Action>
 			<IconOffset>20.0</IconOffset>
 			<Properties Source="1757341017786" Target="1756802739713" Trigger="timeout">
 				<Timeout Class="CodeUnitValue">
-					<Code><![CDATA[1]]></Code>
+					<Code><![CDATA[0]]></Code>
 					<Unit Class="TimeUnits">MINUTE</Unit>
 				</Timeout>
 				<Condition>true</Condition>

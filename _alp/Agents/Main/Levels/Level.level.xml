@@ -1134,6 +1134,120 @@
 				<FillMaterial>null</FillMaterial>
 				<LineStyle>DASHED</LineStyle>
 				<AttractorsLayout>arranged</AttractorsLayout>
+				<Presentation>
+					<Attractor>
+						<Id>1779227207675</Id>
+						<Name><![CDATA[attractor67]]></Name>
+						<X>355</X>
+						<Y>583.75</Y>
+						<Label>
+							<X>10</X>
+							<Y>0</Y>
+						</Label>
+						<PublicFlag>true</PublicFlag>
+						<PresentationFlag>true</PresentationFlag>
+						<ShowLabel>false</ShowLabel>
+						<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+						<Z>0</Z>
+						<Rotation>0.0</Rotation>
+					</Attractor>
+					<Attractor>
+						<Id>1779227207677</Id>
+						<Name><![CDATA[attractor68]]></Name>
+						<X>355</X>
+						<Y>597.5</Y>
+						<Label>
+							<X>10</X>
+							<Y>0</Y>
+						</Label>
+						<PublicFlag>true</PublicFlag>
+						<PresentationFlag>true</PresentationFlag>
+						<ShowLabel>false</ShowLabel>
+						<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+						<Z>0</Z>
+						<Rotation>0.0</Rotation>
+					</Attractor>
+					<Attractor>
+						<Id>1779227207679</Id>
+						<Name><![CDATA[attractor69]]></Name>
+						<X>355</X>
+						<Y>611.25</Y>
+						<Label>
+							<X>10</X>
+							<Y>0</Y>
+						</Label>
+						<PublicFlag>true</PublicFlag>
+						<PresentationFlag>true</PresentationFlag>
+						<ShowLabel>false</ShowLabel>
+						<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+						<Z>0</Z>
+						<Rotation>0.0</Rotation>
+					</Attractor>
+					<Attractor>
+						<Id>1779227207681</Id>
+						<Name><![CDATA[attractor70]]></Name>
+						<X>355</X>
+						<Y>625</Y>
+						<Label>
+							<X>10</X>
+							<Y>0</Y>
+						</Label>
+						<PublicFlag>true</PublicFlag>
+						<PresentationFlag>true</PresentationFlag>
+						<ShowLabel>false</ShowLabel>
+						<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+						<Z>0</Z>
+						<Rotation>0.0</Rotation>
+					</Attractor>
+					<Attractor>
+						<Id>1779227207683</Id>
+						<Name><![CDATA[attractor71]]></Name>
+						<X>355</X>
+						<Y>638.75</Y>
+						<Label>
+							<X>10</X>
+							<Y>0</Y>
+						</Label>
+						<PublicFlag>true</PublicFlag>
+						<PresentationFlag>true</PresentationFlag>
+						<ShowLabel>false</ShowLabel>
+						<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+						<Z>0</Z>
+						<Rotation>0.0</Rotation>
+					</Attractor>
+					<Attractor>
+						<Id>1779227207685</Id>
+						<Name><![CDATA[attractor72]]></Name>
+						<X>355</X>
+						<Y>652.5</Y>
+						<Label>
+							<X>10</X>
+							<Y>0</Y>
+						</Label>
+						<PublicFlag>true</PublicFlag>
+						<PresentationFlag>true</PresentationFlag>
+						<ShowLabel>false</ShowLabel>
+						<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+						<Z>0</Z>
+						<Rotation>0.0</Rotation>
+					</Attractor>
+					<Attractor>
+						<Id>1779227207687</Id>
+						<Name><![CDATA[attractor73]]></Name>
+						<X>355</X>
+						<Y>666.25</Y>
+						<Label>
+							<X>10</X>
+							<Y>0</Y>
+						</Label>
+						<PublicFlag>true</PublicFlag>
+						<PresentationFlag>true</PresentationFlag>
+						<ShowLabel>false</ShowLabel>
+						<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+						<Z>0</Z>
+						<Rotation>0.0</Rotation>
+					</Attractor>
+				</Presentation>
 				<Sloped>false</Sloped>
 				<Slope>
 					<Id>1756752619424</Id>
@@ -1151,7 +1265,7 @@
 					<SlopeType>angle</SlopeType>
 				</Slope>
 				<Width>50</Width>
-				<Height>80</Height>
+				<Height>110</Height>
 				<Rotation>0.0</Rotation>
 			</RectangleNode>
 			<Path SourceId="1756500551321" TargetId="1758114345521">
@@ -3305,7 +3419,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1771950131951</Id>
 		<Name><![CDATA[text8]]></Name>
-		<X>2160</X>
+		<X>1980</X>
 		<Y>1440</Y>
 		<Label>
 			<X>0</X>
@@ -3859,4 +3973,178 @@ al numero di persone]]></Text>
 		</Font>
 		<Alignment>LEFT</Alignment>
 	</Text>
+	<Text>
+		<Id>1778769294504</Id>
+		<Name><![CDATA[waitersPoolDebugText]]></Name>
+		<X>-410</X>
+		<Y>1210</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[waitersPoolDebugText]]></Text>
+		<Font>
+			<Name><![CDATA[Cascadia Code]]></Name>
+			<Size>10</Size>
+			<Style>0</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1778862377774</Id>
+		<Name><![CDATA[customerGroupDebugText]]></Name>
+		<X>-950</X>
+		<Y>990</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[customerGroupDebugText]]></Text>
+		<Font>
+			<Name><![CDATA[Cascadia Code]]></Name>
+			<Size>10</Size>
+			<Style>0</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<RectangleNode>
+		<Id>1779382850154</Id>
+		<Name><![CDATA[jail]]></Name>
+		<X>980</X>
+		<Y>270</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<Z>0</Z>
+		<EmbeddedObject>
+			<Id>1779382850157</Id>
+			<ActiveObjectClass>
+				<PackageName>com.anylogic.libraries.modules.markup_descriptors</PackageName>
+				<ClassName>AreaNodeDescriptor</ClassName>
+			</ActiveObjectClass>
+			<GenericParameterSubstitute>
+				<GenericParameterSubstituteReference>
+					<PackageName>com.anylogic.libraries.modules.markup_descriptors</PackageName>
+					<ClassName>AreaNodeDescriptor</ClassName>
+					<ItemName>1574694148121</ItemName>
+				</GenericParameterSubstituteReference>
+			</GenericParameterSubstitute>
+			<Parameters>
+				<Parameter>
+					<Name><![CDATA[appliedClass]]></Name>
+				</Parameter>
+				<Parameter>
+					<Name><![CDATA[speedRestricted]]></Name>
+				</Parameter>
+				<Parameter>
+					<Name><![CDATA[maxSpeed]]></Name>
+				</Parameter>
+				<Parameter>
+					<Name><![CDATA[accessRestricted]]></Name>
+				</Parameter>
+				<Parameter>
+					<Name><![CDATA[accessRestrictionType]]></Name>
+				</Parameter>
+				<Parameter>
+					<Name><![CDATA[accessRestrictionCondition]]></Name>
+				</Parameter>
+				<Parameter>
+					<Name><![CDATA[capacity]]></Name>
+				</Parameter>
+				<Parameter>
+					<Name><![CDATA[throughput]]></Name>
+				</Parameter>
+				<Parameter>
+					<Name><![CDATA[schedule]]></Name>
+				</Parameter>
+				<Parameter>
+					<Name><![CDATA[avoidedIfClosed]]></Name>
+				</Parameter>
+				<Parameter>
+					<Name><![CDATA[onEnter]]></Name>
+				</Parameter>
+				<Parameter>
+					<Name><![CDATA[onEnterDenied]]></Name>
+				</Parameter>
+				<Parameter>
+					<Name><![CDATA[onExit]]></Name>
+				</Parameter>
+				<Parameter>
+					<Name><![CDATA[onOpen]]></Name>
+				</Parameter>
+				<Parameter>
+					<Name><![CDATA[onClose]]></Name>
+				</Parameter>
+			</Parameters>
+			<ReplicationFlag>false</ReplicationFlag>
+			<Replication Class="CodeValue">
+				<Code><![CDATA[100]]></Code>
+			</Replication>
+			<CollectionType>ARRAY_LIST_BASED</CollectionType>
+			<InitialLocationType>XYZ</InitialLocationType>
+			<ColumnCode Class="CodeValue">
+				<Code><![CDATA[0]]></Code>
+			</ColumnCode>
+			<RowCode Class="CodeValue">
+				<Code><![CDATA[0]]></Code>
+			</RowCode>
+			<LocationNameCode Class="CodeValue">
+				<Code><![CDATA[""]]></Code>
+			</LocationNameCode>
+			<InitializationType>SPECIFIED_NUMBER</InitializationType>
+			<InitializationDatabaseTableQuery>
+				<Id>1779382850156</Id>
+				<TableReference/>
+			</InitializationDatabaseTableQuery>
+			<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+			<QuantityColumn/>
+		</EmbeddedObject>
+		<LineColor>-14774017</LineColor>
+		<FillColor/>
+		<LineWidth>1</LineWidth>
+		<LineMaterial>null</LineMaterial>
+		<FillMaterial>null</FillMaterial>
+		<LineStyle>DASHED</LineStyle>
+		<AttractorsLayout>random</AttractorsLayout>
+		<Sloped>false</Sloped>
+		<Slope>
+			<Id>1779382850152</Id>
+			<Name><![CDATA[jail]]></Name>
+			<X>0</X>
+			<Y>10</Y>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Dx>20</Dx>
+			<Dy>0</Dy>
+			<Dz>0</Dz>
+			<AngleX>30</AngleX>
+			<AngleZ>0</AngleZ>
+			<SlopeType>angle</SlopeType>
+		</Slope>
+		<Width>80</Width>
+		<Height>60</Height>
+		<Rotation>0.0</Rotation>
+	</RectangleNode>
 </Presentation>

@@ -3,7 +3,7 @@
 	<EmbeddedObject>
 		<Id>1756500551345</Id>
 		<Name><![CDATA[customer_source]]></Name>
-		<X>230</X>
+		<X>160</X>
 		<Y>1230</Y>
 		<Label>
 			<X>-10</X>
@@ -269,7 +269,7 @@ customerGroupsInRestaurant.add(agent);]]></Code>
 	<EmbeddedObject>
 		<Id>1756500551416</Id>
 		<Name><![CDATA[entrance_queue]]></Name>
-		<X>420</X>
+		<X>350</X>
 		<Y>1290</Y>
 		<Label>
 			<X>-10</X>
@@ -298,11 +298,14 @@ customerGroupsInRestaurant.add(agent);]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[maximumCapacity]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[true]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[entityLocation]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[path]]></Code>
+					<Code><![CDATA[queue_node]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -322,9 +325,6 @@ customerGroupsInRestaurant.add(agent);]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[enableTimeout]]></Name>
-				<Value Class="CodeValue">
-					<Code><![CDATA[true]]></Code>
-				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[timeout]]></Name>
@@ -348,7 +348,8 @@ customerGroupsInRestaurant.add(agent);]]></Code>
 			<Parameter>
 				<Name><![CDATA[onEnter]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[//agent.send("enter", agent);]]></Code>
+					<Code><![CDATA[//agent.send("enter", agent);
+agent.canStillCheckout = getHourOfDay() <= closingTime;]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -396,7 +397,7 @@ customerGroupsInRestaurant.add(agent);]]></Code>
 	<EmbeddedObject>
 		<Id>1756500551438</Id>
 		<Name><![CDATA[exit]]></Name>
-		<X>2290</X>
+		<X>2360</X>
 		<Y>1390</Y>
 		<Label>
 			<X>-15</X>
@@ -576,7 +577,7 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 	<EmbeddedObject>
 		<Id>1756742653440</Id>
 		<Name><![CDATA[queue_queue]]></Name>
-		<X>310</X>
+		<X>240</X>
 		<Y>1250</Y>
 		<Label>
 			<X>-8</X>
@@ -760,9 +761,6 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[destroyExcessUnits]]></Name>
-				<Value Class="CodeValue">
-					<Code><![CDATA[true]]></Code>
-				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[newUnit]]></Name>
@@ -1183,7 +1181,8 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 			<Parameter>
 				<Name><![CDATA[onSeizeUnit]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[send("goWelcome", unit);]]></Code>
+					<Code><![CDATA[send("goWelcome", unit);
+traceln(agent.getId() + "seized at welcoming_wait waiter " + unit.getId() )]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -1264,7 +1263,8 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 			<Parameter>
 				<Name><![CDATA[delayTime]]></Name>
 				<Value Class="CodeUnitValue">
-					<Code><![CDATA[normal(3, 10, 6, 1)]]></Code>
+					<Code><![CDATA[normal(3, 10, 6, 1)
+]]></Code>
 					<Unit Class="TimeUnits">SECOND</Unit>
 				</Value>
 			</Parameter>
@@ -1294,6 +1294,9 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onEnter]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[traceln("++ " + agent.getId() + " entered menureading");]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onAtExit]]></Name>
@@ -1409,6 +1412,9 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onEnter]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[traceln("++ " + agent.getId() + " entered release");]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onReleaseUnit]]></Name>
@@ -1472,14 +1478,11 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[capacityDefinitionType]]></Name>
-				<Value Class="CodeValue">
-					<Code><![CDATA[self.CAPACITY_SCHEDULE]]></Code>
-				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[capacity]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[5]]></Code>
+					<Code><![CDATA[getMaxWaiters()]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -1688,7 +1691,10 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 				<Value Class="CodeValue">
 					<Code><![CDATA[unit.inState(unit.waiting)
 && !unit.isMoving()
-&& !unit.isOffShift]]></Code>
+&& !unit.isOffShift
+&& unit.isIdle()
+&& !unit.isBusy()
+&& !unit.isReserved()]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -1709,7 +1715,7 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 			<Parameter>
 				<Name><![CDATA[onNewUnit]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[unit.requestShiftStart();]]></Code>
+					<Code><![CDATA[//unit.requestShiftStart();]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -1721,13 +1727,13 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 					<Code><![CDATA[//deliver(new Object(), unit);
 //send("goWelcome", unit);
 
-//unit.isSeized = true;]]></Code>
+unit.isSeized = true;]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onRelease]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[//unit.isSeized = false;]]></Code>
+					<Code><![CDATA[unit.isSeized = false;]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -1736,11 +1742,11 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 			<Parameter>
 				<Name><![CDATA[onUnitStateChange]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[if (type == ResourceTaskType.TASK_END_OF_SHIFT && !unit.isOffShift) {
+					<Code><![CDATA[/*if (type == ResourceTaskType.TASK_END_OF_SHIFT && !unit.isOffShift) {
     unit.requestShiftEnd();
 }else if (type != ResourceTaskType.TASK_END_OF_SHIFT && unit.isOffShift) {
     unit.requestShiftStart();
-}]]></Code>
+}*/]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -1853,7 +1859,7 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 	<EmbeddedObject>
 		<Id>1756760693429</Id>
 		<Name><![CDATA[pay]]></Name>
-		<X>2050</X>
+		<X>1960</X>
 		<Y>1380</Y>
 		<Label>
 			<X>-5</X>
@@ -2099,7 +2105,7 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 			<Parameter>
 				<Name><![CDATA[capacity]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[20]]></Code>
+					<Code><![CDATA[1]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -2132,6 +2138,9 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[pushProtocol]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[true]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[restoreEntityLocationOnExit]]></Name>
@@ -2195,7 +2204,7 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 	<EmbeddedObject>
 		<Id>1757664710063</Id>
 		<Name><![CDATA[hold]]></Name>
-		<X>510</X>
+		<X>515</X>
 		<Y>1320</Y>
 		<Label>
 			<X>-8</X>
@@ -2256,108 +2265,6 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 		<InitializationType>SPECIFIED_NUMBER</InitializationType>
 		<InitializationDatabaseTableQuery>
 			<Id>1757664710061</Id>
-			<TableReference/>
-		</InitializationDatabaseTableQuery>
-		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-		<QuantityColumn/>
-	</EmbeddedObject>
-	<EmbeddedObject>
-		<Id>1757666083426</Id>
-		<Name><![CDATA[queue]]></Name>
-		<X>420</X>
-		<Y>1370</Y>
-		<Label>
-			<X>-10</X>
-			<Y>-4</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<ActiveObjectClass>
-			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
-			<ClassName>Queue</ClassName>
-		</ActiveObjectClass>
-		<GenericParameterSubstitute>
-			<GenericParameterSubstituteReference>
-				<PackageName>com.anylogic.libraries.processmodeling</PackageName>
-				<ClassName>Queue</ClassName>
-				<ItemName>1412336242932</ItemName>
-			</GenericParameterSubstituteReference>
-		</GenericParameterSubstitute>
-		<Parameters>
-			<Parameter>
-				<Name><![CDATA[capacity]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[maximumCapacity]]></Name>
-				<Value Class="CodeValue">
-					<Code><![CDATA[true]]></Code>
-				</Value>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[entityLocation]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[queuing]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[priority]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[comparison]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[enableTimeout]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[timeout]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[enablePreemption]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[restoreEntityLocationOnExit]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[forceStatisticsCollection]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[onEnter]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[onAtExit]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[onExit]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[onExitTimeout]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[onExitPreempted]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[onRemove]]></Name>
-			</Parameter>
-		</Parameters>
-		<ReplicationFlag>false</ReplicationFlag>
-		<Replication Class="CodeValue">
-			<Code><![CDATA[100]]></Code>
-		</Replication>
-		<CollectionType>ARRAY_LIST_BASED</CollectionType>
-		<InitialLocationType>XYZ</InitialLocationType>
-		<ColumnCode Class="CodeValue">
-			<Code><![CDATA[0]]></Code>
-		</ColumnCode>
-		<RowCode Class="CodeValue">
-			<Code><![CDATA[0]]></Code>
-		</RowCode>
-		<LocationNameCode Class="CodeValue">
-			<Code><![CDATA[""]]></Code>
-		</LocationNameCode>
-		<InitializationType>SPECIFIED_NUMBER</InitializationType>
-		<InitializationDatabaseTableQuery>
-			<Id>1757666083424</Id>
 			<TableReference/>
 		</InitializationDatabaseTableQuery>
 		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
@@ -2890,9 +2797,6 @@ send(msg, unit);
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[destroyExcessUnits]]></Name>
-				<Value Class="CodeValue">
-					<Code><![CDATA[true]]></Code>
-				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[newUnit]]></Name>
@@ -3204,9 +3108,6 @@ send(msg, unit);
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[destroyExcessUnits]]></Name>
-				<Value Class="CodeValue">
-					<Code><![CDATA[true]]></Code>
-				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[newUnit]]></Name>
@@ -3620,7 +3521,7 @@ customerGroupsInRestaurant.remove(agent);]]></Code>
 			<Parameter>
 				<Name><![CDATA[condition]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[agent.table == null || agent.table instanceof NoTable]]></Code>
+					<Code><![CDATA[agent.table == null || agent.table instanceof NoTable || agent.table.getId() == -1]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -3634,6 +3535,14 @@ customerGroupsInRestaurant.remove(agent);]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onEnter]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[traceln("++ " + agent.getId() + " entered hastable, table=" 
+    + (agent.table == null ? "null" : agent.table.getId()));
+
+customersAtEntrance = null;
+hold.recalculateConditions();
+]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onExitTrue]]></Name>
@@ -3643,6 +3552,9 @@ customerGroupsInRestaurant.remove(agent);]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onExitFalse]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[customerGroupAlreadyPassed.add(agent);]]></Code>
+				</Value>
 			</Parameter>
 		</Parameters>
 		<ReplicationFlag>false</ReplicationFlag>
@@ -3990,8 +3902,8 @@ customerGroupsInRestaurant.remove(agent);]]></Code>
 	<EmbeddedObject>
 		<Id>1770364465678</Id>
 		<Name><![CDATA[orders_queue]]></Name>
-		<X>370</X>
-		<Y>1590</Y>
+		<X>1380</X>
+		<Y>1500</Y>
 		<Label>
 			<X>0</X>
 			<Y>-5</Y>
@@ -4101,8 +4013,8 @@ customerGroupsInRestaurant.remove(agent);]]></Code>
 	<EmbeddedObject>
 		<Id>1770364486668</Id>
 		<Name><![CDATA[cook_request]]></Name>
-		<X>430</X>
-		<Y>1610</Y>
+		<X>1440</X>
+		<Y>1520</Y>
 		<Label>
 			<X>0</X>
 			<Y>-5</Y>
@@ -4315,8 +4227,8 @@ send(new goCook(agent), unit);]]></Code>
 	<EmbeddedObject>
 		<Id>1770364523572</Id>
 		<Name><![CDATA[cooking]]></Name>
-		<X>490</X>
-		<Y>1630</Y>
+		<X>1500</X>
+		<Y>1540</Y>
 		<Label>
 			<X>0</X>
 			<Y>-5</Y>
@@ -4344,6 +4256,9 @@ send(new goCook(agent), unit);]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[maximumCapacity]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[true]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[entityLocation]]></Name>
@@ -4417,8 +4332,8 @@ send(new goCook(agent), unit);]]></Code>
 	<EmbeddedObject>
 		<Id>1770364542466</Id>
 		<Name><![CDATA[cook_release]]></Name>
-		<X>550</X>
-		<Y>1650</Y>
+		<X>1560</X>
+		<Y>1560</Y>
 		<Label>
 			<X>-5</X>
 			<Y>-5</Y>
@@ -4464,6 +4379,9 @@ send(new goCook(agent), unit);]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[movingGoHome]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[false]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[wrapUpTaskPolicyType]]></Name>
@@ -4519,8 +4437,8 @@ send(new goCook(agent), unit);]]></Code>
 	<EmbeddedObject>
 		<Id>1770364631151</Id>
 		<Name><![CDATA[ready_queue]]></Name>
-		<X>610</X>
-		<Y>1670</Y>
+		<X>1620</X>
+		<Y>1580</Y>
 		<Label>
 			<X>0</X>
 			<Y>-5</Y>
@@ -4624,8 +4542,8 @@ send(new goCook(agent), unit);]]></Code>
 	<EmbeddedObject>
 		<Id>1770364684405</Id>
 		<Name><![CDATA[waiter_seize]]></Name>
-		<X>670</X>
-		<Y>1690</Y>
+		<X>1680</X>
+		<Y>1600</Y>
 		<Label>
 			<X>0</X>
 			<Y>-5</Y>
@@ -4836,8 +4754,8 @@ send(new goCook(agent), unit);]]></Code>
 	<EmbeddedObject>
 		<Id>1770365615080</Id>
 		<Name><![CDATA[kitchen_enter]]></Name>
-		<X>320</X>
-		<Y>1580</Y>
+		<X>1330</X>
+		<Y>1490</Y>
 		<Label>
 			<X>-10</X>
 			<Y>-10</Y>
@@ -4956,8 +4874,8 @@ send(new goCook(agent), unit);]]></Code>
 	<EmbeddedObject>
 		<Id>1770366034486</Id>
 		<Name><![CDATA[bring_food]]></Name>
-		<X>730</X>
-		<Y>1710</Y>
+		<X>1740</X>
+		<Y>1620</Y>
 		<Label>
 			<X>0</X>
 			<Y>-5</Y>
@@ -4985,6 +4903,9 @@ send(new goCook(agent), unit);]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[maximumCapacity]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[true]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[entityLocation]]></Name>
@@ -5058,8 +4979,8 @@ send(new goCook(agent), unit);]]></Code>
 	<EmbeddedObject>
 		<Id>1770366057608</Id>
 		<Name><![CDATA[waiter_release]]></Name>
-		<X>790</X>
-		<Y>1730</Y>
+		<X>1800</X>
+		<Y>1640</Y>
 		<Label>
 			<X>-5</X>
 			<Y>-5</Y>
@@ -5105,6 +5026,9 @@ send(new goCook(agent), unit);]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[movingGoHome]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[false]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[wrapUpTaskPolicyType]]></Name>
@@ -5358,6 +5282,9 @@ send(new goCook(agent), unit);]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[movingGoHome]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[false]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[wrapUpTaskPolicyType]]></Name>
@@ -5413,8 +5340,8 @@ send(new goCook(agent), unit);]]></Code>
 	<EmbeddedObject>
 		<Id>1770372064453</Id>
 		<Name><![CDATA[kitchen_exit]]></Name>
-		<X>860</X>
-		<Y>1770</Y>
+		<X>1870</X>
+		<Y>1680</Y>
 		<Label>
 			<X>-5</X>
 			<Y>-10</Y>
@@ -5526,8 +5453,8 @@ send(new goCook(agent), unit);]]></Code>
 		<X>740</X>
 		<Y>1220</Y>
 		<Label>
-			<X>-5</X>
-			<Y>-15</Y>
+			<X>-4</X>
+			<Y>-8</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
@@ -5614,7 +5541,7 @@ send(new goCook(agent), unit);]]></Code>
 	<EmbeddedObject>
 		<Id>1771948324936</Id>
 		<Name><![CDATA[checkout_seize]]></Name>
-		<X>1880</X>
+		<X>1830</X>
 		<Y>1380</Y>
 		<Label>
 			<X>-5</X>
@@ -5637,6 +5564,9 @@ send(new goCook(agent), unit);]]></Code>
 		<Parameters>
 			<Parameter>
 				<Name><![CDATA[seizeFromOnePool]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[true]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[resourceSets]]></Name>
@@ -5648,6 +5578,9 @@ send(new goCook(agent), unit);]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[resourcePool]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[waitersPool]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[resourceQuantity]]></Name>
@@ -5762,6 +5695,9 @@ send(new goCook(agent), unit);]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[restoreEntityLocationOnExit]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[false]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[forceStatisticsCollection]]></Name>
@@ -5829,10 +5765,10 @@ send(new goCook(agent), unit);]]></Code>
 	<EmbeddedObject>
 		<Id>1771948599368</Id>
 		<Name><![CDATA[checkout_release]]></Name>
-		<X>2150</X>
+		<X>2050</X>
 		<Y>1380</Y>
 		<Label>
-			<X>-15</X>
+			<X>-35</X>
 			<Y>-15</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
@@ -5923,6 +5859,403 @@ send(new goCook(agent), unit);]]></Code>
 		<InitializationType>SPECIFIED_NUMBER</InitializationType>
 		<InitializationDatabaseTableQuery>
 			<Id>1771948599366</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1778860008956</Id>
+		<Name><![CDATA[time_check]]></Name>
+		<X>440</X>
+		<Y>1330</Y>
+		<Label>
+			<X>-40</X>
+			<Y>-15</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<ActiveObjectClass>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>SelectOutput</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+				<ClassName>SelectOutput</ClassName>
+				<ItemName>1412336242931</ItemName>
+			</GenericParameterSubstituteReference>
+		</GenericParameterSubstitute>
+		<Parameters>
+			<Parameter>
+				<Name><![CDATA[conditionIsProbabilistic]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[false]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[condition]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[agent.canStillCheckout]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[probability]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onAtEnter]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[choiceIsVolatile]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onEnter]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExitTrue]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExitFalse]]></Name>
+			</Parameter>
+		</Parameters>
+		<ReplicationFlag>false</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InitialLocationType>XYZ</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>SPECIFIED_NUMBER</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1778860008954</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1778860040747</Id>
+		<Name><![CDATA[too_late]]></Name>
+		<X>510</X>
+		<Y>1370</Y>
+		<Label>
+			<X>-10</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<ActiveObjectClass>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>Sink</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+				<ClassName>Sink</ClassName>
+				<ItemName>1412336242929</ItemName>
+			</GenericParameterSubstituteReference>
+		</GenericParameterSubstitute>
+		<Parameters>
+			<Parameter>
+				<Name><![CDATA[onEnter]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[customersInRestaurantNr--;
+customerGroupsInRestaurant.remove(agent);]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[destroyEntity]]></Name>
+			</Parameter>
+		</Parameters>
+		<ReplicationFlag>false</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InitialLocationType>XYZ</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>SPECIFIED_NUMBER</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1778860040745</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1779382730288</Id>
+		<Name><![CDATA[invalid_population]]></Name>
+		<X>2210</X>
+		<Y>1390</Y>
+		<Label>
+			<X>-40</X>
+			<Y>-25</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<ActiveObjectClass>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>SelectOutput</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+				<ClassName>SelectOutput</ClassName>
+				<ItemName>1412336242931</ItemName>
+			</GenericParameterSubstituteReference>
+		</GenericParameterSubstitute>
+		<Parameters>
+			<Parameter>
+				<Name><![CDATA[conditionIsProbabilistic]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[false]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[condition]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[customerGroup.contains(agent)]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[probability]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onAtEnter]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[choiceIsVolatile]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onEnter]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExitTrue]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExitFalse]]></Name>
+			</Parameter>
+		</Parameters>
+		<ReplicationFlag>false</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InitialLocationType>XYZ</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>SPECIFIED_NUMBER</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1779382730286</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1779382807419</Id>
+		<Name><![CDATA[invalid_state]]></Name>
+		<X>2240</X>
+		<Y>1480</Y>
+		<Label>
+			<X>0</X>
+			<Y>-15</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<ActiveObjectClass>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>Wait</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+				<ClassName>Wait</ClassName>
+				<ItemName>1412336243169</ItemName>
+			</GenericParameterSubstituteReference>
+		</GenericParameterSubstitute>
+		<Parameters>
+			<Parameter>
+				<Name><![CDATA[capacity]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[maximumCapacity]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[true]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[entityLocation]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[jail]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[enableTimeout]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[timeout]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[enablePreemption]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[queuing]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[priority]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[comparisonForPreemption]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[pushProtocol]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[restoreEntityLocationOnExit]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[forceStatisticsCollection]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onEnter]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExit]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExitTimeout]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExitPreempted]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onRemove]]></Name>
+			</Parameter>
+		</Parameters>
+		<ReplicationFlag>false</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InitialLocationType>XYZ</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>SPECIFIED_NUMBER</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1779382807417</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1779392224867</Id>
+		<Name><![CDATA[already_done]]></Name>
+		<X>380</X>
+		<Y>1400</Y>
+		<Label>
+			<X>-40</X>
+			<Y>-25</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<ActiveObjectClass>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>SelectOutput</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+				<ClassName>SelectOutput</ClassName>
+				<ItemName>1412336242931</ItemName>
+			</GenericParameterSubstituteReference>
+		</GenericParameterSubstitute>
+		<Parameters>
+			<Parameter>
+				<Name><![CDATA[conditionIsProbabilistic]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[false]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[condition]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[!customerGroupAlreadyPassed.contains(agent)]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[probability]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onAtEnter]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[choiceIsVolatile]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onEnter]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExitTrue]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExitFalse]]></Name>
+			</Parameter>
+		</Parameters>
+		<ReplicationFlag>false</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InitialLocationType>XYZ</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>SPECIFIED_NUMBER</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1779392224865</Id>
 			<TableReference/>
 		</InitializationDatabaseTableQuery>
 		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>

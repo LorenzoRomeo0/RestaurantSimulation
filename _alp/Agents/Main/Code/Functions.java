@@ -388,3 +388,50 @@ menuCopulaGeneratorDebugText.setText(
 );
 /*ALCODEEND*/}
 
+double waitersPoolDebugTextUpdater()
+{/*ALCODESTART::1778769341205*/
+StringBuilder sb = new StringBuilder();
+
+for (Waiter w : waiters) {
+    Agent owner = w.getServicedEntity();   // null se il waiter è libero
+
+    if (waitersPool.containsUnit(w)) {
+        sb.append("[ \n")
+        .append(w)
+          .append(" -> ")
+          .append(owner == null ? "no owner" : owner.getClass().getName() + " " + owner.getId())
+          .append("\n ] \n");
+    }
+}
+
+
+waitersPoolDebugText.setText(sb.toString());
+/*ALCODEEND*/}
+
+double customerGroupDebugTextUpdater()
+{/*ALCODESTART::1778862300472*/
+StringBuilder sb = new StringBuilder();
+
+for (CustomerGroup c : customerGroup) {
+        sb.append("[ \n")
+        .append(c)
+          .append("\n ] \n");
+}
+
+
+customerGroupDebugText.setText(sb.toString());
+/*ALCODEEND*/}
+
+int getMaxWaiters()
+{/*ALCODESTART::1779227005235*/
+int maxWaiters = 0;
+for(double t = 0; t < 7 * 24; t += 1) { 
+    int val = waiters_schedule.getValue(t, HOUR); 
+    if(val > maxWaiters) {
+        maxWaiters = val;
+    }
+}
+
+return maxWaiters;
+/*ALCODEEND*/}
+

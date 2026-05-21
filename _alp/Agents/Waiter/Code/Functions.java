@@ -10,3 +10,37 @@ startShiftRequested = true;
 waiter_statechart.onChange();
 /*ALCODEEND*/}
 
+String toString()
+{/*ALCODESTART::1778861913555*/
+return
+	"id = " + getId() +"\n" +
+	"shiftStartDate = " + shiftStartDate + "\n" +
+	"shiftEndDate = " + shiftEndDate + "\n" +
+	"endShiftRequested = " + endShiftRequested + "\n" +
+	"startShiftRequested = " + startShiftRequested + "\n" +
+	"isOffShift = " + isOffShift + "\n" +
+	"wasOvertime = " + wasOvertime + "\n" +
+	"lastShiftDay = " + lastShiftDay + "\n" +
+	"currentOrder = " + currentOrder + "\n" +
+	"isSeized = " + isSeized + "\n" +
+	"foundTable = " + foundTable + "\n" +
+	"currentCustomers = " + (currentCustomers == null ? "null" : currentCustomers.getId()) + "\n" +
+	"targetNode = " + targetNode + "\n" +
+	"isWaiting = " + isWaiting;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+/*ALCODEEND*/}
+

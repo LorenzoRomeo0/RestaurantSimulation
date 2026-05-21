@@ -681,7 +681,7 @@
 		<Color>-16777216</Color>
 		<Text><![CDATA[Attenzione a far tornare a waiting nello stesso istante che viene liberata la risorsa dal seize!
 In notify order done mando il messaggio al customer che nel suo statechart lo libera
-dall'ordering wait che po arriva al free() di questo waiter. Il waiter torna disponibile nel pool e 
+dall'ordering wait che poi arriva al free() di questo waiter. Il waiter torna disponibile nel pool e 
 quindi viene richiesto dal customer successivo,peò il messaggio mandato dall'onSeize non 
 veniva processato da questo waiter, perché a causa si un delay di 1 minuto dopo il notify 
 order done, all'arrivo del messaggio non si trovava nello stato waiting (che contiene la 

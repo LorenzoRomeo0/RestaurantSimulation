@@ -456,6 +456,34 @@
 					<ItemName>waiters</ItemName>
 				</ValueColumnReference>
 			</IntervalsQuery>
+			<Action>// Contiamo quanti camerieri sono attualmente nel turno attivo o stanno iniziando
+int currentlyOnShift = 0;
+for (Waiter w : waiters) {
+    if (!w.isOffShift || w.startShiftRequested) {
+        currentlyOnShift++;
+    }
+}
+
+// 1. Dobbiamo INIZIARE nuovi turni?
+if (currentlyOnShift &lt; value) {
+    int needed = value - currentlyOnShift;
+    for (Waiter w : waiters) {
+        if (needed &gt; 0 &amp;&amp; w.isOffShift &amp;&amp; !w.startShiftRequested) {
+            w.requestShiftStart();
+            needed--;
+        }
+    }
+}
+// 2. Dobbiamo TERMINARE dei turni?
+else if (currentlyOnShift &gt; value) {
+    int toRemove = currentlyOnShift - value;
+    for (Waiter w : waiters) {
+        if (toRemove &gt; 0 &amp;&amp; (!w.isOffShift &amp;&amp; !w.endShiftRequested)) {
+            w.requestShiftEnd();
+            toRemove--;
+        }
+    }
+}</Action>
 			<Intervals/>
 			<Exceptions/>
 		</Schedule>

@@ -18,5 +18,7 @@ timeEventsDebugTextUpdater();
 menuItemsDebugTextUpdater();
 moneyDebugTextUpdater();
 menuCopulaGeneratorDebugTextUpdater();
+waitersPoolDebugTextUpdater();
+customerGroupDebugTextUpdater();
 /*ALCODEEND*/}
 
