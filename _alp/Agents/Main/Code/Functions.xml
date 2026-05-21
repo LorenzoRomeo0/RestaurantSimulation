@@ -61,8 +61,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1774982011623</Id>
 		<Name><![CDATA[init]]></Name>
-		<X>-240</X>
-		<Y>440</Y>
+		<X>360</X>
+		<Y>-160</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -101,8 +101,8 @@
 		<ReturnType>String</ReturnType>
 		<Id>1775044645264</Id>
 		<Name><![CDATA[day_to_string]]></Name>
-		<X>-600</X>
-		<Y>310</Y>
+		<X>360</X>
+		<Y>-210</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -146,7 +146,7 @@
 		<Id>1775232593178</Id>
 		<Name><![CDATA[waitersDebugTextUpdater]]></Name>
 		<X>-600</X>
-		<Y>120</Y>
+		<Y>-10</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -162,7 +162,7 @@
 		<Id>1776067186397</Id>
 		<Name><![CDATA[timeEventsDebugTextUpdater]]></Name>
 		<X>-600</X>
-		<Y>90</Y>
+		<Y>-30</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -226,7 +226,7 @@
 		<Id>1776499860026</Id>
 		<Name><![CDATA[menuItemsDebugTextUpdater]]></Name>
 		<X>-600</X>
-		<Y>50</Y>
+		<Y>-50</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -242,7 +242,7 @@
 		<Id>1777058084938</Id>
 		<Name><![CDATA[moneyDebugTextUpdater]]></Name>
 		<X>-600</X>
-		<Y>10</Y>
+		<Y>-70</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -258,7 +258,7 @@
 		<Id>1777316827810</Id>
 		<Name><![CDATA[menuCopulaGeneratorDebugTextUpdater]]></Name>
 		<X>-600</X>
-		<Y>-30</Y>
+		<Y>-90</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -273,8 +273,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1778769341205</Id>
 		<Name><![CDATA[waitersPoolDebugTextUpdater]]></Name>
-		<X>-280</X>
-		<Y>1090</Y>
+		<X>-600</X>
+		<Y>-130</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -289,8 +289,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1778862300472</Id>
 		<Name><![CDATA[customerGroupDebugTextUpdater]]></Name>
-		<X>-280</X>
-		<Y>1050</Y>
+		<X>-600</X>
+		<Y>-110</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -305,8 +305,8 @@
 		<ReturnType>int</ReturnType>
 		<Id>1779227005235</Id>
 		<Name><![CDATA[getMaxWaiters]]></Name>
-		<X>800</X>
-		<Y>-610</Y>
+		<X>360</X>
+		<Y>-130</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>

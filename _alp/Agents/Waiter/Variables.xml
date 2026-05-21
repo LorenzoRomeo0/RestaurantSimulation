@@ -198,11 +198,11 @@
 			</InitialValue>
 		</Properties>
 	</Variable>
-	<Variable Class="Parameter">
-		<Id>1757583049009</Id>
+	<Variable Class="PlainVariable">
+		<Id>1779396241133</Id>
 		<Name><![CDATA[foundTable]]></Name>
-		<X>-105</X>
-		<Y>25</Y>
+		<X>-100</X>
+		<Y>30</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -210,26 +210,20 @@
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
 		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
 			<Type><![CDATA[Table]]></Type>
-			<UnitType>NONE</UnitType>
-			<SdArray>false</SdArray>
-			<DefaultValue Class="CodeValue">
+			<InitialValue Class="CodeValue">
 				<Code><![CDATA[null]]></Code>
-			</DefaultValue>
-			<ParameterEditor>
-				<Id>1757583049007</Id>
-				<EditorContolType>TEXT_BOX</EditorContolType>
-				<MinSliderValue>0</MinSliderValue>
-				<MaxSliderValue>100</MaxSliderValue>
-				<DelimeterType>NO_DELIMETER</DelimeterType>
-			</ParameterEditor>
+			</InitialValue>
 		</Properties>
 	</Variable>
-	<Variable Class="Parameter">
-		<Id>1757583395024</Id>
+	<Variable Class="PlainVariable">
+		<Id>1779396280869</Id>
 		<Name><![CDATA[currentCustomers]]></Name>
-		<X>-105</X>
+		<X>-100</X>
 		<Y>60</Y>
 		<Label>
 			<X>10</X>
@@ -238,28 +232,21 @@
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
 		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
 			<Type><![CDATA[CustomerGroup]]></Type>
-			<UnitType>NONE</UnitType>
-			<UnitOfValue Class="SpeedUnits">MPS</UnitOfValue>
-			<SdArray>false</SdArray>
-			<DefaultValue Class="CodeValue">
+			<InitialValue Class="CodeValue">
 				<Code><![CDATA[null]]></Code>
-			</DefaultValue>
-			<ParameterEditor>
-				<Id>1757583395022</Id>
-				<EditorContolType>TEXT_BOX</EditorContolType>
-				<MinSliderValue>0</MinSliderValue>
-				<MaxSliderValue>100</MaxSliderValue>
-				<DelimeterType>NO_DELIMETER</DelimeterType>
-			</ParameterEditor>
+			</InitialValue>
 		</Properties>
 	</Variable>
-	<Variable Class="Parameter">
-		<Id>1770645169416</Id>
+	<Variable Class="PlainVariable">
+		<Id>1779396314046</Id>
 		<Name><![CDATA[targetNode]]></Name>
-		<X>-105</X>
-		<Y>150</Y>
+		<X>-100</X>
+		<Y>140</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -267,28 +254,21 @@
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
 		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
 			<Type><![CDATA[String]]></Type>
-			<UnitType>NONE</UnitType>
-			<UnitOfValue Class="SpeedUnits">MPS</UnitOfValue>
-			<SdArray>false</SdArray>
-			<DefaultValue Class="CodeValue">
+			<InitialValue Class="CodeValue">
 				<Code><![CDATA[null]]></Code>
-			</DefaultValue>
-			<ParameterEditor>
-				<Id>1770645169414</Id>
-				<EditorContolType>TEXT_BOX</EditorContolType>
-				<MinSliderValue>0</MinSliderValue>
-				<MaxSliderValue>100</MaxSliderValue>
-				<DelimeterType>NO_DELIMETER</DelimeterType>
-			</ParameterEditor>
+			</InitialValue>
 		</Properties>
 	</Variable>
-	<Variable Class="Parameter">
-		<Id>1771885456542</Id>
+	<Variable Class="PlainVariable">
+		<Id>1779396353979</Id>
 		<Name><![CDATA[isWaiting]]></Name>
 		<X>-100</X>
-		<Y>260</Y>
+		<Y>220</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -296,20 +276,14 @@
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
 		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
 			<Type><![CDATA[boolean]]></Type>
-			<UnitType>NONE</UnitType>
-			<SdArray>false</SdArray>
-			<DefaultValue Class="CodeValue">
+			<InitialValue Class="CodeValue">
 				<Code><![CDATA[false]]></Code>
-			</DefaultValue>
-			<ParameterEditor>
-				<Id>1771885456540</Id>
-				<EditorContolType>CHECK_BOX</EditorContolType>
-				<MinSliderValue>0</MinSliderValue>
-				<MaxSliderValue>100</MaxSliderValue>
-				<DelimeterType>NO_DELIMETER</DelimeterType>
-			</ParameterEditor>
+			</InitialValue>
 		</Properties>
 	</Variable>
 </Variables>

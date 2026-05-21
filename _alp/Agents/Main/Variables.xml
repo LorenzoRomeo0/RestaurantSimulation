@@ -99,8 +99,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1776444741169</Id>
 		<Name><![CDATA[menuItems]]></Name>
-		<X>40</X>
-		<Y>30</Y>
+		<X>580</X>
+		<Y>-140</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -121,8 +121,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1777316753395</Id>
 		<Name><![CDATA[menuCopulaGenerator]]></Name>
-		<X>40</X>
-		<Y>60</Y>
+		<X>580</X>
+		<Y>-120</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -143,8 +143,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1778656592315</Id>
 		<Name><![CDATA[customerGroupsInRestaurant]]></Name>
-		<X>40</X>
-		<Y>100</Y>
+		<X>580</X>
+		<Y>-50</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -165,8 +165,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1779392250584</Id>
 		<Name><![CDATA[customerGroupAlreadyPassed]]></Name>
-		<X>400</X>
-		<Y>1450</Y>
+		<X>580</X>
+		<Y>-30</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -184,11 +184,11 @@
 			</InitialValue>
 		</Properties>
 	</Variable>
-	<Variable Class="Parameter">
-		<Id>1756761690210</Id>
+	<Variable Class="PlainVariable">
+		<Id>1779396450567</Id>
 		<Name><![CDATA[customersAtEntrance]]></Name>
 		<X>580</X>
-		<Y>-390</Y>
+		<Y>-100</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -196,17 +196,33 @@
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
 		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
 			<Type><![CDATA[CustomerGroup]]></Type>
-			<UnitType>NONE</UnitType>
-			<SdArray>false</SdArray>
-			<ParameterEditor>
-				<Id>1756761690208</Id>
-				<EditorContolType>TEXT_BOX</EditorContolType>
-				<MinSliderValue>0</MinSliderValue>
-				<MaxSliderValue>100</MaxSliderValue>
-				<DelimeterType>NO_DELIMETER</DelimeterType>
-			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1779396480991</Id>
+		<Name><![CDATA[customersInRestaurantNr]]></Name>
+		<X>580</X>
+		<Y>-70</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[int]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[0]]></Code>
+			</InitialValue>
 		</Properties>
 	</Variable>
 	<Variable Class="Parameter">
@@ -294,38 +310,10 @@
 		</Properties>
 	</Variable>
 	<Variable Class="Parameter">
-		<Id>1775058175567</Id>
-		<Name><![CDATA[customersInRestaurantNr]]></Name>
-		<X>580</X>
-		<Y>-370</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>false</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-			<Type><![CDATA[int]]></Type>
-			<UnitType>NONE</UnitType>
-			<SdArray>false</SdArray>
-			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[0]]></Code>
-			</DefaultValue>
-			<ParameterEditor>
-				<Id>1775058175565</Id>
-				<EditorContolType>TEXT_BOX</EditorContolType>
-				<MinSliderValue>0</MinSliderValue>
-				<MaxSliderValue>100</MaxSliderValue>
-				<DelimeterType>NO_DELIMETER</DelimeterType>
-			</ParameterEditor>
-		</Properties>
-	</Variable>
-	<Variable Class="Parameter">
 		<Id>1775058764621</Id>
 		<Name><![CDATA[closingTime]]></Name>
 		<X>580</X>
-		<Y>-200</Y>
+		<Y>-190</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>

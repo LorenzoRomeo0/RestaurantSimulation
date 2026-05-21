@@ -96,9 +96,6 @@
 		</Presentation>
 		<Parameters>
 			<Parameter>
-				<ParameterName>customersAtEntrance</ParameterName>
-			</Parameter>
-			<Parameter>
 				<ParameterName>outsideTablesNr</ParameterName>
 			</Parameter>
 			<Parameter>
@@ -106,9 +103,6 @@
 			</Parameter>
 			<Parameter>
 				<ParameterName>barTablesNr</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>customersInRestaurantNr</ParameterName>
 			</Parameter>
 			<Parameter>
 				<ParameterName>closingTime</ParameterName>

@@ -1818,20 +1818,7 @@ unit.isSeized = true;]]></Code>
 				<ItemName>1756480161937</ItemName>
 			</GenericParameterSubstituteReference>
 		</GenericParameterSubstitute>
-		<Parameters>
-			<Parameter>
-				<Name><![CDATA[foundTable]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[currentCustomers]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[targetNode]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[isWaiting]]></Name>
-			</Parameter>
-		</Parameters>
+		<Parameters/>
 		<ReplicationFlag>true</ReplicationFlag>
 		<Replication Class="CodeValue">
 			<Code><![CDATA[100]]></Code>
@@ -1977,23 +1964,7 @@ unit.isSeized = true;]]></Code>
 				<ItemName>1756480025055</ItemName>
 			</GenericParameterSubstituteReference>
 		</GenericParameterSubstitute>
-		<Parameters>
-			<Parameter>
-				<Name><![CDATA[size]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[table]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[currentWaiter]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[entrancePriority]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[celiacs]]></Name>
-			</Parameter>
-		</Parameters>
+		<Parameters/>
 		<ReplicationFlag>true</ReplicationFlag>
 		<Replication Class="CodeValue">
 			<Code><![CDATA[100]]></Code>
