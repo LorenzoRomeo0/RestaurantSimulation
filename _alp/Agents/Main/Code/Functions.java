@@ -79,16 +79,13 @@ double eatingTimeModel(int groupSize)
 //Di più con amici e parenti (cena e weekends)
 
 double baseMeanTime = eating_time_schedule.getValue();
-
 double minTime = lognormal(baseMeanTime, baseMeanTime*0.2, 5);
-
 double maxIncrease = 0.8; //percentuale di tempo aggiunto massima
-
 double growth = 0.35;
-
 double multiplier = 1 + maxIncrease * (1 - Math.exp(-growth * (groupSize - 1)));
 
 return baseMeanTime * multiplier;
+
 
 
 /*ALCODEEND*/}
@@ -433,5 +430,13 @@ for(double t = 0; t < 7 * 24; t += 1) {
 }
 
 return maxWaiters;
+/*ALCODEEND*/}
+
+double menuReadingModel(int groupSize)
+{/*ALCODESTART::1779701422068*/
+double baseTime = normal(0, 200, 6, 2);
+
+double k = 0.05; //% of time an additional person adds
+return baseTime * (1 + k * (groupSize - 1));
 /*ALCODEEND*/}
 

@@ -19,20 +19,20 @@ Calcolare quanto tempo in media le persone stanno nel ristorante
 (OK) Modellare il tempo trascorso nel ristorante in base al momento della giornata (colazione veloce, cena molto lenta)
 (OK) Usare distrubuzione per dire quanti tavoli di una determinata dimensione ci sono (oppure farlo fisso? Rendere parametrico per fare esperimenti)
 
-rendere menu_reading proporzionale alla dimensione del gruppo (non di molto perché è un attività che si fa in parallelo, più che altro per simulare l'allungarsi del dare l'ordine al cameriere)
+(OK) rendere menu_reading proporzionale alla dimensione del gruppo (non di molto perché è un attività che si fa in parallelo, più che altro per simulare l'allungarsi del dare l'ordine al cameriere)
 
 (OK) creare schedule per i cooks e camerieri (pochi a colazione, tanti a cena. usare distribuzione)
 Calcolare il numero di camerieri per tenere conto delle possibili assenze (malattia ecc)
 
 Modellare menù
-    (OK) con popolarità per cibo 
-    (OK) con menù diversi per diversi momenti della giornata (colazione, pranzo, break, cena) 
-    (OK)complessità di preparazione per alimento e costo 
+    (OK) con popolarità per cibo
+    (OK) con menù diversi per diversi momenti della giornata (colazione, pranzo, break, cena)
+    (OK)complessità di preparazione per alimento e costo
     (come modelliamo quanto tempo le persone ci mettono ad ordinare? come modellare la scelta di un primo, un secondo? Utilizzando altre tabelle...)
-    (OK) aggiungere la possibilità di menù fissi a pranzo (menù lavoratori) 
-        (OK) ma anche a colazione (combo brioche succo e caffè) 
-    (IN PROGRESS) copula per elementi che spesso vengono presi insieme? (tipo cotoletta e contorno) 
-        creare un generatore di matrici di correlazione da csv di ordini sintetici
+    (OK) aggiungere la possibilità di menù fissi a pranzo (menù lavoratori)
+        (OK) ma anche a colazione (combo brioche succo e caffè)
+    (OK) copula per elementi che spesso vengono presi insieme? (tipo cotoletta e contorno)
+        (OK) creare un generatore di matrici di correlazione da csv di ordini sintetici
     Creare del parallelismo per la preparazione di un ordine (magari hot e cold possono essere fatti simulaneamente e teniamo conto solo del tempo maggiore?)
 
 

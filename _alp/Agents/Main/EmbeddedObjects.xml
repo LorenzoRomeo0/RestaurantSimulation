@@ -1263,9 +1263,8 @@ traceln(agent.getId() + "seized at welcoming_wait waiter " + unit.getId() )]]></
 			<Parameter>
 				<Name><![CDATA[delayTime]]></Name>
 				<Value Class="CodeUnitValue">
-					<Code><![CDATA[normal(3, 10, 6, 1)
-]]></Code>
-					<Unit Class="TimeUnits">SECOND</Unit>
+					<Code><![CDATA[menuReadingModel(agent.size)]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
 				</Value>
 			</Parameter>
 			<Parameter>

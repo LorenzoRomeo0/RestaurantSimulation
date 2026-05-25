@@ -58,7 +58,7 @@
 					<Id>1770632895149</Id>
 					<TableReference>
 						<PackageName>restaurant_2025</PackageName>
-						<ClassName>arrival_rate_week_converted</ClassName>
+						<ClassName>arrival_rate_week_converted_delete</ClassName>
 					</TableReference>
 					<ConnectionIndex>0</ConnectionIndex>
 					<ExternalTableName>"arrival_rate_week_converted"</ExternalTableName>
@@ -68,7 +68,7 @@
 					<Id>1770632895152</Id>
 					<TableReference>
 						<PackageName>restaurant_2025</PackageName>
-						<ClassName>arrival_rate_complete</ClassName>
+						<ClassName>arrival_rate_complete_delete</ClassName>
 					</TableReference>
 					<ConnectionIndex>0</ConnectionIndex>
 					<ExternalTableName>"arrival_rate_complete"</ExternalTableName>

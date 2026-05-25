@@ -130,21 +130,21 @@
 				<Id>1770220504058</Id>
 				<TableReference>
 					<PackageName>restaurant_2025</PackageName>
-					<ClassName>arrival_rate_complete</ClassName>
+					<ClassName>arrival_rate_week_groupsize</ClassName>
 				</TableReference>
 				<StartColumnReference>
 					<PackageName>restaurant_2025</PackageName>
-					<ClassName>arrival_rate_complete</ClassName>
+					<ClassName>arrival_rate_week_groupsize</ClassName>
 					<ItemName>start_timestamp</ItemName>
 				</StartColumnReference>
 				<EndColumnReference>
 					<PackageName>restaurant_2025</PackageName>
-					<ClassName>arrival_rate_complete</ClassName>
+					<ClassName>arrival_rate_week_groupsize</ClassName>
 					<ItemName>end_timestamp</ItemName>
 				</EndColumnReference>
 				<ValueColumnReference>
 					<PackageName>restaurant_2025</PackageName>
-					<ClassName>arrival_rate_complete</ClassName>
+					<ClassName>arrival_rate_week_groupsize</ClassName>
 					<ItemName>arrival_rate</ItemName>
 				</ValueColumnReference>
 			</IntervalsQuery>
