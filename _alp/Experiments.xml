@@ -110,6 +110,12 @@
 			<Parameter>
 				<ParameterName>openingTime</ParameterName>
 			</Parameter>
+			<Parameter>
+				<ParameterName>muPayTime</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>sigmaPayTime</ParameterName>
+			</Parameter>
 		</Parameters>
 		<PresentationProperties>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>

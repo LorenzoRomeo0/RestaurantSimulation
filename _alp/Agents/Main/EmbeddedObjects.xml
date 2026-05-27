@@ -1872,8 +1872,8 @@ unit.isSeized = true;]]></Code>
 			<Parameter>
 				<Name><![CDATA[delayTime]]></Name>
 				<Value Class="CodeUnitValue">
-					<Code><![CDATA[normal(0.5, 5, 2, 1) + agent.size/5]]></Code>
-					<Unit Class="TimeUnits">MINUTE</Unit>
+					<Code><![CDATA[payTimeModel(agent.size)]]></Code>
+					<Unit Class="TimeUnits">SECOND</Unit>
 				</Value>
 			</Parameter>
 			<Parameter>

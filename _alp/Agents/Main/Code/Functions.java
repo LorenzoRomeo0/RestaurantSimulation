@@ -440,3 +440,24 @@ double k = 0.05; //% of time an additional person adds
 return baseTime * (1 + k * (groupSize - 1));
 /*ALCODEEND*/}
 
+double payTimeModel(int groupSize)
+{/*ALCODESTART::1779873697186*/
+// Returned value is in SECONDS
+
+int onePaysAll = bernoulli(0.7);
+
+double min = 5;
+double max = Double.POSITIVE_INFINITY;
+
+
+double payTime = 
+	(onePaysAll * 
+		( normal(min, max, muPayTime, sigmaPayTime) * 1.05)) + 
+	(1-onePaysAll * 
+		(normal(min, max, muPayTime * groupSize , sigmaPayTime * sqrt(groupSize)))); 
+
+return payTime;
+
+//normal(0.5, 5, 2, 1) + agent.size/5
+/*ALCODEEND*/}
+

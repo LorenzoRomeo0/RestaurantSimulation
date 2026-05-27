@@ -146,8 +146,6 @@ public class TimeEvents {
     }
 
     
-    
-    
     @Override
     public String toString() {
         return "TimeEvents{size=" + events.size() + "}";
