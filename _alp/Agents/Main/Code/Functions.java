@@ -447,7 +447,8 @@ double payTimeModel(int groupSize)
 {/*ALCODESTART::1779873697186*/
 // Returned value is in SECONDS
 
-int onePaysAll = bernoulli(0.7);
+double p = pPayTimeModel;
+int onePaysAll = bernoulli(p);
 
 double min = 5;
 double max = Double.POSITIVE_INFINITY;

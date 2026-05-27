@@ -125,6 +125,9 @@
 			<Parameter>
 				<ParameterName>maxIncreaseEatingTimeModel</ParameterName>
 			</Parameter>
+			<Parameter>
+				<ParameterName>pPayTimeModel</ParameterName>
+			</Parameter>
 		</Parameters>
 		<PresentationProperties>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>
