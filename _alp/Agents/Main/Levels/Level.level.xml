@@ -3416,33 +3416,6 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		</Font>
 		<Alignment>LEFT</Alignment>
 	</Text>
-	<Text>
-		<Id>1771950131951</Id>
-		<Name><![CDATA[text8]]></Name>
-		<X>1980</X>
-		<Y>1440</Y>
-		<Label>
-			<X>0</X>
-			<Y>-10</Y>
-		</Label>
-		<PublicFlag>true</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>false</ShowLabel>
-		<DrawMode>SHAPE_DRAW_2D</DrawMode>
-		<EmbeddedIcon>false</EmbeddedIcon>
-		<Z>0</Z>
-		<Rotation>0.0</Rotation>
-		<Color>-16777216</Color>
-		<Text><![CDATA[migliorare il calcolo
-del tempo pesato
-al numero di persone]]></Text>
-		<Font>
-			<Name><![CDATA[SansSerif]]></Name>
-			<Size>10</Size>
-			<Style>0</Style>
-		</Font>
-		<Alignment>LEFT</Alignment>
-	</Text>
 	<TimePlot>
 		<Id>1774864175722</Id>
 		<Name><![CDATA[plot]]></Name>

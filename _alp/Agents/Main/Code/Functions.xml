@@ -41,8 +41,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1772007563909</Id>
 		<Name><![CDATA[eatingTimeModel]]></Name>
-		<X>360</X>
-		<Y>-40</Y>
+		<X>820</X>
+		<Y>40</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -321,8 +321,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1779701422068</Id>
 		<Name><![CDATA[menuReadingModel]]></Name>
-		<X>360</X>
-		<Y>-20</Y>
+		<X>560</X>
+		<Y>40</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -341,8 +341,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1779873697186</Id>
 		<Name><![CDATA[payTimeModel]]></Name>
-		<X>360</X>
-		<Y>10</Y>
+		<X>340</X>
+		<Y>50</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>

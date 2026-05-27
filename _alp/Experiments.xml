@@ -116,6 +116,15 @@
 			<Parameter>
 				<ParameterName>sigmaPayTime</ParameterName>
 			</Parameter>
+			<Parameter>
+				<ParameterName>kMenuReadingModel</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>growthEatingTimeModel</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>maxIncreaseEatingTimeModel</ParameterName>
+			</Parameter>
 		</Parameters>
 		<PresentationProperties>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>
