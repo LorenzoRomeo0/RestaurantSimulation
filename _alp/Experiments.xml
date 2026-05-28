@@ -131,6 +131,12 @@
 			<Parameter>
 				<ParameterName>scenario</ParameterName>
 			</Parameter>
+			<Parameter>
+				<ParameterName>muMenuReading</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>sigmaMenuReading</ParameterName>
+			</Parameter>
 		</Parameters>
 		<PresentationProperties>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>
@@ -223,6 +229,12 @@
 			</Parameter>
 			<Parameter>
 				<ParameterName>scenario</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>muMenuReading</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>sigmaMenuReading</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>

@@ -437,7 +437,13 @@ return maxWaiters;
 
 double menuReadingModel(int groupSize)
 {/*ALCODESTART::1779701422068*/
-double baseTime = normal(0, 200, 6, 2);
+double min = 0;
+double max = Double.POSITIVE_INFINITY;
+double mu = muMenuReading;
+double sigma = sigmaMenuReading;
+
+
+double baseTime = normal(min, max, mu, sigma);
 
 double k = kMenuReadingModel; //% of time an additional person adds
 return baseTime * (1 + k * (groupSize - 1));
