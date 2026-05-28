@@ -13,6 +13,7 @@ except locale.Error:
 
 data = pd.read_csv("./arrival_rate_complete.csv")
 groupsize = pd.read_csv("./arrival_rate_groupsize.csv")
+
 # Convert your timestamp data to hours offset
 start_time = datetime(1970, 1, 5, 7, 0, 0)
 for index, row in data.iterrows():
