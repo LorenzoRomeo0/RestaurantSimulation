@@ -132,6 +132,18 @@
 					<PackageName>restaurant_2025</PackageName>
 					<ClassName>arrival_rate_week_groupsize</ClassName>
 				</TableReference>
+				<Condition>
+					<Id>1779965808665</Id>
+					<ColumnReference>
+						<PackageName>restaurant_2025</PackageName>
+						<ClassName>arrival_rate_week_groupsize</ClassName>
+						<ItemName>scenario</ItemName>
+					</ColumnReference>
+					<Value Class="CodeValue">
+						<Code><![CDATA[scenario]]></Code>
+					</Value>
+					<Operator>EQUALS</Operator>
+				</Condition>
 				<StartColumnReference>
 					<PackageName>restaurant_2025</PackageName>
 					<ClassName>arrival_rate_week_groupsize</ClassName>
@@ -184,6 +196,18 @@
 					<PackageName>restaurant_2025</PackageName>
 					<ClassName>arrival_rate_week_groupsize</ClassName>
 				</TableReference>
+				<Condition>
+					<Id>1779966827163</Id>
+					<ColumnReference>
+						<PackageName>restaurant_2025</PackageName>
+						<ClassName>arrival_rate_week_groupsize</ClassName>
+						<ItemName>scenario</ItemName>
+					</ColumnReference>
+					<Value Class="CodeValue">
+						<Code><![CDATA[scenario]]></Code>
+					</Value>
+					<Operator>EQUALS</Operator>
+				</Condition>
 				<StartColumnReference>
 					<PackageName>restaurant_2025</PackageName>
 					<ClassName>arrival_rate_week_groupsize</ClassName>
@@ -235,6 +259,18 @@
 					<PackageName>restaurant_2025</PackageName>
 					<ClassName>tables_selection</ClassName>
 				</TableReference>
+				<Condition>
+					<Id>1779966644728</Id>
+					<ColumnReference>
+						<PackageName>restaurant_2025</PackageName>
+						<ClassName>tables_selection</ClassName>
+						<ItemName>scenario</ItemName>
+					</ColumnReference>
+					<Value Class="CodeValue">
+						<Code><![CDATA[scenario]]></Code>
+					</Value>
+					<Operator>EQUALS</Operator>
+				</Condition>
 				<StartColumnReference>
 					<PackageName>restaurant_2025</PackageName>
 					<ClassName>tables_selection</ClassName>
@@ -286,6 +322,18 @@
 					<PackageName>restaurant_2025</PackageName>
 					<ClassName>tables_selection</ClassName>
 				</TableReference>
+				<Condition>
+					<Id>1779966659454</Id>
+					<ColumnReference>
+						<PackageName>restaurant_2025</PackageName>
+						<ClassName>tables_selection</ClassName>
+						<ItemName>scenario</ItemName>
+					</ColumnReference>
+					<Value Class="CodeValue">
+						<Code><![CDATA[scenario]]></Code>
+					</Value>
+					<Operator>EQUALS</Operator>
+				</Condition>
 				<StartColumnReference>
 					<PackageName>restaurant_2025</PackageName>
 					<ClassName>tables_selection</ClassName>
@@ -337,6 +385,18 @@
 					<PackageName>restaurant_2025</PackageName>
 					<ClassName>tables_selection</ClassName>
 				</TableReference>
+				<Condition>
+					<Id>1779966668482</Id>
+					<ColumnReference>
+						<PackageName>restaurant_2025</PackageName>
+						<ClassName>tables_selection</ClassName>
+						<ItemName>scenario</ItemName>
+					</ColumnReference>
+					<Value Class="CodeValue">
+						<Code><![CDATA[scenario]]></Code>
+					</Value>
+					<Operator>EQUALS</Operator>
+				</Condition>
 				<StartColumnReference>
 					<PackageName>restaurant_2025</PackageName>
 					<ClassName>tables_selection</ClassName>
@@ -388,6 +448,18 @@
 					<PackageName>restaurant_2025</PackageName>
 					<ClassName>eating_time</ClassName>
 				</TableReference>
+				<Condition>
+					<Id>1779889337608</Id>
+					<ColumnReference>
+						<PackageName>restaurant_2025</PackageName>
+						<ClassName>eating_time</ClassName>
+						<ItemName>scenario</ItemName>
+					</ColumnReference>
+					<Value Class="CodeValue">
+						<Code><![CDATA[scenario]]></Code>
+					</Value>
+					<Operator>EQUALS</Operator>
+				</Condition>
 				<StartColumnReference>
 					<PackageName>restaurant_2025</PackageName>
 					<ClassName>eating_time</ClassName>
@@ -440,6 +512,18 @@
 					<PackageName>restaurant_2025</PackageName>
 					<ClassName>employees_schedule</ClassName>
 				</TableReference>
+				<Condition>
+					<Id>1779966758801</Id>
+					<ColumnReference>
+						<PackageName>restaurant_2025</PackageName>
+						<ClassName>employees_schedule</ClassName>
+						<ItemName>scenario</ItemName>
+					</ColumnReference>
+					<Value Class="CodeValue">
+						<Code><![CDATA[scenario]]></Code>
+					</Value>
+					<Operator>EQUALS</Operator>
+				</Condition>
 				<StartColumnReference>
 					<PackageName>restaurant_2025</PackageName>
 					<ClassName>employees_schedule</ClassName>
@@ -520,6 +604,18 @@ else if (currentlyOnShift &gt; value) {
 					<PackageName>restaurant_2025</PackageName>
 					<ClassName>employees_schedule</ClassName>
 				</TableReference>
+				<Condition>
+					<Id>1779966768332</Id>
+					<ColumnReference>
+						<PackageName>restaurant_2025</PackageName>
+						<ClassName>employees_schedule</ClassName>
+						<ItemName>scenario</ItemName>
+					</ColumnReference>
+					<Value Class="CodeValue">
+						<Code><![CDATA[scenario]]></Code>
+					</Value>
+					<Operator>EQUALS</Operator>
+				</Condition>
 				<StartColumnReference>
 					<PackageName>restaurant_2025</PackageName>
 					<ClassName>employees_schedule</ClassName>
@@ -571,6 +667,18 @@ else if (currentlyOnShift &gt; value) {
 					<PackageName>restaurant_2025</PackageName>
 					<ClassName>tables_selection</ClassName>
 				</TableReference>
+				<Condition>
+					<Id>1779966618479</Id>
+					<ColumnReference>
+						<PackageName>restaurant_2025</PackageName>
+						<ClassName>tables_selection</ClassName>
+						<ItemName>scenario</ItemName>
+					</ColumnReference>
+					<Value Class="CodeValue">
+						<Code><![CDATA[scenario]]></Code>
+					</Value>
+					<Operator>EQUALS</Operator>
+				</Condition>
 				<StartColumnReference>
 					<PackageName>restaurant_2025</PackageName>
 					<ClassName>tables_selection</ClassName>
@@ -622,6 +730,18 @@ else if (currentlyOnShift &gt; value) {
 					<PackageName>restaurant_2025</PackageName>
 					<ClassName>tables_selection</ClassName>
 				</TableReference>
+				<Condition>
+					<Id>1779966628590</Id>
+					<ColumnReference>
+						<PackageName>restaurant_2025</PackageName>
+						<ClassName>tables_selection</ClassName>
+						<ItemName>scenario</ItemName>
+					</ColumnReference>
+					<Value Class="CodeValue">
+						<Code><![CDATA[scenario]]></Code>
+					</Value>
+					<Operator>EQUALS</Operator>
+				</Condition>
 				<StartColumnReference>
 					<PackageName>restaurant_2025</PackageName>
 					<ClassName>tables_selection</ClassName>
@@ -673,6 +793,18 @@ else if (currentlyOnShift &gt; value) {
 					<PackageName>restaurant_2025</PackageName>
 					<ClassName>tables_selection</ClassName>
 				</TableReference>
+				<Condition>
+					<Id>1779966636117</Id>
+					<ColumnReference>
+						<PackageName>restaurant_2025</PackageName>
+						<ClassName>tables_selection</ClassName>
+						<ItemName>scenario</ItemName>
+					</ColumnReference>
+					<Value Class="CodeValue">
+						<Code><![CDATA[scenario]]></Code>
+					</Value>
+					<Operator>EQUALS</Operator>
+				</Condition>
 				<StartColumnReference>
 					<PackageName>restaurant_2025</PackageName>
 					<ClassName>tables_selection</ClassName>

@@ -55,37 +55,17 @@
 					<Password/>
 				</ExternalConnection>
 				<TableImportSettings>
-					<Id>1770632895149</Id>
-					<TableReference>
-						<PackageName>restaurant_2025</PackageName>
-						<ClassName>arrival_rate_week_converted_delete</ClassName>
-					</TableReference>
-					<ConnectionIndex>0</ConnectionIndex>
-					<ExternalTableName>"arrival_rate_week_converted"</ExternalTableName>
-					<AutoImport>false</AutoImport>
-				</TableImportSettings>
-				<TableImportSettings>
-					<Id>1770632895152</Id>
-					<TableReference>
-						<PackageName>restaurant_2025</PackageName>
-						<ClassName>arrival_rate_complete_delete</ClassName>
-					</TableReference>
-					<ConnectionIndex>0</ConnectionIndex>
-					<ExternalTableName>"arrival_rate_complete"</ExternalTableName>
-					<AutoImport>false</AutoImport>
-				</TableImportSettings>
-				<TableImportSettings>
-					<Id>1770632895146</Id>
+					<Id>1779965903419</Id>
 					<TableReference>
 						<PackageName>restaurant_2025</PackageName>
 						<ClassName>arrival_rate_week_groupsize</ClassName>
 					</TableReference>
 					<ConnectionIndex>0</ConnectionIndex>
-					<ExternalTableName>"arrival_rate_week_groupsize (2)"</ExternalTableName>
+					<ExternalTableName>"arrival_rate_week_groupsize"</ExternalTableName>
 					<AutoImport>false</AutoImport>
 				</TableImportSettings>
 				<TableImportSettings>
-					<Id>1776329694711</Id>
+					<Id>1779966609478</Id>
 					<TableReference>
 						<PackageName>restaurant_2025</PackageName>
 						<ClassName>tables_selection</ClassName>
@@ -95,7 +75,7 @@
 					<AutoImport>false</AutoImport>
 				</TableImportSettings>
 				<TableImportSettings>
-					<Id>1771950486965</Id>
+					<Id>1779889279026</Id>
 					<TableReference>
 						<PackageName>restaurant_2025</PackageName>
 						<ClassName>eating_time</ClassName>
@@ -105,7 +85,7 @@
 					<AutoImport>false</AutoImport>
 				</TableImportSettings>
 				<TableImportSettings>
-					<Id>1772014117469</Id>
+					<Id>1779966753801</Id>
 					<TableReference>
 						<PackageName>restaurant_2025</PackageName>
 						<ClassName>employees_schedule</ClassName>

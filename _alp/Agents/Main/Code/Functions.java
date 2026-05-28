@@ -456,7 +456,7 @@ double mu = muPayTime;
 double sigma = sigmaPayTime;
 
 double payTime = 
-	onePaysAll * 
+	(onePaysAll) * 
 		(normal(min, max, mu, sigma) * 1.05)
 	 + 
 	(1-onePaysAll) * 
