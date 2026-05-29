@@ -22,7 +22,7 @@ Calcolare quanto tempo in media le persone stanno nel ristorante
 (OK) rendere menu_reading proporzionale alla dimensione del gruppo (non di molto perché è un attività che si fa in parallelo, più che altro per simulare l'allungarsi del dare l'ordine al cameriere)
 
 (OK) creare schedule per i cooks e camerieri (pochi a colazione, tanti a cena. usare distribuzione)
-Calcolare il numero di camerieri per tenere conto delle possibili assenze (malattia ecc)
+() Calcolare il numero di camerieri per tenere conto delle possibili assenze (malattia ecc)
 
 Modellare menù
     (OK) con popolarità per cibo
@@ -37,9 +37,9 @@ Modellare menù
 
 
 # Improvements --
-Modellare l'impazienza dei clienti che aspettano fuori
-Migliorare l'eating time model
-Migliorare il calcolo del tempo pesato al numero di persone quando si paga alla cassa.
+(NO) Modellare l'impazienza dei clienti che aspettano fuori
+(OK) Migliorare l'eating time model
+(OK) Migliorare il calcolo del tempo pesato al numero di persone quando si paga alla cassa.
 
 # Fixes --
 Trovare un modo di far tornare a home il waiter nel release del loop di assegnazione del tavolo. Attenzione al conflitto di movimento.
