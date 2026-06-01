@@ -10,24 +10,21 @@ startShiftRequested = true;
 cook_statechart.onChange();
 /*ALCODEEND*/}
 
-double getTimeToPrepareOrder()
+double getTimeToPrepareOrder(ArrayList<MenuItem> orderItems)
 {/*ALCODESTART::1777049298321*/
-ArrayList<MenuItem> items = currentOrder.menuItems;
+double min = 0;
+double max = Double.POSITIVE_INFINITY;
 
-if (items == null || items.isEmpty()) {
+if (orderItems == null || orderItems.isEmpty()) {
     return 0.0;
 }
 
 double total = 0.0;
 
-for (MenuItem item : items) {
+for (MenuItem item : orderItems) {
     if (item != null) {
-        double sampled = normal(0, 999, item.prepTimeMeanMin, item.prepTimeSdMin);
-
-        if (sampled < 0) {
-            sampled = 0;
-        }
-
+        double sampled = normal(min, max, item.prepTimeMeanMin, item.prepTimeSdMin);
+        
         total += sampled;
     }
 }

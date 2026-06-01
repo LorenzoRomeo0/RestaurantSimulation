@@ -473,3 +473,20 @@ return payTime;
 //normal(0.5, 5, 2, 1) + agent.size/5
 /*ALCODEEND*/}
 
+int getWaitersNumber()
+{/*ALCODESTART::1780067259114*/
+int value = waiters_schedule.getValue();
+int absent = binomial(pWaiterSickness, value);
+value = value - absent;
+
+
+/*ALCODEEND*/}
+
+int getCooksNumber()
+{/*ALCODESTART::1780067334032*/
+int value = waiters_schedule.getValue();
+int absent = binomial(pCookSickness, value);
+return value - absent;
+
+/*ALCODEEND*/}
+

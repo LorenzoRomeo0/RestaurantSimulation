@@ -567,7 +567,8 @@ else if (currentlyOnShift &gt; value) {
             toRemove--;
         }
     }
-}</Action>
+}
+</Action>
 			<Intervals/>
 			<Exceptions/>
 		</Schedule>

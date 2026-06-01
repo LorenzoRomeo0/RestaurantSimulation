@@ -137,6 +137,12 @@
 			<Parameter>
 				<ParameterName>sigmaMenuReading</ParameterName>
 			</Parameter>
+			<Parameter>
+				<ParameterName>pWaiterSickness</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>pCookSickness</ParameterName>
+			</Parameter>
 		</Parameters>
 		<PresentationProperties>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>
@@ -235,6 +241,12 @@
 			</Parameter>
 			<Parameter>
 				<ParameterName>sigmaMenuReading</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>pWaiterSickness</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>pCookSickness</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>

@@ -46,6 +46,10 @@
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
 		<ShowLabel>true</ShowLabel>
+		<Parameter>
+			<Name><![CDATA[orderItems]]></Name>
+			<Type><![CDATA[ArrayList<MenuItem>]]></Type>
+		</Parameter>
 		<Body xmlns:al="http://anylogic.com"/>
 	</Function>
 </Functions>
