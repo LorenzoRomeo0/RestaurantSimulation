@@ -97,7 +97,7 @@ double init()
 {/*ALCODESTART::1774982011623*/
 menuItems = new MenuItems(this);
 
-traceln("INIT-------------");
+traceln("INIT END-------------");
 /*ALCODEEND*/}
 
 double register_customer_wait(Date start,Date end)
@@ -271,58 +271,6 @@ timeEventsCooksDebugText.setText(
 		)
 	)
 );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*ALCODEEND*/}
 

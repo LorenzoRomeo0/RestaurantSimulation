@@ -18,10 +18,27 @@ return order;
 
 DayPartUtil.DayPart currentDayPart = DayPartUtil.getCurrentDayPart(this);
 
-//MenuItems items = new MenuItems(this);
-Order order = main.menuItems.generateOrderByDayPart(currentDayPart);
+/*
+Order order = new Order();
 order.customerGroup = this;
 order.date = date();
+order.menuItems = new ArrayList<MenuItem>();
+
+for (int i=0; i<size; i++) {
+	ArrayList<MenuItem> sampledMenuItems = main.menuItems.generateOrderByDayPart(currentDayPart).menuItems;
+	order.menuItems.addAll(sampledMenuItems);
+}
+
+*/
+
+Order order = main.menuItems.generateGroupOrderByDayPart(currentDayPart, size);
+order.customerGroup = this;
+order.date = date();
+
+traceln("--------------------------ORDER----- "+ size);
+traceln(order);
+traceln("--------------------------REDRO-----");
+
 
 return order;
 
@@ -31,7 +48,7 @@ return order;
 String toString()
 {/*ALCODESTART::1778862261565*/
 return
-	"id = " + getId() +"\n" +
+	"waiter{id = " + getId() +"\n" +
 	"entrance_time = " + entrance_time + "\n" +
 	"exit_time = " + exit_time + "\n" +
 	"table_wait_start_time = " + table_wait_start_time + "\n" +
@@ -44,6 +61,6 @@ return
 	"table = " + table + "\n" +
 	"currentWaiter = " + (currentWaiter == null ? "null" : currentWaiter.getId()) + "\n" +
 	"celiacs = " + celiacs + "\n" +
-	"entrancePriority = " + entrancePriority;
+	"entrancePriority = " + entrancePriority + "}";
 /*ALCODEEND*/}
 

@@ -1,6 +1,6 @@
 String toString()
 {/*ALCODESTART::1777022491572*/
-return "menuItems = " + menuItems + " ";
+return "menuItems = \n" + menuItems + " \n";
 /*ALCODEEND*/}
 
 double getTotalPrice()

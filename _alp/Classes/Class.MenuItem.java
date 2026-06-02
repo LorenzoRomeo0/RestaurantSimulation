@@ -40,18 +40,18 @@ public class MenuItem {
     @Override
     public String toString() {
         return "MenuItem[" +
-                "name=" + name +
-                ", dayPart=" + dayPart +
-                ", category=" + foodCategory +
-                ", course=" + course +
-                ", price=" + price +
-                ", popularityWeight=" + popularityWeight +
-                ", prepMeanMin=" + prepTimeMeanMin +
-                ", prepSdMin=" + prepTimeSdMin +
-                ", complexity=" + complexity +
-                ", station=" + kitchenStation +
-                ", serviceMin=" + serviceTimeMeanMin +
-                ", eatingMin=" + eatingTimeMeanMin +
-                "]";
+                "\nname=" + name +
+                //", \ndayPart=" + dayPart +
+                ", \ncategory=" + foodCategory +
+                ", \ncourse=" + course +
+                //", price=" + price +
+                //", popularityWeight=" + popularityWeight +
+                //", prepMeanMin=" + prepTimeMeanMin +
+                //", prepSdMin=" + prepTimeSdMin +
+                //", complexity=" + complexity +
+                //", station=" + kitchenStation +
+                //", serviceMin=" + serviceTimeMeanMin +
+                //", eatingMin=" + eatingTimeMeanMin +
+                "]\n";
     }
 }

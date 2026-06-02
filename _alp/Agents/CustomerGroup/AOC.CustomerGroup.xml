@@ -232,7 +232,8 @@ for (int i = 0; i &lt; main.welcoming_wait.size(); i++) {
     );
 }
 */
-traceln("CustomerGroup "+ getId() + " is freed from welcoming_wait");</EntryAction>
+
+//traceln("CustomerGroup "+ getId() + " is freed from welcoming_wait");</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
@@ -249,7 +250,7 @@ traceln("CustomerGroup "+ getId() + " is freed from welcoming_wait");</EntryActi
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
-				<EntryAction>traceln("CustomerGroup "+ getId() + " is miniwaiting");</EntryAction>
+				<EntryAction>//traceln("CustomerGroup "+ getId() + " is miniwaiting");</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
@@ -346,7 +347,7 @@ send(order, currentWaiter);
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="140" Height="30">
-				<EntryAction>traceln("?? " + getId() + " received a null table...");
+				<EntryAction>//traceln("?? " + getId() + " received a null table...");
 main.welcoming_wait.free(this);</EntryAction>
 				<FillColor/>
 			</Properties>
@@ -374,7 +375,7 @@ main.welcoming_wait.free(this);</EntryAction>
 	
 	isExitingSystem = true;
 } else {
-traceln(getId() + "TRIED TO EXIT TWICE");
+	traceln(getId() + "TRIED TO EXIT TWICE");
 }
 
 </EntryAction>

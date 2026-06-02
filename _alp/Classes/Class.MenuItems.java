@@ -165,10 +165,34 @@ public class MenuItems {
         ensureAtLeastOneItem(order, candidates);
         return order;
     }
+    
+    public Order generateGroupOrderByDayPart(DayPartUtil.DayPart dayPart, int groupSize) {
+        Order groupOrder = main.add_orders();
+
+        if (groupSize <= 0) {
+            return groupOrder;
+        }
+
+        for (int i = 0; i < groupSize; i++) {
+            Order tempOrder = generateOrderByDayPart(dayPart);
+
+            if (tempOrder.menuItems != null && !tempOrder.menuItems.isEmpty()) {
+                groupOrder.menuItems.addAll(tempOrder.menuItems);
+            }
+
+            main.remove_orders(tempOrder);
+            // oppure: tempOrder.remove(); se Order è un agente e lo rimuovi dal pool
+        }
+
+        return groupOrder;
+    }
 
     private void generateBreakfast(Order order, List<MenuItem> candidates) {
         MenuCopulaGenerator.CopulaSample sample =
                 copulaGenerator.sample(DayPartUtil.DayPart.BREAKFAST);
+        
+        traceln(sample);
+        traceln("comboon: "+ (sample.isOn("combo")? "on":"off"));
 
         if (sample.isOn("combo")) {
             addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.COMBO));
@@ -255,90 +279,6 @@ public class MenuItems {
         if (sample.isOn("dessert")) {
             addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.DESSERT));
         }
-    }
-    
-/*
-    private void generateBreakfast(Order order, List<MenuItem> candidates) {
-        if (chance(P_BREAKFAST_COMBO)) {
-            addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.COMBO));
-            return;
-        }
-
-        if (chance(P_BREAKFAST_MAIN)) {
-            addIfAbsent(order, weightedChoiceByCourse(candidates, 1));
-        }
-
-        if (chance(P_BREAKFAST_DRINK)) {
-            addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.DRINK));
-        }
-    }
-
-    private void generateBreak(Order order, List<MenuItem> candidates) {
-        if (chance(P_BREAK_MAIN)) {
-            addIfAbsent(order, weightedChoiceByCourse(candidates, 1));
-        }
-
-        if (chance(P_BREAK_DRINK)) {
-            addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.DRINK));
-        }
-    }
-
-    private void generateLunch(Order order, List<MenuItem> candidates) {
-        if (chance(P_LUNCH_FIXED_MENU)) {
-            addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.FIXED_MENU));
-            return;
-        }
-
-        if (chance(P_LUNCH_COURSE_1)) {
-            addIfAbsent(order, weightedChoiceByCourse(candidates, 1));
-        }
-
-        if (chance(P_LUNCH_COURSE_2)) {
-            addIfAbsent(order, weightedChoiceByCourse(candidates, 2));
-        }
-
-        if (chance(P_LUNCH_SIDE)) {
-            addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.SIDE));
-        }
-
-        if (chance(P_LUNCH_DRINK)) {
-            addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.DRINK));
-        }
-
-        if (chance(P_LUNCH_DESSERT)) {
-            addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.DESSERT));
-        }
-    }
-
-    private void generateDinner(Order order, List<MenuItem> candidates) {
-        if (chance(P_DINNER_FIXED_MENU)) {
-            addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.FIXED_MENU));
-            return;
-        }
-
-        if (chance(P_DINNER_COURSE_1)) {
-            addIfAbsent(order, weightedChoiceByCourse(candidates, 1));
-        }
-
-        if (chance(P_DINNER_COURSE_2)) {
-            addIfAbsent(order, weightedChoiceByCourse(candidates, 2));
-        }
-
-        if (chance(P_DINNER_SIDE)) {
-            addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.SIDE));
-        }
-
-        if (chance(P_DINNER_DRINK)) {
-            addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.DRINK));
-        }
-
-        if (chance(P_DINNER_DESSERT)) {
-            addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.DESSERT));
-        }
-    }
-*/
-    private boolean chance(double p) {
-        return rnd.nextDouble() < p;
     }
 
     private void ensureAtLeastOneItem(Order order, List<MenuItem> candidates) {

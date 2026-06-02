@@ -3563,7 +3563,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	</Histogram>
 	<Text>
 		<Id>1775058310781</Id>
-		<Name><![CDATA[text]]></Name>
+		<Name><![CDATA[customersinRestaurant]]></Name>
 		<X>830</X>
 		<Y>250</Y>
 		<Label>
@@ -3578,7 +3578,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Z>0</Z>
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
-		<Text/>
+		<Text><![CDATA[customersinRestaurant]]></Text>
 		<TextCode>"Customers: " + customersInRestaurantNr</TextCode>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>

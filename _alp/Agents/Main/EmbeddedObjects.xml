@@ -1182,7 +1182,7 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 				<Name><![CDATA[onSeizeUnit]]></Name>
 				<Value Class="CodeValue">
 					<Code><![CDATA[send("goWelcome", unit);
-traceln(agent.getId() + "seized at welcoming_wait waiter " + unit.getId() )]]></Code>
+//traceln(agent.getId() + "seized at welcoming_wait waiter " + unit.getId() )]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -1294,7 +1294,7 @@ traceln(agent.getId() + "seized at welcoming_wait waiter " + unit.getId() )]]></
 			<Parameter>
 				<Name><![CDATA[onEnter]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[traceln("++ " + agent.getId() + " entered menureading");]]></Code>
+					<Code><![CDATA[//traceln("++ " + agent.getId() + " entered menureading");]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -1303,7 +1303,7 @@ traceln(agent.getId() + "seized at welcoming_wait waiter " + unit.getId() )]]></
 			<Parameter>
 				<Name><![CDATA[onExit]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[traceln("-- " + agent.getId()+" read the menu");
+					<Code><![CDATA[//traceln("-- " + agent.getId()+" read the menu");
 ]]></Code>
 				</Value>
 			</Parameter>
@@ -1412,7 +1412,7 @@ traceln(agent.getId() + "seized at welcoming_wait waiter " + unit.getId() )]]></
 			<Parameter>
 				<Name><![CDATA[onEnter]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[traceln("++ " + agent.getId() + " entered release");]]></Code>
+					<Code><![CDATA[//traceln("++ " + agent.getId() + " entered release");]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -1909,7 +1909,7 @@ unit.isSeized = true;]]></Code>
 			<Parameter>
 				<Name><![CDATA[onExit]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[System.out.println(agent.getId() + " Exited.")]]></Code>
+					<Code><![CDATA[//System.out.println(agent.getId() + " Exited.")]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -2124,14 +2124,14 @@ unit.isSeized = true;]]></Code>
 			<Parameter>
 				<Name><![CDATA[onEnter]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[traceln("-- " + agent.getId()+" entered the welcoming_wait");
+					<Code><![CDATA[//traceln("-- " + agent.getId()+" entered the welcoming_wait");
 ]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onExit]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[traceln("-- " + agent.getId()+" is trying to exit the welcoming_wait");
+					<Code><![CDATA[//traceln("-- " + agent.getId()+" is trying to exit the welcoming_wait");
 ]]></Code>
 				</Value>
 			</Parameter>
@@ -2529,7 +2529,7 @@ unit.isSeized = true;]]></Code>
 			<Parameter>
 				<Name><![CDATA[onSeizeUnit]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[traceln("---> GoServe sent from "+ agent.getId() +" to waiter " + unit.getId());
+					<Code><![CDATA[//traceln("---> GoServe sent from "+ agent.getId() +" to waiter " + unit.getId());
 /*
 Waiter seizedUnit = (Waiter) unit;
 traceln("--> Agent status: " + seizedUnit.waiter_statechart.getActiveSimpleState().name());
@@ -3426,7 +3426,7 @@ send(msg, unit);
 			<Parameter>
 				<Name><![CDATA[onEnter]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[traceln("customer " + agent.getId() +" is too big ("+agent.size+")");
+					<Code><![CDATA[//traceln("customer " + agent.getId() +" is too big ("+agent.size+")");
 customersInRestaurantNr--;
 customerGroupsInRestaurant.remove(agent);]]></Code>
 				</Value>
@@ -3506,8 +3506,8 @@ customerGroupsInRestaurant.remove(agent);]]></Code>
 			<Parameter>
 				<Name><![CDATA[onEnter]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[traceln("++ " + agent.getId() + " entered hastable, table=" 
-    + (agent.table == null ? "null" : agent.table.getId()));
+					<Code><![CDATA[//traceln("++ " + agent.getId() + " entered hastable, table=" 
+//    + (agent.table == null ? "null" : agent.table.getId()));
 
 customersAtEntrance = null;
 hold.recalculateConditions();
