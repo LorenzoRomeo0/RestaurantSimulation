@@ -747,7 +747,7 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 			<Parameter>
 				<Name><![CDATA[capacityOnValue]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[insideTablesNr]]></Code>
+					<Code><![CDATA[20]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -931,15 +931,31 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[addToCustomPopulation]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[true]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[population]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[insideTables]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[forceStatisticsCollection]]></Name>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onNewUnit]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[Table t = (Table) unit;
+int idx = nextInsideTableIdx;
+
+if (idx >= 0 && idx < insideTablesSizes.length) {
+    t.size = insideTablesSizes[idx];
+}
+
+nextInsideTableIdx++;]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onDestroyUnit]]></Name>
@@ -1994,61 +2010,6 @@ unit.isSeized = true;]]></Code>
 		<QuantityColumn/>
 	</EmbeddedObject>
 	<EmbeddedObject>
-		<Id>1756799690845</Id>
-		<Name><![CDATA[table]]></Name>
-		<X>40</X>
-		<Y>-320</Y>
-		<Label>
-			<X>20</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<ActiveObjectClass>
-			<PackageName>restaurant_2025</PackageName>
-			<ClassName>Table</ClassName>
-		</ActiveObjectClass>
-		<GenericParameterSubstitute>
-			<GenericParameterSubstituteReference>
-				<PackageName>restaurant_2025</PackageName>
-				<ClassName>Table</ClassName>
-				<ItemName>1756480077440</ItemName>
-			</GenericParameterSubstituteReference>
-		</GenericParameterSubstitute>
-		<Parameters>
-			<Parameter>
-				<Name><![CDATA[isFree]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[size]]></Name>
-			</Parameter>
-		</Parameters>
-		<ReplicationFlag>true</ReplicationFlag>
-		<Replication Class="CodeValue">
-			<Code><![CDATA[100]]></Code>
-		</Replication>
-		<CollectionType>ARRAY_LIST_BASED</CollectionType>
-		<InEnvironment>true</InEnvironment>
-		<InitialLocationType>XYZ</InitialLocationType>
-		<ColumnCode Class="CodeValue">
-			<Code><![CDATA[0]]></Code>
-		</ColumnCode>
-		<RowCode Class="CodeValue">
-			<Code><![CDATA[0]]></Code>
-		</RowCode>
-		<LocationNameCode Class="CodeValue">
-			<Code><![CDATA[""]]></Code>
-		</LocationNameCode>
-		<InitializationType>EMPTY</InitializationType>
-		<InitializationDatabaseTableQuery>
-			<Id>1756799690843</Id>
-			<TableReference/>
-		</InitializationDatabaseTableQuery>
-		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-		<QuantityColumn/>
-	</EmbeddedObject>
-	<EmbeddedObject>
 		<Id>1756815781606</Id>
 		<Name><![CDATA[welcoming_wait]]></Name>
 		<X>770</X>
@@ -2753,7 +2714,7 @@ send(msg, unit);
 			<Parameter>
 				<Name><![CDATA[capacityOnValue]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[outsideTablesNr]]></Code>
+					<Code><![CDATA[outsideTablesSizes.length]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -2937,15 +2898,31 @@ send(msg, unit);
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[addToCustomPopulation]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[true]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[population]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[outsideTables]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[forceStatisticsCollection]]></Name>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onNewUnit]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[Table t = (Table) unit;
+int idx = nextOutsideTableIdx;
+
+if (idx >= 0 && idx < outsideTablesSizes.length) {
+    t.size = outsideTablesSizes[idx];
+}
+
+nextOutsideTableIdx++;]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onDestroyUnit]]></Name>
@@ -3064,7 +3041,7 @@ send(msg, unit);
 			<Parameter>
 				<Name><![CDATA[capacityOnValue]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[barTablesNr]]></Code>
+					<Code><![CDATA[barTablesSizes.length]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -3248,15 +3225,31 @@ send(msg, unit);
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[addToCustomPopulation]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[true]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[population]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[barTables]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[forceStatisticsCollection]]></Name>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onNewUnit]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[Table t = (Table) unit;
+int idx = nextBarTableIdx;
+
+if (idx >= 0 && idx < barTablesSizes.length) {
+    t.size = barTablesSizes[idx];
+}
+
+nextBarTableIdx++;]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onDestroyUnit]]></Name>
@@ -6226,6 +6219,154 @@ customerGroupsInRestaurant.remove(agent);]]></Code>
 		<InitializationType>SPECIFIED_NUMBER</InitializationType>
 		<InitializationDatabaseTableQuery>
 			<Id>1779392224865</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1780695078329</Id>
+		<Name><![CDATA[barTables]]></Name>
+		<X>170</X>
+		<Y>-315</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<PresentationId>1780695078331</PresentationId>
+		<ActiveObjectClass>
+			<PackageName>restaurant_2025</PackageName>
+			<ClassName>Table</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>restaurant_2025</PackageName>
+				<ClassName>Table</ClassName>
+				<ItemName>1756480077440</ItemName>
+			</GenericParameterSubstituteReference>
+		</GenericParameterSubstitute>
+		<Parameters/>
+		<ReplicationFlag>true</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InEnvironment>true</InEnvironment>
+		<InitialLocationType>NODE</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<NodeCode>bar_tables_node</NodeCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>EMPTY</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1780695078327</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1780695242917</Id>
+		<Name><![CDATA[outsideTables]]></Name>
+		<X>170</X>
+		<Y>-295</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<PresentationId>1780695242919</PresentationId>
+		<ActiveObjectClass>
+			<PackageName>restaurant_2025</PackageName>
+			<ClassName>Table</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>restaurant_2025</PackageName>
+				<ClassName>Table</ClassName>
+				<ItemName>1756480077440</ItemName>
+			</GenericParameterSubstituteReference>
+		</GenericParameterSubstitute>
+		<Parameters/>
+		<ReplicationFlag>true</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InEnvironment>true</InEnvironment>
+		<InitialLocationType>XYZ</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>EMPTY</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1780695242915</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1780695443374</Id>
+		<Name><![CDATA[insideTables]]></Name>
+		<X>170</X>
+		<Y>-275</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<PresentationId>1780695443376</PresentationId>
+		<ActiveObjectClass>
+			<PackageName>restaurant_2025</PackageName>
+			<ClassName>Table</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>restaurant_2025</PackageName>
+				<ClassName>Table</ClassName>
+				<ItemName>1756480077440</ItemName>
+			</GenericParameterSubstituteReference>
+		</GenericParameterSubstitute>
+		<Parameters/>
+		<ReplicationFlag>true</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InEnvironment>true</InEnvironment>
+		<InitialLocationType>XYZ</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>EMPTY</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1780695443372</Id>
 			<TableReference/>
 		</InitializationDatabaseTableQuery>
 		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>

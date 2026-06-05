@@ -22,3 +22,30 @@ waitersPoolDebugTextUpdater();
 customerGroupDebugTextUpdater();
 /*ALCODEEND*/}
 
+void createTables()
+{/*ALCODESTART::1780693738790*/
+// create tables
+
+/*
+for(int i: barTablesSizes){
+	Table t = add_barTables();
+	t.size = i;
+	t.setLocationRandomInside(bar_tables_node);
+    traceln("inside table " + t.getId() + " created at " + t.getX() + ", " + t.getY());
+	traceln("created table of size " + i);
+}
+
+for(int i: insideTablesSizes){
+	Table t = add_insideTables();
+	t.size = i;
+
+}
+
+for(int i: outsideTablesSizes){
+	Table t = add_outsideTables();
+	t.size = i;
+}
+*/
+
+/*ALCODEEND*/}
+

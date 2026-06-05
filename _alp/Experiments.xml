@@ -96,15 +96,6 @@
 		</Presentation>
 		<Parameters>
 			<Parameter>
-				<ParameterName>outsideTablesNr</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>insideTablesNr</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>barTablesNr</ParameterName>
-			</Parameter>
-			<Parameter>
 				<ParameterName>closingTime</ParameterName>
 			</Parameter>
 			<Parameter>
@@ -151,6 +142,15 @@
 			</Parameter>
 			<Parameter>
 				<ParameterName>sigmaGroupSize</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>insideTablesSizes</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>outsideTablesSizes</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>barTablesSizes</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>
@@ -210,15 +210,6 @@
 		</Presentation>
 		<Parameters>
 			<Parameter>
-				<ParameterName>outsideTablesNr</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>insideTablesNr</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>barTablesNr</ParameterName>
-			</Parameter>
-			<Parameter>
 				<ParameterName>closingTime</ParameterName>
 			</Parameter>
 			<Parameter>
@@ -265,6 +256,15 @@
 			</Parameter>
 			<Parameter>
 				<ParameterName>sigmaGroupSize</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>insideTablesSizes</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>outsideTablesSizes</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>barTablesSizes</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>

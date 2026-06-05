@@ -79,6 +79,31 @@
 					<Login/>
 					<Password/>
 				</ExternalConnection>
+				<ExternalConnection>
+					<Id>1780689878017</Id>
+					<Name><![CDATA[database]]></Name>
+					<X>0</X>
+					<Y>0</Y>
+					<Label>
+						<X>10</X>
+						<Y>0</Y>
+					</Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<DatabaseType>EXCEL_ACCESS</DatabaseType>
+					<ConnectionURL/>
+					<ConnectOnStartup>true</ConnectOnStartup>
+					<DatabaseName/>
+					<ResourceReference>
+						<PackageName>restaurant_2025</PackageName>
+						<ClassName>scripts/restaurant_variables.xlsx</ClassName>
+					</ResourceReference>
+					<Host>localhost</Host>
+					<JdbcDriverClassName>net.sourceforge.jtds.jdbc.Driver</JdbcDriverClassName>
+					<Login/>
+					<Password/>
+				</ExternalConnection>
 				<TableImportSettings>
 					<Id>1779965903419</Id>
 					<TableReference>
@@ -87,16 +112,6 @@
 					</TableReference>
 					<ConnectionIndex>0</ConnectionIndex>
 					<ExternalTableName>"arrival_rate_week_groupsize"</ExternalTableName>
-					<AutoImport>false</AutoImport>
-				</TableImportSettings>
-				<TableImportSettings>
-					<Id>1779966609478</Id>
-					<TableReference>
-						<PackageName>restaurant_2025</PackageName>
-						<ClassName>tables_selection</ClassName>
-					</TableReference>
-					<ConnectionIndex>0</ConnectionIndex>
-					<ExternalTableName>"tables_selection"</ExternalTableName>
 					<AutoImport>false</AutoImport>
 				</TableImportSettings>
 				<TableImportSettings>
@@ -137,6 +152,16 @@
 					</TableReference>
 					<ConnectionIndex>1</ConnectionIndex>
 					<ExternalTableName>"menu_items"</ExternalTableName>
+					<AutoImport>false</AutoImport>
+				</TableImportSettings>
+				<TableImportSettings>
+					<Id>1780692433200</Id>
+					<TableReference>
+						<PackageName>restaurant_2025</PackageName>
+						<ClassName>tables_selection</ClassName>
+					</TableReference>
+					<ConnectionIndex>2</ConnectionIndex>
+					<ExternalTableName>"tables_selection"</ExternalTableName>
 					<AutoImport>false</AutoImport>
 				</TableImportSettings>
 			</ImportSettings>

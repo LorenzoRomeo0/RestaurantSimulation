@@ -97,6 +97,7 @@ double init()
 {/*ALCODESTART::1774982011623*/
 menuItems = new MenuItems(this);
 
+
 traceln("INIT END-------------");
 /*ALCODEEND*/}
 
