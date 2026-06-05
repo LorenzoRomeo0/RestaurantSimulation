@@ -120,19 +120,10 @@
 				<ParameterName>pPayTimeModel</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>scenario</ParameterName>
-			</Parameter>
-			<Parameter>
 				<ParameterName>muMenuReading</ParameterName>
 			</Parameter>
 			<Parameter>
 				<ParameterName>sigmaMenuReading</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>pWaiterSickness</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>pCookSickness</ParameterName>
 			</Parameter>
 			<Parameter>
 				<ParameterName>minGroupSize</ParameterName>
@@ -151,126 +142,24 @@
 			</Parameter>
 			<Parameter>
 				<ParameterName>barTablesSizes</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>eatingTimeScenario</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>employeesScheduleScenario</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>arrivalsGroupsizeScenario</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>tablesScenario</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>
 			<ExecutionMode>realTimeScaled</ExecutionMode>
 			<Title>Restaurant_2025 : Simulation</Title>
-			<EnableDeveloperPanel>true</EnableDeveloperPanel>
-			<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
-			<RealTimeScale>1.0</RealTimeScale>
-		</PresentationProperties>
-		<ModelTimeProperties>
-			<StopOption>Stop at specified date</StopOption>
-			<InitialDate>370800000</InitialDate>
-			<InitialTime>0.0</InitialTime>
-			<FinalDate>1054800000</FinalDate>
-			<FinalTime>11400.0</FinalTime>
-		</ModelTimeProperties>
-		<BypassInitialScreen>true</BypassInitialScreen>
-	</SimulationExperiment>
-	<SimulationExperiment ActiveObjectClassId="1756479932269">
-		<Id>1779888410607</Id>
-		<Name><![CDATA[Simulation1]]></Name>
-		<CommandLineArguments/>
-		<MaximumMemory>16384</MaximumMemory>
-		<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
-		<CustomGeneratorCode>new Random()</CustomGeneratorCode>
-		<SeedValue>1</SeedValue>
-		<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
-		<VmArgs/>
-		<LoadRootFromSnapshot>false</LoadRootFromSnapshot>
-		<Presentation>
-			<Text>
-				<Id>1779888410609</Id>
-				<Name><![CDATA[text]]></Name>
-				<X>50</X>
-				<Y>30</Y>
-				<Label>
-					<X>10</X>
-					<Y>0</Y>
-				</Label>
-				<PublicFlag>true</PublicFlag>
-				<PresentationFlag>true</PresentationFlag>
-				<ShowLabel>false</ShowLabel>
-				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-				<EmbeddedIcon>false</EmbeddedIcon>
-				<Z>0</Z>
-				<Rotation>0.0</Rotation>
-				<Color>-12490271</Color>
-				<Text><![CDATA[Restaurant_2026]]></Text>
-				<Font>
-					<Name><![CDATA[SansSerif]]></Name>
-					<Size>24</Size>
-					<Style>0</Style>
-				</Font>
-				<Alignment>LEFT</Alignment>
-			</Text>
-		</Presentation>
-		<Parameters>
-			<Parameter>
-				<ParameterName>closingTime</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>openingTime</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>muPayTime</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>sigmaPayTime</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>kMenuReadingModel</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>growthEatingTimeModel</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>maxIncreaseEatingTimeModel</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>pPayTimeModel</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>scenario</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>muMenuReading</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>sigmaMenuReading</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>pWaiterSickness</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>pCookSickness</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>minGroupSize</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>maxGroupsize</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>sigmaGroupSize</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>insideTablesSizes</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>outsideTablesSizes</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>barTablesSizes</ParameterName>
-			</Parameter>
-		</Parameters>
-		<PresentationProperties>
-			<EnableZoomAndPanning>true</EnableZoomAndPanning>
-			<ExecutionMode>realTimeScaled</ExecutionMode>
-			<Title>Restaurant_2026 : Simulation1</Title>
 			<EnableDeveloperPanel>true</EnableDeveloperPanel>
 			<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
 			<RealTimeScale>1.0</RealTimeScale>
