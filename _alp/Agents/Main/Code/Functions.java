@@ -411,7 +411,7 @@ double sigma = sigmaPayTime;
 
 double payTime = 
 	(onePaysAll) * 
-		(normal(min, max, mu, sigma) * 1.05)
+		(normal(min, max, mu, sigma))
 	 + 
 	(1-onePaysAll) * 
 		(normal(min, max, mu * groupSize , sigma * sqrt(groupSize))); 
