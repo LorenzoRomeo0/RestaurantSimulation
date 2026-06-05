@@ -35,10 +35,11 @@ Order order = main.menuItems.generateGroupOrderByDayPart(currentDayPart, size);
 order.customerGroup = this;
 order.date = date();
 
+/*
 traceln("--------------------------ORDER----- "+ size);
 traceln(order);
 traceln("--------------------------REDRO-----");
-
+*/
 
 return order;
 

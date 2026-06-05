@@ -191,8 +191,8 @@ public class MenuItems {
         MenuCopulaGenerator.CopulaSample sample =
                 copulaGenerator.sample(DayPartUtil.DayPart.BREAKFAST);
         
-        traceln(sample);
-        traceln("comboon: "+ (sample.isOn("combo")? "on":"off"));
+        //traceln(sample);
+        //traceln("comboon: "+ (sample.isOn("combo")? "on":"off"));
 
         if (sample.isOn("combo")) {
             addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.COMBO));
@@ -224,6 +224,8 @@ public class MenuItems {
     private void generateLunch(Order order, List<MenuItem> candidates) {
         MenuCopulaGenerator.CopulaSample sample =
                 copulaGenerator.sample(DayPartUtil.DayPart.LUNCH);
+        
+        traceln(sample);
 
         if (sample.isOn("fixed_menu")) {
             addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.FIXED_MENU));

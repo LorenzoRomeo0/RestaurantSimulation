@@ -447,11 +447,13 @@ main.welcoming_wait.free(this);</EntryAction>
 				<Action>table = (Table) msg;
 
 
+/*
 if(table != null &amp;&amp; !(table instanceof NoTable)){
 	traceln("customer "+ getId() + " was assigned "+ table.getId());
 } else {
 	traceln("customer "+ getId() + " was assigned null");
 }
+*/
 </Action>
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[10]]></Code>
