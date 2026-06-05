@@ -155,6 +155,15 @@
 			<Parameter>
 				<ParameterName>tablesScenario</ParameterName>
 			</Parameter>
+			<Parameter>
+				<ParameterName>coverCharge</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>waitersHourlyRate</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>cooksHourlyRate</ParameterName>
+			</Parameter>
 		</Parameters>
 		<PresentationProperties>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>

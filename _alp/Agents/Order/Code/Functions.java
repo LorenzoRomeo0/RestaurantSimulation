@@ -17,6 +17,6 @@ for (MenuItem item : menuItems) {
     }
 }
 
-return total;
+return total + main.coverCharge;
 /*ALCODEEND*/}
 
