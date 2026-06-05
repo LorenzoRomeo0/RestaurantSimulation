@@ -12,11 +12,13 @@ public class MenuItem {
         FIXED_MENU
     }
 
+    /*
     public enum KitchenStation {
         BAR,
         HOT,
         COLD
     }
+    */
 
     String name;
     DayPartUtil.DayPart dayPart;
@@ -26,10 +28,10 @@ public class MenuItem {
     double price;
     double prepTimeMeanMin;
     double prepTimeSdMin;
-    int complexity;
-    KitchenStation kitchenStation;
-    double serviceTimeMeanMin;
-    double eatingTimeMeanMin;
+    //int complexity;
+    //KitchenStation kitchenStation;
+    //double serviceTimeMeanMin;
+    //double eatingTimeMeanMin;
 
     /**
      * Default constructor

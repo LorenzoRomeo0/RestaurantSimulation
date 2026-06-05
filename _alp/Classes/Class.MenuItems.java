@@ -17,39 +17,7 @@ public class MenuItems {
     MenuCopulaGenerator copulaGenerator;
 
     private final Random rnd = new Random();
-
-    // =========================
-    // Probabilità selezioni multiple
-    // =========================
-    
-    /*
-    // BREAKFAST
-    private static final double P_BREAKFAST_COMBO = 0.18;
-    private static final double P_BREAKFAST_MAIN = 0.75;
-    private static final double P_BREAKFAST_DRINK = 0.80;
-
-    // BREAK
-    private static final double P_BREAK_MAIN = 0.70;
-    private static final double P_BREAK_DRINK = 0.65;
-
-    // LUNCH
-    private static final double P_LUNCH_FIXED_MENU = 0.22;
-    private static final double P_LUNCH_COURSE_1 = 0.75;
-    private static final double P_LUNCH_COURSE_2 = 0.45;
-    private static final double P_LUNCH_SIDE = 0.35;
-    private static final double P_LUNCH_DRINK = 0.55;
-    private static final double P_LUNCH_DESSERT = 0.30;
-
-    // DINNER
-    private static final double P_DINNER_FIXED_MENU = 0.12;
-    private static final double P_DINNER_COURSE_1 = 0.55;
-    private static final double P_DINNER_COURSE_2 = 0.65;
-    private static final double P_DINNER_SIDE = 0.40;
-    private static final double P_DINNER_DRINK = 0.60;
-    private static final double P_DINNER_DESSERT = 0.38;
-    */
-    
-
+  
     public MenuItems(Main main) {
         this.main = main;
         //copulaGenerator = new MenuCopulaGenerator(main);
@@ -90,10 +58,10 @@ public class MenuItems {
                 item.price = rs.getDouble("price");
                 item.prepTimeMeanMin = rs.getDouble("prep_time_mean_min");
                 item.prepTimeSdMin = rs.getDouble("prep_time_sd_min");
-                item.complexity = rs.getInt("complexity");
-                item.kitchenStation = MenuItem.KitchenStation.valueOf(rs.getString("kitchen_station"));
-                item.serviceTimeMeanMin = rs.getDouble("service_time_mean_min");
-                item.eatingTimeMeanMin = rs.getDouble("eating_time_mean_min");
+                //item.complexity = rs.getInt("complexity");
+                //item.kitchenStation = MenuItem.KitchenStation.valueOf(rs.getString("kitchen_station"));
+                //item.serviceTimeMeanMin = rs.getDouble("service_time_mean_min");
+                //item.eatingTimeMeanMin = rs.getDouble("eating_time_mean_min");
 
                 menuItems.add(item);
             }
@@ -397,10 +365,10 @@ public class MenuItems {
             sb.append("  Popularity  : ").append(item.popularityWeight).append("\n");
             sb.append("  Prep mean   : ").append(item.prepTimeMeanMin).append(" min\n");
             sb.append("  Prep sd     : ").append(item.prepTimeSdMin).append(" min\n");
-            sb.append("  Complexity  : ").append(item.complexity).append("\n");
-            sb.append("  Station     : ").append(item.kitchenStation).append("\n");
-            sb.append("  Service     : ").append(item.serviceTimeMeanMin).append(" min\n");
-            sb.append("  Eating      : ").append(item.eatingTimeMeanMin).append(" min\n");
+            //sb.append("  Complexity  : ").append(item.complexity).append("\n");
+            //sb.append("  Station     : ").append(item.kitchenStation).append("\n");
+            //sb.append("  Service     : ").append(item.serviceTimeMeanMin).append(" min\n");
+            //sb.append("  Eating      : ").append(item.eatingTimeMeanMin).append(" min\n");
             sb.append("----------------------------------------\n");
         }
 
