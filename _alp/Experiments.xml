@@ -143,6 +143,15 @@
 			<Parameter>
 				<ParameterName>pCookSickness</ParameterName>
 			</Parameter>
+			<Parameter>
+				<ParameterName>minGroupSize</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>maxGroupsize</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>sigmaGroupSize</ParameterName>
+			</Parameter>
 		</Parameters>
 		<PresentationProperties>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>
@@ -247,6 +256,15 @@
 			</Parameter>
 			<Parameter>
 				<ParameterName>pCookSickness</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>minGroupSize</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>maxGroupsize</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>sigmaGroupSize</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>

@@ -438,3 +438,13 @@ return value - absent;
 
 /*ALCODEEND*/}
 
+int groupSizeModel()
+{/*ALCODESTART::1780666597930*/
+double min = minGroupSize;
+double max = maxGroupsize;
+double mu = groupsize_schedule.getValue();
+double sigma = sigmaGroupSize;
+
+return (int) normal(min, max, mu, sigma);
+/*ALCODEEND*/}
+
