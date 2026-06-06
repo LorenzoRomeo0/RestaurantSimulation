@@ -333,6 +333,28 @@
 			</InitialValue>
 		</Properties>
 	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1780770056386</Id>
+		<Name><![CDATA[customerStayChartItems]]></Name>
+		<X>-780</X>
+		<Y>700</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[Map<String, DataItem>]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[new LinkedHashMap<>();]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
 	<Variable Class="Parameter">
 		<Id>1775058764621</Id>
 		<Name><![CDATA[closingTime]]></Name>

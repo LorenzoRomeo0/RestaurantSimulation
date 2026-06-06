@@ -466,6 +466,7 @@ double customerEventsUpdater()
 StringBuilder sbEntrance = new StringBuilder();
 StringBuilder sbTable = new StringBuilder();
 StringBuilder sbPay = new StringBuilder();
+StringBuilder sbStay = new StringBuilder();
 
 sbEntrance.append("weekday,daypart,waitTimeEntrance")
   .append(System.lineSeparator());
@@ -476,6 +477,9 @@ sbTable.append("weekday,daypart,waitTimeTable")
 sbPay.append("weekday,daypart,waitTimePay")
   .append(System.lineSeparator());
   
+sbStay.append("weekday,daypart,stayTime")
+  .append(System.lineSeparator());
+  
 
 for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
     for (DayPartUtil.DayPart dayPart : DayPartUtil.DayPart.values()) {
@@ -483,6 +487,7 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
         double averageWaitEntrance = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.CUSTOMER_WAIT_ENTRANCE);
 		double averageWaitTable = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.CUSTOMER_WAIT_TABLE);
 		double averageWaitPay = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.CUSTOMER_WAIT_PAY);
+		double averageStay = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.CUSTOMER_STAY);
 		
 		String dayName = day_to_string(day);
         			String key = dayName + "-" + dayPart;
@@ -494,18 +499,25 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
           .append(averageWaitEntrance)
           .append(System.lineSeparator());
           
-          sbTable.append(dayName)
+        sbTable.append(dayName)
           .append(",")
           .append(dayPart)
           .append(",")
           .append(averageWaitTable)
           .append(System.lineSeparator());
           
-          sbPay.append(dayName)
+        sbPay.append(dayName)
           .append(",")
           .append(dayPart)
           .append(",")
           .append(averageWaitPay)
+          .append(System.lineSeparator());
+          
+        sbStay.append(dayName)
+          .append(",")
+          .append(dayPart)
+          .append(",")
+          .append(averageStay)
           .append(System.lineSeparator());
          
         
@@ -545,18 +557,24 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
             item.setValue(averageWaitPay);
         }
         
+        item = customerStayChartItems.get(key);
+        if (item == null) {
+            item = new DataItem();
+            item.setValue(averageStay);
+            customerStayChartItems.put(key, item);
+
+            customerStayChart.addDataItem(item, key, dayPartColors.get(dayPart));
+        } else {
+            item.setValue(averageStay);
+        }
+        
     }
 }
 
 customerWaitEntranceText.setText(sbEntrance.toString());
 customerWaitTableText.setText(sbTable.toString());
 customerWaitPayText.setText(sbPay.toString());
-/*ALCODEEND*/}
-
-double registerCustomerWaitEntranceEvent1(Date start,Date end)
-{/*ALCODESTART::1780765471999*/
-TimeEvent ev = new TimeEvent(start, end, TimeEvent.EventType.CUSTOMER_WAIT_ENTRANCE);
-timeEvents.add(ev);
+customerStayText.setText(sbStay.toString());
 /*ALCODEEND*/}
 
 double registerCustomerStayEvent(Date start,Date end)

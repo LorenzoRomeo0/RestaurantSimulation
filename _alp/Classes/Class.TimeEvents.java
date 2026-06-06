@@ -174,7 +174,7 @@ public class TimeEvents {
                 .mapToDouble(TimeEvent::getDurationMinutes)
                 .filter(d -> d >= 0)
                 .average()
-                .orElse(-1);
+                .orElse(0);
     }
     
     
