@@ -188,6 +188,7 @@ _ps7.setFillColor(green);</EntryAction>
 			<Properties Width="100" Height="30">
 				<EntryAction>this.stop();
 
+idleStartDate = date();
 
 foundTable = null;
 currentCustomers = null;
@@ -196,7 +197,12 @@ currentOrder = null;
 //traceln(this +" "+this.getId() + " IS WAITING");
 
 </EntryAction>
-				<ExitAction>//isWaiting = false;
+				<ExitAction>//if (idleStartDate.getTime() - date().getTime() &gt;= 60_000)
+if(!isOffShift)
+	main.registerWaiterIdlevent(idleStartDate, date());
+	
+
+//isWaiting = false;
 
 //traceln(this +" "+ this.getId() + " IS NO MORE WAITING");</ExitAction>
 				<FillColor>-14774017</FillColor>

@@ -583,3 +583,54 @@ TimeEvent ev = new TimeEvent(start, end, TimeEvent.EventType.CUSTOMER_STAY);
 timeEvents.add(ev);
 /*ALCODEEND*/}
 
+double registerWaiterIdlevent(Date start,Date end)
+{/*ALCODESTART::1780776464516*/
+TimeEvent ev = new TimeEvent(start, end, TimeEvent.EventType.WAITER_IDLE);
+timeEvents.add(ev);
+/*ALCODEEND*/}
+
+double waiterEventsUpdater()
+{/*ALCODESTART::1780776729342*/
+//wait entrance
+
+StringBuilder sbIdle = new StringBuilder();
+
+sbIdle.append("weekday,daypart,meanIdleTime")
+  .append(System.lineSeparator());
+
+
+for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
+    for (DayPartUtil.DayPart dayPart : DayPartUtil.DayPart.values()) {
+        
+        double averageIdle = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.WAITER_IDLE);
+		
+		String dayName = day_to_string(day);
+        String key = dayName + "-" + dayPart;
+
+        sbIdle.append(dayName)
+          .append(",")
+          .append(dayPart)
+          .append(",")
+          .append(averageIdle)
+          .append(System.lineSeparator());
+        
+        
+        DataItem item = waiterIdleChartItems.get(key);
+
+        if (item == null) {
+            item = new DataItem();
+            item.setValue(averageIdle);
+            waiterIdleChartItems.put(key, item);
+
+            waiterIdleChart.addDataItem(item, key, dayPartColors.get(dayPart));
+        } else {
+            item.setValue(averageIdle);
+        }
+        
+        
+    }
+}
+
+waitersIdleText.setText(sbIdle.toString());
+/*ALCODEEND*/}
+

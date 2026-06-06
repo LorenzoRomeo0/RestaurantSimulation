@@ -15,5 +15,6 @@ void statisticsEvent()
 {/*ALCODESTART::1780759318822*/
 paymentEventsUpdater();
 customerEventsUpdater();
+waiterEventsUpdater();
 /*ALCODEEND*/}
 

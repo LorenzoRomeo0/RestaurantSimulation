@@ -4216,4 +4216,89 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 			<RelativeWidth>0.8</RelativeWidth>
 		</Bars>
 	</BarChart>
+	<Text>
+		<Id>1780777175818</Id>
+		<Name><![CDATA[waitersIdleText]]></Name>
+		<X>-370</X>
+		<Y>550</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[waitersIdleText]]></Text>
+		<Font>
+			<Name><![CDATA[Cascadia Code]]></Name>
+			<Size>8</Size>
+			<Style>0</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<BarChart>
+		<Id>1780777690660</Id>
+		<Name><![CDATA[waiterIdleChart]]></Name>
+		<X>-880</X>
+		<Y>1660</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<AutoUpdate>true</AutoUpdate>
+		<RecurrenceProperties>
+			<Id>1780777690658</Id>
+			<OccurrenceAtTime>true</OccurrenceAtTime>
+			<OccurrenceDate>1780819200000</OccurrenceDate>
+			<OccurrenceTime Class="CodeUnitValue">
+				<Code><![CDATA[0]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</OccurrenceTime>
+			<RecurrenceCode Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</RecurrenceCode>
+		</RecurrenceProperties>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Width>790</Width>
+		<Height>280</Height>
+		<BackgroundColor/>
+		<BorderColor/>
+		<ChartArea>
+			<XOffset>50</XOffset>
+			<YOffset>30</YOffset>
+			<Width>680</Width>
+			<Height>230</Height>
+			<BackgroundColor>-1</BackgroundColor>
+			<BorderColor>-16777216</BorderColor>
+			<GridColor>-12566464</GridColor>
+		</ChartArea>
+		<Legend>
+			<Place>EAST</Place>
+			<TextColor>-16777216</TextColor>
+			<Size>30</Size>
+		</Legend>
+		<Labels>
+			<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+			<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+			<TextColor>-12566464</TextColor>
+		</Labels>
+		<ShowLegend>true</ShowLegend>
+		<ScaleFromExpression>0</ScaleFromExpression>
+		<ScaleToExpression>1</ScaleToExpression>
+		<ScaleType>AUTO</ScaleType>
+		<Bars>
+			<Direction>UP</Direction>
+			<RelativeWidth>0.8</RelativeWidth>
+		</Bars>
+	</BarChart>
 </Presentation>

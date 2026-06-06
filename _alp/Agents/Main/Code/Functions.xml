@@ -480,4 +480,44 @@
 		</Parameter>
 		<Body xmlns:al="http://anylogic.com"/>
 	</Function>
+	<Function AccessType="default" StaticFunction="false">
+		<ReturnModificator>VOID</ReturnModificator>
+		<ReturnType>double</ReturnType>
+		<Id>1780776464516</Id>
+		<Name><![CDATA[registerWaiterIdlevent]]></Name>
+		<X>-380</X>
+		<Y>350</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Parameter>
+			<Name><![CDATA[start]]></Name>
+			<Type><![CDATA[Date]]></Type>
+		</Parameter>
+		<Parameter>
+			<Name><![CDATA[end]]></Name>
+			<Type><![CDATA[Date]]></Type>
+		</Parameter>
+		<Body xmlns:al="http://anylogic.com"/>
+	</Function>
+	<Function AccessType="default" StaticFunction="false">
+		<ReturnModificator>VOID</ReturnModificator>
+		<ReturnType>double</ReturnType>
+		<Id>1780776729342</Id>
+		<Name><![CDATA[waiterEventsUpdater]]></Name>
+		<X>-380</X>
+		<Y>390</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Body xmlns:al="http://anylogic.com"/>
+	</Function>
 </Functions>

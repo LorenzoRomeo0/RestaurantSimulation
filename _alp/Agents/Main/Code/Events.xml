@@ -65,7 +65,7 @@
 				<Unit Class="TimeUnits">MINUTE</Unit>
 			</OccurrenceTime>
 			<RecurrenceCode Class="CodeUnitValue">
-				<Code><![CDATA[1]]></Code>
+				<Code><![CDATA[60]]></Code>
 				<Unit Class="TimeUnits">MINUTE</Unit>
 			</RecurrenceCode>
 			<Condition>false</Condition>

@@ -27,24 +27,30 @@ public class TimeEvents {
     public int size() {
         return events.size();
     }
-
+    
+    /**
     public List<TimeEvent> filter(Predicate<TimeEvent> predicate) {
         return events.stream()
                 .filter(predicate)
                 .collect(Collectors.toList());
     }
-
+    */
+    
+    /*
     public List<TimeEvent> filterByType(TimeEvent.EventType type) {
         return events.stream()
                 .filter(e -> e.eventType == type)
                 .collect(Collectors.toList());
     }
+    */
 
+    /*
     public List<TimeEvent> filterByStartDay(int dayOfWeek) {
         return events.stream()
                 .filter(e -> e.getStartDayOfWeek() == dayOfWeek)
                 .collect(Collectors.toList());
     }
+    
 
     public List<TimeEvent> filterByEndDay(int dayOfWeek) {
         return events.stream()
@@ -52,17 +58,22 @@ public class TimeEvents {
                 .collect(Collectors.toList());
     }
 
+	
+    
     public List<TimeEvent> filterByStartHourGreaterOrEqual(int hour) {
         return events.stream()
                 .filter(e -> e.getStartHourOfDay() >= hour)
                 .collect(Collectors.toList());
     }
 
+
     public List<TimeEvent> filterByEndHourGreaterOrEqual(int hour) {
         return events.stream()
                 .filter(e -> e.getEndHourOfDay() >= hour)
                 .collect(Collectors.toList());
     }
+    
+    
 
     public List<TimeEvent> filterByTypeDayAndEndHour(TimeEvent.EventType type, int dayOfWeek, int minHour) {
         return events.stream()
@@ -71,6 +82,7 @@ public class TimeEvents {
                 .filter(e -> e.getEndHourOfDay() >= minHour)
                 .collect(Collectors.toList());
     }
+    
 
     public double getAverageDurationHours() {
         return events.stream()
@@ -79,6 +91,8 @@ public class TimeEvents {
                 .average()
                 .orElse(-1);
     }
+    
+    
 
     public double getTotalDurationHoursByType(TimeEvent.EventType type) {
         return events.stream()
@@ -88,6 +102,7 @@ public class TimeEvents {
                 .sum();
     }
         
+       
     
     public List<TimeEvent> filterByTypeAndEndHour(TimeEvent.EventType type, int hour){
     	 return events.stream()
@@ -95,6 +110,8 @@ public class TimeEvents {
                  .filter(e -> e.getEndHourOfDay() >= hour)
                  .collect(Collectors.toList());
     }
+    
+    */
 
     
     public Map<Integer, List<TimeEvent>> groupByDayAndFilterByEndHourAndEventType(int endHour, TimeEvent.EventType eventType) {
@@ -103,6 +120,7 @@ public class TimeEvents {
                 .filter(e -> e.getEndHourOfDay() >= endHour)
                 .collect(Collectors.groupingBy(TimeEvent::getEndDayOfWeek));
     }
+    
     
     public Map<Integer, Long> groupByDayAndFilterByEndHourAndEventTypeCount(int endHour, TimeEvent.EventType eventType) {
         return events.stream()

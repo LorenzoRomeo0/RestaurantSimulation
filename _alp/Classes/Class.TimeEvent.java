@@ -12,6 +12,7 @@ public class TimeEvent {
         COOK_SHIFT,
         WAITER_END,
         WAITER_SHIFT,
+        WAITER_IDLE,
         CUSTOMER_WAIT,
         CUSTOMER_WAIT_ENTRANCE,
         CUSTOMER_WAIT_TABLE,
