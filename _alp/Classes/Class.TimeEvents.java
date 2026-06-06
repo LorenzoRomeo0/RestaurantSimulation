@@ -144,7 +144,44 @@ public class TimeEvents {
                         Collectors.averagingDouble(e -> e.getDurationAfterHourMinutes(thresholdHour))
                 ));
     }
+    
+    
+    
+    
+    /////
+    public double getMoneySumByWeekdayAndDayPart(int dayOfWeek, DayPartUtil.DayPart dayPart) {
+        return events.stream()
+                .filter(e -> e != null)
+                .filter(e -> e.eventType == TimeEvent.EventType.MONEY)
+                .filter(e -> e.getStartDayOfWeek() == dayOfWeek)
+                .filter(e -> DayPartUtil.getDayPart(
+                        e.getStartHourOfDay(),
+                        e.getStartMinuteOfHour()
+                ) == dayPart)
+                .mapToDouble(e -> e.value)
+                .sum();
+    }
 
+    public double getAverageTimeByWeekdayAndDayPart(int dayOfWeek, DayPartUtil.DayPart dayPart, TimeEvent.EventType event) {
+        return events.stream()
+                .filter(e -> e != null)
+                .filter(e -> e.eventType == event)
+                .filter(e -> e.getStartDayOfWeek() == dayOfWeek)
+                .filter(e -> DayPartUtil.getDayPart(
+                        e.getStartHourOfDay(),
+                        e.getStartMinuteOfHour()
+                ) == dayPart)
+                .mapToDouble(TimeEvent::getDurationMinutes)
+                .filter(d -> d >= 0)
+                .average()
+                .orElse(-1);
+    }
+    
+    
+    
+    
+    
+    ////
     
     @Override
     public String toString() {

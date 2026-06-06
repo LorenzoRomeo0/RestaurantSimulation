@@ -101,22 +101,6 @@ menuItems = new MenuItems(this);
 traceln("INIT END-------------");
 /*ALCODEEND*/}
 
-double register_customer_wait(Date start,Date end)
-{/*ALCODESTART::1774982475261*/
-TimeEvent ev = new TimeEvent(start, end, TimeEvent.EventType.CUSTOMER_WAIT);
-timeEvents.add(ev);
-
-int d = ev.getEndDayOfWeek() - 1;
-int h = ev.getEndHourOfDay();
-
-double waitMin = ev.getDurationMinutes();
-
-if (d >= 0 && d < 7 && h >= 0 && h < 24 && waitMin >= 0) {
-    customer_wait_sum[d][h] += waitMin;
-    customer_wait_count[d][h] += 1;
-}
-/*ALCODEEND*/}
-
 String day_to_string(int day)
 {/*ALCODESTART::1775044645264*/
 switch (day) {
@@ -275,25 +259,6 @@ timeEventsCooksDebugText.setText(
 
 /*ALCODEEND*/}
 
-double register_customer_stay(Date start,Date end)
-{/*ALCODESTART::1776067684596*/
-TimeEvent ev = new TimeEvent(start, end, TimeEvent.EventType.CUSTOMER_STAY);
-timeEvents.add(ev);
-
-/*
-int d = ev.getEndDayOfWeek() - 1;
-int h = ev.getEndHourOfDay();
-
-double waitMin = ev.getDurationMinutes();
-
-if (d >= 0 && d < 7 && h >= 0 && h < 24 && waitMin >= 0) {
-    customer_wait_sum[d][h] += waitMin;
-    customer_wait_count[d][h] += 1;
-}
-
-*/
-/*ALCODEEND*/}
-
 double register_cook_shift(Date start,Date end)
 {/*ALCODESTART::1776172006330*/
 TimeEvent ev = new TimeEvent(start, end, TimeEvent.EventType.COOK_SHIFT);
@@ -430,5 +395,173 @@ double mu = groupsize_schedule.getValue();
 double sigma = sigmaGroupSize;
 
 return (int) normal(min, max, mu, sigma);
+/*ALCODEEND*/}
+
+double registerPaymentEvent(Date start,Date end,double amount)
+{/*ALCODESTART::1780734091041*/
+TimeEvent ev = new TimeEvent(start, end, TimeEvent.EventType.MONEY, amount);
+timeEvents.add(ev);
+/*ALCODEEND*/}
+
+double paymentEventsUpdater()
+{/*ALCODESTART::1780735636798*/
+StringBuilder sb = new StringBuilder();
+
+sb.append("weekday,daypart,total")
+  .append(System.lineSeparator());
+
+for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
+    for (DayPartUtil.DayPart dayPart : DayPartUtil.DayPart.values()) {
+        double total = timeEvents.getMoneySumByWeekdayAndDayPart(day, dayPart);
+
+		String dayName = day_to_string(day);
+        			String key = dayName + "-" + dayPart;
+
+        sb.append(dayName)
+          .append(",")
+          .append(dayPart)
+          .append(",")
+          .append(total)
+          .append(System.lineSeparator());
+          
+        DataItem item = paymentChartItems.get(key);
+
+        if (item == null) {
+            item = new DataItem();
+            item.setValue(total);
+            paymentChartItems.put(key, item);
+
+            paymentEventsChart.addDataItem(item, key, dayPartColors.get(dayPart));
+        } else {
+            item.setValue(total);
+        }
+    }
+}
+
+paymentEventsText.setText(sb.toString());
+/*ALCODEEND*/}
+
+double registerCustomerWaitEntranceEvent(Date start,Date end)
+{/*ALCODESTART::1780759689915*/
+TimeEvent ev = new TimeEvent(start, end, TimeEvent.EventType.CUSTOMER_WAIT_ENTRANCE);
+timeEvents.add(ev);
+/*ALCODEEND*/}
+
+double registerCustomerWaitTableEvent(Date start,Date end)
+{/*ALCODESTART::1780760523532*/
+TimeEvent ev = new TimeEvent(start, end, TimeEvent.EventType.CUSTOMER_WAIT_TABLE);
+timeEvents.add(ev);
+/*ALCODEEND*/}
+
+double registerCustomerWaitPayEvent(Date start,Date end)
+{/*ALCODESTART::1780761019562*/
+TimeEvent ev = new TimeEvent(start, end, TimeEvent.EventType.CUSTOMER_WAIT_PAY);
+timeEvents.add(ev);
+/*ALCODEEND*/}
+
+double customerEventsUpdater()
+{/*ALCODESTART::1780762327897*/
+//wait entrance
+
+StringBuilder sbEntrance = new StringBuilder();
+StringBuilder sbTable = new StringBuilder();
+StringBuilder sbPay = new StringBuilder();
+
+sbEntrance.append("weekday,daypart,waitTimeEntrance")
+  .append(System.lineSeparator());
+
+sbTable.append("weekday,daypart,waitTimeTable")
+  .append(System.lineSeparator());
+  
+sbPay.append("weekday,daypart,waitTimePay")
+  .append(System.lineSeparator());
+  
+
+for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
+    for (DayPartUtil.DayPart dayPart : DayPartUtil.DayPart.values()) {
+        
+        double averageWaitEntrance = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.CUSTOMER_WAIT_ENTRANCE);
+		double averageWaitTable = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.CUSTOMER_WAIT_TABLE);
+		double averageWaitPay = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.CUSTOMER_WAIT_PAY);
+		
+		String dayName = day_to_string(day);
+        			String key = dayName + "-" + dayPart;
+
+        sbEntrance.append(dayName)
+          .append(",")
+          .append(dayPart)
+          .append(",")
+          .append(averageWaitEntrance)
+          .append(System.lineSeparator());
+          
+          sbTable.append(dayName)
+          .append(",")
+          .append(dayPart)
+          .append(",")
+          .append(averageWaitTable)
+          .append(System.lineSeparator());
+          
+          sbPay.append(dayName)
+          .append(",")
+          .append(dayPart)
+          .append(",")
+          .append(averageWaitPay)
+          .append(System.lineSeparator());
+         
+        
+        DataItem item = customerWaitEntranceChartItems.get(key);
+
+        if (item == null) {
+            item = new DataItem();
+            item.setValue(averageWaitEntrance);
+            customerWaitEntranceChartItems.put(key, item);
+
+            customerWaitEntranceChart.addDataItem(item, key, dayPartColors.get(dayPart));
+        } else {
+            item.setValue(averageWaitEntrance);
+        }
+        
+        
+        item = customerWaitTableChartItems.get(key);
+        if (item == null) {
+            item = new DataItem();
+            item.setValue(averageWaitTable);
+            customerWaitTableChartItems.put(key, item);
+
+            customerWaitTableChart.addDataItem(item, key, dayPartColors.get(dayPart));
+        } else {
+            item.setValue(averageWaitTable);
+        }
+        
+        
+        item = customerWaitPayChartItems.get(key);
+        if (item == null) {
+            item = new DataItem();
+            item.setValue(averageWaitPay);
+            customerWaitPayChartItems.put(key, item);
+
+            customerWaitPayChart.addDataItem(item, key, dayPartColors.get(dayPart));
+        } else {
+            item.setValue(averageWaitPay);
+        }
+        
+    }
+}
+
+customerWaitEntranceText.setText(sbEntrance.toString());
+customerWaitTableText.setText(sbTable.toString());
+customerWaitPayText.setText(sbPay.toString());
+/*ALCODEEND*/}
+
+double registerCustomerWaitEntranceEvent1(Date start,Date end)
+{/*ALCODESTART::1780765471999*/
+TimeEvent ev = new TimeEvent(start, end, TimeEvent.EventType.CUSTOMER_WAIT_ENTRANCE);
+timeEvents.add(ev);
+/*ALCODEEND*/}
+
+double registerCustomerStayEvent(Date start,Date end)
+{/*ALCODESTART::1780765479315*/
+TimeEvent ev = new TimeEvent(start, end, TimeEvent.EventType.CUSTOMER_STAY);
+timeEvents.add(ev);
 /*ALCODEEND*/}
 

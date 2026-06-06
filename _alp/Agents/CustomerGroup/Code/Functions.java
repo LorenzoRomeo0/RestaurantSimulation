@@ -50,14 +50,8 @@ String toString()
 {/*ALCODESTART::1778862261565*/
 return
 	"waiter{id = " + getId() +"\n" +
-	"entrance_time = " + entrance_time + "\n" +
-	"exit_time = " + exit_time + "\n" +
-	"table_wait_start_time = " + table_wait_start_time + "\n" +
-	"table_wait_end_time = " + table_wait_end_time + "\n" +
-	"entrance_date = " + entrance_date + "\n" +
-	"exit_date = " + exit_date + "\n" +
-	"table_wait_start_date = " + table_wait_start_date + "\n" +
-	"table_wait_end_date = " + table_wait_end_date + "\n" +
+	"entrance_date = " + entranceDate + "\n" +
+	"table_wait_start_date = " + tableWaitStartDate + "\n" +
 	"size = " + size + "\n" +
 	"table = " + table + "\n" +
 	"currentWaiter = " + (currentWaiter == null ? "null" : currentWaiter.getId()) + "\n" +

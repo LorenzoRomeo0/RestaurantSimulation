@@ -1918,6 +1918,9 @@ unit.isSeized = true;]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onEnter]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[registerCustomerWaitPayEvent(agent.exitWaitStartDate, date());]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onAtExit]]></Name>
@@ -1925,7 +1928,8 @@ unit.isSeized = true;]]></Code>
 			<Parameter>
 				<Name><![CDATA[onExit]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[//System.out.println(agent.getId() + " Exited.")]]></Code>
+					<Code><![CDATA[//System.out.println(agent.getId() + " Exited.")
+registerPaymentEvent(date(), date(), agent.order.getTotalPrice());]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -2620,6 +2624,9 @@ send(msg, unit);
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onEnter]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[agent.exitWaitStartDate = date();]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onExit]]></Name>
@@ -5048,7 +5055,7 @@ send(new goCook(agent), unit);]]></Code>
 		<Id>1770368816032</Id>
 		<Name><![CDATA[cook]]></Name>
 		<X>40</X>
-		<Y>-290</Y>
+		<Y>-230</Y>
 		<Label>
 			<X>15</X>
 			<Y>0</Y>
@@ -5358,7 +5365,7 @@ send(new goCook(agent), unit);]]></Code>
 		<Id>1770373494150</Id>
 		<Name><![CDATA[orders]]></Name>
 		<X>40</X>
-		<Y>-260</Y>
+		<Y>-200</Y>
 		<Label>
 			<X>15</X>
 			<Y>0</Y>
@@ -6227,8 +6234,8 @@ customerGroupsInRestaurant.remove(agent);]]></Code>
 	<EmbeddedObject>
 		<Id>1780695078329</Id>
 		<Name><![CDATA[barTables]]></Name>
-		<X>170</X>
-		<Y>-315</Y>
+		<X>40</X>
+		<Y>-310</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -6277,8 +6284,8 @@ customerGroupsInRestaurant.remove(agent);]]></Code>
 	<EmbeddedObject>
 		<Id>1780695242917</Id>
 		<Name><![CDATA[outsideTables]]></Name>
-		<X>170</X>
-		<Y>-295</Y>
+		<X>40</X>
+		<Y>-290</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -6326,8 +6333,8 @@ customerGroupsInRestaurant.remove(agent);]]></Code>
 	<EmbeddedObject>
 		<Id>1780695443374</Id>
 		<Name><![CDATA[insideTables]]></Name>
-		<X>170</X>
-		<Y>-275</Y>
+		<X>40</X>
+		<Y>-270</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>

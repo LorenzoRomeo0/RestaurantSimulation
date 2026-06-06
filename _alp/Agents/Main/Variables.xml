@@ -1,80 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Variables>
 	<Variable Class="PlainVariable">
-		<Id>1774958349376</Id>
-		<Name><![CDATA[customer_wait_sum]]></Name>
-		<X>-240</X>
-		<Y>300</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true"
-              Constant="false"
-              AccessType="public"
-              StaticVariable="false">
-			<Type><![CDATA[double[][]]]></Type>
-			<InitialValue Class="CodeValue">
-				<Code><![CDATA[new double[7][24]]]></Code>
-			</InitialValue>
-		</Properties>
-	</Variable>
-	<Variable Class="PlainVariable">
-		<Id>1774958391337</Id>
-		<Name><![CDATA[customer_wait_count]]></Name>
-		<X>-240</X>
-		<Y>330</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true"
-              Constant="false"
-              AccessType="public"
-              StaticVariable="false">
-			<Type><![CDATA[double[][]]]></Type>
-			<InitialValue Class="CodeValue">
-				<Code><![CDATA[new double[7][24]]]></Code>
-			</InitialValue>
-		</Properties>
-	</Variable>
-	<Variable Class="PlainVariable">
-		<Id>1774982079371</Id>
-		<Name><![CDATA[customerWaitAvgByDay]]></Name>
-		<X>-240</X>
-		<Y>370</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true"
-              Constant="false"
-              AccessType="public"
-              StaticVariable="false">
-			<Type><![CDATA[DataSet[]]]></Type>
-			<InitialValue Class="CodeValue">
-				<Code><![CDATA[new DataSet[] {
-    new com.anylogic.engine.analysis.DataSet(1000),
-    new com.anylogic.engine.analysis.DataSet(1000),
-    new com.anylogic.engine.analysis.DataSet(1000),
-    new com.anylogic.engine.analysis.DataSet(1000),
-    new com.anylogic.engine.analysis.DataSet(1000),
-    new com.anylogic.engine.analysis.DataSet(1000),
-    new com.anylogic.engine.analysis.DataSet(1000)
-}]]></Code>
-			</InitialValue>
-		</Properties>
-	</Variable>
-	<Variable Class="PlainVariable">
 		<Id>1774982640481</Id>
 		<Name><![CDATA[timeEvents]]></Name>
 		<X>-240</X>
@@ -288,6 +214,122 @@
 			<Type><![CDATA[int]]></Type>
 			<InitialValue Class="CodeValue">
 				<Code><![CDATA[0]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1780753382216</Id>
+		<Name><![CDATA[paymentChartItems]]></Name>
+		<X>-1920</X>
+		<Y>-20</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[Map<String, DataItem>]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[new LinkedHashMap<>();]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1780755273918</Id>
+		<Name><![CDATA[dayPartColors]]></Name>
+		<X>-600</X>
+		<Y>120</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[Map<DayPartUtil.DayPart, Color>]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[new LinkedHashMap<>(Map.of(
+    DayPartUtil.DayPart.BREAKFAST, Color.YELLOW,
+    DayPartUtil.DayPart.LUNCH,     Color.ORANGE,
+    DayPartUtil.DayPart.BREAK,     Color.GREEN,
+    DayPartUtil.DayPart.DINNER,    Color.BLUE,
+    DayPartUtil.DayPart.CLOSED,    Color.BLACK
+));]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1780764548423</Id>
+		<Name><![CDATA[customerWaitTableChartItems]]></Name>
+		<X>-780</X>
+		<Y>780</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[Map<String, DataItem>]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[new LinkedHashMap<>();]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1780764665925</Id>
+		<Name><![CDATA[customerWaitEntranceChartItems]]></Name>
+		<X>-780</X>
+		<Y>740</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[Map<String, DataItem>]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[new LinkedHashMap<>();]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1780764666868</Id>
+		<Name><![CDATA[customerWaitPayChartItems]]></Name>
+		<X>-780</X>
+		<Y>820</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[Map<String, DataItem>]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[new LinkedHashMap<>();]]></Code>
 			</InitialValue>
 		</Properties>
 	</Variable>
@@ -826,8 +868,8 @@
 	<Variable Class="Parameter">
 		<Id>1780697268442</Id>
 		<Name><![CDATA[tablesScenario]]></Name>
-		<X>450</X>
-		<Y>-420</Y>
+		<X>360</X>
+		<Y>-460</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>

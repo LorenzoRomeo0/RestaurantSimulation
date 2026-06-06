@@ -112,12 +112,11 @@
 				<EntryAction>//System.out.println(this.getId() + " inside.");
 //setColor( Color.GREEN );
 
-entrance_time = time();
-table_wait_start_time = time();
+main.registerCustomerWaitEntranceEvent(entranceDate, date());
 
-table_wait_start_date = date();
+//table_wait_start_time = time();
 
-entrance_date = date();
+tableWaitStartDate = date();
 
 shapeBody.setFillColor(green);
 main.inside_restaurant.free(this);</EntryAction>
@@ -143,7 +142,10 @@ shapeBody.setFillColor(orange);
 
 for(int i=0; i&lt;size; i++){
 	celiacs+=bernoulli(0.01);
-}</EntryAction>
+}
+
+//entrance_time = time();
+entranceDate = date();</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
@@ -175,11 +177,14 @@ for(int i=0; i&lt;size; i++){
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="120" Height="30">
 				<EntryAction>//traceln(getId() + " moving to table " + table.getId() + " pos: "+ table.getPosition().toString());
-table_wait_end_time = time();
-table_wait_end_date = date();
+//table_wait_end_time = time();
+//table_wait_end_date = date();
 
-main.register_customer_wait(table_wait_start_date, table_wait_end_date);
-main.table_wait_time_ds.add(time() - table_wait_end_time);
+//main.register_customer_wait(table_wait_start_date, table_wait_end_date);
+//main.table_wait_time_ds.add(time() - table_wait_end_time);
+
+main.registerCustomerWaitTableEvent(tableWaitStartDate, date());
+
 
 shapeBody.setFillColor(mediumOrchid);
 moveTo(table);</EntryAction>
@@ -319,7 +324,7 @@ send(order, currentWaiter);
 
 */
 
-Order order = makeOrder();
+order = makeOrder();
 
 send(order, currentWaiter);
 
@@ -366,14 +371,16 @@ main.welcoming_wait.free(this);</EntryAction>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
 				<EntryAction>if( !isExitingSystem ){
-	main.stay_time_ds.add(time() - entrance_time);
-	main.stay_time_hg.add(time() - entrance_time);
+	//main.stay_time_ds.add(time() - entrance_time);
+	//main.stay_time_hg.add(time() - entrance_time);
 	
 	//main.register_customer_wait(entrance_date, date());
-	main.register_customer_stay(entrance_date, date());
-	main.eating_wait.free(this);
 	
+	main.registerCustomerStayEvent(entranceDate, date());
+	
+	main.eating_wait.free(this);
 	isExitingSystem = true;
+	
 } else {
 	traceln(getId() + "TRIED TO EXIT TWICE");
 }

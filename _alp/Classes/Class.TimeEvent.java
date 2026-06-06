@@ -13,12 +13,17 @@ public class TimeEvent {
         WAITER_END,
         WAITER_SHIFT,
         CUSTOMER_WAIT,
-        CUSTOMER_STAY
+        CUSTOMER_WAIT_ENTRANCE,
+        CUSTOMER_WAIT_TABLE,
+        CUSTOMER_WAIT_PAY,
+        CUSTOMER_STAY,
+        MONEY
     }
 
 	public Date startTime;
     public Date endTime;
     public EventType eventType;
+    public double value;
     
 
     public TimeEvent(Date startTime, Date endTime, EventType eventType) {
@@ -26,6 +31,14 @@ public class TimeEvent {
 		this.endTime = endTime;
 		this.eventType = eventType;
     }
+    
+    public TimeEvent(Date startTime, Date endTime, EventType eventType, double value) {
+		this.startTime = startTime;
+		this.endTime = endTime;
+		this.eventType = eventType;
+		this.value = value;
+    }
+    
     
     public int getStartDayOfWeek() {
         return startTime != null ? getDayOfWeek(startTime) : -1;
@@ -38,6 +51,10 @@ public class TimeEvent {
     public int getStartHourOfDay() {
         return startTime != null ? getHourOfDay(startTime) : -1;
     }
+    
+    public int getStartMinuteOfHour() {
+        return startTime != null ? getMinuteOfHour(startTime) : -1;
+    }
 
     public int getEndHourOfDay() {
         return endTime != null ? getHourOfDay(endTime) : -1;
@@ -48,6 +65,13 @@ public class TimeEvent {
             return -1;
         }
         return endTime.getTime() - startTime.getTime();
+    }
+    
+    
+    private int getMinuteOfHour(Date date) {
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        return cal.get(Calendar.MINUTE);
     }
     
     public double getDurationSeconds() {
