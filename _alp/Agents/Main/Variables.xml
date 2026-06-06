@@ -26,7 +26,7 @@
 		<Id>1776444741169</Id>
 		<Name><![CDATA[menuItems]]></Name>
 		<X>580</X>
-		<Y>-140</Y>
+		<Y>-380</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -48,7 +48,7 @@
 		<Id>1777316753395</Id>
 		<Name><![CDATA[menuCopulaGenerator]]></Name>
 		<X>580</X>
-		<Y>-120</Y>
+		<Y>-360</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -70,7 +70,7 @@
 		<Id>1778656592315</Id>
 		<Name><![CDATA[customerGroupsInRestaurant]]></Name>
 		<X>580</X>
-		<Y>-50</Y>
+		<Y>-290</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -92,7 +92,7 @@
 		<Id>1779392250584</Id>
 		<Name><![CDATA[customerGroupAlreadyPassed]]></Name>
 		<X>580</X>
-		<Y>-30</Y>
+		<Y>-270</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -114,7 +114,7 @@
 		<Id>1779396450567</Id>
 		<Name><![CDATA[customersAtEntrance]]></Name>
 		<X>580</X>
-		<Y>-100</Y>
+		<Y>-340</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -133,7 +133,7 @@
 		<Id>1779396480991</Id>
 		<Name><![CDATA[customersInRestaurantNr]]></Name>
 		<X>580</X>
-		<Y>-70</Y>
+		<Y>-310</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -155,7 +155,7 @@
 		<Id>1780695733149</Id>
 		<Name><![CDATA[nextInsideTableIdx]]></Name>
 		<X>780</X>
-		<Y>-320</Y>
+		<Y>-560</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -177,7 +177,7 @@
 		<Id>1780695758362</Id>
 		<Name><![CDATA[nextOutsideTableIdx]]></Name>
 		<X>780</X>
-		<Y>-290</Y>
+		<Y>-530</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -199,7 +199,7 @@
 		<Id>1780695763971</Id>
 		<Name><![CDATA[nextBarTableIdx]]></Name>
 		<X>780</X>
-		<Y>-260</Y>
+		<Y>-500</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -220,8 +220,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1780753382216</Id>
 		<Name><![CDATA[paymentChartItems]]></Name>
-		<X>-1920</X>
-		<Y>-20</Y>
+		<X>1400</X>
+		<Y>-300</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -242,8 +242,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1780755273918</Id>
 		<Name><![CDATA[dayPartColors]]></Name>
-		<X>-600</X>
-		<Y>120</Y>
+		<X>-240</X>
+		<Y>80</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -270,8 +270,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1780764548423</Id>
 		<Name><![CDATA[customerWaitTableChartItems]]></Name>
-		<X>-780</X>
-		<Y>780</Y>
+		<X>1400</X>
+		<Y>-620</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -292,8 +292,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1780764665925</Id>
 		<Name><![CDATA[customerWaitEntranceChartItems]]></Name>
-		<X>-780</X>
-		<Y>740</Y>
+		<X>1400</X>
+		<Y>-660</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -314,8 +314,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1780764666868</Id>
 		<Name><![CDATA[customerWaitPayChartItems]]></Name>
-		<X>-780</X>
-		<Y>820</Y>
+		<X>1400</X>
+		<Y>-580</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -336,8 +336,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1780770056386</Id>
 		<Name><![CDATA[customerStayChartItems]]></Name>
-		<X>-780</X>
-		<Y>700</Y>
+		<X>1400</X>
+		<Y>-700</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -358,8 +358,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1780777576498</Id>
 		<Name><![CDATA[waiterIdleChartItems]]></Name>
-		<X>-380</X>
-		<Y>430</Y>
+		<X>1720</X>
+		<Y>-300</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -381,7 +381,7 @@
 		<Id>1775058764621</Id>
 		<Name><![CDATA[closingTime]]></Name>
 		<X>580</X>
-		<Y>-190</Y>
+		<Y>-430</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -409,7 +409,7 @@
 		<Id>1775063315096</Id>
 		<Name><![CDATA[openingTime]]></Name>
 		<X>580</X>
-		<Y>-220</Y>
+		<Y>-460</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -436,8 +436,8 @@
 	<Variable Class="Parameter">
 		<Id>1779886765152</Id>
 		<Name><![CDATA[muPayTime]]></Name>
-		<X>340</X>
-		<Y>80</Y>
+		<X>570</X>
+		<Y>-1070</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -464,8 +464,8 @@
 	<Variable Class="Parameter">
 		<Id>1779886779592</Id>
 		<Name><![CDATA[sigmaPayTime]]></Name>
-		<X>340</X>
-		<Y>100</Y>
+		<X>570</X>
+		<Y>-1050</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -492,8 +492,8 @@
 	<Variable Class="Parameter">
 		<Id>1779887040276</Id>
 		<Name><![CDATA[kMenuReadingModel]]></Name>
-		<X>560</X>
-		<Y>70</Y>
+		<X>790</X>
+		<Y>-1080</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -520,8 +520,8 @@
 	<Variable Class="Parameter">
 		<Id>1779887174778</Id>
 		<Name><![CDATA[growthEatingTimeModel]]></Name>
-		<X>820</X>
-		<Y>70</Y>
+		<X>1050</X>
+		<Y>-1080</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -548,8 +548,8 @@
 	<Variable Class="Parameter">
 		<Id>1779887194149</Id>
 		<Name><![CDATA[maxIncreaseEatingTimeModel]]></Name>
-		<X>820</X>
-		<Y>90</Y>
+		<X>1050</X>
+		<Y>-1060</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -576,8 +576,8 @@
 	<Variable Class="Parameter">
 		<Id>1779887875460</Id>
 		<Name><![CDATA[pPayTimeModel]]></Name>
-		<X>340</X>
-		<Y>120</Y>
+		<X>570</X>
+		<Y>-1030</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -604,8 +604,8 @@
 	<Variable Class="Parameter">
 		<Id>1779978419352</Id>
 		<Name><![CDATA[muMenuReading]]></Name>
-		<X>560</X>
-		<Y>100</Y>
+		<X>790</X>
+		<Y>-1050</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -632,8 +632,8 @@
 	<Variable Class="Parameter">
 		<Id>1779978450349</Id>
 		<Name><![CDATA[sigmaMenuReading]]></Name>
-		<X>560</X>
-		<Y>120</Y>
+		<X>790</X>
+		<Y>-1030</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -660,8 +660,8 @@
 	<Variable Class="Parameter">
 		<Id>1780666634035</Id>
 		<Name><![CDATA[minGroupSize]]></Name>
-		<X>110</X>
-		<Y>80</Y>
+		<X>340</X>
+		<Y>-1070</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -688,8 +688,8 @@
 	<Variable Class="Parameter">
 		<Id>1780666655336</Id>
 		<Name><![CDATA[maxGroupsize]]></Name>
-		<X>110</X>
-		<Y>110</Y>
+		<X>340</X>
+		<Y>-1040</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -716,8 +716,8 @@
 	<Variable Class="Parameter">
 		<Id>1780666686346</Id>
 		<Name><![CDATA[sigmaGroupSize]]></Name>
-		<X>110</X>
-		<Y>140</Y>
+		<X>340</X>
+		<Y>-1010</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -745,7 +745,7 @@
 		<Id>1780691442061</Id>
 		<Name><![CDATA[insideTablesSizes]]></Name>
 		<X>580</X>
-		<Y>-320</Y>
+		<Y>-560</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -773,7 +773,7 @@
 		<Id>1780691625593</Id>
 		<Name><![CDATA[outsideTablesSizes]]></Name>
 		<X>580</X>
-		<Y>-290</Y>
+		<Y>-530</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -801,7 +801,7 @@
 		<Id>1780691655251</Id>
 		<Name><![CDATA[barTablesSizes]]></Name>
 		<X>580</X>
-		<Y>-260</Y>
+		<Y>-500</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -829,7 +829,7 @@
 		<Id>1780696851256</Id>
 		<Name><![CDATA[eatingTimeScenario]]></Name>
 		<X>810</X>
-		<Y>-520</Y>
+		<Y>-760</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -857,7 +857,7 @@
 		<Id>1780696894485</Id>
 		<Name><![CDATA[employeesScheduleScenario]]></Name>
 		<X>810</X>
-		<Y>-630</Y>
+		<Y>-870</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -885,7 +885,7 @@
 		<Id>1780697063716</Id>
 		<Name><![CDATA[arrivalsGroupsizeScenario]]></Name>
 		<X>810</X>
-		<Y>-590</Y>
+		<Y>-830</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -913,7 +913,7 @@
 		<Id>1780697268442</Id>
 		<Name><![CDATA[tablesScenario]]></Name>
 		<X>360</X>
-		<Y>-460</Y>
+		<Y>-700</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -941,7 +941,7 @@
 		<Id>1780698941824</Id>
 		<Name><![CDATA[coverCharge]]></Name>
 		<X>580</X>
-		<Y>-350</Y>
+		<Y>-590</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -969,7 +969,7 @@
 		<Id>1780699123043</Id>
 		<Name><![CDATA[waitersHourlyRate]]></Name>
 		<X>1090</X>
-		<Y>-630</Y>
+		<Y>-870</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -997,7 +997,7 @@
 		<Id>1780699159267</Id>
 		<Name><![CDATA[cooksHourlyRate]]></Name>
 		<X>1090</X>
-		<Y>-600</Y>
+		<Y>-840</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>

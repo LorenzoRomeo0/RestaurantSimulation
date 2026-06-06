@@ -103,7 +103,7 @@
 			<Id>1770220504060</Id>
 			<Name><![CDATA[arrivals_schedule]]></Name>
 			<X>610</X>
-			<Y>-580</Y>
+			<Y>-820</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -167,7 +167,7 @@
 			<Id>1770633020320</Id>
 			<Name><![CDATA[groupsize_schedule]]></Name>
 			<X>610</X>
-			<Y>-550</Y>
+			<Y>-790</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -231,7 +231,7 @@
 			<Id>1770643795202</Id>
 			<Name><![CDATA[inside_schedule]]></Name>
 			<X>360</X>
-			<Y>-550</Y>
+			<Y>-790</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -294,7 +294,7 @@
 			<Id>1770643826624</Id>
 			<Name><![CDATA[outside_schedule]]></Name>
 			<X>360</X>
-			<Y>-520</Y>
+			<Y>-760</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -357,7 +357,7 @@
 			<Id>1770643835144</Id>
 			<Name><![CDATA[bar_schedule]]></Name>
 			<X>360</X>
-			<Y>-490</Y>
+			<Y>-730</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -420,7 +420,7 @@
 			<Id>1771950500906</Id>
 			<Name><![CDATA[eating_time_schedule]]></Name>
 			<X>610</X>
-			<Y>-520</Y>
+			<Y>-760</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -483,7 +483,7 @@
 			<Id>1772014207717</Id>
 			<Name><![CDATA[waiters_schedule]]></Name>
 			<X>610</X>
-			<Y>-640</Y>
+			<Y>-880</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -576,7 +576,7 @@ else if (currentlyOnShift &gt; value) {
 			<Id>1772014350792</Id>
 			<Name><![CDATA[cooks_schedule]]></Name>
 			<X>610</X>
-			<Y>-610</Y>
+			<Y>-850</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -640,7 +640,7 @@ else if (currentlyOnShift &gt; value) {
 			<Id>1776332307617</Id>
 			<Name><![CDATA[bar_prio_schedule]]></Name>
 			<X>360</X>
-			<Y>-640</Y>
+			<Y>-880</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -703,7 +703,7 @@ else if (currentlyOnShift &gt; value) {
 			<Id>1776332404624</Id>
 			<Name><![CDATA[inside_prio_schedule]]></Name>
 			<X>360</X>
-			<Y>-610</Y>
+			<Y>-850</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -766,7 +766,7 @@ else if (currentlyOnShift &gt; value) {
 			<Id>1776332408087</Id>
 			<Name><![CDATA[outside_prio_schedule]]></Name>
 			<X>360</X>
-			<Y>-580</Y>
+			<Y>-820</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -870,71 +870,71 @@ else if (currentlyOnShift &gt; value) {
 			<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
 			<Presentation xmlns:al="http://anylogic.com"/>
 		</Level>
-		<EmbeddedObjectPresentation>
-			<Id>1780695078331</Id>
-			<Name><![CDATA[barTables_presentation]]></Name>
-			<X>20</X>
-			<Y>-310</Y>
-			<Label>
-				<X>10</X>
-				<Y>0</Y>
-			</Label>
-			<PublicFlag>true</PublicFlag>
-			<PresentationFlag>true</PresentationFlag>
-			<ShowLabel>false</ShowLabel>
-			<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-			<EmbeddedIcon>false</EmbeddedIcon>
-			<Z>0</Z>
-			<Rotation>0.0</Rotation>
-			<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
-			<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
-			<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
-			<Latitude>0.0</Latitude>
-			<Longitude>0.0</Longitude>
-		</EmbeddedObjectPresentation>
-		<EmbeddedObjectPresentation>
-			<Id>1780695242919</Id>
-			<Name><![CDATA[outsideTables_presentation]]></Name>
-			<X>20</X>
-			<Y>-290</Y>
-			<Label>
-				<X>10</X>
-				<Y>0</Y>
-			</Label>
-			<PublicFlag>true</PublicFlag>
-			<PresentationFlag>true</PresentationFlag>
-			<ShowLabel>false</ShowLabel>
-			<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-			<EmbeddedIcon>false</EmbeddedIcon>
-			<Z>0</Z>
-			<Rotation>0.0</Rotation>
-			<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
-			<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
-			<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
-			<Latitude>0.0</Latitude>
-			<Longitude>0.0</Longitude>
-		</EmbeddedObjectPresentation>
-		<EmbeddedObjectPresentation>
-			<Id>1780695443376</Id>
-			<Name><![CDATA[insideTables_presentation]]></Name>
-			<X>20</X>
-			<Y>-270</Y>
-			<Label>
-				<X>10</X>
-				<Y>0</Y>
-			</Label>
-			<PublicFlag>true</PublicFlag>
-			<PresentationFlag>true</PresentationFlag>
-			<ShowLabel>false</ShowLabel>
-			<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-			<EmbeddedIcon>false</EmbeddedIcon>
-			<Z>0</Z>
-			<Rotation>0.0</Rotation>
-			<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
-			<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
-			<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
-			<Latitude>0.0</Latitude>
-			<Longitude>0.0</Longitude>
-		</EmbeddedObjectPresentation>
 	</Presentation>
+	<Areas>
+		<Area>
+			<Id>1780779078123</Id>
+			<Name><![CDATA[chartsViewArea]]></Name>
+			<X>10000</X>
+			<Y>0</Y>
+			<Label>
+				<X>0</X>
+				<Y>-10</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Title/>
+			<Width>3000</Width>
+			<Height>2480</Height>
+		</Area>
+		<Area>
+			<Id>1780779554865</Id>
+			<Name><![CDATA[restaurantViewArea]]></Name>
+			<X>0</X>
+			<Y>0</Y>
+			<Label>
+				<X>0</X>
+				<Y>-10</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Title/>
+			<Width>1200</Width>
+			<Height>880</Height>
+		</Area>
+		<Area>
+			<Id>1780779901838</Id>
+			<Name><![CDATA[pmlViewArea]]></Name>
+			<X>0</X>
+			<Y>1000</Y>
+			<Label>
+				<X>0</X>
+				<Y>-10</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Title/>
+			<Width>2880</Width>
+			<Height>880</Height>
+		</Area>
+		<Area>
+			<Id>1780780513733</Id>
+			<Name><![CDATA[parametersViewArea]]></Name>
+			<X>0</X>
+			<Y>-1140</Y>
+			<Label>
+				<X>0</X>
+				<Y>-10</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Title/>
+			<Width>2100</Width>
+			<Height>940</Height>
+		</Area>
+	</Areas>
 </ActiveObjectClass>

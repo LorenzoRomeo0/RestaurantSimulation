@@ -1,10 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Presentation>
+	<Rectangle>
+		<Id>1780779694370</Id>
+		<Name><![CDATA[rectangle2]]></Name>
+		<X>11560</X>
+		<Y>900</Y>
+		<Label>
+			<X>10</X>
+			<Y>10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<ZHeight>10</ZHeight>
+		<LineWidth>1</LineWidth>
+		<LineColor>-16777216</LineColor>
+		<LineMaterial>null</LineMaterial>
+		<LineStyle>SOLID</LineStyle>
+		<Width>1200</Width>
+		<Height>680</Height>
+		<Rotation>0.0</Rotation>
+		<FillColor>-1</FillColor>
+		<FillMaterial>null</FillMaterial>
+	</Rectangle>
+	<Rectangle>
+		<Id>1780779415814</Id>
+		<Name><![CDATA[rectangle1]]></Name>
+		<X>11560</X>
+		<Y>120</Y>
+		<Label>
+			<X>10</X>
+			<Y>10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<ZHeight>10</ZHeight>
+		<LineWidth>1</LineWidth>
+		<LineColor>-16777216</LineColor>
+		<LineMaterial>null</LineMaterial>
+		<LineStyle>SOLID</LineStyle>
+		<Width>1200</Width>
+		<Height>680</Height>
+		<Rotation>0.0</Rotation>
+		<FillColor>-1</FillColor>
+		<FillMaterial>null</FillMaterial>
+	</Rectangle>
+	<Rectangle>
+		<Id>1780779356538</Id>
+		<Name><![CDATA[rectangle]]></Name>
+		<X>10160</X>
+		<Y>120</Y>
+		<Label>
+			<X>10</X>
+			<Y>10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<ZHeight>10</ZHeight>
+		<LineWidth>1</LineWidth>
+		<LineColor>-16777216</LineColor>
+		<LineMaterial>null</LineMaterial>
+		<LineStyle>SOLID</LineStyle>
+		<Width>1200</Width>
+		<Height>2220</Height>
+		<Rotation>0.0</Rotation>
+		<FillColor>-1</FillColor>
+		<FillMaterial>null</FillMaterial>
+	</Rectangle>
 	<Network>
 		<Id>1756500551264</Id>
 		<Name><![CDATA[network]]></Name>
-		<X>580</X>
-		<Y>10</Y>
+		<X>410</X>
+		<Y>-40</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -17,8 +95,8 @@
 			<RectangleNode>
 				<Id>1756500551321</Id>
 				<Name><![CDATA[tables_node]]></Name>
-				<X>400</X>
-				<Y>390</Y>
+				<X>230</X>
+				<Y>340</Y>
 				<Label>
 					<X>10</X>
 					<Y>0</Y>
@@ -122,8 +200,8 @@
 					<Attractor>
 						<Id>1756751877253</Id>
 						<Name><![CDATA[attractor20]]></Name>
-						<X>483.333</X>
-						<Y>462</Y>
+						<X>313.3330000000001</X>
+						<Y>412</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -138,8 +216,8 @@
 					<Attractor>
 						<Id>1756751877255</Id>
 						<Name><![CDATA[attractor21]]></Name>
-						<X>566.667</X>
-						<Y>462</Y>
+						<X>396.66700000000003</X>
+						<Y>412</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -154,8 +232,8 @@
 					<Attractor>
 						<Id>1756751877257</Id>
 						<Name><![CDATA[attractor22]]></Name>
-						<X>650</X>
-						<Y>462</Y>
+						<X>480</X>
+						<Y>412</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -170,8 +248,8 @@
 					<Attractor>
 						<Id>1756751877259</Id>
 						<Name><![CDATA[attractor23]]></Name>
-						<X>733.333</X>
-						<Y>462</Y>
+						<X>563.3330000000001</X>
+						<Y>412</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -186,8 +264,8 @@
 					<Attractor>
 						<Id>1756751877261</Id>
 						<Name><![CDATA[attractor24]]></Name>
-						<X>816.667</X>
-						<Y>462</Y>
+						<X>646.6669999999999</X>
+						<Y>412</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -202,8 +280,8 @@
 					<Attractor>
 						<Id>1756751877263</Id>
 						<Name><![CDATA[attractor25]]></Name>
-						<X>483.333</X>
-						<Y>534</Y>
+						<X>313.3330000000001</X>
+						<Y>484</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -218,8 +296,8 @@
 					<Attractor>
 						<Id>1756751877265</Id>
 						<Name><![CDATA[attractor26]]></Name>
-						<X>566.667</X>
-						<Y>534</Y>
+						<X>396.66700000000003</X>
+						<Y>484</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -234,8 +312,8 @@
 					<Attractor>
 						<Id>1756751877267</Id>
 						<Name><![CDATA[attractor27]]></Name>
-						<X>650</X>
-						<Y>534</Y>
+						<X>480</X>
+						<Y>484</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -250,8 +328,8 @@
 					<Attractor>
 						<Id>1756751877269</Id>
 						<Name><![CDATA[attractor28]]></Name>
-						<X>733.333</X>
-						<Y>534</Y>
+						<X>563.3330000000001</X>
+						<Y>484</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -266,8 +344,8 @@
 					<Attractor>
 						<Id>1756751877271</Id>
 						<Name><![CDATA[attractor29]]></Name>
-						<X>816.667</X>
-						<Y>534</Y>
+						<X>646.6669999999999</X>
+						<Y>484</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -282,8 +360,8 @@
 					<Attractor>
 						<Id>1756751877273</Id>
 						<Name><![CDATA[attractor30]]></Name>
-						<X>483.333</X>
-						<Y>606</Y>
+						<X>313.3330000000001</X>
+						<Y>556</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -298,8 +376,8 @@
 					<Attractor>
 						<Id>1756751877275</Id>
 						<Name><![CDATA[attractor31]]></Name>
-						<X>566.667</X>
-						<Y>606</Y>
+						<X>396.66700000000003</X>
+						<Y>556</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -314,8 +392,8 @@
 					<Attractor>
 						<Id>1756751877277</Id>
 						<Name><![CDATA[attractor32]]></Name>
-						<X>650</X>
-						<Y>606</Y>
+						<X>480</X>
+						<Y>556</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -330,8 +408,8 @@
 					<Attractor>
 						<Id>1756751877279</Id>
 						<Name><![CDATA[attractor33]]></Name>
-						<X>733.333</X>
-						<Y>606</Y>
+						<X>563.3330000000001</X>
+						<Y>556</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -346,8 +424,8 @@
 					<Attractor>
 						<Id>1756751877281</Id>
 						<Name><![CDATA[attractor34]]></Name>
-						<X>816.667</X>
-						<Y>606</Y>
+						<X>646.6669999999999</X>
+						<Y>556</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -362,8 +440,8 @@
 					<Attractor>
 						<Id>1756751877283</Id>
 						<Name><![CDATA[attractor35]]></Name>
-						<X>483.333</X>
-						<Y>678</Y>
+						<X>313.3330000000001</X>
+						<Y>628</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -378,8 +456,8 @@
 					<Attractor>
 						<Id>1756751877285</Id>
 						<Name><![CDATA[attractor36]]></Name>
-						<X>566.667</X>
-						<Y>678</Y>
+						<X>396.66700000000003</X>
+						<Y>628</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -394,8 +472,8 @@
 					<Attractor>
 						<Id>1756751877287</Id>
 						<Name><![CDATA[attractor37]]></Name>
-						<X>650</X>
-						<Y>678</Y>
+						<X>480</X>
+						<Y>628</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -410,8 +488,8 @@
 					<Attractor>
 						<Id>1756751877289</Id>
 						<Name><![CDATA[attractor38]]></Name>
-						<X>733.333</X>
-						<Y>678</Y>
+						<X>563.3330000000001</X>
+						<Y>628</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -426,8 +504,8 @@
 					<Attractor>
 						<Id>1756751877291</Id>
 						<Name><![CDATA[attractor39]]></Name>
-						<X>816.667</X>
-						<Y>678</Y>
+						<X>646.6669999999999</X>
+						<Y>628</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -442,8 +520,8 @@
 					<Attractor>
 						<Id>1758283072242</Id>
 						<Name><![CDATA[attractor10]]></Name>
-						<X>483.3333333333333</X>
-						<Y>462</Y>
+						<X>313.33333333333326</X>
+						<Y>412</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -458,8 +536,8 @@
 					<Attractor>
 						<Id>1758283072244</Id>
 						<Name><![CDATA[attractor11]]></Name>
-						<X>566.6666666666666</X>
-						<Y>462</Y>
+						<X>396.66666666666663</X>
+						<Y>412</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -474,8 +552,8 @@
 					<Attractor>
 						<Id>1758283072246</Id>
 						<Name><![CDATA[attractor12]]></Name>
-						<X>650</X>
-						<Y>462</Y>
+						<X>480</X>
+						<Y>412</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -490,8 +568,8 @@
 					<Attractor>
 						<Id>1758283072248</Id>
 						<Name><![CDATA[attractor13]]></Name>
-						<X>733.3333333333333</X>
-						<Y>462</Y>
+						<X>563.3333333333333</X>
+						<Y>412</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -506,8 +584,8 @@
 					<Attractor>
 						<Id>1758283072250</Id>
 						<Name><![CDATA[attractor14]]></Name>
-						<X>816.6666666666666</X>
-						<Y>462</Y>
+						<X>646.6666666666665</X>
+						<Y>412</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -522,8 +600,8 @@
 					<Attractor>
 						<Id>1758283072252</Id>
 						<Name><![CDATA[attractor15]]></Name>
-						<X>483.3333333333333</X>
-						<Y>534</Y>
+						<X>313.33333333333326</X>
+						<Y>484</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -538,8 +616,8 @@
 					<Attractor>
 						<Id>1758283072254</Id>
 						<Name><![CDATA[attractor16]]></Name>
-						<X>566.6666666666666</X>
-						<Y>534</Y>
+						<X>396.66666666666663</X>
+						<Y>484</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -554,8 +632,8 @@
 					<Attractor>
 						<Id>1758283072256</Id>
 						<Name><![CDATA[attractor17]]></Name>
-						<X>650</X>
-						<Y>534</Y>
+						<X>480</X>
+						<Y>484</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -570,8 +648,8 @@
 					<Attractor>
 						<Id>1758283072258</Id>
 						<Name><![CDATA[attractor18]]></Name>
-						<X>733.3333333333333</X>
-						<Y>534</Y>
+						<X>563.3333333333333</X>
+						<Y>484</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -586,8 +664,8 @@
 					<Attractor>
 						<Id>1758283072260</Id>
 						<Name><![CDATA[attractor19]]></Name>
-						<X>816.6666666666666</X>
-						<Y>534</Y>
+						<X>646.6666666666665</X>
+						<Y>484</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -602,8 +680,8 @@
 					<Attractor>
 						<Id>1758283072262</Id>
 						<Name><![CDATA[attractor40]]></Name>
-						<X>483.3333333333333</X>
-						<Y>606</Y>
+						<X>313.33333333333326</X>
+						<Y>556</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -618,8 +696,8 @@
 					<Attractor>
 						<Id>1758283072264</Id>
 						<Name><![CDATA[attractor41]]></Name>
-						<X>566.6666666666666</X>
-						<Y>606</Y>
+						<X>396.66666666666663</X>
+						<Y>556</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -634,8 +712,8 @@
 					<Attractor>
 						<Id>1758283072266</Id>
 						<Name><![CDATA[attractor42]]></Name>
-						<X>650</X>
-						<Y>606</Y>
+						<X>480</X>
+						<Y>556</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -650,8 +728,8 @@
 					<Attractor>
 						<Id>1758283072268</Id>
 						<Name><![CDATA[attractor43]]></Name>
-						<X>733.3333333333333</X>
-						<Y>606</Y>
+						<X>563.3333333333333</X>
+						<Y>556</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -666,8 +744,8 @@
 					<Attractor>
 						<Id>1758283072270</Id>
 						<Name><![CDATA[attractor44]]></Name>
-						<X>816.6666666666666</X>
-						<Y>606</Y>
+						<X>646.6666666666665</X>
+						<Y>556</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -682,8 +760,8 @@
 					<Attractor>
 						<Id>1758283072272</Id>
 						<Name><![CDATA[attractor45]]></Name>
-						<X>483.3333333333333</X>
-						<Y>678</Y>
+						<X>313.33333333333326</X>
+						<Y>628</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -698,8 +776,8 @@
 					<Attractor>
 						<Id>1758283072274</Id>
 						<Name><![CDATA[attractor46]]></Name>
-						<X>566.6666666666666</X>
-						<Y>678</Y>
+						<X>396.66666666666663</X>
+						<Y>628</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -714,8 +792,8 @@
 					<Attractor>
 						<Id>1758283072276</Id>
 						<Name><![CDATA[attractor47]]></Name>
-						<X>650</X>
-						<Y>678</Y>
+						<X>480</X>
+						<Y>628</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -730,8 +808,8 @@
 					<Attractor>
 						<Id>1758283072278</Id>
 						<Name><![CDATA[attractor48]]></Name>
-						<X>733.3333333333333</X>
-						<Y>678</Y>
+						<X>563.3333333333333</X>
+						<Y>628</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -746,8 +824,8 @@
 					<Attractor>
 						<Id>1758283072280</Id>
 						<Name><![CDATA[attractor49]]></Name>
-						<X>816.6666666666666</X>
-						<Y>678</Y>
+						<X>646.6666666666665</X>
+						<Y>628</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -783,8 +861,8 @@
 			<Path SourceId="1756500551321" TargetId="1756752236276">
 				<Id>1756752252314</Id>
 				<Name><![CDATA[path2]]></Name>
-				<X>820</X>
-				<Y>390</Y>
+				<X>650</X>
+				<Y>340</Y>
 				<Label>
 					<X>10</X>
 					<Y>0</Y>
@@ -846,8 +924,8 @@
 			<RectangleNode>
 				<Id>1756752236276</Id>
 				<Name><![CDATA[exit_node]]></Name>
-				<X>800</X>
-				<Y>330</Y>
+				<X>630</X>
+				<Y>280</Y>
 				<Label>
 					<X>10</X>
 					<Y>0</Y>
@@ -970,8 +1048,8 @@
 			<Path SourceId="1756752619426" TargetId="1756500551321">
 				<Id>1756752659979</Id>
 				<Name><![CDATA[path3]]></Name>
-				<X>380</X>
-				<Y>590</Y>
+				<X>210</X>
+				<Y>540</Y>
 				<Label>
 					<X>10</X>
 					<Y>0</Y>
@@ -1033,8 +1111,8 @@
 			<RectangleNode>
 				<Id>1756752619426</Id>
 				<Name><![CDATA[waiters_node]]></Name>
-				<X>330</X>
-				<Y>570</Y>
+				<X>160</X>
+				<Y>520</Y>
 				<Label>
 					<X>10</X>
 					<Y>0</Y>
@@ -1138,8 +1216,8 @@
 					<Attractor>
 						<Id>1779227207675</Id>
 						<Name><![CDATA[attractor67]]></Name>
-						<X>355</X>
-						<Y>583.75</Y>
+						<X>185</X>
+						<Y>533.75</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -1154,8 +1232,8 @@
 					<Attractor>
 						<Id>1779227207677</Id>
 						<Name><![CDATA[attractor68]]></Name>
-						<X>355</X>
-						<Y>597.5</Y>
+						<X>185</X>
+						<Y>547.5</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -1170,8 +1248,8 @@
 					<Attractor>
 						<Id>1779227207679</Id>
 						<Name><![CDATA[attractor69]]></Name>
-						<X>355</X>
-						<Y>611.25</Y>
+						<X>185</X>
+						<Y>561.25</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -1186,8 +1264,8 @@
 					<Attractor>
 						<Id>1779227207681</Id>
 						<Name><![CDATA[attractor70]]></Name>
-						<X>355</X>
-						<Y>625</Y>
+						<X>185</X>
+						<Y>575</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -1202,8 +1280,8 @@
 					<Attractor>
 						<Id>1779227207683</Id>
 						<Name><![CDATA[attractor71]]></Name>
-						<X>355</X>
-						<Y>638.75</Y>
+						<X>185</X>
+						<Y>588.75</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -1218,8 +1296,8 @@
 					<Attractor>
 						<Id>1779227207685</Id>
 						<Name><![CDATA[attractor72]]></Name>
-						<X>355</X>
-						<Y>652.5</Y>
+						<X>185</X>
+						<Y>602.5</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -1234,8 +1312,8 @@
 					<Attractor>
 						<Id>1779227207687</Id>
 						<Name><![CDATA[attractor73]]></Name>
-						<X>355</X>
-						<Y>666.25</Y>
+						<X>185</X>
+						<Y>616.25</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -1271,8 +1349,8 @@
 			<Path SourceId="1756500551321" TargetId="1758114345521">
 				<Id>1758114389050</Id>
 				<Name><![CDATA[path4]]></Name>
-				<X>900</X>
-				<Y>450</Y>
+				<X>730</X>
+				<Y>400</Y>
 				<Label>
 					<X>10</X>
 					<Y>0</Y>
@@ -1334,8 +1412,8 @@
 			<RectangleNode>
 				<Id>1758114345521</Id>
 				<Name><![CDATA[outside_tables_node]]></Name>
-				<X>950</X>
-				<Y>420</Y>
+				<X>780</X>
+				<Y>370</Y>
 				<Label>
 					<X>10</X>
 					<Y>0</Y>
@@ -1439,8 +1517,8 @@
 					<Attractor>
 						<Id>1758114702699</Id>
 						<Name><![CDATA[attractor]]></Name>
-						<X>990</X>
-						<Y>448.182</Y>
+						<X>820</X>
+						<Y>398.182</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -1455,8 +1533,8 @@
 					<Attractor>
 						<Id>1758114702701</Id>
 						<Name><![CDATA[attractor1]]></Name>
-						<X>990</X>
-						<Y>476.364</Y>
+						<X>820</X>
+						<Y>426.36400000000003</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -1471,8 +1549,8 @@
 					<Attractor>
 						<Id>1758114702703</Id>
 						<Name><![CDATA[attractor2]]></Name>
-						<X>990</X>
-						<Y>504.545</Y>
+						<X>820</X>
+						<Y>454.5450000000001</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -1487,8 +1565,8 @@
 					<Attractor>
 						<Id>1758114702705</Id>
 						<Name><![CDATA[attractor3]]></Name>
-						<X>990</X>
-						<Y>532.727</Y>
+						<X>820</X>
+						<Y>482.727</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -1503,8 +1581,8 @@
 					<Attractor>
 						<Id>1758114702707</Id>
 						<Name><![CDATA[attractor4]]></Name>
-						<X>990</X>
-						<Y>560.909</Y>
+						<X>820</X>
+						<Y>510.909</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -1519,8 +1597,8 @@
 					<Attractor>
 						<Id>1758114702709</Id>
 						<Name><![CDATA[attractor5]]></Name>
-						<X>990</X>
-						<Y>589.091</Y>
+						<X>820</X>
+						<Y>539.091</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -1535,8 +1613,8 @@
 					<Attractor>
 						<Id>1758114702711</Id>
 						<Name><![CDATA[attractor6]]></Name>
-						<X>990</X>
-						<Y>617.273</Y>
+						<X>820</X>
+						<Y>567.2730000000001</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -1551,8 +1629,8 @@
 					<Attractor>
 						<Id>1758114702713</Id>
 						<Name><![CDATA[attractor7]]></Name>
-						<X>990</X>
-						<Y>645.455</Y>
+						<X>820</X>
+						<Y>595.4549999999999</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -1567,8 +1645,8 @@
 					<Attractor>
 						<Id>1758114702715</Id>
 						<Name><![CDATA[attractor8]]></Name>
-						<X>990</X>
-						<Y>673.636</Y>
+						<X>820</X>
+						<Y>623.636</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -1583,8 +1661,8 @@
 					<Attractor>
 						<Id>1758114702717</Id>
 						<Name><![CDATA[attractor9]]></Name>
-						<X>990</X>
-						<Y>701.818</Y>
+						<X>820</X>
+						<Y>651.818</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -1620,8 +1698,8 @@
 			<Path SourceId="1756500551271" TargetId="1756500551321">
 				<Id>1756500551316</Id>
 				<Name><![CDATA[path1]]></Name>
-				<X>755</X>
-				<Y>360</Y>
+				<X>585</X>
+				<Y>310</Y>
 				<Label>
 					<X>10</X>
 					<Y>0</Y>
@@ -1683,8 +1761,8 @@
 			<RectangleNode>
 				<Id>1756500551271</Id>
 				<Name><![CDATA[entrance_node]]></Name>
-				<X>740</X>
-				<Y>320</Y>
+				<X>570</X>
+				<Y>270</Y>
 				<Label>
 					<X>10</X>
 					<Y>0</Y>
@@ -1807,8 +1885,8 @@
 			<Path SourceId="1756500551295" TargetId="1756500551271">
 				<Id>1756500551266</Id>
 				<Name><![CDATA[path]]></Name>
-				<X>755</X>
-				<Y>290</Y>
+				<X>585</X>
+				<Y>240</Y>
 				<Label>
 					<X>10</X>
 					<Y>0</Y>
@@ -1870,8 +1948,8 @@
 			<RectangleNode>
 				<Id>1756500551295</Id>
 				<Name><![CDATA[queue_node]]></Name>
-				<X>715</X>
-				<Y>230</Y>
+				<X>545</X>
+				<Y>180</Y>
 				<Label>
 					<X>10</X>
 					<Y>0</Y>
@@ -1994,8 +2072,8 @@
 			<Path SourceId="1758282368140" TargetId="1756500551321">
 				<Id>1758282381066</Id>
 				<Name><![CDATA[path6]]></Name>
-				<X>380</X>
-				<Y>410</Y>
+				<X>210</X>
+				<Y>360</Y>
 				<Label>
 					<X>10</X>
 					<Y>0</Y>
@@ -2057,8 +2135,8 @@
 			<RectangleNode>
 				<Id>1758282368140</Id>
 				<Name><![CDATA[bar_node]]></Name>
-				<X>330</X>
-				<Y>395</Y>
+				<X>160</X>
+				<Y>345</Y>
 				<Label>
 					<X>10</X>
 					<Y>0</Y>
@@ -2181,8 +2259,8 @@
 			<Path SourceId="1758282880332" TargetId="1756500551321">
 				<Id>1758282950457</Id>
 				<Name><![CDATA[path7]]></Name>
-				<X>435</X>
-				<Y>350</Y>
+				<X>265</X>
+				<Y>300</Y>
 				<Label>
 					<X>10</X>
 					<Y>0</Y>
@@ -2244,8 +2322,8 @@
 			<RectangleNode>
 				<Id>1758282880332</Id>
 				<Name><![CDATA[bar_tables_node]]></Name>
-				<X>400</X>
-				<Y>270</Y>
+				<X>230</X>
+				<Y>220</Y>
 				<Label>
 					<X>10</X>
 					<Y>0</Y>
@@ -2349,8 +2427,8 @@
 					<Attractor>
 						<Id>1758283233604</Id>
 						<Name><![CDATA[attractor50]]></Name>
-						<X>443.3333333333333</X>
-						<Y>296.6666666666667</Y>
+						<X>273.33333333333326</X>
+						<Y>246.66666666666674</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -2365,8 +2443,8 @@
 					<Attractor>
 						<Id>1758283233606</Id>
 						<Name><![CDATA[attractor51]]></Name>
-						<X>486.6666666666667</X>
-						<Y>296.6666666666667</Y>
+						<X>316.66666666666674</X>
+						<Y>246.66666666666674</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -2381,8 +2459,8 @@
 					<Attractor>
 						<Id>1758283233608</Id>
 						<Name><![CDATA[attractor52]]></Name>
-						<X>530</X>
-						<Y>296.6666666666667</Y>
+						<X>360</X>
+						<Y>246.66666666666674</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -2397,8 +2475,8 @@
 					<Attractor>
 						<Id>1758283233610</Id>
 						<Name><![CDATA[attractor53]]></Name>
-						<X>573.3333333333334</X>
-						<Y>296.6666666666667</Y>
+						<X>403.33333333333337</X>
+						<Y>246.66666666666674</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -2413,8 +2491,8 @@
 					<Attractor>
 						<Id>1758283233612</Id>
 						<Name><![CDATA[attractor54]]></Name>
-						<X>616.6666666666667</X>
-						<Y>296.6666666666667</Y>
+						<X>446.66666666666674</X>
+						<Y>246.66666666666674</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -2429,8 +2507,8 @@
 					<Attractor>
 						<Id>1758283233614</Id>
 						<Name><![CDATA[attractor55]]></Name>
-						<X>443.3333333333333</X>
-						<Y>323.3333333333333</Y>
+						<X>273.33333333333326</X>
+						<Y>273.33333333333326</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -2445,8 +2523,8 @@
 					<Attractor>
 						<Id>1758283233616</Id>
 						<Name><![CDATA[attractor56]]></Name>
-						<X>486.6666666666667</X>
-						<Y>323.3333333333333</Y>
+						<X>316.66666666666674</X>
+						<Y>273.33333333333326</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -2461,8 +2539,8 @@
 					<Attractor>
 						<Id>1758283233618</Id>
 						<Name><![CDATA[attractor57]]></Name>
-						<X>530</X>
-						<Y>323.3333333333333</Y>
+						<X>360</X>
+						<Y>273.33333333333326</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -2477,8 +2555,8 @@
 					<Attractor>
 						<Id>1758283233620</Id>
 						<Name><![CDATA[attractor58]]></Name>
-						<X>573.3333333333334</X>
-						<Y>323.3333333333333</Y>
+						<X>403.33333333333337</X>
+						<Y>273.33333333333326</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -2493,8 +2571,8 @@
 					<Attractor>
 						<Id>1758283233622</Id>
 						<Name><![CDATA[attractor59]]></Name>
-						<X>616.6666666666667</X>
-						<Y>323.3333333333333</Y>
+						<X>446.66666666666674</X>
+						<Y>273.33333333333326</Y>
 						<Label>
 							<X>10</X>
 							<Y>0</Y>
@@ -2530,8 +2608,8 @@
 			<Path SourceId="1758115056461" TargetId="1756500551321">
 				<Id>1758115078003</Id>
 				<Name><![CDATA[path5]]></Name>
-				<X>375</X>
-				<Y>485</Y>
+				<X>205</X>
+				<Y>435</Y>
 				<Label>
 					<X>10</X>
 					<Y>0</Y>
@@ -2593,8 +2671,8 @@
 			<RectangleNode>
 				<Id>1758115056461</Id>
 				<Name><![CDATA[kitchen_node]]></Name>
-				<X>330</X>
-				<Y>465</Y>
+				<X>160</X>
+				<Y>415</Y>
 				<Label>
 					<X>10</X>
 					<Y>0</Y>
@@ -2717,8 +2795,8 @@
 			<Path SourceId="1756752236276" TargetId="1771948426457">
 				<Id>1771948449901</Id>
 				<Name><![CDATA[path8]]></Name>
-				<X>840</X>
-				<Y>345</Y>
+				<X>670</X>
+				<Y>295</Y>
 				<Label>
 					<X>10</X>
 					<Y>0</Y>
@@ -2780,8 +2858,8 @@
 			<RectangleNode>
 				<Id>1771948426457</Id>
 				<Name><![CDATA[checkout_node]]></Name>
-				<X>880</X>
-				<Y>340</Y>
+				<X>710</X>
+				<Y>290</Y>
 				<Label>
 					<X>10</X>
 					<Y>0</Y>
@@ -2904,55 +2982,11 @@
 		</Presentation>
 		<Z>0</Z>
 	</Network>
-	<EmbeddedObjectPresentation>
-		<Id>1757411338065</Id>
-		<Name><![CDATA[customerGroup_presentation]]></Name>
-		<X>10</X>
-		<Y>-370</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>true</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>false</ShowLabel>
-		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-		<EmbeddedIcon>false</EmbeddedIcon>
-		<Z>0</Z>
-		<Rotation>0.0</Rotation>
-		<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
-		<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
-		<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
-		<Latitude>0.0</Latitude>
-		<Longitude>0.0</Longitude>
-	</EmbeddedObjectPresentation>
-	<EmbeddedObjectPresentation>
-		<Id>1757582111635</Id>
-		<Name><![CDATA[waiters_presentation]]></Name>
-		<X>10</X>
-		<Y>-340</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>true</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>false</ShowLabel>
-		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-		<EmbeddedIcon>false</EmbeddedIcon>
-		<Z>0</Z>
-		<Rotation>0.0</Rotation>
-		<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
-		<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
-		<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
-		<Latitude>0.0</Latitude>
-		<Longitude>0.0</Longitude>
-	</EmbeddedObjectPresentation>
 	<Group>
 		<Id>1770028206143</Id>
 		<Name><![CDATA[clock]]></Name>
-		<X>580</X>
-		<Y>200</Y>
+		<X>410</X>
+		<Y>150</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -3295,8 +3329,8 @@
 	<Text>
 		<Id>1770051566110</Id>
 		<Name><![CDATA[scheduleVals]]></Name>
-		<X>640</X>
-		<Y>190</Y>
+		<X>470</X>
+		<Y>140</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3322,8 +3356,8 @@
 	<Text>
 		<Id>1770051794926</Id>
 		<Name><![CDATA[Datetime]]></Name>
-		<X>640</X>
-		<Y>170</Y>
+		<X>470</X>
+		<Y>120</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3345,55 +3379,11 @@
 		</Font>
 		<Alignment>LEFT</Alignment>
 	</Text>
-	<EmbeddedObjectPresentation>
-		<Id>1770368817449</Id>
-		<Name><![CDATA[cook_presentation]]></Name>
-		<X>0</X>
-		<Y>0</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>true</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>false</ShowLabel>
-		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-		<EmbeddedIcon>false</EmbeddedIcon>
-		<Z>0</Z>
-		<Rotation>0.0</Rotation>
-		<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
-		<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
-		<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
-		<Latitude>0.0</Latitude>
-		<Longitude>0.0</Longitude>
-	</EmbeddedObjectPresentation>
-	<EmbeddedObjectPresentation>
-		<Id>1770373497345</Id>
-		<Name><![CDATA[orders_presentation]]></Name>
-		<X>0</X>
-		<Y>0</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>true</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>false</ShowLabel>
-		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-		<EmbeddedIcon>false</EmbeddedIcon>
-		<Z>0</Z>
-		<Rotation>0.0</Rotation>
-		<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
-		<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
-		<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
-		<Latitude>0.0</Latitude>
-		<Longitude>0.0</Longitude>
-	</EmbeddedObjectPresentation>
 	<Text>
 		<Id>1770374931654</Id>
 		<Name><![CDATA[text5]]></Name>
-		<X>640</X>
-		<Y>1070</Y>
+		<X>1060</X>
+		<Y>1030</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3419,8 +3409,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1775058310781</Id>
 		<Name><![CDATA[customersinRestaurant]]></Name>
-		<X>830</X>
-		<Y>250</Y>
+		<X>660</X>
+		<Y>200</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3445,8 +3435,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1775231420587</Id>
 		<Name><![CDATA[txtWaitersDebug]]></Name>
-		<X>150</X>
-		<Y>610</Y>
+		<X>1320</X>
+		<Y>740</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3545,8 +3535,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1776500266077</Id>
 		<Name><![CDATA[currentMenuItemsDebugText]]></Name>
-		<X>1220</X>
-		<Y>20</Y>
+		<X>1480</X>
+		<Y>80</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3570,8 +3560,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1777058799377</Id>
 		<Name><![CDATA[moneySpentText]]></Name>
-		<X>830</X>
-		<Y>270</Y>
+		<X>660</X>
+		<Y>220</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3595,8 +3585,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1777316852854</Id>
 		<Name><![CDATA[menuCopulaGeneratorDebugText]]></Name>
-		<X>1370</X>
-		<Y>20</Y>
+		<X>1630</X>
+		<Y>80</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3620,8 +3610,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1778769294504</Id>
 		<Name><![CDATA[waitersPoolDebugText]]></Name>
-		<X>-170</X>
-		<Y>1840</Y>
+		<X>-1800</X>
+		<Y>-320</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3670,8 +3660,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<RectangleNode>
 		<Id>1779382850154</Id>
 		<Name><![CDATA[jail]]></Name>
-		<X>980</X>
-		<Y>270</Y>
+		<X>810</X>
+		<Y>220</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -3791,11 +3781,516 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Height>60</Height>
 		<Rotation>0.0</Rotation>
 	</RectangleNode>
+	<Group>
+		<Id>1780778952373</Id>
+		<Name><![CDATA[group]]></Name>
+		<X>10640</X>
+		<Y>1160</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Presentation>
+			<Text>
+				<Id>1780762938456</Id>
+				<Name><![CDATA[customerWaitEntranceText]]></Name>
+				<X>300</X>
+				<Y>-870</Y>
+				<Label>
+					<X>0</X>
+					<Y>-10</Y>
+				</Label>
+				<PublicFlag>true</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D</DrawMode>
+				<EmbeddedIcon>false</EmbeddedIcon>
+				<Z>0</Z>
+				<Rotation>0.0</Rotation>
+				<Color>-16777216</Color>
+				<Text><![CDATA[customerWaitEntranceText]]></Text>
+				<Font>
+					<Name><![CDATA[Cascadia Code]]></Name>
+					<Size>8</Size>
+					<Style>0</Style>
+				</Font>
+				<Alignment>LEFT</Alignment>
+			</Text>
+			<Text>
+				<Id>1780763406071</Id>
+				<Name><![CDATA[customerWaitTableText]]></Name>
+				<X>300</X>
+				<Y>-370</Y>
+				<Label>
+					<X>0</X>
+					<Y>-10</Y>
+				</Label>
+				<PublicFlag>true</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D</DrawMode>
+				<EmbeddedIcon>false</EmbeddedIcon>
+				<Z>0</Z>
+				<Rotation>0.0</Rotation>
+				<Color>-16777216</Color>
+				<Text><![CDATA[customerWaitTableText]]></Text>
+				<Font>
+					<Name><![CDATA[Cascadia Code]]></Name>
+					<Size>8</Size>
+					<Style>0</Style>
+				</Font>
+				<Alignment>LEFT</Alignment>
+			</Text>
+			<Text>
+				<Id>1780763409101</Id>
+				<Name><![CDATA[customerWaitPayText]]></Name>
+				<X>300</X>
+				<Y>130</Y>
+				<Label>
+					<X>0</X>
+					<Y>-10</Y>
+				</Label>
+				<PublicFlag>true</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D</DrawMode>
+				<EmbeddedIcon>false</EmbeddedIcon>
+				<Z>0</Z>
+				<Rotation>0.0</Rotation>
+				<Color>-16777216</Color>
+				<Text><![CDATA[customerWaitPayText]]></Text>
+				<Font>
+					<Name><![CDATA[Cascadia Code]]></Name>
+					<Size>8</Size>
+					<Style>0</Style>
+				</Font>
+				<Alignment>LEFT</Alignment>
+			</Text>
+			<BarChart>
+				<Id>1780764749305</Id>
+				<Name><![CDATA[customerWaitEntranceChart]]></Name>
+				<X>-440</X>
+				<Y>-900</Y>
+				<Label>
+					<X>0</X>
+					<Y>-10</Y>
+				</Label>
+				<PublicFlag>true</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<AutoUpdate>true</AutoUpdate>
+				<RecurrenceProperties>
+					<Id>1780764749303</Id>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1780819200000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits">MINUTE</Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits">MINUTE</Unit>
+					</RecurrenceCode>
+				</RecurrenceProperties>
+				<EmbeddedIcon>false</EmbeddedIcon>
+				<Width>760</Width>
+				<Height>310</Height>
+				<BackgroundColor/>
+				<BorderColor/>
+				<ChartArea>
+					<XOffset>50</XOffset>
+					<YOffset>30</YOffset>
+					<Width>680</Width>
+					<Height>230</Height>
+					<BackgroundColor>-1</BackgroundColor>
+					<BorderColor>-16777216</BorderColor>
+					<GridColor>-12566464</GridColor>
+				</ChartArea>
+				<Legend>
+					<Place>SOUTH</Place>
+					<TextColor>-16777216</TextColor>
+					<Size>30</Size>
+				</Legend>
+				<Labels>
+					<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+					<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+					<TextColor>-12566464</TextColor>
+				</Labels>
+				<ShowLegend>true</ShowLegend>
+				<ScaleFromExpression>0</ScaleFromExpression>
+				<ScaleToExpression>1</ScaleToExpression>
+				<ScaleType>AUTO</ScaleType>
+				<Bars>
+					<Direction>UP</Direction>
+					<RelativeWidth>0.8</RelativeWidth>
+				</Bars>
+			</BarChart>
+			<BarChart>
+				<Id>1780764993989</Id>
+				<Name><![CDATA[customerWaitTableChart]]></Name>
+				<X>-440</X>
+				<Y>-400</Y>
+				<Label>
+					<X>0</X>
+					<Y>-10</Y>
+				</Label>
+				<PublicFlag>true</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<AutoUpdate>true</AutoUpdate>
+				<RecurrenceProperties>
+					<Id>1780764993987</Id>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1780819200000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits">MINUTE</Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits">MINUTE</Unit>
+					</RecurrenceCode>
+				</RecurrenceProperties>
+				<EmbeddedIcon>false</EmbeddedIcon>
+				<Width>760</Width>
+				<Height>310</Height>
+				<BackgroundColor/>
+				<BorderColor/>
+				<ChartArea>
+					<XOffset>50</XOffset>
+					<YOffset>30</YOffset>
+					<Width>680</Width>
+					<Height>230</Height>
+					<BackgroundColor>-1</BackgroundColor>
+					<BorderColor>-16777216</BorderColor>
+					<GridColor>-12566464</GridColor>
+				</ChartArea>
+				<Legend>
+					<Place>SOUTH</Place>
+					<TextColor>-16777216</TextColor>
+					<Size>30</Size>
+				</Legend>
+				<Labels>
+					<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+					<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+					<TextColor>-12566464</TextColor>
+				</Labels>
+				<ShowLegend>true</ShowLegend>
+				<ScaleFromExpression>0</ScaleFromExpression>
+				<ScaleToExpression>1</ScaleToExpression>
+				<ScaleType>AUTO</ScaleType>
+				<Bars>
+					<Direction>UP</Direction>
+					<RelativeWidth>0.8</RelativeWidth>
+				</Bars>
+			</BarChart>
+			<BarChart>
+				<Id>1780765000935</Id>
+				<Name><![CDATA[customerWaitPayChart]]></Name>
+				<X>-440</X>
+				<Y>100</Y>
+				<Label>
+					<X>0</X>
+					<Y>-10</Y>
+				</Label>
+				<PublicFlag>true</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<AutoUpdate>true</AutoUpdate>
+				<RecurrenceProperties>
+					<Id>1780765000933</Id>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1780819200000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits">MINUTE</Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits">MINUTE</Unit>
+					</RecurrenceCode>
+				</RecurrenceProperties>
+				<EmbeddedIcon>false</EmbeddedIcon>
+				<Width>760</Width>
+				<Height>310</Height>
+				<BackgroundColor/>
+				<BorderColor/>
+				<ChartArea>
+					<XOffset>50</XOffset>
+					<YOffset>30</YOffset>
+					<Width>680</Width>
+					<Height>230</Height>
+					<BackgroundColor>-1</BackgroundColor>
+					<BorderColor>-16777216</BorderColor>
+					<GridColor>-12566464</GridColor>
+				</ChartArea>
+				<Legend>
+					<Place>SOUTH</Place>
+					<TextColor>-16777216</TextColor>
+					<Size>30</Size>
+				</Legend>
+				<Labels>
+					<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+					<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+					<TextColor>-12566464</TextColor>
+				</Labels>
+				<ShowLegend>true</ShowLegend>
+				<ScaleFromExpression>0</ScaleFromExpression>
+				<ScaleToExpression>1</ScaleToExpression>
+				<ScaleType>AUTO</ScaleType>
+				<Bars>
+					<Direction>UP</Direction>
+					<RelativeWidth>0.8</RelativeWidth>
+				</Bars>
+			</BarChart>
+			<Text>
+				<Id>1780770125191</Id>
+				<Name><![CDATA[customerStayText]]></Name>
+				<X>300</X>
+				<Y>630</Y>
+				<Label>
+					<X>0</X>
+					<Y>-10</Y>
+				</Label>
+				<PublicFlag>true</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D</DrawMode>
+				<EmbeddedIcon>false</EmbeddedIcon>
+				<Z>0</Z>
+				<Rotation>0.0</Rotation>
+				<Color>-16777216</Color>
+				<Text><![CDATA[customerStayText]]></Text>
+				<Font>
+					<Name><![CDATA[Cascadia Code]]></Name>
+					<Size>8</Size>
+					<Style>0</Style>
+				</Font>
+				<Alignment>LEFT</Alignment>
+			</Text>
+			<BarChart>
+				<Id>1780770330376</Id>
+				<Name><![CDATA[customerStayChart]]></Name>
+				<X>-440</X>
+				<Y>600</Y>
+				<Label>
+					<X>0</X>
+					<Y>-10</Y>
+				</Label>
+				<PublicFlag>true</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<AutoUpdate>true</AutoUpdate>
+				<RecurrenceProperties>
+					<Id>1780770330374</Id>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1780819200000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits">MINUTE</Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits">MINUTE</Unit>
+					</RecurrenceCode>
+				</RecurrenceProperties>
+				<EmbeddedIcon>false</EmbeddedIcon>
+				<Width>760</Width>
+				<Height>290</Height>
+				<BackgroundColor/>
+				<BorderColor/>
+				<ChartArea>
+					<XOffset>50</XOffset>
+					<YOffset>30</YOffset>
+					<Width>680</Width>
+					<Height>230</Height>
+					<BackgroundColor>-1</BackgroundColor>
+					<BorderColor>-16777216</BorderColor>
+					<GridColor>-12566464</GridColor>
+				</ChartArea>
+				<Legend>
+					<Place>SOUTH</Place>
+					<TextColor>-16777216</TextColor>
+					<Size>10</Size>
+				</Legend>
+				<Labels>
+					<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+					<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+					<TextColor>-12566464</TextColor>
+				</Labels>
+				<ShowLegend>true</ShowLegend>
+				<ScaleFromExpression>0</ScaleFromExpression>
+				<ScaleToExpression>1</ScaleToExpression>
+				<ScaleType>AUTO</ScaleType>
+				<Bars>
+					<Direction>UP</Direction>
+					<RelativeWidth>0.8</RelativeWidth>
+				</Bars>
+			</BarChart>
+		</Presentation>
+	</Group>
+	<Control Type="Button">
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Id>1780779189104</Id>
+		<Name><![CDATA[goToChartsBtn]]></Name>
+		<X>1000</X>
+		<Y>360</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<BasicProperties Width="140" Height="30">
+			<EmbeddedIcon>false</EmbeddedIcon>
+			<TextColor>-16777216</TextColor>
+			<Enabled>true</Enabled>
+			<ActionCode>chartsViewArea.navigateTo();</ActionCode>
+		</BasicProperties>
+		<ExtendedProperties>
+			<Font Name="Dialog" Size="11" Style="0"/>
+			<LabelText>View charts</LabelText>
+		</ExtendedProperties>
+	</Control>
+	<Group>
+		<Id>1780779308883</Id>
+		<Name><![CDATA[paymentGroup]]></Name>
+		<X>11980</X>
+		<Y>400</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Presentation>
+			<Group>
+				<Id>1780779308885</Id>
+				<Name><![CDATA[paymentCharts]]></Name>
+				<X>-140</X>
+				<Y>-10</Y>
+				<Label>
+					<X>10</X>
+					<Y>0</Y>
+				</Label>
+				<PublicFlag>true</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<EmbeddedIcon>false</EmbeddedIcon>
+				<Z>0</Z>
+				<Rotation>0.0</Rotation>
+			</Group>
+			<Text>
+				<Id>1780779308887</Id>
+				<Name><![CDATA[paymentEventsText]]></Name>
+				<X>330</X>
+				<Y>-120</Y>
+				<Label>
+					<X>0</X>
+					<Y>-10</Y>
+				</Label>
+				<PublicFlag>true</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D</DrawMode>
+				<EmbeddedIcon>false</EmbeddedIcon>
+				<Z>0</Z>
+				<Rotation>0.0</Rotation>
+				<Color>-16777216</Color>
+				<Text><![CDATA[paymentEventsText]]></Text>
+				<Font>
+					<Name><![CDATA[Cascadia Code]]></Name>
+					<Size>8</Size>
+					<Style>0</Style>
+				</Font>
+				<Alignment>LEFT</Alignment>
+			</Text>
+			<BarChart>
+				<Id>1780779308891</Id>
+				<Name><![CDATA[paymentEventsChart]]></Name>
+				<X>-410</X>
+				<Y>-150</Y>
+				<Label>
+					<X>0</X>
+					<Y>-10</Y>
+				</Label>
+				<PublicFlag>true</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<AutoUpdate>true</AutoUpdate>
+				<RecurrenceProperties>
+					<Id>1780779308889</Id>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1780819200000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits">MINUTE</Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits">MINUTE</Unit>
+					</RecurrenceCode>
+				</RecurrenceProperties>
+				<EmbeddedIcon>false</EmbeddedIcon>
+				<Width>760</Width>
+				<Height>300</Height>
+				<BackgroundColor/>
+				<BorderColor/>
+				<ChartArea>
+					<XOffset>50</XOffset>
+					<YOffset>30</YOffset>
+					<Width>680</Width>
+					<Height>230</Height>
+					<BackgroundColor>-1</BackgroundColor>
+					<BorderColor>-16777216</BorderColor>
+					<GridColor>-12566464</GridColor>
+				</ChartArea>
+				<Legend>
+					<Place>SOUTH</Place>
+					<TextColor>-16777216</TextColor>
+					<Size>10</Size>
+				</Legend>
+				<Labels>
+					<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+					<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+					<TextColor>-12566464</TextColor>
+				</Labels>
+				<ShowLegend>true</ShowLegend>
+				<ScaleFromExpression>0</ScaleFromExpression>
+				<ScaleToExpression>1</ScaleToExpression>
+				<ScaleType>AUTO</ScaleType>
+				<Bars>
+					<Direction>UP</Direction>
+					<RelativeWidth>0.8</RelativeWidth>
+				</Bars>
+			</BarChart>
+		</Presentation>
+	</Group>
 	<Text>
-		<Id>1780735671191</Id>
-		<Name><![CDATA[paymentEventsText]]></Name>
-		<X>-2200</X>
-		<Y>40</Y>
+		<Id>1780779390111</Id>
+		<Name><![CDATA[text]]></Name>
+		<X>10220</X>
+		<Y>160</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3808,79 +4303,19 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Z>0</Z>
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
-		<Text><![CDATA[paymentEventsText]]></Text>
+		<Text><![CDATA[Customer Charts]]></Text>
 		<Font>
-			<Name><![CDATA[Cascadia Code]]></Name>
-			<Size>8</Size>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>20</Size>
 			<Style>0</Style>
 		</Font>
 		<Alignment>LEFT</Alignment>
 	</Text>
-	<BarChart>
-		<Id>1780741678788</Id>
-		<Name><![CDATA[paymentEventsChart]]></Name>
-		<X>-1980</X>
-		<Y>0</Y>
-		<Label>
-			<X>0</X>
-			<Y>-10</Y>
-		</Label>
-		<PublicFlag>true</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>false</ShowLabel>
-		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-		<AutoUpdate>true</AutoUpdate>
-		<RecurrenceProperties>
-			<Id>1780741678786</Id>
-			<OccurrenceAtTime>true</OccurrenceAtTime>
-			<OccurrenceDate>1780819200000</OccurrenceDate>
-			<OccurrenceTime Class="CodeUnitValue">
-				<Code><![CDATA[0]]></Code>
-				<Unit Class="TimeUnits">MINUTE</Unit>
-			</OccurrenceTime>
-			<RecurrenceCode Class="CodeUnitValue">
-				<Code><![CDATA[1]]></Code>
-				<Unit Class="TimeUnits">MINUTE</Unit>
-			</RecurrenceCode>
-		</RecurrenceProperties>
-		<EmbeddedIcon>false</EmbeddedIcon>
-		<Width>790</Width>
-		<Height>290</Height>
-		<BackgroundColor/>
-		<BorderColor/>
-		<ChartArea>
-			<XOffset>50</XOffset>
-			<YOffset>30</YOffset>
-			<Width>680</Width>
-			<Height>230</Height>
-			<BackgroundColor>-1</BackgroundColor>
-			<BorderColor>-16777216</BorderColor>
-			<GridColor>-12566464</GridColor>
-		</ChartArea>
-		<Legend>
-			<Place>EAST</Place>
-			<TextColor>-16777216</TextColor>
-			<Size>30</Size>
-		</Legend>
-		<Labels>
-			<HorLabelsPosition>DEFAULT</HorLabelsPosition>
-			<VerLabelsPosition>DEFAULT</VerLabelsPosition>
-			<TextColor>-12566464</TextColor>
-		</Labels>
-		<ShowLegend>true</ShowLegend>
-		<ScaleFromExpression>0</ScaleFromExpression>
-		<ScaleToExpression>1</ScaleToExpression>
-		<ScaleType>AUTO</ScaleType>
-		<Bars>
-			<Direction>UP</Direction>
-			<RelativeWidth>0.8</RelativeWidth>
-		</Bars>
-	</BarChart>
 	<Text>
-		<Id>1780762938456</Id>
-		<Name><![CDATA[customerWaitEntranceText]]></Name>
-		<X>-1160</X>
-		<Y>1000</Y>
+		<Id>1780779431501</Id>
+		<Name><![CDATA[text1]]></Name>
+		<X>11600</X>
+		<Y>160</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3893,334 +4328,19 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Z>0</Z>
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
-		<Text><![CDATA[customerWaitEntranceText]]></Text>
+		<Text><![CDATA[Money charts]]></Text>
 		<Font>
-			<Name><![CDATA[Cascadia Code]]></Name>
-			<Size>8</Size>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>20</Size>
 			<Style>0</Style>
 		</Font>
 		<Alignment>LEFT</Alignment>
 	</Text>
 	<Text>
-		<Id>1780763406071</Id>
-		<Name><![CDATA[customerWaitTableText]]></Name>
-		<X>-850</X>
-		<Y>1000</Y>
-		<Label>
-			<X>0</X>
-			<Y>-10</Y>
-		</Label>
-		<PublicFlag>true</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>false</ShowLabel>
-		<DrawMode>SHAPE_DRAW_2D</DrawMode>
-		<EmbeddedIcon>false</EmbeddedIcon>
-		<Z>0</Z>
-		<Rotation>0.0</Rotation>
-		<Color>-16777216</Color>
-		<Text><![CDATA[customerWaitTableText]]></Text>
-		<Font>
-			<Name><![CDATA[Cascadia Code]]></Name>
-			<Size>8</Size>
-			<Style>0</Style>
-		</Font>
-		<Alignment>LEFT</Alignment>
-	</Text>
-	<Text>
-		<Id>1780763409101</Id>
-		<Name><![CDATA[customerWaitPayText]]></Name>
-		<X>-580</X>
-		<Y>1000</Y>
-		<Label>
-			<X>0</X>
-			<Y>-10</Y>
-		</Label>
-		<PublicFlag>true</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>false</ShowLabel>
-		<DrawMode>SHAPE_DRAW_2D</DrawMode>
-		<EmbeddedIcon>false</EmbeddedIcon>
-		<Z>0</Z>
-		<Rotation>0.0</Rotation>
-		<Color>-16777216</Color>
-		<Text><![CDATA[customerWaitPayText]]></Text>
-		<Font>
-			<Name><![CDATA[Cascadia Code]]></Name>
-			<Size>8</Size>
-			<Style>0</Style>
-		</Font>
-		<Alignment>LEFT</Alignment>
-	</Text>
-	<BarChart>
-		<Id>1780764749305</Id>
-		<Name><![CDATA[customerWaitEntranceChart]]></Name>
-		<X>-1990</X>
-		<Y>660</Y>
-		<Label>
-			<X>0</X>
-			<Y>-10</Y>
-		</Label>
-		<PublicFlag>true</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>false</ShowLabel>
-		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-		<AutoUpdate>true</AutoUpdate>
-		<RecurrenceProperties>
-			<Id>1780764749303</Id>
-			<OccurrenceAtTime>true</OccurrenceAtTime>
-			<OccurrenceDate>1780819200000</OccurrenceDate>
-			<OccurrenceTime Class="CodeUnitValue">
-				<Code><![CDATA[0]]></Code>
-				<Unit Class="TimeUnits">MINUTE</Unit>
-			</OccurrenceTime>
-			<RecurrenceCode Class="CodeUnitValue">
-				<Code><![CDATA[1]]></Code>
-				<Unit Class="TimeUnits">MINUTE</Unit>
-			</RecurrenceCode>
-		</RecurrenceProperties>
-		<EmbeddedIcon>false</EmbeddedIcon>
-		<Width>790</Width>
-		<Height>280</Height>
-		<BackgroundColor/>
-		<BorderColor/>
-		<ChartArea>
-			<XOffset>50</XOffset>
-			<YOffset>30</YOffset>
-			<Width>680</Width>
-			<Height>230</Height>
-			<BackgroundColor>-1</BackgroundColor>
-			<BorderColor>-16777216</BorderColor>
-			<GridColor>-12566464</GridColor>
-		</ChartArea>
-		<Legend>
-			<Place>EAST</Place>
-			<TextColor>-16777216</TextColor>
-			<Size>30</Size>
-		</Legend>
-		<Labels>
-			<HorLabelsPosition>DEFAULT</HorLabelsPosition>
-			<VerLabelsPosition>DEFAULT</VerLabelsPosition>
-			<TextColor>-12566464</TextColor>
-		</Labels>
-		<ShowLegend>true</ShowLegend>
-		<ScaleFromExpression>0</ScaleFromExpression>
-		<ScaleToExpression>1</ScaleToExpression>
-		<ScaleType>AUTO</ScaleType>
-		<Bars>
-			<Direction>UP</Direction>
-			<RelativeWidth>0.8</RelativeWidth>
-		</Bars>
-	</BarChart>
-	<BarChart>
-		<Id>1780764993989</Id>
-		<Name><![CDATA[customerWaitTableChart]]></Name>
-		<X>-2000</X>
-		<Y>1220</Y>
-		<Label>
-			<X>0</X>
-			<Y>-10</Y>
-		</Label>
-		<PublicFlag>true</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>false</ShowLabel>
-		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-		<AutoUpdate>true</AutoUpdate>
-		<RecurrenceProperties>
-			<Id>1780764993987</Id>
-			<OccurrenceAtTime>true</OccurrenceAtTime>
-			<OccurrenceDate>1780819200000</OccurrenceDate>
-			<OccurrenceTime Class="CodeUnitValue">
-				<Code><![CDATA[0]]></Code>
-				<Unit Class="TimeUnits">MINUTE</Unit>
-			</OccurrenceTime>
-			<RecurrenceCode Class="CodeUnitValue">
-				<Code><![CDATA[1]]></Code>
-				<Unit Class="TimeUnits">MINUTE</Unit>
-			</RecurrenceCode>
-		</RecurrenceProperties>
-		<EmbeddedIcon>false</EmbeddedIcon>
-		<Width>790</Width>
-		<Height>280</Height>
-		<BackgroundColor/>
-		<BorderColor/>
-		<ChartArea>
-			<XOffset>50</XOffset>
-			<YOffset>30</YOffset>
-			<Width>680</Width>
-			<Height>230</Height>
-			<BackgroundColor>-1</BackgroundColor>
-			<BorderColor>-16777216</BorderColor>
-			<GridColor>-12566464</GridColor>
-		</ChartArea>
-		<Legend>
-			<Place>EAST</Place>
-			<TextColor>-16777216</TextColor>
-			<Size>30</Size>
-		</Legend>
-		<Labels>
-			<HorLabelsPosition>DEFAULT</HorLabelsPosition>
-			<VerLabelsPosition>DEFAULT</VerLabelsPosition>
-			<TextColor>-12566464</TextColor>
-		</Labels>
-		<ShowLegend>true</ShowLegend>
-		<ScaleFromExpression>0</ScaleFromExpression>
-		<ScaleToExpression>1</ScaleToExpression>
-		<ScaleType>AUTO</ScaleType>
-		<Bars>
-			<Direction>UP</Direction>
-			<RelativeWidth>0.8</RelativeWidth>
-		</Bars>
-	</BarChart>
-	<BarChart>
-		<Id>1780765000935</Id>
-		<Name><![CDATA[customerWaitPayChart]]></Name>
-		<X>-2000</X>
-		<Y>1820</Y>
-		<Label>
-			<X>0</X>
-			<Y>-10</Y>
-		</Label>
-		<PublicFlag>true</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>false</ShowLabel>
-		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-		<AutoUpdate>true</AutoUpdate>
-		<RecurrenceProperties>
-			<Id>1780765000933</Id>
-			<OccurrenceAtTime>true</OccurrenceAtTime>
-			<OccurrenceDate>1780819200000</OccurrenceDate>
-			<OccurrenceTime Class="CodeUnitValue">
-				<Code><![CDATA[0]]></Code>
-				<Unit Class="TimeUnits">MINUTE</Unit>
-			</OccurrenceTime>
-			<RecurrenceCode Class="CodeUnitValue">
-				<Code><![CDATA[1]]></Code>
-				<Unit Class="TimeUnits">MINUTE</Unit>
-			</RecurrenceCode>
-		</RecurrenceProperties>
-		<EmbeddedIcon>false</EmbeddedIcon>
-		<Width>790</Width>
-		<Height>280</Height>
-		<BackgroundColor/>
-		<BorderColor/>
-		<ChartArea>
-			<XOffset>50</XOffset>
-			<YOffset>30</YOffset>
-			<Width>680</Width>
-			<Height>230</Height>
-			<BackgroundColor>-1</BackgroundColor>
-			<BorderColor>-16777216</BorderColor>
-			<GridColor>-12566464</GridColor>
-		</ChartArea>
-		<Legend>
-			<Place>EAST</Place>
-			<TextColor>-16777216</TextColor>
-			<Size>30</Size>
-		</Legend>
-		<Labels>
-			<HorLabelsPosition>DEFAULT</HorLabelsPosition>
-			<VerLabelsPosition>DEFAULT</VerLabelsPosition>
-			<TextColor>-12566464</TextColor>
-		</Labels>
-		<ShowLegend>true</ShowLegend>
-		<ScaleFromExpression>0</ScaleFromExpression>
-		<ScaleToExpression>1</ScaleToExpression>
-		<ScaleType>AUTO</ScaleType>
-		<Bars>
-			<Direction>UP</Direction>
-			<RelativeWidth>0.8</RelativeWidth>
-		</Bars>
-	</BarChart>
-	<Text>
-		<Id>1780770125191</Id>
-		<Name><![CDATA[customerStayText]]></Name>
-		<X>-400</X>
-		<Y>1000</Y>
-		<Label>
-			<X>0</X>
-			<Y>-10</Y>
-		</Label>
-		<PublicFlag>true</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>false</ShowLabel>
-		<DrawMode>SHAPE_DRAW_2D</DrawMode>
-		<EmbeddedIcon>false</EmbeddedIcon>
-		<Z>0</Z>
-		<Rotation>0.0</Rotation>
-		<Color>-16777216</Color>
-		<Text><![CDATA[customerStayText]]></Text>
-		<Font>
-			<Name><![CDATA[Cascadia Code]]></Name>
-			<Size>8</Size>
-			<Style>0</Style>
-		</Font>
-		<Alignment>LEFT</Alignment>
-	</Text>
-	<BarChart>
-		<Id>1780770330376</Id>
-		<Name><![CDATA[customerStayChart]]></Name>
-		<X>-2000</X>
-		<Y>2510</Y>
-		<Label>
-			<X>0</X>
-			<Y>-10</Y>
-		</Label>
-		<PublicFlag>true</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>false</ShowLabel>
-		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-		<AutoUpdate>true</AutoUpdate>
-		<RecurrenceProperties>
-			<Id>1780770330374</Id>
-			<OccurrenceAtTime>true</OccurrenceAtTime>
-			<OccurrenceDate>1780819200000</OccurrenceDate>
-			<OccurrenceTime Class="CodeUnitValue">
-				<Code><![CDATA[0]]></Code>
-				<Unit Class="TimeUnits">MINUTE</Unit>
-			</OccurrenceTime>
-			<RecurrenceCode Class="CodeUnitValue">
-				<Code><![CDATA[1]]></Code>
-				<Unit Class="TimeUnits">MINUTE</Unit>
-			</RecurrenceCode>
-		</RecurrenceProperties>
-		<EmbeddedIcon>false</EmbeddedIcon>
-		<Width>790</Width>
-		<Height>280</Height>
-		<BackgroundColor/>
-		<BorderColor/>
-		<ChartArea>
-			<XOffset>50</XOffset>
-			<YOffset>30</YOffset>
-			<Width>680</Width>
-			<Height>230</Height>
-			<BackgroundColor>-1</BackgroundColor>
-			<BorderColor>-16777216</BorderColor>
-			<GridColor>-12566464</GridColor>
-		</ChartArea>
-		<Legend>
-			<Place>EAST</Place>
-			<TextColor>-16777216</TextColor>
-			<Size>30</Size>
-		</Legend>
-		<Labels>
-			<HorLabelsPosition>DEFAULT</HorLabelsPosition>
-			<VerLabelsPosition>DEFAULT</VerLabelsPosition>
-			<TextColor>-12566464</TextColor>
-		</Labels>
-		<ShowLegend>true</ShowLegend>
-		<ScaleFromExpression>0</ScaleFromExpression>
-		<ScaleToExpression>1</ScaleToExpression>
-		<ScaleType>AUTO</ScaleType>
-		<Bars>
-			<Direction>UP</Direction>
-			<RelativeWidth>0.8</RelativeWidth>
-		</Bars>
-	</BarChart>
-	<Text>
-		<Id>1780777175818</Id>
+		<Id>1780779480412</Id>
 		<Name><![CDATA[waitersIdleText]]></Name>
-		<X>-370</X>
-		<Y>550</Y>
+		<X>12320</X>
+		<Y>1050</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -4242,10 +4362,10 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Alignment>LEFT</Alignment>
 	</Text>
 	<BarChart>
-		<Id>1780777690660</Id>
+		<Id>1780779480416</Id>
 		<Name><![CDATA[waiterIdleChart]]></Name>
-		<X>-880</X>
-		<Y>1660</Y>
+		<X>11560</X>
+		<Y>1020</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -4256,7 +4376,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 		<AutoUpdate>true</AutoUpdate>
 		<RecurrenceProperties>
-			<Id>1780777690658</Id>
+			<Id>1780779480414</Id>
 			<OccurrenceAtTime>true</OccurrenceAtTime>
 			<OccurrenceDate>1780819200000</OccurrenceDate>
 			<OccurrenceTime Class="CodeUnitValue">
@@ -4269,8 +4389,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 			</RecurrenceCode>
 		</RecurrenceProperties>
 		<EmbeddedIcon>false</EmbeddedIcon>
-		<Width>790</Width>
-		<Height>280</Height>
+		<Width>760</Width>
+		<Height>310</Height>
 		<BackgroundColor/>
 		<BorderColor/>
 		<ChartArea>
@@ -4283,7 +4403,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 			<GridColor>-12566464</GridColor>
 		</ChartArea>
 		<Legend>
-			<Place>EAST</Place>
+			<Place>SOUTH</Place>
 			<TextColor>-16777216</TextColor>
 			<Size>30</Size>
 		</Legend>
@@ -4301,4 +4421,264 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 			<RelativeWidth>0.8</RelativeWidth>
 		</Bars>
 	</BarChart>
+	<Control Type="Button">
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Id>1780779581467</Id>
+		<Name><![CDATA[goToRestaurantBtn]]></Name>
+		<X>10100</X>
+		<Y>40</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<BasicProperties Width="100" Height="30">
+			<EmbeddedIcon>false</EmbeddedIcon>
+			<TextColor>-16777216</TextColor>
+			<Enabled>true</Enabled>
+			<ActionCode>restaurantViewArea.navigateTo();</ActionCode>
+		</BasicProperties>
+		<ExtendedProperties>
+			<Font Name="Dialog" Size="11" Style="0"/>
+			<LabelText>View restaurant</LabelText>
+		</ExtendedProperties>
+	</Control>
+	<Text>
+		<Id>1780779678919</Id>
+		<Name><![CDATA[text2]]></Name>
+		<X>11580</X>
+		<Y>980</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[AAAA]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>20</Size>
+			<Style>0</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<EmbeddedObjectPresentation>
+		<Id>1780780720197</Id>
+		<Name><![CDATA[waiters_presentation]]></Name>
+		<X>20</X>
+		<Y>-500</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+		<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+		<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+		<Latitude>0.0</Latitude>
+		<Longitude>0.0</Longitude>
+	</EmbeddedObjectPresentation>
+	<EmbeddedObjectPresentation>
+		<Id>1780780720199</Id>
+		<Name><![CDATA[customerGroup_presentation]]></Name>
+		<X>20</X>
+		<Y>-530</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+		<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+		<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+		<Latitude>0.0</Latitude>
+		<Longitude>0.0</Longitude>
+	</EmbeddedObjectPresentation>
+	<EmbeddedObjectPresentation>
+		<Id>1780780720201</Id>
+		<Name><![CDATA[barTables_presentation]]></Name>
+		<X>30</X>
+		<Y>-480</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+		<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+		<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+		<Latitude>0.0</Latitude>
+		<Longitude>0.0</Longitude>
+	</EmbeddedObjectPresentation>
+	<EmbeddedObjectPresentation>
+		<Id>1780780720203</Id>
+		<Name><![CDATA[outsideTables_presentation]]></Name>
+		<X>30</X>
+		<Y>-450</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+		<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+		<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+		<Latitude>0.0</Latitude>
+		<Longitude>0.0</Longitude>
+	</EmbeddedObjectPresentation>
+	<EmbeddedObjectPresentation>
+		<Id>1780780720205</Id>
+		<Name><![CDATA[insideTables_presentation]]></Name>
+		<X>30</X>
+		<Y>-420</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+		<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+		<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+		<Latitude>0.0</Latitude>
+		<Longitude>0.0</Longitude>
+	</EmbeddedObjectPresentation>
+	<Control Type="Button">
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Id>1780780832922</Id>
+		<Name><![CDATA[goToChartsBtn1]]></Name>
+		<X>1000</X>
+		<Y>400</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<BasicProperties Width="140" Height="30">
+			<EmbeddedIcon>false</EmbeddedIcon>
+			<TextColor>-16777216</TextColor>
+			<Enabled>true</Enabled>
+			<ActionCode>parametersViewArea.navigateTo();</ActionCode>
+		</BasicProperties>
+		<ExtendedProperties>
+			<Font Name="Dialog" Size="11" Style="0"/>
+			<LabelText>View parameters</LabelText>
+		</ExtendedProperties>
+	</Control>
+	<Control Type="Button">
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Id>1780780942850</Id>
+		<Name><![CDATA[goToRestaurantBtn1]]></Name>
+		<X>50</X>
+		<Y>-1110</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<BasicProperties Width="120" Height="30">
+			<EmbeddedIcon>false</EmbeddedIcon>
+			<TextColor>-16777216</TextColor>
+			<Enabled>true</Enabled>
+			<ActionCode>restaurantViewArea.navigateTo();</ActionCode>
+		</BasicProperties>
+		<ExtendedProperties>
+			<Font Name="Dialog" Size="11" Style="0"/>
+			<LabelText>View restaurant</LabelText>
+		</ExtendedProperties>
+	</Control>
+	<Control Type="Button">
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Id>1780781650374</Id>
+		<Name><![CDATA[goToPmlBtn]]></Name>
+		<X>1000</X>
+		<Y>440</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<BasicProperties Width="140" Height="30">
+			<EmbeddedIcon>false</EmbeddedIcon>
+			<TextColor>-16777216</TextColor>
+			<Enabled>true</Enabled>
+			<ActionCode>pmlViewArea.navigateTo();</ActionCode>
+		</BasicProperties>
+		<ExtendedProperties>
+			<Font Name="Dialog" Size="11" Style="0"/>
+			<LabelText>View PML model</LabelText>
+		</ExtendedProperties>
+	</Control>
+	<Control Type="Button">
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Id>1780781698289</Id>
+		<Name><![CDATA[goToRestaurantBtn2]]></Name>
+		<X>40</X>
+		<Y>1040</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<BasicProperties Width="120" Height="30">
+			<EmbeddedIcon>false</EmbeddedIcon>
+			<TextColor>-16777216</TextColor>
+			<Enabled>true</Enabled>
+			<ActionCode>restaurantViewArea.navigateTo();</ActionCode>
+		</BasicProperties>
+		<ExtendedProperties>
+			<Font Name="Dialog" Size="11" Style="0"/>
+			<LabelText>View restaurant</LabelText>
+		</ExtendedProperties>
+	</Control>
 </Presentation>
