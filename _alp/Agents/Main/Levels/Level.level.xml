@@ -3371,7 +3371,9 @@
 		<Color>-16777216</Color>
 		<Text><![CDATA[text]]></Text>
 		<TextCode>"Arrival rate: "+ arrivals_schedule.getValue() +
-"\nAvg group size: " + groupsize_schedule.getValue()</TextCode>
+", Avg group size: " + groupsize_schedule.getValue()
++ "\nActive waiters: " + waiters_schedule.getValue()
++ "\nActive cooks: " + cooks_schedule.getValue()</TextCode>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
 			<Size>10</Size>
