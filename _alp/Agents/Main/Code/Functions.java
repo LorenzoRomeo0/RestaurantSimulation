@@ -470,6 +470,7 @@ StringBuilder sbEntrance = new StringBuilder();
 StringBuilder sbTable = new StringBuilder();
 StringBuilder sbPay = new StringBuilder();
 StringBuilder sbStay = new StringBuilder();
+StringBuilder sbServed = new StringBuilder();
 
 sbEntrance.append("weekday,daypart,waitTimeEntrance")
   .append(System.lineSeparator());
@@ -482,6 +483,9 @@ sbPay.append("weekday,daypart,waitTimePay")
   
 sbStay.append("weekday,daypart,stayTime")
   .append(System.lineSeparator());
+    
+sbServed.append("weekday,daypart,totalServed")
+  .append(System.lineSeparator());
   
 
 for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
@@ -491,6 +495,8 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
 		double averageWaitTable = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.CUSTOMER_WAIT_TABLE, openingTime);
 		double averageWaitPay = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.CUSTOMER_WAIT_PAY, openingTime);
 		double averageStay = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.CUSTOMER_STAY, openingTime);
+		double totalServed = timeEvents.getValueSumByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.CUSTOMERS_SERVED, openingTime);
+		
 		
 		String dayName = day_to_string(day);
         			String key = dayName + "-" + dayPart;
@@ -521,6 +527,13 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
           .append(dayPart)
           .append(",")
           .append(averageStay)
+          .append(System.lineSeparator());
+          
+        sbServed.append(dayName)
+          .append(",")
+          .append(dayPart)
+          .append(",")
+          .append(totalServed)
           .append(System.lineSeparator());
          
         
@@ -571,6 +584,18 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
             item.setValue(averageStay);
         }
         
+        item = customersServedChartItems.get(key);
+        if (item == null) {
+            item = new DataItem();
+            item.setValue(totalServed);
+            customersServedChartItems.put(key, item);
+
+            customersServedChart.addDataItem(item, key, dayPartColors.get(dayPart));
+        } else {
+            item.setValue(totalServed);
+        }
+        
+        
     }
 }
 
@@ -578,6 +603,7 @@ customerWaitEntranceText.setText(sbEntrance.toString());
 customerWaitTableText.setText(sbTable.toString());
 customerWaitPayText.setText(sbPay.toString());
 customerStayText.setText(sbStay.toString());
+customersServedText.setText(sbServed.toString());
 /*ALCODEEND*/}
 
 double registerCustomerStayEvent(Date start,Date end)
@@ -818,5 +844,49 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
 }
 
 tableEventsText.setText(sb.toString());
+/*ALCODEEND*/}
+
+double registerCustomersServedEvent(Date start,Date end,double amount)
+{/*ALCODESTART::1780937675928*/
+TimeEvent ev = new TimeEvent(start, end, TimeEvent.EventType.CUSTOMERS_SERVED, amount);
+timeEvents.add(ev);
+/*ALCODEEND*/}
+
+double customersServedEventsUpdater()
+{/*ALCODESTART::1780937812768*/
+StringBuilder sb = new StringBuilder();
+
+sb.append("weekday,daypart,total")
+  .append(System.lineSeparator());
+
+for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
+    for (DayPartUtil.DayPart dayPart : DayPartUtil.DayPart.values()) {
+        double total = timeEvents.getValueSumByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.CUSTOMERS_SERVED, openingTime);
+
+		String dayName = day_to_string(day);
+        			String key = dayName + "-" + dayPart;
+
+        sb.append(dayName)
+          .append(",")
+          .append(dayPart)
+          .append(",")
+          .append(total)
+          .append(System.lineSeparator());
+          
+        DataItem item = customersServedChartItems.get(key);
+
+        if (item == null) {
+            item = new DataItem();
+            item.setValue(total);
+            customersServedChartItems.put(key, item);
+
+            customersServedEventsChart.addDataItem(item, key, dayPartColors.get(dayPart));
+        } else {
+            item.setValue(total);
+        }
+    }
+}
+
+customersServedEventsText.setText(sb.toString());
 /*ALCODEEND*/}
 

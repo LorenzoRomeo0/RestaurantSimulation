@@ -19,6 +19,7 @@ public class TimeEvent {
         CUSTOMER_WAIT_TABLE,
         CUSTOMER_WAIT_PAY,
         CUSTOMER_STAY,
+        CUSTOMERS_SERVED,
         MONEY,
         TABLES_USAGE_OUTSIDE,
         TABLES_USAGE_INSIDE,

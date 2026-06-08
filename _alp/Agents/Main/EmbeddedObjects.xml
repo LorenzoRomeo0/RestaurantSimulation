@@ -421,7 +421,8 @@ agent.canStillCheckout = getHourOfDay() <= closingTime;]]></Code>
 			<Parameter>
 				<Name><![CDATA[onEnter]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[customersInRestaurantNr--;
+					<Code><![CDATA[registerCustomersServedEvent(date(), date(), agent.size);
+customersInRestaurantNr--;
 customerGroupsInRestaurant.remove(agent);]]></Code>
 				</Value>
 			</Parameter>
