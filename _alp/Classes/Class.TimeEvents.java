@@ -111,7 +111,7 @@ public class TimeEvents {
                  .collect(Collectors.toList());
     }
     
-    */
+
 
     
     public Map<Integer, List<TimeEvent>> groupByDayAndFilterByEndHourAndEventType(int endHour, TimeEvent.EventType eventType) {
@@ -162,6 +162,8 @@ public class TimeEvents {
                         Collectors.averagingDouble(e -> e.getDurationAfterHourMinutes(thresholdHour))
                 ));
     }
+    
+    */
     
     
     
