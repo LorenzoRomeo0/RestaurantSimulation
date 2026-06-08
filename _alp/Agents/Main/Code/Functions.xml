@@ -330,7 +330,7 @@
 		<Id>1780734091041</Id>
 		<Name><![CDATA[registerPaymentEvent]]></Name>
 		<X>1400</X>
-		<Y>-380</Y>
+		<Y>-620</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -358,7 +358,7 @@
 		<Id>1780735636798</Id>
 		<Name><![CDATA[paymentEventsUpdater]]></Name>
 		<X>1400</X>
-		<Y>-340</Y>
+		<Y>-580</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -374,7 +374,7 @@
 		<Id>1780759689915</Id>
 		<Name><![CDATA[registerCustomerWaitEntranceEvent]]></Name>
 		<X>1720</X>
-		<Y>-660</Y>
+		<Y>-900</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -398,7 +398,7 @@
 		<Id>1780760523532</Id>
 		<Name><![CDATA[registerCustomerWaitTableEvent]]></Name>
 		<X>1720</X>
-		<Y>-620</Y>
+		<Y>-860</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -422,7 +422,7 @@
 		<Id>1780761019562</Id>
 		<Name><![CDATA[registerCustomerWaitPayEvent]]></Name>
 		<X>1720</X>
-		<Y>-580</Y>
+		<Y>-820</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -446,7 +446,7 @@
 		<Id>1780762327897</Id>
 		<Name><![CDATA[customerEventsUpdater]]></Name>
 		<X>1720</X>
-		<Y>-540</Y>
+		<Y>-780</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -462,7 +462,7 @@
 		<Id>1780765479315</Id>
 		<Name><![CDATA[registerCustomerStayEvent]]></Name>
 		<X>1720</X>
-		<Y>-700</Y>
+		<Y>-940</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -486,7 +486,7 @@
 		<Id>1780776464516</Id>
 		<Name><![CDATA[registerWaiterIdlevent]]></Name>
 		<X>1720</X>
-		<Y>-380</Y>
+		<Y>-620</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -510,7 +510,7 @@
 		<Id>1780776729342</Id>
 		<Name><![CDATA[waiterEventsUpdater]]></Name>
 		<X>1720</X>
-		<Y>-340</Y>
+		<Y>-580</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -525,8 +525,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1780905019206</Id>
 		<Name><![CDATA[registerCookIdlevent]]></Name>
-		<X>1370</X>
-		<Y>280</Y>
+		<X>1400</X>
+		<Y>-460</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -549,8 +549,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1780905104134</Id>
 		<Name><![CDATA[cooksEventsUpdater]]></Name>
-		<X>1370</X>
-		<Y>310</Y>
+		<X>1400</X>
+		<Y>-430</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>

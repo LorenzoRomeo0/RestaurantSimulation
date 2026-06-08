@@ -164,6 +164,9 @@
 			<Parameter>
 				<ParameterName>cooksHourlyRate</ParameterName>
 			</Parameter>
+			<Parameter>
+				<ParameterName>fixedCosts</ParameterName>
+			</Parameter>
 		</Parameters>
 		<PresentationProperties>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>
