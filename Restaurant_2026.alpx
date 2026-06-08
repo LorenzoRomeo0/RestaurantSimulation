@@ -125,7 +125,7 @@
 					<AutoImport>false</AutoImport>
 				</TableImportSettings>
 				<TableImportSettings>
-					<Id>1780931863364</Id>
+					<Id>1780932436314</Id>
 					<TableReference>
 						<PackageName>restaurant_2025</PackageName>
 						<ClassName>employees_schedule</ClassName>

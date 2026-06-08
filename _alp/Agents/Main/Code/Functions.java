@@ -158,6 +158,8 @@ txtWaitersDebug.setText(sb.toString());
 
 double timeEventsDebugTextUpdater()
 {/*ALCODESTART::1776067186397*/
+
+/*
 timeEventsCustomerStayDebugText.setText(
 	"CUSTOMER EVENTS: "+
 	"counts =  \n "+
@@ -257,6 +259,7 @@ timeEventsCooksDebugText.setText(
 	)
 );
 
+*/
 /*ALCODEEND*/}
 
 double register_cook_shift(Date start,Date end)
@@ -267,11 +270,11 @@ timeEvents.add(ev);
 
 double menuItemsDebugTextUpdater()
 {/*ALCODESTART::1776499860026*/
-DayPartUtil.DayPart currentDayPart = DayPartUtil.getCurrentDayPart(this);
+DayPartUtil.DayPart currentDayPart = DayPartUtil.getCurrentDayPart(this, openingTime);
 
 MenuItems items = new MenuItems(this);
 ArrayList<MenuItem> currentItems = items.getItemsByDayPart(
-    DayPartUtil.getCurrentDayPart(this)
+    DayPartUtil.getCurrentDayPart(this, openingTime)
 );
 
 currentMenuItemsDebugText.setText(MenuItems.prettyPrintMenuItems(currentItems));
@@ -294,9 +297,9 @@ double menuCopulaGeneratorDebugTextUpdater()
 {/*ALCODESTART::1777316827810*/
 menuCopulaGeneratorDebugText.setText(
 	menuCopulaGenerator.modelPrettyString(
-		DayPartUtil.getCurrentDayPart(this), 
+		DayPartUtil.getCurrentDayPart(this, openingTime), 
 		menuCopulaGenerator.getCopulaModel(
-			DayPartUtil.getCurrentDayPart(this)
+			DayPartUtil.getCurrentDayPart(this, openingTime)
 		)
 	)
 );
@@ -412,7 +415,7 @@ sb.append("weekday,daypart,total")
 
 for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
     for (DayPartUtil.DayPart dayPart : DayPartUtil.DayPart.values()) {
-        double total = timeEvents.getValueSumByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.MONEY);
+        double total = timeEvents.getValueSumByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.MONEY, openingTime);
 
 		String dayName = day_to_string(day);
         			String key = dayName + "-" + dayPart;
@@ -484,10 +487,10 @@ sbStay.append("weekday,daypart,stayTime")
 for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
     for (DayPartUtil.DayPart dayPart : DayPartUtil.DayPart.values()) {
         
-        double averageWaitEntrance = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.CUSTOMER_WAIT_ENTRANCE);
-		double averageWaitTable = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.CUSTOMER_WAIT_TABLE);
-		double averageWaitPay = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.CUSTOMER_WAIT_PAY);
-		double averageStay = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.CUSTOMER_STAY);
+        double averageWaitEntrance = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.CUSTOMER_WAIT_ENTRANCE, openingTime);
+		double averageWaitTable = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.CUSTOMER_WAIT_TABLE, openingTime);
+		double averageWaitPay = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.CUSTOMER_WAIT_PAY, openingTime);
+		double averageStay = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.CUSTOMER_STAY, openingTime);
 		
 		String dayName = day_to_string(day);
         			String key = dayName + "-" + dayPart;
@@ -602,7 +605,7 @@ sbIdle.append("weekday,daypart,meanIdleTime")
 for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
     for (DayPartUtil.DayPart dayPart : DayPartUtil.DayPart.values()) {
         
-        double averageIdle = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.WAITER_IDLE);
+        double averageIdle = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.WAITER_IDLE, openingTime);
 		
 		String dayName = day_to_string(day);
         String key = dayName + "-" + dayPart;
@@ -653,7 +656,7 @@ sbIdle.append("weekday,daypart,meanIdleTime")
 for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
     for (DayPartUtil.DayPart dayPart : DayPartUtil.DayPart.values()) {
         
-        double averageIdle = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.COOK_IDLE);
+        double averageIdle = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.COOK_IDLE, openingTime);
 		
 		String dayName = day_to_string(day);
         String key = dayName + "-" + dayPart;
@@ -729,9 +732,9 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
 	String dayName = day_to_string(day);
 
     for (DayPartUtil.DayPart dayPart : DayPartUtil.DayPart.values()) {
-        Double totalInside = timeEvents.getValueAvgByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.TABLES_USAGE_INSIDE) / insideTables.size() * 100;
-        Double totalOutside = timeEvents.getValueAvgByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.TABLES_USAGE_OUTSIDE)/ outsideTables.size() *100;
-        Double totalBar = timeEvents.getValueAvgByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.TABLES_USAGE_BAR)/ barTables.size() * 100;
+        Double totalInside = timeEvents.getValueAvgByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.TABLES_USAGE_INSIDE, openingTime) / insideTables.size() * 100;
+        Double totalOutside = timeEvents.getValueAvgByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.TABLES_USAGE_OUTSIDE, openingTime)/ outsideTables.size() *100;
+        Double totalBar = timeEvents.getValueAvgByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.TABLES_USAGE_BAR, openingTime)/ barTables.size() * 100;
 		
 		if(totalInside.isNaN() || totalInside == 0.0) totalInside = -1.0;
 		if(totalOutside.isNaN() || totalOutside== 0.0) totalOutside = -1.0;

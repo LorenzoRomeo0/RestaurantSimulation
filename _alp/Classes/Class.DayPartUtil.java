@@ -13,8 +13,9 @@ public class DayPartUtil {
         CLOSED
     }
 
-    public static DayPart getDayPart(int hour, int minute) {
+    public static DayPart getDayPart(int hour, int minute, int openingHour) {
         int totalMinutes = hour * 60 + minute;
+        int openMinutes = openingHour * 60;
 
         if (totalMinutes >= 7 * 60 && totalMinutes < 11 * 60) {
             return DayPart.BREAKFAST;
@@ -28,10 +29,31 @@ public class DayPartUtil {
             return DayPart.CLOSED;
         }
     }
-
-    public static DayPart getCurrentDayPart(Agent agent) {
+    public static DayPart getCurrentDayPart(Agent agent, int openingHour) {
         int hour = agent.getHourOfDay();
         int minute = agent.getMinute();
-        return getDayPart(hour, minute);
+        return getDayPart(hour, minute, openingHour);
+    }
+    
+    public static int getBusinessDayOfWeek(Date date, int openingHour) {
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+
+        int hour = cal.get(Calendar.HOUR_OF_DAY);
+        int minute = cal.get(Calendar.MINUTE);
+        int totalMinutes = hour * 60 + minute;
+        int openMinutes = openingHour * 60;
+
+        if (totalMinutes < openMinutes) {
+            cal.add(Calendar.DAY_OF_MONTH, -1);
+        }
+
+        return cal.get(Calendar.DAY_OF_WEEK);
+    }
+
+    public static DayPart getDayPart(Date date, int openingHour) {
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        return getDayPart(cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE), openingHour);
     }
 }

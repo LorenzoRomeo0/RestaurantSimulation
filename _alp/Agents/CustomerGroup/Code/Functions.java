@@ -16,7 +16,7 @@ return order;
 
 
 
-DayPartUtil.DayPart currentDayPart = DayPartUtil.getCurrentDayPart(this);
+DayPartUtil.DayPart currentDayPart = DayPartUtil.getCurrentDayPart(this, main.openingTime);
 
 /*
 Order order = new Order();

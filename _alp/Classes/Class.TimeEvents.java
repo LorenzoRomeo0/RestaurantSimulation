@@ -167,42 +167,33 @@ public class TimeEvents {
     
     
     /////
-    public double getValueSumByWeekdayAndDayPart(int dayOfWeek, DayPartUtil.DayPart dayPart, TimeEvent.EventType event) {
+    public double getValueSumByWeekdayAndDayPart(int dayOfWeek, DayPartUtil.DayPart dayPart, TimeEvent.EventType event, int openingHour) {
         return events.stream()
                 .filter(e -> e != null)
                 .filter(e -> e.eventType == event)
-                .filter(e -> e.getStartDayOfWeek() == dayOfWeek)
-                .filter(e -> DayPartUtil.getDayPart(
-                        e.getStartHourOfDay(),
-                        e.getStartMinuteOfHour()
-                ) == dayPart)
+                .filter(e -> e.getBusinessStartDayOfWeek(openingHour) == dayOfWeek)
+                .filter(e -> e.getBusinessStartDayPart(openingHour) == dayPart)
                 .mapToDouble(e -> e.value)
                 .sum();
     }
     
-    public double getValueAvgByWeekdayAndDayPart(int dayOfWeek, DayPartUtil.DayPart dayPart, TimeEvent.EventType event) {
+    public double getValueAvgByWeekdayAndDayPart(int dayOfWeek, DayPartUtil.DayPart dayPart, TimeEvent.EventType event, int openingHour) {
         return events.stream()
                 .filter(e -> e != null)
                 .filter(e -> e.eventType == event)
-                .filter(e -> e.getStartDayOfWeek() == dayOfWeek)
-                .filter(e -> DayPartUtil.getDayPart(
-                        e.getStartHourOfDay(),
-                        e.getStartMinuteOfHour()
-                ) == dayPart)
+                .filter(e -> e.getBusinessStartDayOfWeek(openingHour) == dayOfWeek)
+                .filter(e -> e.getBusinessStartDayPart(openingHour) == dayPart)
                 .mapToDouble(e -> e.value)
                 .average()
                 .orElse(0.0);
     }
 
-    public double getAverageTimeByWeekdayAndDayPart(int dayOfWeek, DayPartUtil.DayPart dayPart, TimeEvent.EventType event) {
+    public double getAverageTimeByWeekdayAndDayPart(int dayOfWeek, DayPartUtil.DayPart dayPart, TimeEvent.EventType event, int openingHour) {
         return events.stream()
                 .filter(e -> e != null)
                 .filter(e -> e.eventType == event)
-                .filter(e -> e.getStartDayOfWeek() == dayOfWeek)
-                .filter(e -> DayPartUtil.getDayPart(
-                        e.getStartHourOfDay(),
-                        e.getStartMinuteOfHour()
-                ) == dayPart)
+                .filter(e -> e.getBusinessStartDayOfWeek(openingHour) == dayOfWeek)
+                .filter(e -> e.getBusinessStartDayPart(openingHour) == dayPart)
                 .mapToDouble(TimeEvent::getDurationMinutes)
                 .filter(d -> d >= 0)
                 .average()

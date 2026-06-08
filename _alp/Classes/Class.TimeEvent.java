@@ -72,6 +72,18 @@ public class TimeEvent {
         return endTime.getTime() - startTime.getTime();
     }
     
+    public int getBusinessStartDayOfWeek(int openingHour) {
+        return startTime != null
+                ? DayPartUtil.getBusinessDayOfWeek(startTime, openingHour)
+                : -1;
+    }
+
+    public DayPartUtil.DayPart getBusinessStartDayPart(int openingHour) {
+        return startTime != null
+                ? DayPartUtil.getDayPart(startTime, openingHour)
+                : null;
+    }
+    
     
     private int getMinuteOfHour(Date date) {
         Calendar cal = Calendar.getInstance();
