@@ -16,5 +16,6 @@ void statisticsEvent()
 paymentEventsUpdater();
 customerEventsUpdater();
 waiterEventsUpdater();
+cooksEventsUpdater();
 /*ALCODEEND*/}
 

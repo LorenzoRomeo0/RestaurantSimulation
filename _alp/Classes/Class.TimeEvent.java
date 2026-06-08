@@ -10,6 +10,7 @@ public class TimeEvent {
 	public enum EventType {
         COOK_END,
         COOK_SHIFT,
+        COOK_IDLE,
         WAITER_END,
         WAITER_SHIFT,
         WAITER_IDLE,

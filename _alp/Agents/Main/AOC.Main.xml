@@ -875,7 +875,7 @@ else if (currentlyOnShift &gt; value) {
 		<Area>
 			<Id>1780779078123</Id>
 			<Name><![CDATA[chartsViewArea]]></Name>
-			<X>10000</X>
+			<X>3200</X>
 			<Y>0</Y>
 			<Label>
 				<X>0</X>
