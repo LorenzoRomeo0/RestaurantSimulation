@@ -560,4 +560,36 @@
 		<ShowLabel>true</ShowLabel>
 		<Body xmlns:al="http://anylogic.com"/>
 	</Function>
+	<Function AccessType="default" StaticFunction="false">
+		<ReturnModificator>VOID</ReturnModificator>
+		<ReturnType>double</ReturnType>
+		<Id>1780906745364</Id>
+		<Name><![CDATA[registerTablesUsage]]></Name>
+		<X>1720</X>
+		<Y>-440</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Body xmlns:al="http://anylogic.com"/>
+	</Function>
+	<Function AccessType="default" StaticFunction="false">
+		<ReturnModificator>VOID</ReturnModificator>
+		<ReturnType>double</ReturnType>
+		<Id>1780907226546</Id>
+		<Name><![CDATA[tablesEventsUpdater]]></Name>
+		<X>1720</X>
+		<Y>-400</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Body xmlns:al="http://anylogic.com"/>
+	</Function>
 </Functions>

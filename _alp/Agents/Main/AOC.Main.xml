@@ -885,7 +885,7 @@ else if (currentlyOnShift &gt; value) {
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>false</ShowLabel>
 			<Title/>
-			<Width>3000</Width>
+			<Width>4600</Width>
 			<Height>2480</Height>
 		</Area>
 		<Area>

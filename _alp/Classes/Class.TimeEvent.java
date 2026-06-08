@@ -19,7 +19,10 @@ public class TimeEvent {
         CUSTOMER_WAIT_TABLE,
         CUSTOMER_WAIT_PAY,
         CUSTOMER_STAY,
-        MONEY
+        MONEY,
+        TABLES_USAGE_OUTSIDE,
+        TABLES_USAGE_INSIDE,
+        TABLES_USAGE_BAR
     }
 
 	public Date startTime;

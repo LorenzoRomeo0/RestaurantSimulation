@@ -2,15 +2,15 @@ int tablesMaxSize()
 {/*ALCODESTART::1769810442527*/
 int maxSize = 0;
 
-for(Table t : insideTablesPool){
+for(Table t : insideTables){
 	if(t.size > maxSize)maxSize = t.size;
 }
 
-for(Table t : outsideTablesPool){
+for(Table t : outsideTables){
 	if(t.size > maxSize)maxSize = t.size;
 }
 
-for(Table t : barTablesPool){
+for(Table t : barTables){
 	if(t.size > maxSize)maxSize = t.size;
 }
 
@@ -42,7 +42,7 @@ int barPrio = bar_prio_schedule.getValue();
 for (int prio = 1; prio <= 3; prio++) {
 
     if (insidePrio == prio) {
-        for (Table t : insideTablesPool) {
+        for (Table t : insideTables) {
             if (t.isFree && t.size >= customerGroup.size) {
                 t.isFree = false;
                 return t;
@@ -51,7 +51,7 @@ for (int prio = 1; prio <= 3; prio++) {
     }
 
     if (outsidePrio == prio) {
-        for (Table t : outsideTablesPool) {
+        for (Table t : outsideTables) {
             if (t.isFree && t.size >= customerGroup.size) {
                 t.isFree = false;
                 return t;
@@ -60,7 +60,7 @@ for (int prio = 1; prio <= 3; prio++) {
     }
 
     if (barPrio == prio) {
-        for (Table t : barTablesPool) {
+        for (Table t : barTables) {
             if (t.isFree && t.size >= customerGroup.size) {
                 t.isFree = false;
                 return t;
@@ -412,7 +412,7 @@ sb.append("weekday,daypart,total")
 
 for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
     for (DayPartUtil.DayPart dayPart : DayPartUtil.DayPart.values()) {
-        double total = timeEvents.getMoneySumByWeekdayAndDayPart(day, dayPart);
+        double total = timeEvents.getValueSumByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.MONEY);
 
 		String dayName = day_to_string(day);
         			String key = dayName + "-" + dayPart;
@@ -683,5 +683,137 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
 }
 
 cookIdleText.setText(sbIdle.toString());
+/*ALCODEEND*/}
+
+double registerTablesUsage()
+{/*ALCODESTART::1780906745364*/
+int insideUsage = 0;
+int outsideUsage = 0;
+int barUsage = 0;
+
+for (Table t : insideTables) {
+    if (!t.isFree) {
+        insideUsage++;
+    }
+}
+for (Table t : outsideTables) {
+    if (!t.isFree) {
+        outsideUsage++;
+    }
+}
+for (Table t : barTables) {
+    if (!t.isFree) {
+        barUsage++;
+    }
+}
+
+TimeEvent ev = new TimeEvent(date(), date(), TimeEvent.EventType.TABLES_USAGE_OUTSIDE, outsideUsage);
+timeEvents.add(ev);
+
+ev = new TimeEvent(date(), date(), TimeEvent.EventType.TABLES_USAGE_INSIDE, insideUsage);
+timeEvents.add(ev);
+
+ev = new TimeEvent(date(), date(), TimeEvent.EventType.TABLES_USAGE_BAR, barUsage);
+timeEvents.add(ev);
+/*ALCODEEND*/}
+
+double tablesEventsUpdater()
+{/*ALCODESTART::1780907226546*/
+StringBuilder sb = new StringBuilder();
+
+sb.append("weekday,daypart,inside, outside, bar")
+  .append(System.lineSeparator());
+
+for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
+	
+	String dayName = day_to_string(day);
+
+    for (DayPartUtil.DayPart dayPart : DayPartUtil.DayPart.values()) {
+        Double totalInside = timeEvents.getValueAvgByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.TABLES_USAGE_INSIDE) / insideTables.size() * 100;
+        Double totalOutside = timeEvents.getValueAvgByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.TABLES_USAGE_OUTSIDE)/ outsideTables.size() *100;
+        Double totalBar = timeEvents.getValueAvgByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.TABLES_USAGE_BAR)/ barTables.size() * 100;
+		
+		if(totalInside.isNaN() || totalInside == 0.0) totalInside = -1.0;
+		if(totalOutside.isNaN() || totalOutside== 0.0) totalOutside = -1.0;
+		if(totalBar.isNaN() || totalBar == 0.0 ) totalBar = -1.0;
+		
+		
+        String key = dayName + "-" + dayPart;
+
+        sb.append(dayName)
+          .append(",")
+          .append(dayPart)
+          .append(",")
+          .append(totalInside)
+          .append(",")
+          .append(totalOutside)
+          .append(",")
+          .append(totalBar)
+          .append(System.lineSeparator());
+          
+        /* 
+        DataItem item = tablesChartItems.get(key);
+
+        if (item == null) {
+            item = new DataItem();
+            item.setValue(total);
+            paymentChartItems.put(key, item);
+
+            paymentEventsChart.addDataItem(item, key, dayPartColors.get(dayPart));
+        } else {
+            item.setValue(total);
+        }
+        */
+        
+        
+        DataItem insideTablesItem = insideTablesChartItems.get(key);
+        if (insideTablesItem == null) {
+            insideTablesItem = new DataItem();
+            insideTablesItem.setValue(totalInside);
+            insideTablesChartItems.put(key, insideTablesItem);
+            tablesUsageChart.addDataItem(insideTablesItem, key + " - Inside", tablesAreaColors.get(TimeEvent.EventType.TABLES_USAGE_INSIDE));
+        } else {
+            insideTablesItem.setValue(totalInside);
+        }
+
+        DataItem outsideTablesItem = outsideTablesChartItems.get(key);
+        if (outsideTablesItem == null) {
+            outsideTablesItem = new DataItem();
+            outsideTablesItem.setValue(totalOutside);
+            outsideTablesChartItems.put(key, outsideTablesItem);
+            tablesUsageChart.addDataItem(outsideTablesItem, key + " - Outside", tablesAreaColors.get(TimeEvent.EventType.TABLES_USAGE_OUTSIDE));
+        } else {
+            outsideTablesItem.setValue(totalOutside);
+        }
+
+        DataItem barTablesItem = barTablesChartItems.get(key);
+        if (barTablesItem == null) {
+            barTablesItem = new DataItem();
+            barTablesItem.setValue(totalBar);
+            barTablesChartItems.put(key, barTablesItem);
+            tablesUsageChart.addDataItem(barTablesItem, key + " - Bar", tablesAreaColors.get(TimeEvent.EventType.TABLES_USAGE_BAR));
+        } else {
+            barTablesItem.setValue(totalBar);
+        } 
+    }
+    
+    String spacerKey = dayName +"-SPACER";
+        if (day < Calendar.SATURDAY) {
+		
+		    DataItem spacerItem = spacerTablesChartItems.get(spacerKey);
+		
+		    if (spacerItem == null) {
+		        spacerItem = new DataItem();
+		        spacerItem.setValue(100);
+		        spacerTablesChartItems.put(spacerKey, spacerItem);
+		
+		        tablesUsageChart.addDataItem(spacerItem, spacerKey, Color.BLACK);
+		    } else {
+		        spacerItem.setValue(100);
+		    }
+		}
+}
+
+tableEventsText.setText(sb.toString());
 /*ALCODEEND*/}
 

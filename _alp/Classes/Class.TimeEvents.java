@@ -167,10 +167,10 @@ public class TimeEvents {
     
     
     /////
-    public double getMoneySumByWeekdayAndDayPart(int dayOfWeek, DayPartUtil.DayPart dayPart) {
+    public double getValueSumByWeekdayAndDayPart(int dayOfWeek, DayPartUtil.DayPart dayPart, TimeEvent.EventType event) {
         return events.stream()
                 .filter(e -> e != null)
-                .filter(e -> e.eventType == TimeEvent.EventType.MONEY)
+                .filter(e -> e.eventType == event)
                 .filter(e -> e.getStartDayOfWeek() == dayOfWeek)
                 .filter(e -> DayPartUtil.getDayPart(
                         e.getStartHourOfDay(),
@@ -178,6 +178,20 @@ public class TimeEvents {
                 ) == dayPart)
                 .mapToDouble(e -> e.value)
                 .sum();
+    }
+    
+    public double getValueAvgByWeekdayAndDayPart(int dayOfWeek, DayPartUtil.DayPart dayPart, TimeEvent.EventType event) {
+        return events.stream()
+                .filter(e -> e != null)
+                .filter(e -> e.eventType == event)
+                .filter(e -> e.getStartDayOfWeek() == dayOfWeek)
+                .filter(e -> DayPartUtil.getDayPart(
+                        e.getStartHourOfDay(),
+                        e.getStartMinuteOfHour()
+                ) == dayPart)
+                .mapToDouble(e -> e.value)
+                .average()
+                .orElse(0.0);
     }
 
     public double getAverageTimeByWeekdayAndDayPart(int dayOfWeek, DayPartUtil.DayPart dayPart, TimeEvent.EventType event) {

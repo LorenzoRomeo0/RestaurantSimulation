@@ -971,6 +971,9 @@ nextInsideTableIdx++;]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onUnitStateChange]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[registerTablesUsage();]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onMaintenanceStart]]></Name>
@@ -2842,6 +2845,9 @@ nextOutsideTableIdx++;]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onUnitStateChange]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[registerTablesUsage();]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onMaintenanceStart]]></Name>
@@ -3169,6 +3175,9 @@ nextBarTableIdx++;]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onUnitStateChange]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[registerTablesUsage();]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onMaintenanceStart]]></Name>
@@ -6310,13 +6319,14 @@ customerGroupsInRestaurant.remove(agent);]]></Code>
 		</Replication>
 		<CollectionType>ARRAY_LIST_BASED</CollectionType>
 		<InEnvironment>true</InEnvironment>
-		<InitialLocationType>XYZ</InitialLocationType>
+		<InitialLocationType>NODE</InitialLocationType>
 		<ColumnCode Class="CodeValue">
 			<Code><![CDATA[0]]></Code>
 		</ColumnCode>
 		<RowCode Class="CodeValue">
 			<Code><![CDATA[0]]></Code>
 		</RowCode>
+		<NodeCode>outside_tables_node</NodeCode>
 		<LocationNameCode Class="CodeValue">
 			<Code><![CDATA[""]]></Code>
 		</LocationNameCode>
@@ -6359,13 +6369,14 @@ customerGroupsInRestaurant.remove(agent);]]></Code>
 		</Replication>
 		<CollectionType>ARRAY_LIST_BASED</CollectionType>
 		<InEnvironment>true</InEnvironment>
-		<InitialLocationType>XYZ</InitialLocationType>
+		<InitialLocationType>NODE</InitialLocationType>
 		<ColumnCode Class="CodeValue">
 			<Code><![CDATA[0]]></Code>
 		</ColumnCode>
 		<RowCode Class="CodeValue">
 			<Code><![CDATA[0]]></Code>
 		</RowCode>
+		<NodeCode>tables_node</NodeCode>
 		<LocationNameCode Class="CodeValue">
 			<Code><![CDATA[""]]></Code>
 		</LocationNameCode>

@@ -17,5 +17,11 @@ paymentEventsUpdater();
 customerEventsUpdater();
 waiterEventsUpdater();
 cooksEventsUpdater();
+tablesEventsUpdater();
+/*ALCODEEND*/}
+
+void TablesEvent()
+{/*ALCODESTART::1780908127908*/
+registerTablesUsage();
 /*ALCODEEND*/}
 
