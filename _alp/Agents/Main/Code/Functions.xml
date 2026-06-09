@@ -623,11 +623,10 @@
 	<Function AccessType="default" StaticFunction="false">
 		<ReturnModificator>VOID</ReturnModificator>
 		<ReturnType>double</ReturnType>
-		<Id>1780937812768</Id>
-		<Name><![CDATA[customersServedEventsUpdater]]></Name>
-		<ExcludeFromBuild>true</ExcludeFromBuild>
-		<X>2010</X>
-		<Y>-660</Y>
+		<Id>1780995917002</Id>
+		<Name><![CDATA[registerWaiterOvertimeEvent]]></Name>
+		<X>1720</X>
+		<Y>-650</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -635,6 +634,18 @@
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
 		<ShowLabel>true</ShowLabel>
+		<Parameter>
+			<Name><![CDATA[start]]></Name>
+			<Type><![CDATA[Date]]></Type>
+		</Parameter>
+		<Parameter>
+			<Name><![CDATA[end]]></Name>
+			<Type><![CDATA[Date]]></Type>
+		</Parameter>
+		<Parameter>
+			<Name><![CDATA[amount]]></Name>
+			<Type><![CDATA[double]]></Type>
+		</Parameter>
 		<Body xmlns:al="http://anylogic.com"/>
 	</Function>
 </Functions>

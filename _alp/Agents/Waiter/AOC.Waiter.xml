@@ -449,6 +449,29 @@ this.moveTo(main.kitchen_node)</EntryAction>
 			<Properties Width="100" Height="30">
 				<EntryAction>if(!endShiftRequested){ //era overtime
 	wasOvertime = true;
+	
+	Date end = date();
+
+	Calendar cal = Calendar.getInstance();
+	cal.setTime(end);
+	cal.set(Calendar.HOUR_OF_DAY, main.closingTime);
+	cal.set(Calendar.MINUTE, 0);
+	cal.set(Calendar.SECOND, 0);
+	cal.set(Calendar.MILLISECOND, 0);
+	
+	Date overtimeStart = cal.getTime();
+	
+	if (end.before(overtimeStart)) {
+	    cal.add(Calendar.DAY_OF_MONTH, -1);
+	    overtimeStart = cal.getTime();
+	}
+	
+	double value = (end.getTime() - overtimeStart.getTime()) / 3600000.0;
+	
+	if (value &gt; 0 &amp;&amp; value &lt; 24) {
+	    main.registerWaiterOvertimeEvent(overtimeStart, end, value);
+		traceln("current time: " + format(end) + " | registered an overtime of: " + value);
+	};
 }
 
 shiftEndDate = date();

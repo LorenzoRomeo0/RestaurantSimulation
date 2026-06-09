@@ -14,6 +14,7 @@ public class TimeEvent {
         WAITER_END,
         WAITER_SHIFT,
         WAITER_IDLE,
+        WAITER_OVERTIME,
         CUSTOMER_WAIT,
         CUSTOMER_WAIT_ENTRANCE,
         CUSTOMER_WAIT_TABLE,

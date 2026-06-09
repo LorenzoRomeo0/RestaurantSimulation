@@ -109,7 +109,8 @@
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
 				<EntryAction>idleStartDate = date();</EntryAction>
-				<ExitAction>main.registerCookIdlevent(idleStartDate, date());</ExitAction>
+				<ExitAction>if(!isOffShift)
+	main.registerCookIdlevent(idleStartDate, date());</ExitAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
