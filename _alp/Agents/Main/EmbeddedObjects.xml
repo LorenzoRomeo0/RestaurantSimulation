@@ -3486,14 +3486,11 @@ hold.recalculateConditions();
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[capacityDefinitionType]]></Name>
-				<Value Class="CodeValue">
-					<Code><![CDATA[self.CAPACITY_SCHEDULE]]></Code>
-				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[capacity]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[3]]></Code>
+					<Code><![CDATA[getMaxCooks()]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -3691,14 +3688,21 @@ hold.recalculateConditions();
 				<Name><![CDATA[requestChoiceCondition]]></Name>
 				<Value Class="CodeValue">
 					<Code><![CDATA[unit.inState(unit.waiting)
-&& !unit.isOffShift]]></Code>
+&& !unit.isOffShift
+&& !unit.isSeized]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[addToCustomPopulation]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[true]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[population]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[cooks]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[forceStatisticsCollection]]></Name>
@@ -3706,7 +3710,7 @@ hold.recalculateConditions();
 			<Parameter>
 				<Name><![CDATA[onNewUnit]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[unit.requestShiftStart();]]></Code>
+					<Code><![CDATA[//unit.requestShiftStart();]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -3714,9 +3718,15 @@ hold.recalculateConditions();
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onSeize]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[unit.isSeized = true;]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onRelease]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[unit.isSeized = false;]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onWrapUp]]></Name>
@@ -3724,11 +3734,13 @@ hold.recalculateConditions();
 			<Parameter>
 				<Name><![CDATA[onUnitStateChange]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[if (type == ResourceTaskType.TASK_END_OF_SHIFT && !unit.isOffShift) {
+					<Code><![CDATA[/*
+if (type == ResourceTaskType.TASK_END_OF_SHIFT && !unit.isOffShift) {
     unit.requestShiftEnd();
 }else if (type != ResourceTaskType.TASK_END_OF_SHIFT && unit.isOffShift) {
     unit.requestShiftStart();
-}]]></Code>
+}
+*/]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -4717,6 +4729,9 @@ send(new goCook(agent), unit);]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onEnter]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[//traceln("order entered");]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onRemove]]></Name>
@@ -6140,54 +6155,6 @@ customerGroupsInRestaurant.remove(agent);]]></Code>
 		<QuantityColumn/>
 	</EmbeddedObject>
 	<EmbeddedObject>
-		<Id>1780780720224</Id>
-		<Name><![CDATA[cook]]></Name>
-		<X>50</X>
-		<Y>-390</Y>
-		<Label>
-			<X>15</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<ActiveObjectClass>
-			<PackageName>restaurant_2025</PackageName>
-			<ClassName>Cook</ClassName>
-		</ActiveObjectClass>
-		<GenericParameterSubstitute>
-			<GenericParameterSubstituteReference>
-				<PackageName>restaurant_2025</PackageName>
-				<ClassName>Cook</ClassName>
-				<ItemName>1756480196657</ItemName>
-			</GenericParameterSubstituteReference>
-		</GenericParameterSubstitute>
-		<Parameters/>
-		<ReplicationFlag>true</ReplicationFlag>
-		<Replication Class="CodeValue">
-			<Code><![CDATA[100]]></Code>
-		</Replication>
-		<CollectionType>ARRAY_LIST_BASED</CollectionType>
-		<InEnvironment>true</InEnvironment>
-		<InitialLocationType>XYZ</InitialLocationType>
-		<ColumnCode Class="CodeValue">
-			<Code><![CDATA[0]]></Code>
-		</ColumnCode>
-		<RowCode Class="CodeValue">
-			<Code><![CDATA[0]]></Code>
-		</RowCode>
-		<LocationNameCode Class="CodeValue">
-			<Code><![CDATA[""]]></Code>
-		</LocationNameCode>
-		<InitializationType>EMPTY</InitializationType>
-		<InitializationDatabaseTableQuery>
-			<Id>1780780720222</Id>
-			<TableReference/>
-		</InitializationDatabaseTableQuery>
-		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-		<QuantityColumn/>
-	</EmbeddedObject>
-	<EmbeddedObject>
 		<Id>1780780720231</Id>
 		<Name><![CDATA[orders]]></Name>
 		<X>50</X>
@@ -6387,6 +6354,55 @@ customerGroupsInRestaurant.remove(agent);]]></Code>
 		<InitializationType>EMPTY</InitializationType>
 		<InitializationDatabaseTableQuery>
 			<Id>1780780720250</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1781009865197</Id>
+		<Name><![CDATA[cooks]]></Name>
+		<X>50</X>
+		<Y>-390</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<PresentationId>1781009865199</PresentationId>
+		<ActiveObjectClass>
+			<PackageName>restaurant_2025</PackageName>
+			<ClassName>Cook</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>restaurant_2025</PackageName>
+				<ClassName>Cook</ClassName>
+				<ItemName>1756480196657</ItemName>
+			</GenericParameterSubstituteReference>
+		</GenericParameterSubstitute>
+		<Parameters/>
+		<ReplicationFlag>true</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InEnvironment>true</InEnvironment>
+		<InitialLocationType>XYZ</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>EMPTY</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1781009865195</Id>
 			<TableReference/>
 		</InitializationDatabaseTableQuery>
 		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>

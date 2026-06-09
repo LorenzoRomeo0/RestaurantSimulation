@@ -193,7 +193,7 @@ public class MenuItems {
         MenuCopulaGenerator.CopulaSample sample =
                 copulaGenerator.sample(DayPartUtil.DayPart.LUNCH);
         
-        traceln(sample);
+        //traceln(sample);
 
         if (sample.isOn("fixed_menu")) {
             addIfAbsent(order, weightedChoiceByCategory(candidates, MenuItem.FoodCategory.FIXED_MENU));

@@ -207,7 +207,7 @@ _ps310.setFillColor(dodgerBlue);</EntryAction>
 	
 	if (value &gt; 0 &amp;&amp; value &lt; 24) {
 	    main.registerCookOvertimeEvent(overtimeStart, end, value);
-		traceln("current time: " + format(end) + " | registered an overtime of: " + value);
+		//traceln("current time: " + format(end) + " | registered an overtime of: " + value);
 	};
 }
 
@@ -412,7 +412,7 @@ _ps310.setFillColor(red);</EntryAction>
 || (
 	wasOvertime 
 	//&amp;&amp; getHourOfDay() &gt;= main.openingTime 
-	&amp;&amp; DayPartUtil.getCurrentDayPart(this, main.openingTime) == DayPartUtil.DayPart.CLOSED
+	&amp;&amp; DayPartUtil.getCurrentDayPart(this, main.openingTime) != DayPartUtil.DayPart.CLOSED
 	&amp;&amp; lastShiftDay != date().getDay()
 	)</Condition>
 				<Rate Class="CodeUnitValue">
@@ -601,7 +601,7 @@ _ps310.setFillColor(red);</EntryAction>
 	</AgentLinks>
 	<ContainerLinks>
 		<ContainerLink>
-			<Id>1780780720225</Id>
+			<Id>1781009865201</Id>
 			<Name><![CDATA[main]]></Name>
 			<X>50</X>
 			<Y>-100</Y>

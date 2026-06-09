@@ -167,6 +167,12 @@
 			<Parameter>
 				<ParameterName>fixedCosts</ParameterName>
 			</Parameter>
+			<Parameter>
+				<ParameterName>waitersHourlyRateOvertime</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>cooksHourlyRateOvertime</ParameterName>
+			</Parameter>
 		</Parameters>
 		<PresentationProperties>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>

@@ -470,7 +470,7 @@ this.moveTo(main.kitchen_node)</EntryAction>
 	
 	if (value &gt; 0 &amp;&amp; value &lt; 24) {
 	    main.registerWaiterOvertimeEvent(overtimeStart, end, value);
-		traceln("current time: " + format(end) + " | registered an overtime of: " + value);
+		//traceln("current time: " + format(end) + " | registered an overtime of: " + value);
 	};
 }
 

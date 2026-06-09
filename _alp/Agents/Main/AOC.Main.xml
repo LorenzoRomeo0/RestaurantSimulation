@@ -540,15 +540,14 @@
 					<ItemName>waiters</ItemName>
 				</ValueColumnReference>
 			</IntervalsQuery>
-			<Action>// Contiamo quanti camerieri sono attualmente nel turno attivo o stanno iniziando
-int currentlyOnShift = 0;
+			<Action>int currentlyOnShift = 0;
 for (Waiter w : waiters) {
     if (!w.isOffShift || w.startShiftRequested) {
         currentlyOnShift++;
     }
 }
 
-// 1. Dobbiamo INIZIARE nuovi turni?
+// turni da iniziare
 if (currentlyOnShift &lt; value) {
     int needed = value - currentlyOnShift;
     for (Waiter w : waiters) {
@@ -558,7 +557,8 @@ if (currentlyOnShift &lt; value) {
         }
     }
 }
-// 2. Dobbiamo TERMINARE dei turni?
+
+//turni da terminare
 else if (currentlyOnShift &gt; value) {
     int toRemove = currentlyOnShift - value;
     for (Waiter w : waiters) {
@@ -568,6 +568,8 @@ else if (currentlyOnShift &gt; value) {
         }
     }
 }
+
+//traceln("WAITERS: value: " + value + "\ncurrentlyOn: " + currentlyOnShift + "\nneeded: "+ (value - currentlyOnShift) + "\nterminate: " + (currentlyOnShift - value)+ "\n--");
 </Action>
 			<Intervals/>
 			<Exceptions/>
@@ -633,6 +635,36 @@ else if (currentlyOnShift &gt; value) {
 					<ItemName>cooks</ItemName>
 				</ValueColumnReference>
 			</IntervalsQuery>
+			<Action>int currentlyOnShift = 0;
+for (Cook w : cooks) {
+    if (!w.isOffShift || w.startShiftRequested) {
+        currentlyOnShift++;
+    }
+}
+
+// turni da iniziare
+if (currentlyOnShift &lt; value) {
+    int needed = value - currentlyOnShift;
+    for (Cook w : cooks) {
+        if (needed &gt; 0 &amp;&amp; w.isOffShift &amp;&amp; !w.startShiftRequested) {
+            w.requestShiftStart();
+            needed--;
+        }
+    }
+}
+
+//turni da terminare
+else if (currentlyOnShift &gt; value) {
+    int toRemove = currentlyOnShift - value;
+    for (Cook w : cooks) {
+        if (toRemove &gt; 0 &amp;&amp; (!w.isOffShift &amp;&amp; !w.endShiftRequested)) {
+            w.requestShiftEnd();
+            toRemove--;
+        }
+    }
+}
+
+//traceln("COOKS value: " + value + "\ncurrentlyOn: " + currentlyOnShift + "\nneeded: "+ (value - currentlyOnShift) + "\nterminate: " + (currentlyOnShift - value)+ "\n--");</Action>
 			<Intervals/>
 			<Exceptions/>
 		</Schedule>
@@ -870,6 +902,28 @@ else if (currentlyOnShift &gt; value) {
 			<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
 			<Presentation xmlns:al="http://anylogic.com"/>
 		</Level>
+		<EmbeddedObjectPresentation>
+			<Id>1781009865199</Id>
+			<Name><![CDATA[cooks_presentation]]></Name>
+			<X>20</X>
+			<Y>-380</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>true</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+			<EmbeddedIcon>false</EmbeddedIcon>
+			<Z>0</Z>
+			<Rotation>0.0</Rotation>
+			<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+			<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+			<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+			<Latitude>0.0</Latitude>
+			<Longitude>0.0</Longitude>
+		</EmbeddedObjectPresentation>
 	</Presentation>
 	<Areas>
 		<Area>

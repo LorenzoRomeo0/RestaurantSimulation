@@ -919,3 +919,16 @@ TimeEvent ev = new TimeEvent(start, end, TimeEvent.EventType.COOK_OVERTIME, amou
 timeEvents.add(ev);
 /*ALCODEEND*/}
 
+int getMaxCooks()
+{/*ALCODESTART::1781003606894*/
+int maxCooks = 0;
+for(double t = 0; t < 7 * 24; t += 1) { 
+    int val = cooks_schedule.getValue(t, HOUR); 
+    if(val > maxCooks) {
+        maxCooks = val;
+    }
+}
+
+return maxCooks;
+/*ALCODEEND*/}
+
