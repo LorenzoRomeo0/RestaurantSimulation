@@ -384,7 +384,13 @@ _ps310.setFillColor(red);</EntryAction>
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="TimeUnits">MINUTE</Unit>
 				</Timeout>
-				<Condition>startShiftRequested || (wasOvertime &amp;&amp; getHourOfDay() &gt;= main.openingTime &amp;&amp; lastShiftDay != date().getDay())</Condition>
+				<Condition>startShiftRequested 
+|| (
+	wasOvertime 
+	//&amp;&amp; getHourOfDay() &gt;= main.openingTime 
+	&amp;&amp; DayPartUtil.getCurrentDayPart(this, main.openingTime) == DayPartUtil.DayPart.CLOSED
+	&amp;&amp; lastShiftDay != date().getDay()
+	)</Condition>
 				<Rate Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="RateUnits">PER_MINUTE</Unit>
@@ -472,7 +478,15 @@ _ps310.setFillColor(red);</EntryAction>
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="TimeUnits">MINUTE</Unit>
 				</Timeout>
-				<Condition>!isOffShift &amp;&amp; (endShiftRequested || (getHourOfDay() &gt;= main.closingTime &amp;&amp; main.customersInRestaurantNr == 0))</Condition>
+				<Condition>!isOffShift 
+&amp;&amp; (
+	endShiftRequested 
+	|| (
+		//getHourOfDay() &gt;= main.closingTime 
+		DayPartUtil.getCurrentDayPart(this, main.openingTime) == DayPartUtil.DayPart.CLOSED
+		&amp;&amp; main.customersInRestaurantNr == 0
+		)
+	)</Condition>
 				<Rate Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="RateUnits">PER_MINUTE</Unit>

@@ -186,7 +186,27 @@ _ps7.setFillColor(green);</EntryAction>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
-				<EntryAction>this.stop();
+				<EntryAction>/*
+if (getHourOfDay() &gt;= 23) {
+    traceln(
+        "hour=" + getHourOfDay()
+        + "minutes=" + getMinute()
+        + " waiterId=" + getId()
+        + " | !isOffShift=" + (!isOffShift)
+        + " | !isSeized=" + (!isSeized)
+        + " | endShiftRequested=" + endShiftRequested
+        + " | closingTimeReached=" + (getHourOfDay() &gt;= main.closingTime)
+        + " | NEWclosingTimeReached=" + DayPartUtil.getCurrentDayPart(this, main.openingTime) == DayPartUtil.DayPart.CLOSED
+        + " | customersZero=" + (main.customersInRestaurantNr == 0)
+        + " | finalCondition="
+        + (!isOffShift &amp;&amp; !isSeized
+           &amp;&amp; (endShiftRequested
+               || (getHourOfDay() &gt;= main.closingTime
+                   &amp;&amp; main.customersInRestaurantNr == 0)))
+    );
+}
+*/
+this.stop();
 
 idleStartDate = date();
 
@@ -1241,7 +1261,16 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="TimeUnits">MINUTE</Unit>
 				</Timeout>
-				<Condition>!isOffShift &amp;&amp; !isSeized &amp;&amp; (endShiftRequested || (getHourOfDay() &gt;= main.closingTime &amp;&amp; main.customersInRestaurantNr == 0))</Condition>
+				<Condition>!isOffShift 
+&amp;&amp; !isSeized 
+&amp;&amp; (
+	endShiftRequested 
+	|| (
+		//getHourOfDay() &gt;= main.closingTime 
+		DayPartUtil.getCurrentDayPart(this, main.openingTime) == DayPartUtil.DayPart.CLOSED
+		&amp;&amp; main.customersInRestaurantNr == 0
+		)
+	)</Condition>
 				<Rate Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="RateUnits">PER_MINUTE</Unit>
@@ -1330,7 +1359,13 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="TimeUnits">MINUTE</Unit>
 				</Timeout>
-				<Condition>startShiftRequested || (wasOvertime &amp;&amp; getHourOfDay() &gt;= main.openingTime &amp;&amp; lastShiftDay != date().getDay())</Condition>
+				<Condition>startShiftRequested 
+|| (
+	wasOvertime 
+	//&amp;&amp; getHourOfDay() &gt;= main.openingTime 
+	&amp;&amp; DayPartUtil.getCurrentDayPart(this, main.openingTime) != DayPartUtil.DayPart.CLOSED
+	&amp;&amp; lastShiftDay != date().getDay()
+	)</Condition>
 				<Rate Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="RateUnits">PER_MINUTE</Unit>
