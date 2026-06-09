@@ -664,24 +664,24 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
         }
         
         if(dayPart == DayPartUtil.DayPart.CLOSED){
-        sbOvertime.append(dayName)
-          .append(",")
-          .append(dayPart)
-          .append(",")
-          .append(totalOvertime)
-          .append(System.lineSeparator());
-          
-          item = waiterOvertimeChartItems.get(key);
-
-        if (item == null) {
-            item = new DataItem();
-            item.setValue(totalOvertime);
-            waiterOvertimeChartItems.put(key, item);
-
-            waiterOvertimeChart.addDataItem(item, key, dayPartColors.get(dayPart));
-        } else {
-            item.setValue(totalOvertime);
-        }
+	        sbOvertime.append(dayName)
+	          .append(",")
+	          .append(dayPart)
+	          .append(",")
+	          .append(totalOvertime)
+	          .append(System.lineSeparator());
+	          
+	          item = waiterOvertimeChartItems.get(key);
+	
+	        if (item == null) {
+	            item = new DataItem();
+	            item.setValue(totalOvertime);
+	            waiterOvertimeChartItems.put(key, item);
+	
+	            waiterOvertimeChart.addDataItem(item, key, dayPartColors.get(dayPart));
+	        } else {
+	            item.setValue(totalOvertime);
+	        }
         }
     }
 }
@@ -699,18 +699,23 @@ timeEvents.add(ev);
 
 double cooksEventsUpdater()
 {/*ALCODESTART::1780905104134*/
-//wait entrance
-
 StringBuilder sbIdle = new StringBuilder();
+StringBuilder sbOvertime = new StringBuilder();
 
 sbIdle.append("weekday,daypart,meanIdleTime")
   .append(System.lineSeparator());
+
+sbOvertime.append("weekday,daypart,overtimeHours")
+  .append(System.lineSeparator());
+
 
 
 for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
     for (DayPartUtil.DayPart dayPart : DayPartUtil.DayPart.values()) {
         
         double averageIdle = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.COOK_IDLE, openingTime);
+		double totalOvertime = timeEvents.getValueSumByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.COOK_OVERTIME, openingTime);
+		
 		
 		String dayName = day_to_string(day);
         String key = dayName + "-" + dayPart;
@@ -735,11 +740,33 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
             item.setValue(averageIdle);
         }
         
+        if(dayPart == DayPartUtil.DayPart.CLOSED){
+	        sbOvertime.append(dayName)
+	          .append(",")
+	          .append(dayPart)
+	          .append(",")
+	          .append(totalOvertime)
+	          .append(System.lineSeparator());
+	          
+	          item = cookOvertimeChartItems.get(key);
+	
+	        if (item == null) {
+	            item = new DataItem();
+	            item.setValue(totalOvertime);
+	            cookOvertimeChartItems.put(key, item);
+	
+	            cookOvertimeChart.addDataItem(item, key, dayPartColors.get(dayPart));
+	        } else {
+	            item.setValue(totalOvertime);
+	        }
+        }
+        
         
     }
 }
 
 cookIdleText.setText(sbIdle.toString());
+cookOvertimeText.setText(sbIdle.toString());
 /*ALCODEEND*/}
 
 double registerTablesUsage()
@@ -883,6 +910,12 @@ timeEvents.add(ev);
 double registerWaiterOvertimeEvent(Date start,Date end,double amount)
 {/*ALCODESTART::1780995917002*/
 TimeEvent ev = new TimeEvent(start, end, TimeEvent.EventType.WAITER_OVERTIME, amount);
+timeEvents.add(ev);
+/*ALCODEEND*/}
+
+double registerCookOvertimeEvent(Date start,Date end,double amount)
+{/*ALCODESTART::1781000084410*/
+TimeEvent ev = new TimeEvent(start, end, TimeEvent.EventType.COOK_OVERTIME, amount);
 timeEvents.add(ev);
 /*ALCODEEND*/}
 

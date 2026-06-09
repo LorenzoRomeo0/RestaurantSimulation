@@ -11,6 +11,7 @@ public class TimeEvent {
         COOK_END,
         COOK_SHIFT,
         COOK_IDLE,
+        COOK_OVERTIME,
         WAITER_END,
         WAITER_SHIFT,
         WAITER_IDLE,

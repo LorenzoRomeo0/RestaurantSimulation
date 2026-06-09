@@ -29,8 +29,8 @@
 	<Rectangle>
 		<Id>1780779694370</Id>
 		<Name><![CDATA[rectangle2]]></Name>
-		<X>4760</X>
-		<Y>900</Y>
+		<X>4740</X>
+		<Y>120</Y>
 		<Label>
 			<X>10</X>
 			<Y>10</Y>
@@ -55,8 +55,8 @@
 	<Rectangle>
 		<Id>1780779415814</Id>
 		<Name><![CDATA[rectangle1]]></Name>
-		<X>4760</X>
-		<Y>120</Y>
+		<X>6160</X>
+		<Y>1460</Y>
 		<Label>
 			<X>10</X>
 			<Y>10</Y>
@@ -4196,8 +4196,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Group>
 		<Id>1780779308883</Id>
 		<Name><![CDATA[paymentGroup]]></Name>
-		<X>5180</X>
-		<Y>400</Y>
+		<X>6580</X>
+		<Y>1740</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -4342,8 +4342,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1780779431501</Id>
 		<Name><![CDATA[text1]]></Name>
-		<X>4800</X>
-		<Y>160</Y>
+		<X>6200</X>
+		<Y>1500</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -4367,8 +4367,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1780779480412</Id>
 		<Name><![CDATA[waitersIdleText]]></Name>
-		<X>5520</X>
-		<Y>1050</Y>
+		<X>5500</X>
+		<Y>270</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -4392,8 +4392,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<BarChart>
 		<Id>1780779480416</Id>
 		<Name><![CDATA[waiterIdleChart]]></Name>
-		<X>4760</X>
-		<Y>1020</Y>
+		<X>4740</X>
+		<Y>240</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -4477,8 +4477,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1780779678919</Id>
 		<Name><![CDATA[text2]]></Name>
-		<X>4780</X>
-		<Y>980</Y>
+		<X>4760</X>
+		<Y>200</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -4712,8 +4712,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Rectangle>
 		<Id>1780905252816</Id>
 		<Name><![CDATA[rectangle3]]></Name>
-		<X>4760</X>
-		<Y>2220</Y>
+		<X>4740</X>
+		<Y>1360</Y>
 		<Label>
 			<X>10</X>
 			<Y>10</Y>
@@ -4730,7 +4730,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<LineMaterial>null</LineMaterial>
 		<LineStyle>SOLID</LineStyle>
 		<Width>1200</Width>
-		<Height>680</Height>
+		<Height>1260</Height>
 		<Rotation>0.0</Rotation>
 		<FillColor>-1</FillColor>
 		<FillMaterial>null</FillMaterial>
@@ -4738,8 +4738,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1780905211476</Id>
 		<Name><![CDATA[cookIdleText]]></Name>
-		<X>5500</X>
-		<Y>2360</Y>
+		<X>5480</X>
+		<Y>1500</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -4763,8 +4763,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<BarChart>
 		<Id>1780905252820</Id>
 		<Name><![CDATA[cookIdleChart]]></Name>
-		<X>4760</X>
-		<Y>2340</Y>
+		<X>4740</X>
+		<Y>1480</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -4823,8 +4823,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1780905252826</Id>
 		<Name><![CDATA[text3]]></Name>
-		<X>4780</X>
-		<Y>2300</Y>
+		<X>4760</X>
+		<Y>1440</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -5252,8 +5252,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<BarChart>
 		<Id>1780998905779</Id>
 		<Name><![CDATA[waiterOvertimeChart]]></Name>
-		<X>4780</X>
-		<Y>1600</Y>
+		<X>4760</X>
+		<Y>820</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -5312,8 +5312,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1780998919935</Id>
 		<Name><![CDATA[waitersOvertimeText]]></Name>
-		<X>5540</X>
-		<Y>1620</Y>
+		<X>5520</X>
+		<Y>840</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -5327,6 +5327,91 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
 		<Text><![CDATA[waitersOvertimeText]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>10</Size>
+			<Style>0</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<BarChart>
+		<Id>1781001147927</Id>
+		<Name><![CDATA[cookOvertimeChart]]></Name>
+		<X>4740</X>
+		<Y>2060</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<AutoUpdate>true</AutoUpdate>
+		<RecurrenceProperties>
+			<Id>1781001147925</Id>
+			<OccurrenceAtTime>true</OccurrenceAtTime>
+			<OccurrenceDate>1780819200000</OccurrenceDate>
+			<OccurrenceTime Class="CodeUnitValue">
+				<Code><![CDATA[0]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</OccurrenceTime>
+			<RecurrenceCode Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</RecurrenceCode>
+		</RecurrenceProperties>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Width>760</Width>
+		<Height>310</Height>
+		<BackgroundColor/>
+		<BorderColor/>
+		<ChartArea>
+			<XOffset>50</XOffset>
+			<YOffset>30</YOffset>
+			<Width>680</Width>
+			<Height>230</Height>
+			<BackgroundColor>-1</BackgroundColor>
+			<BorderColor>-16777216</BorderColor>
+			<GridColor>-12566464</GridColor>
+		</ChartArea>
+		<Legend>
+			<Place>SOUTH</Place>
+			<TextColor>-16777216</TextColor>
+			<Size>30</Size>
+		</Legend>
+		<Labels>
+			<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+			<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+			<TextColor>-12566464</TextColor>
+		</Labels>
+		<ShowLegend>true</ShowLegend>
+		<ScaleFromExpression>0</ScaleFromExpression>
+		<ScaleToExpression>1</ScaleToExpression>
+		<ScaleType>AUTO</ScaleType>
+		<Bars>
+			<Direction>UP</Direction>
+			<RelativeWidth>0.8</RelativeWidth>
+		</Bars>
+	</BarChart>
+	<Text>
+		<Id>1781001158112</Id>
+		<Name><![CDATA[cookOvertimeText]]></Name>
+		<X>5500</X>
+		<Y>2080</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[cookOvertimeText]]></Text>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
 			<Size>10</Size>
