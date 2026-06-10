@@ -5147,7 +5147,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1780932758677</Id>
 		<Name><![CDATA[text9]]></Name>
-		<X>6610</X>
+		<X>6590</X>
 		<Y>250</Y>
 		<Label>
 			<X>0</X>
@@ -5172,7 +5172,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1780932765201</Id>
 		<Name><![CDATA[text10]]></Name>
-		<X>6740</X>
+		<X>6720</X>
 		<Y>250</Y>
 		<Label>
 			<X>0</X>
@@ -5197,7 +5197,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1780932773503</Id>
 		<Name><![CDATA[text11]]></Name>
-		<X>6850</X>
+		<X>6840</X>
 		<Y>250</Y>
 		<Label>
 			<X>0</X>

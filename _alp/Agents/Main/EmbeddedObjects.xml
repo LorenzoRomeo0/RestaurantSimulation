@@ -349,7 +349,8 @@ customerGroupsInRestaurant.add(agent);]]></Code>
 				<Name><![CDATA[onEnter]]></Name>
 				<Value Class="CodeValue">
 					<Code><![CDATA[//agent.send("enter", agent);
-agent.canStillCheckout = getHourOfDay() <= closingTime;]]></Code>
+//agent.canStillCheckout = getHourOfDay() <= closingTime;
+agent.canStillCheckout = DayPartUtil.getCurrentDayPart(this, openingTime) != DayPartUtil.DayPart.CLOSED;]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
