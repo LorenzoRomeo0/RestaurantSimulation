@@ -359,7 +359,7 @@
 		<Id>1780777576498</Id>
 		<Name><![CDATA[waiterIdleChartItems]]></Name>
 		<X>1720</X>
-		<Y>-540</Y>
+		<Y>-530</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -380,8 +380,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1780905104136</Id>
 		<Name><![CDATA[cookIdleChartItems]]></Name>
-		<X>1400</X>
-		<Y>-390</Y>
+		<X>1410</X>
+		<Y>-310</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -539,7 +539,7 @@
 		<Id>1780998883253</Id>
 		<Name><![CDATA[waiterOvertimeChartItems]]></Name>
 		<X>1720</X>
-		<Y>-520</Y>
+		<Y>-510</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -560,8 +560,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1781000215116</Id>
 		<Name><![CDATA[cookOvertimeChartItems]]></Name>
-		<X>1400</X>
-		<Y>-360</Y>
+		<X>1410</X>
+		<Y>-280</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>

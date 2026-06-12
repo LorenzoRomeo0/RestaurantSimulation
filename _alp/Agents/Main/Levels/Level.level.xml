@@ -73,7 +73,7 @@
 		<LineMaterial>null</LineMaterial>
 		<LineStyle>SOLID</LineStyle>
 		<Width>1200</Width>
-		<Height>680</Height>
+		<Height>1140</Height>
 		<Rotation>0.0</Rotation>
 		<FillColor>-1</FillColor>
 		<FillMaterial>null</FillMaterial>
@@ -5528,6 +5528,56 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Text><![CDATA[cookOvertimeText]]></Text>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
+			<Size>10</Size>
+			<Style>0</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1781297487108</Id>
+		<Name><![CDATA[waitersShiftText]]></Name>
+		<X>6760</X>
+		<Y>2130</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[waitersShiftText]]></Text>
+		<Font>
+			<Name><![CDATA[Cascadia Code]]></Name>
+			<Size>10</Size>
+			<Style>0</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1781299346066</Id>
+		<Name><![CDATA[cooksShiftText]]></Name>
+		<X>6180</X>
+		<Y>2120</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[cooksShiftText]]></Text>
+		<Font>
+			<Name><![CDATA[Cascadia Code]]></Name>
 			<Size>10</Size>
 			<Style>0</Style>
 		</Font>

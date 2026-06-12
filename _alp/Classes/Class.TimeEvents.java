@@ -202,6 +202,17 @@ public class TimeEvents {
                 .orElse(0);
     }
     
+    /*public double getTotalDurationHoursByWeekdayDayPartAndType(int dayOfWeek, DayPartUtil.DayPart dayPart, TimeEvent.EventType eventType, int openingHour) {
+        return (events.stream()
+                .filter(e -> e != null)
+                .filter(e -> e.eventType == eventType)
+                .filter(e -> e.getBusinessStartDayOfWeek(openingHour) == dayOfWeek)
+                .filter(e -> e.getBusinessStartDayPart(openingHour) == dayPart)
+                .mapToDouble(e -> Math.round(e.getDurationMinutes()))
+                .filter(m -> m >= 0)
+                .sum()) / 60.0;
+    }
+    */
     
     
     

@@ -569,6 +569,12 @@ else if (currentlyOnShift &gt; value) {
     }
 }
 
+registerWaitersShiftEvent(
+	date(), 
+	timeToDate(self.getTimeOfNextValue()), 
+	value
+);
+
 //traceln("WAITERS: value: " + value + "\ncurrentlyOn: " + currentlyOnShift + "\nneeded: "+ (value - currentlyOnShift) + "\nterminate: " + (currentlyOnShift - value)+ "\n--");
 </Action>
 			<Intervals/>
@@ -663,6 +669,13 @@ else if (currentlyOnShift &gt; value) {
         }
     }
 }
+
+registerCooksShiftEvent(
+	date(), 
+	timeToDate(self.getTimeOfNextValue()), 
+	value
+);
+
 
 //traceln("COOKS value: " + value + "\ncurrentlyOn: " + currentlyOnShift + "\nneeded: "+ (value - currentlyOnShift) + "\nterminate: " + (currentlyOnShift - value)+ "\n--");</Action>
 			<Intervals/>

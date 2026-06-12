@@ -97,6 +97,7 @@ double init()
 {/*ALCODESTART::1774982011623*/
 menuItems = new MenuItems(this);
 
+//tablesInit();
 
 traceln("INIT END-------------");
 /*ALCODEEND*/}
@@ -624,6 +625,7 @@ double waiterEventsUpdater()
 
 StringBuilder sbIdle = new StringBuilder();
 StringBuilder sbOvertime = new StringBuilder();
+StringBuilder sbShift = new StringBuilder();
 
 sbIdle.append("weekday,daypart,meanIdleTime")
   .append(System.lineSeparator());
@@ -631,12 +633,18 @@ sbIdle.append("weekday,daypart,meanIdleTime")
 
 sbOvertime.append("weekday,daypart,overtimeHours")
   .append(System.lineSeparator());
+  
+
+sbShift.append("weekday,daypart,waitersInShift,hours,salary,overtimeSalary,totalSalary")
+  .append(System.lineSeparator());
 
 for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
     for (DayPartUtil.DayPart dayPart : DayPartUtil.DayPart.values()) {
         
         double averageIdle = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.WAITER_IDLE, openingTime);
 		double totalOvertime = timeEvents.getValueSumByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.WAITER_OVERTIME, openingTime);
+		double totalInShift = timeEvents.getValueSumByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.WAITERS_IN_SHIFT, openingTime);
+		double shiftLength = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.WAITERS_IN_SHIFT, openingTime) / 60;
 		
 		String dayName = day_to_string(day);
         String key = dayName + "-" + dayPart;
@@ -648,8 +656,21 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
           .append(averageIdle)
           .append(System.lineSeparator());
           
-        
-        
+        sbShift.append(dayName)
+          .append(",")
+          .append(dayPart)
+          .append(",")
+          .append(totalInShift)
+          .append(",")
+          .append(shiftLength)
+          .append(",")
+          .append(totalInShift*shiftLength*waitersHourlyRate)
+          .append(",")
+          .append(totalOvertime*waitersHourlyRateOvertime)
+          .append(",")
+          .append(totalInShift*shiftLength*waitersHourlyRate + totalOvertime*waitersHourlyRateOvertime)
+          .append(System.lineSeparator());
+          
         
         DataItem item = waiterIdleChartItems.get(key);
 
@@ -688,6 +709,7 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
 
 waitersIdleText.setText(sbIdle.toString());
 waitersOvertimeText.setText(sbOvertime.toString());
+waitersShiftText.setText(sbShift.toString());
 
 /*ALCODEEND*/}
 
@@ -701,6 +723,8 @@ double cooksEventsUpdater()
 {/*ALCODESTART::1780905104134*/
 StringBuilder sbIdle = new StringBuilder();
 StringBuilder sbOvertime = new StringBuilder();
+StringBuilder sbShift = new StringBuilder();
+
 
 sbIdle.append("weekday,daypart,meanIdleTime")
   .append(System.lineSeparator());
@@ -708,6 +732,8 @@ sbIdle.append("weekday,daypart,meanIdleTime")
 sbOvertime.append("weekday,daypart,overtimeHours")
   .append(System.lineSeparator());
 
+sbShift.append("weekday,daypart,cooksInShift,hours,salary,overtimeSalary,totalSalary")
+  .append(System.lineSeparator());
 
 
 for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
@@ -715,6 +741,8 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
         
         double averageIdle = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.COOK_IDLE, openingTime);
 		double totalOvertime = timeEvents.getValueSumByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.COOK_OVERTIME, openingTime);
+		double totalInShift = timeEvents.getValueSumByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.COOKS_IN_SHIFT, openingTime);
+		double shiftLength = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.COOKS_IN_SHIFT, openingTime) / 60;
 		
 		
 		String dayName = day_to_string(day);
@@ -727,6 +755,21 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
           .append(averageIdle)
           .append(System.lineSeparator());
         
+        
+         sbShift.append(dayName)
+          .append(",")
+          .append(dayPart)
+          .append(",")
+          .append(totalInShift)
+          .append(",")
+          .append(shiftLength)
+          .append(",")
+          .append(totalInShift*shiftLength*waitersHourlyRate)
+          .append(",")
+          .append(totalOvertime*waitersHourlyRateOvertime)
+          .append(",")
+          .append(totalInShift*shiftLength*waitersHourlyRate + totalOvertime*waitersHourlyRateOvertime)
+          .append(System.lineSeparator());
         
         DataItem item = cookIdleChartItems.get(key);
 
@@ -767,6 +810,8 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
 
 cookIdleText.setText(sbIdle.toString());
 cookOvertimeText.setText(sbIdle.toString());
+cooksShiftText.setText(sbShift.toString());
+
 /*ALCODEEND*/}
 
 double registerTablesUsage()
@@ -930,5 +975,70 @@ for(double t = 0; t < 7 * 24; t += 1) {
 }
 
 return maxCooks;
+/*ALCODEEND*/}
+
+double tablesInit()
+{/*ALCODESTART::1781278926240*/
+
+/*
+for(int size : insideTablesSizes){
+	Table t = add_insideTables();
+	t.size = size;
+}
+
+for(int size : outsideTablesSizes){
+	Table t = add_outsideTables();
+	t.size = size;
+}
+
+for(int size : barTablesSizes){
+	Table t = add_barTables();
+	t.size = size;
+}
+*/
+/*
+Table t = (Table) unit;
+int idx = nextInsideTableIdx;
+
+if (idx >= 0 && idx < insideTablesSizes.length) {
+    t.size = insideTablesSizes[idx];
+}
+
+nextInsideTableIdx++;
+
+
+/*
+Table t = (Table) unit;
+int idx = nextOutsideTableIdx;
+
+if (idx >= 0 && idx < outsideTablesSizes.length) {
+    t.size = outsideTablesSizes[idx];
+}
+
+nextOutsideTableIdx++;
+
+
+Table t = (Table) unit;
+int idx = nextBarTableIdx;
+
+if (idx >= 0 && idx < barTablesSizes.length) {
+    t.size = barTablesSizes[idx];
+}
+
+nextBarTableIdx++;
+
+*/
+/*ALCODEEND*/}
+
+double registerWaitersShiftEvent(Date start,Date end,double amount)
+{/*ALCODESTART::1781292445708*/
+TimeEvent ev = new TimeEvent(start, end, TimeEvent.EventType.WAITERS_IN_SHIFT, amount);
+timeEvents.add(ev);
+/*ALCODEEND*/}
+
+double registerCooksShiftEvent(Date start,Date end,double amount)
+{/*ALCODESTART::1781292549595*/
+TimeEvent ev = new TimeEvent(start, end, TimeEvent.EventType.COOKS_IN_SHIFT, amount);
+timeEvents.add(ev);
 /*ALCODEEND*/}
 

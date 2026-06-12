@@ -476,7 +476,7 @@ this.moveTo(main.kitchen_node)</EntryAction>
 
 shiftEndDate = date();
 
-main.register_waiter_shift(shiftStartDate, shiftEndDate);
+//main.register_waiter_shift(shiftStartDate, shiftEndDate);
 
 isOffShift = true;
 endShiftRequested = false;

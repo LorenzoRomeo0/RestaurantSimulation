@@ -97,6 +97,7 @@
 		<ReturnType>double</ReturnType>
 		<Id>1775044771309</Id>
 		<Name><![CDATA[register_waiter_shift]]></Name>
+		<ExcludeFromBuild>true</ExcludeFromBuild>
 		<X>-240</X>
 		<Y>130</Y>
 		<Label>
@@ -153,6 +154,7 @@
 		<ReturnType>double</ReturnType>
 		<Id>1776172006330</Id>
 		<Name><![CDATA[register_cook_shift]]></Name>
+		<ExcludeFromBuild>true</ExcludeFromBuild>
 		<X>-240</X>
 		<Y>160</Y>
 		<Label>
@@ -486,7 +488,7 @@
 		<Id>1780776464516</Id>
 		<Name><![CDATA[registerWaiterIdlevent]]></Name>
 		<X>1720</X>
-		<Y>-620</Y>
+		<Y>-610</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -510,7 +512,7 @@
 		<Id>1780776729342</Id>
 		<Name><![CDATA[waiterEventsUpdater]]></Name>
 		<X>1720</X>
-		<Y>-580</Y>
+		<Y>-570</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -525,8 +527,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1780905019206</Id>
 		<Name><![CDATA[registerCookIdlevent]]></Name>
-		<X>1400</X>
-		<Y>-460</Y>
+		<X>1410</X>
+		<Y>-380</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -549,8 +551,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1780905104134</Id>
 		<Name><![CDATA[cooksEventsUpdater]]></Name>
-		<X>1400</X>
-		<Y>-430</Y>
+		<X>1410</X>
+		<Y>-350</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -626,7 +628,7 @@
 		<Id>1780995917002</Id>
 		<Name><![CDATA[registerWaiterOvertimeEvent]]></Name>
 		<X>1720</X>
-		<Y>-650</Y>
+		<Y>-640</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -653,8 +655,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1781000084410</Id>
 		<Name><![CDATA[registerCookOvertimeEvent]]></Name>
-		<X>1400</X>
-		<Y>-490</Y>
+		<X>1410</X>
+		<Y>-410</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -690,6 +692,79 @@
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
 		<ShowLabel>true</ShowLabel>
+		<Body xmlns:al="http://anylogic.com"/>
+	</Function>
+	<Function AccessType="default" StaticFunction="false">
+		<ReturnModificator>VOID</ReturnModificator>
+		<ReturnType>double</ReturnType>
+		<Id>1781278926240</Id>
+		<Name><![CDATA[tablesInit]]></Name>
+		<ExcludeFromBuild>true</ExcludeFromBuild>
+		<X>360</X>
+		<Y>-510</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Body xmlns:al="http://anylogic.com"/>
+	</Function>
+	<Function AccessType="default" StaticFunction="false">
+		<ReturnModificator>VOID</ReturnModificator>
+		<ReturnType>double</ReturnType>
+		<Id>1781292445708</Id>
+		<Name><![CDATA[registerWaitersShiftEvent]]></Name>
+		<X>1720</X>
+		<Y>-670</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Parameter>
+			<Name><![CDATA[start]]></Name>
+			<Type><![CDATA[Date]]></Type>
+		</Parameter>
+		<Parameter>
+			<Name><![CDATA[end]]></Name>
+			<Type><![CDATA[Date]]></Type>
+		</Parameter>
+		<Parameter>
+			<Name><![CDATA[amount]]></Name>
+			<Type><![CDATA[double]]></Type>
+		</Parameter>
+		<Body xmlns:al="http://anylogic.com"/>
+	</Function>
+	<Function AccessType="default" StaticFunction="false">
+		<ReturnModificator>VOID</ReturnModificator>
+		<ReturnType>double</ReturnType>
+		<Id>1781292549595</Id>
+		<Name><![CDATA[registerCooksShiftEvent]]></Name>
+		<X>1410</X>
+		<Y>-250</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Parameter>
+			<Name><![CDATA[start]]></Name>
+			<Type><![CDATA[Date]]></Type>
+		</Parameter>
+		<Parameter>
+			<Name><![CDATA[end]]></Name>
+			<Type><![CDATA[Date]]></Type>
+		</Parameter>
+		<Parameter>
+			<Name><![CDATA[amount]]></Name>
+			<Type><![CDATA[double]]></Type>
+		</Parameter>
 		<Body xmlns:al="http://anylogic.com"/>
 	</Function>
 </Functions>

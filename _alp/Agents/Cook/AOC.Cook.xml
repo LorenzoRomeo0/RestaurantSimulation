@@ -213,7 +213,7 @@ _ps310.setFillColor(dodgerBlue);</EntryAction>
 
 shiftEndDate = date();
 
-main.register_cook_shift(shiftStartDate, shiftEndDate);
+//main.register_cook_shift(shiftStartDate, shiftEndDate);
 
 isOffShift = true;
 endShiftRequested = false;
