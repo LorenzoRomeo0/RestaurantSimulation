@@ -6060,8 +6060,8 @@ customerGroupsInRestaurant.remove(agent);]]></Code>
 	<EmbeddedObject>
 		<Id>1780780720210</Id>
 		<Name><![CDATA[waiters]]></Name>
-		<X>50</X>
-		<Y>-510</Y>
+		<X>110</X>
+		<Y>-500</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -6109,8 +6109,8 @@ customerGroupsInRestaurant.remove(agent);]]></Code>
 	<EmbeddedObject>
 		<Id>1780780720217</Id>
 		<Name><![CDATA[customerGroup]]></Name>
-		<X>50</X>
-		<Y>-540</Y>
+		<X>110</X>
+		<Y>-530</Y>
 		<Label>
 			<X>15</X>
 			<Y>0</Y>
@@ -6163,8 +6163,8 @@ customerGroupsInRestaurant.remove(agent);]]></Code>
 	<EmbeddedObject>
 		<Id>1780780720231</Id>
 		<Name><![CDATA[orders]]></Name>
-		<X>50</X>
-		<Y>-360</Y>
+		<X>110</X>
+		<Y>-350</Y>
 		<Label>
 			<X>15</X>
 			<Y>0</Y>
@@ -6218,8 +6218,8 @@ customerGroupsInRestaurant.remove(agent);]]></Code>
 	<EmbeddedObject>
 		<Id>1780780720240</Id>
 		<Name><![CDATA[barTables]]></Name>
-		<X>50</X>
-		<Y>-480</Y>
+		<X>110</X>
+		<Y>-470</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -6268,8 +6268,8 @@ customerGroupsInRestaurant.remove(agent);]]></Code>
 	<EmbeddedObject>
 		<Id>1780780720247</Id>
 		<Name><![CDATA[outsideTables]]></Name>
-		<X>50</X>
-		<Y>-450</Y>
+		<X>110</X>
+		<Y>-440</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -6318,8 +6318,8 @@ customerGroupsInRestaurant.remove(agent);]]></Code>
 	<EmbeddedObject>
 		<Id>1780780720252</Id>
 		<Name><![CDATA[insideTables]]></Name>
-		<X>50</X>
-		<Y>-420</Y>
+		<X>110</X>
+		<Y>-410</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -6368,8 +6368,8 @@ customerGroupsInRestaurant.remove(agent);]]></Code>
 	<EmbeddedObject>
 		<Id>1781009865197</Id>
 		<Name><![CDATA[cooks]]></Name>
-		<X>50</X>
-		<Y>-390</Y>
+		<X>110</X>
+		<Y>-380</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>

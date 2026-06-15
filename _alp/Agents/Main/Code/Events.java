@@ -18,6 +18,7 @@ customerEventsUpdater();
 waiterEventsUpdater();
 cooksEventsUpdater();
 tablesEventsUpdater();
+moneyEventsUpdater();
 /*ALCODEEND*/}
 
 void TablesEvent()

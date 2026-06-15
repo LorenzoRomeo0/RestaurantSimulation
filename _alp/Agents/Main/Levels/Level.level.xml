@@ -1,9 +1,243 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Presentation>
 	<Rectangle>
+		<Id>1781514101441</Id>
+		<Name><![CDATA[rectangle13]]></Name>
+		<X>540</X>
+		<Y>-600</Y>
+		<Label>
+			<X>10</X>
+			<Y>10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<ZHeight>10</ZHeight>
+		<LineWidth>1</LineWidth>
+		<LineColor>-16777216</LineColor>
+		<LineMaterial>null</LineMaterial>
+		<LineStyle>SOLID</LineStyle>
+		<Width>290</Width>
+		<Height>260</Height>
+		<Rotation>0.0</Rotation>
+		<FillColor>-1</FillColor>
+		<FillMaterial>null</FillMaterial>
+	</Rectangle>
+	<Rectangle>
+		<Id>1781514043089</Id>
+		<Name><![CDATA[rectangle12]]></Name>
+		<X>340</X>
+		<Y>-600</Y>
+		<Label>
+			<X>10</X>
+			<Y>10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<ZHeight>10</ZHeight>
+		<LineWidth>1</LineWidth>
+		<LineColor>-16777216</LineColor>
+		<LineMaterial>null</LineMaterial>
+		<LineStyle>SOLID</LineStyle>
+		<Width>170</Width>
+		<Height>220</Height>
+		<Rotation>0.0</Rotation>
+		<FillColor>-1</FillColor>
+		<FillMaterial>null</FillMaterial>
+	</Rectangle>
+	<Rectangle>
+		<Id>1781513982809</Id>
+		<Name><![CDATA[rectangle11]]></Name>
+		<X>890</X>
+		<Y>-1010</Y>
+		<Label>
+			<X>10</X>
+			<Y>10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<ZHeight>10</ZHeight>
+		<LineWidth>1</LineWidth>
+		<LineColor>-16777216</LineColor>
+		<LineMaterial>null</LineMaterial>
+		<LineStyle>SOLID</LineStyle>
+		<Width>170</Width>
+		<Height>140</Height>
+		<Rotation>0.0</Rotation>
+		<FillColor>-1</FillColor>
+		<FillMaterial>null</FillMaterial>
+	</Rectangle>
+	<Rectangle>
+		<Id>1781513838301</Id>
+		<Name><![CDATA[rectangle10]]></Name>
+		<X>600</X>
+		<Y>-1010</Y>
+		<Label>
+			<X>10</X>
+			<Y>10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<ZHeight>10</ZHeight>
+		<LineWidth>1</LineWidth>
+		<LineColor>-16777216</LineColor>
+		<LineMaterial>null</LineMaterial>
+		<LineStyle>SOLID</LineStyle>
+		<Width>260</Width>
+		<Height>170</Height>
+		<Rotation>0.0</Rotation>
+		<FillColor>-1</FillColor>
+		<FillMaterial>null</FillMaterial>
+	</Rectangle>
+	<Rectangle>
+		<Id>1781513794791</Id>
+		<Name><![CDATA[rectangle9]]></Name>
+		<X>300</X>
+		<Y>-1010</Y>
+		<Label>
+			<X>10</X>
+			<Y>10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<ZHeight>10</ZHeight>
+		<LineWidth>1</LineWidth>
+		<LineColor>-16777216</LineColor>
+		<LineMaterial>null</LineMaterial>
+		<LineStyle>SOLID</LineStyle>
+		<Width>270</Width>
+		<Height>240</Height>
+		<Rotation>0.0</Rotation>
+		<FillColor>-1</FillColor>
+		<FillMaterial>null</FillMaterial>
+	</Rectangle>
+	<Rectangle>
+		<Id>1781513768016</Id>
+		<Name><![CDATA[rectangle8]]></Name>
+		<X>50</X>
+		<Y>-1010</Y>
+		<Label>
+			<X>10</X>
+			<Y>10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<ZHeight>10</ZHeight>
+		<LineWidth>1</LineWidth>
+		<LineColor>-16777216</LineColor>
+		<LineMaterial>null</LineMaterial>
+		<LineStyle>SOLID</LineStyle>
+		<Width>220</Width>
+		<Height>350</Height>
+		<Rotation>0.0</Rotation>
+		<FillColor>-1</FillColor>
+		<FillMaterial>null</FillMaterial>
+	</Rectangle>
+	<Rectangle>
+		<Id>1781513067484</Id>
+		<Name><![CDATA[rectangle7]]></Name>
+		<X>60</X>
+		<Y>-600</Y>
+		<Label>
+			<X>10</X>
+			<Y>10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<ZHeight>10</ZHeight>
+		<LineWidth>1</LineWidth>
+		<LineColor>-16777216</LineColor>
+		<LineMaterial>null</LineMaterial>
+		<LineStyle>SOLID</LineStyle>
+		<Width>250</Width>
+		<Height>270</Height>
+		<Rotation>0.0</Rotation>
+		<FillColor>-1</FillColor>
+		<FillMaterial>null</FillMaterial>
+	</Rectangle>
+	<Rectangle>
+		<Id>1781513009581</Id>
+		<Name><![CDATA[rectangle6]]></Name>
+		<X>1090</X>
+		<Y>-1010</Y>
+		<Label>
+			<X>10</X>
+			<Y>10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<ZHeight>10</ZHeight>
+		<LineWidth>1</LineWidth>
+		<LineColor>-16777216</LineColor>
+		<LineMaterial>null</LineMaterial>
+		<LineStyle>SOLID</LineStyle>
+		<Width>590</Width>
+		<Height>270</Height>
+		<Rotation>0.0</Rotation>
+		<FillColor>-1</FillColor>
+		<FillMaterial>null</FillMaterial>
+	</Rectangle>
+	<Rectangle>
+		<Id>1781512845496</Id>
+		<Name><![CDATA[rectangle5]]></Name>
+		<X>1090</X>
+		<Y>-730</Y>
+		<Label>
+			<X>10</X>
+			<Y>10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<ZHeight>10</ZHeight>
+		<LineWidth>1</LineWidth>
+		<LineColor>-16777216</LineColor>
+		<LineMaterial>null</LineMaterial>
+		<LineStyle>SOLID</LineStyle>
+		<Width>590</Width>
+		<Height>520</Height>
+		<Rotation>0.0</Rotation>
+		<FillColor>-1</FillColor>
+		<FillMaterial>null</FillMaterial>
+	</Rectangle>
+	<Rectangle>
 		<Id>1780911855713</Id>
 		<Name><![CDATA[rectangle4]]></Name>
-		<X>6160</X>
+		<X>5920</X>
 		<Y>120</Y>
 		<Label>
 			<X>10</X>
@@ -20,7 +254,7 @@
 		<LineColor>-16777216</LineColor>
 		<LineMaterial>null</LineMaterial>
 		<LineStyle>SOLID</LineStyle>
-		<Width>1200</Width>
+		<Width>1320</Width>
 		<Height>1320</Height>
 		<Rotation>0.0</Rotation>
 		<FillColor>-1</FillColor>
@@ -29,7 +263,7 @@
 	<Rectangle>
 		<Id>1780779694370</Id>
 		<Name><![CDATA[rectangle2]]></Name>
-		<X>4740</X>
+		<X>4600</X>
 		<Y>120</Y>
 		<Label>
 			<X>10</X>
@@ -55,7 +289,7 @@
 	<Rectangle>
 		<Id>1780779415814</Id>
 		<Name><![CDATA[rectangle1]]></Name>
-		<X>6160</X>
+		<X>5920</X>
 		<Y>1460</Y>
 		<Label>
 			<X>10</X>
@@ -72,7 +306,7 @@
 		<LineColor>-16777216</LineColor>
 		<LineMaterial>null</LineMaterial>
 		<LineStyle>SOLID</LineStyle>
-		<Width>1200</Width>
+		<Width>1320</Width>
 		<Height>1140</Height>
 		<Rotation>0.0</Rotation>
 		<FillColor>-1</FillColor>
@@ -81,7 +315,7 @@
 	<Rectangle>
 		<Id>1780779356538</Id>
 		<Name><![CDATA[rectangle]]></Name>
-		<X>3360</X>
+		<X>3280</X>
 		<Y>120</Y>
 		<Label>
 			<X>10</X>
@@ -99,7 +333,7 @@
 		<LineMaterial>null</LineMaterial>
 		<LineStyle>SOLID</LineStyle>
 		<Width>1200</Width>
-		<Height>2780</Height>
+		<Height>3040</Height>
 		<Rotation>0.0</Rotation>
 		<FillColor>-1</FillColor>
 		<FillMaterial>null</FillMaterial>
@@ -3926,7 +4160,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Group>
 		<Id>1780778952373</Id>
 		<Name><![CDATA[group]]></Name>
-		<X>3840</X>
+		<X>3760</X>
 		<Y>1160</Y>
 		<Label>
 			<X>10</X>
@@ -3969,7 +4203,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 				<Id>1780763406071</Id>
 				<Name><![CDATA[customerWaitTableText]]></Name>
 				<X>300</X>
-				<Y>-370</Y>
+				<Y>-310</Y>
 				<Label>
 					<X>0</X>
 					<Y>-10</Y>
@@ -3994,7 +4228,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 				<Id>1780763409101</Id>
 				<Name><![CDATA[customerWaitPayText]]></Name>
 				<X>300</X>
-				<Y>130</Y>
+				<Y>250</Y>
 				<Label>
 					<X>0</X>
 					<Y>-10</Y>
@@ -4079,7 +4313,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 				<Id>1780764993989</Id>
 				<Name><![CDATA[customerWaitTableChart]]></Name>
 				<X>-440</X>
-				<Y>-400</Y>
+				<Y>-340</Y>
 				<Label>
 					<X>0</X>
 					<Y>-10</Y>
@@ -4139,7 +4373,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 				<Id>1780765000935</Id>
 				<Name><![CDATA[customerWaitPayChart]]></Name>
 				<X>-440</X>
-				<Y>100</Y>
+				<Y>220</Y>
 				<Label>
 					<X>0</X>
 					<Y>-10</Y>
@@ -4199,7 +4433,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 				<Id>1780770125191</Id>
 				<Name><![CDATA[customerStayText]]></Name>
 				<X>300</X>
-				<Y>630</Y>
+				<Y>830</Y>
 				<Label>
 					<X>0</X>
 					<Y>-10</Y>
@@ -4224,7 +4458,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 				<Id>1780770330376</Id>
 				<Name><![CDATA[customerStayChart]]></Name>
 				<X>-440</X>
-				<Y>600</Y>
+				<Y>800</Y>
 				<Label>
 					<X>0</X>
 					<Y>-10</Y>
@@ -4310,7 +4544,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Group>
 		<Id>1780779308883</Id>
 		<Name><![CDATA[paymentGroup]]></Name>
-		<X>6580</X>
+		<X>6340</X>
 		<Y>1740</Y>
 		<Label>
 			<X>10</X>
@@ -4431,7 +4665,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1780779390111</Id>
 		<Name><![CDATA[text]]></Name>
-		<X>3420</X>
+		<X>3340</X>
 		<Y>160</Y>
 		<Label>
 			<X>0</X>
@@ -4456,7 +4690,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1780779431501</Id>
 		<Name><![CDATA[text1]]></Name>
-		<X>6200</X>
+		<X>5960</X>
 		<Y>1500</Y>
 		<Label>
 			<X>0</X>
@@ -4481,8 +4715,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1780779480412</Id>
 		<Name><![CDATA[waitersIdleText]]></Name>
-		<X>5500</X>
-		<Y>270</Y>
+		<X>5360</X>
+		<Y>260</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -4506,7 +4740,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<BarChart>
 		<Id>1780779480416</Id>
 		<Name><![CDATA[waiterIdleChart]]></Name>
-		<X>4740</X>
+		<X>4600</X>
 		<Y>240</Y>
 		<Label>
 			<X>0</X>
@@ -4577,7 +4811,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<PresentationFlag>true</PresentationFlag>
 		<ShowLabel>false</ShowLabel>
 		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-		<BasicProperties Width="100" Height="30">
+		<BasicProperties Width="160" Height="30">
 			<EmbeddedIcon>false</EmbeddedIcon>
 			<TextColor>-16777216</TextColor>
 			<Enabled>true</Enabled>
@@ -4591,8 +4825,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1780779678919</Id>
 		<Name><![CDATA[text2]]></Name>
-		<X>4760</X>
-		<Y>200</Y>
+		<X>4660</X>
+		<Y>160</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -4616,8 +4850,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<EmbeddedObjectPresentation>
 		<Id>1780780720197</Id>
 		<Name><![CDATA[waiters_presentation]]></Name>
-		<X>20</X>
-		<Y>-500</Y>
+		<X>80</X>
+		<Y>-490</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -4638,8 +4872,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<EmbeddedObjectPresentation>
 		<Id>1780780720199</Id>
 		<Name><![CDATA[customerGroup_presentation]]></Name>
-		<X>20</X>
-		<Y>-530</Y>
+		<X>80</X>
+		<Y>-520</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -4660,8 +4894,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<EmbeddedObjectPresentation>
 		<Id>1780780720201</Id>
 		<Name><![CDATA[barTables_presentation]]></Name>
-		<X>30</X>
-		<Y>-480</Y>
+		<X>90</X>
+		<Y>-470</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -4682,8 +4916,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<EmbeddedObjectPresentation>
 		<Id>1780780720203</Id>
 		<Name><![CDATA[outsideTables_presentation]]></Name>
-		<X>30</X>
-		<Y>-450</Y>
+		<X>90</X>
+		<Y>-440</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -4704,8 +4938,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<EmbeddedObjectPresentation>
 		<Id>1780780720205</Id>
 		<Name><![CDATA[insideTables_presentation]]></Name>
-		<X>30</X>
-		<Y>-420</Y>
+		<X>90</X>
+		<Y>-410</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -4753,7 +4987,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Id>1780780942850</Id>
 		<Name><![CDATA[goToRestaurantBtn1]]></Name>
 		<X>50</X>
-		<Y>-1110</Y>
+		<Y>-1100</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -4826,7 +5060,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Rectangle>
 		<Id>1780905252816</Id>
 		<Name><![CDATA[rectangle3]]></Name>
-		<X>4740</X>
+		<X>4600</X>
 		<Y>1360</Y>
 		<Label>
 			<X>10</X>
@@ -4852,7 +5086,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1780905211476</Id>
 		<Name><![CDATA[cookIdleText]]></Name>
-		<X>5480</X>
+		<X>5340</X>
 		<Y>1500</Y>
 		<Label>
 			<X>0</X>
@@ -4877,7 +5111,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<BarChart>
 		<Id>1780905252820</Id>
 		<Name><![CDATA[cookIdleChart]]></Name>
-		<X>4740</X>
+		<X>4600</X>
 		<Y>1480</Y>
 		<Label>
 			<X>0</X>
@@ -4937,8 +5171,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1780905252826</Id>
 		<Name><![CDATA[text3]]></Name>
-		<X>4760</X>
-		<Y>1440</Y>
+		<X>4650</X>
+		<Y>1410</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -4962,7 +5196,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<BarChart>
 		<Id>1780911837682</Id>
 		<Name><![CDATA[tablesUsageChart]]></Name>
-		<X>6160</X>
+		<X>5920</X>
 		<Y>240</Y>
 		<Label>
 			<X>0</X>
@@ -5022,7 +5256,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1780911837684</Id>
 		<Name><![CDATA[tableEventsText]]></Name>
-		<X>7060</X>
+		<X>6820</X>
 		<Y>260</Y>
 		<Label>
 			<X>0</X>
@@ -5047,7 +5281,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1780911895818</Id>
 		<Name><![CDATA[text4]]></Name>
-		<X>6200</X>
+		<X>5960</X>
 		<Y>160</Y>
 		<Label>
 			<X>0</X>
@@ -5072,7 +5306,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1780932735816</Id>
 		<Name><![CDATA[text6]]></Name>
-		<X>6240</X>
+		<X>6000</X>
 		<Y>250</Y>
 		<Label>
 			<X>0</X>
@@ -5097,7 +5331,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1780932743942</Id>
 		<Name><![CDATA[text7]]></Name>
-		<X>6360</X>
+		<X>6120</X>
 		<Y>250</Y>
 		<Label>
 			<X>0</X>
@@ -5122,7 +5356,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1780932749837</Id>
 		<Name><![CDATA[text8]]></Name>
-		<X>6480</X>
+		<X>6240</X>
 		<Y>250</Y>
 		<Label>
 			<X>0</X>
@@ -5147,7 +5381,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1780932758677</Id>
 		<Name><![CDATA[text9]]></Name>
-		<X>6590</X>
+		<X>6350</X>
 		<Y>250</Y>
 		<Label>
 			<X>0</X>
@@ -5172,7 +5406,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1780932765201</Id>
 		<Name><![CDATA[text10]]></Name>
-		<X>6720</X>
+		<X>6480</X>
 		<Y>250</Y>
 		<Label>
 			<X>0</X>
@@ -5197,7 +5431,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1780932773503</Id>
 		<Name><![CDATA[text11]]></Name>
-		<X>6840</X>
+		<X>6600</X>
 		<Y>250</Y>
 		<Label>
 			<X>0</X>
@@ -5222,7 +5456,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1780932779442</Id>
 		<Name><![CDATA[text12]]></Name>
-		<X>6960</X>
+		<X>6720</X>
 		<Y>250</Y>
 		<Label>
 			<X>0</X>
@@ -5247,8 +5481,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Group>
 		<Id>1780937939741</Id>
 		<Name><![CDATA[paymentGroup1]]></Name>
-		<X>4000</X>
-		<Y>2480</Y>
+		<X>3920</X>
+		<Y>2700</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -5264,8 +5498,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Group>
 		<Id>1780937939743</Id>
 		<Name><![CDATA[paymentCharts1]]></Name>
-		<X>3860</X>
-		<Y>2470</Y>
+		<X>3780</X>
+		<Y>2690</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -5281,8 +5515,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<BarChart>
 		<Id>1780937939749</Id>
 		<Name><![CDATA[customersServedChart]]></Name>
-		<X>3400</X>
-		<Y>2320</Y>
+		<X>3320</X>
+		<Y>2540</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -5341,8 +5575,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1780938007712</Id>
 		<Name><![CDATA[customersServedText]]></Name>
-		<X>4180</X>
-		<Y>2350</Y>
+		<X>4060</X>
+		<Y>2570</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -5366,7 +5600,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<BarChart>
 		<Id>1780998905779</Id>
 		<Name><![CDATA[waiterOvertimeChart]]></Name>
-		<X>4760</X>
+		<X>4600</X>
 		<Y>820</Y>
 		<Label>
 			<X>0</X>
@@ -5426,7 +5660,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1780998919935</Id>
 		<Name><![CDATA[waitersOvertimeText]]></Name>
-		<X>5520</X>
+		<X>5370</X>
 		<Y>840</Y>
 		<Label>
 			<X>0</X>
@@ -5451,7 +5685,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<BarChart>
 		<Id>1781001147927</Id>
 		<Name><![CDATA[cookOvertimeChart]]></Name>
-		<X>4740</X>
+		<X>4600</X>
 		<Y>2060</Y>
 		<Label>
 			<X>0</X>
@@ -5511,7 +5745,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1781001158112</Id>
 		<Name><![CDATA[cookOvertimeText]]></Name>
-		<X>5500</X>
+		<X>5360</X>
 		<Y>2080</Y>
 		<Label>
 			<X>0</X>
@@ -5535,9 +5769,9 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	</Text>
 	<Text>
 		<Id>1781297487108</Id>
-		<Name><![CDATA[waitersShiftText]]></Name>
-		<X>6760</X>
-		<Y>2130</Y>
+		<Name><![CDATA[shiftText]]></Name>
+		<X>5950</X>
+		<Y>2170</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -5550,7 +5784,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Z>0</Z>
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
-		<Text><![CDATA[waitersShiftText]]></Text>
+		<Text><![CDATA[shiftText]]></Text>
 		<Font>
 			<Name><![CDATA[Cascadia Code]]></Name>
 			<Size>10</Size>
@@ -5559,10 +5793,10 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Alignment>LEFT</Alignment>
 	</Text>
 	<Text>
-		<Id>1781299346066</Id>
-		<Name><![CDATA[cooksShiftText]]></Name>
-		<X>6180</X>
-		<Y>2120</Y>
+		<Id>1781358557729</Id>
+		<Name><![CDATA[shiftTotalText]]></Name>
+		<X>7000</X>
+		<Y>2170</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -5575,11 +5809,561 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Z>0</Z>
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
-		<Text><![CDATA[cooksShiftText]]></Text>
+		<Text><![CDATA[shiftTotalText]]></Text>
 		<Font>
 			<Name><![CDATA[Cascadia Code]]></Name>
 			<Size>10</Size>
 			<Style>0</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1781512283354</Id>
+		<Name><![CDATA[text13]]></Name>
+		<X>3370</X>
+		<Y>240</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[Customer entrance wait times (Minutes)]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>14</Size>
+			<Style>1</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1781512311445</Id>
+		<Name><![CDATA[text14]]></Name>
+		<X>3370</X>
+		<Y>820</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[Customer table wait times (Minutes)]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>14</Size>
+			<Style>1</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1781512346175</Id>
+		<Name><![CDATA[text15]]></Name>
+		<X>3380</X>
+		<Y>1380</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[Customer wait times at checkout (Minutes)]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>14</Size>
+			<Style>1</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1781512438211</Id>
+		<Name><![CDATA[text16]]></Name>
+		<X>3380</X>
+		<Y>1960</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[Customer stay time lengh (Minutes)]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>14</Size>
+			<Style>1</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1781512737825</Id>
+		<Name><![CDATA[text17]]></Name>
+		<X>3380</X>
+		<Y>2540</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[Number of customers served (Minutes)]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>14</Size>
+			<Style>1</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1781512812031</Id>
+		<Name><![CDATA[text18]]></Name>
+		<X>1110</X>
+		<Y>-710</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[Statistics/charts]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>14</Size>
+			<Style>1</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1781512985902</Id>
+		<Name><![CDATA[text19]]></Name>
+		<X>1110</X>
+		<Y>-990</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[Time models]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>14</Size>
+			<Style>1</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1781513050701</Id>
+		<Name><![CDATA[text20]]></Name>
+		<X>100</X>
+		<Y>-580</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[Populations]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>14</Size>
+			<Style>1</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1781513752826</Id>
+		<Name><![CDATA[text21]]></Name>
+		<X>70</X>
+		<Y>-1000</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[Tables]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>14</Size>
+			<Style>1</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1781513779511</Id>
+		<Name><![CDATA[text22]]></Name>
+		<X>320</X>
+		<Y>-1000</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[Employees]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>14</Size>
+			<Style>1</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1781513821630</Id>
+		<Name><![CDATA[text23]]></Name>
+		<X>620</X>
+		<Y>-1000</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[Customers]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>14</Size>
+			<Style>1</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1781513968580</Id>
+		<Name><![CDATA[text24]]></Name>
+		<X>910</X>
+		<Y>-1000</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[Restaurant]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>14</Size>
+			<Style>1</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1781514032967</Id>
+		<Name><![CDATA[text25]]></Name>
+		<X>360</X>
+		<Y>-590</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[Functions]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>14</Size>
+			<Style>1</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1781514086216</Id>
+		<Name><![CDATA[text26]]></Name>
+		<X>560</X>
+		<Y>-590</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[Variables]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>14</Size>
+			<Style>1</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1781514522531</Id>
+		<Name><![CDATA[text27]]></Name>
+		<X>4660</X>
+		<Y>240</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[Waiters IDLE times (Minutes)]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>14</Size>
+			<Style>1</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1781514554893</Id>
+		<Name><![CDATA[text28]]></Name>
+		<X>4660</X>
+		<Y>810</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[Waiters overtime times (Hours)]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>14</Size>
+			<Style>1</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1781514591632</Id>
+		<Name><![CDATA[text29]]></Name>
+		<X>4660</X>
+		<Y>1470</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[Cooks IDLE times (Minutes)]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>14</Size>
+			<Style>1</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1781514662026</Id>
+		<Name><![CDATA[text30]]></Name>
+		<X>4660</X>
+		<Y>2040</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[Cooks overtime times (Hours)]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>14</Size>
+			<Style>1</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1781514997909</Id>
+		<Name><![CDATA[text31]]></Name>
+		<X>5980</X>
+		<Y>220</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[Tables usage (Percentage) (-1 indicates not available)]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>14</Size>
+			<Style>1</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1781515188063</Id>
+		<Name><![CDATA[text32]]></Name>
+		<X>5980</X>
+		<Y>1580</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[Earned money]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>14</Size>
+			<Style>1</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1781515214988</Id>
+		<Name><![CDATA[text33]]></Name>
+		<X>5960</X>
+		<Y>2140</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[Employees costs]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>14</Size>
+			<Style>1</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Text>
+		<Id>1781515236616</Id>
+		<Name><![CDATA[text34]]></Name>
+		<X>7010</X>
+		<Y>2140</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[Costs/profit]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>14</Size>
+			<Style>1</Style>
 		</Font>
 		<Alignment>LEFT</Alignment>
 	</Text>

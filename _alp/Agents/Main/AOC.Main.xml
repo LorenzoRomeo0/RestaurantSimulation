@@ -102,8 +102,8 @@
 		<Schedule>
 			<Id>1770220504060</Id>
 			<Name><![CDATA[arrivals_schedule]]></Name>
-			<X>610</X>
-			<Y>-820</Y>
+			<X>620</X>
+			<Y>-910</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -166,8 +166,8 @@
 		<Schedule>
 			<Id>1770633020320</Id>
 			<Name><![CDATA[groupsize_schedule]]></Name>
-			<X>610</X>
-			<Y>-790</Y>
+			<X>620</X>
+			<Y>-890</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -230,8 +230,8 @@
 		<Schedule>
 			<Id>1770643795202</Id>
 			<Name><![CDATA[inside_schedule]]></Name>
-			<X>360</X>
-			<Y>-790</Y>
+			<X>70</X>
+			<Y>-720</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -293,8 +293,8 @@
 		<Schedule>
 			<Id>1770643826624</Id>
 			<Name><![CDATA[outside_schedule]]></Name>
-			<X>360</X>
-			<Y>-760</Y>
+			<X>70</X>
+			<Y>-700</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -356,8 +356,8 @@
 		<Schedule>
 			<Id>1770643835144</Id>
 			<Name><![CDATA[bar_schedule]]></Name>
-			<X>360</X>
-			<Y>-730</Y>
+			<X>70</X>
+			<Y>-680</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -419,8 +419,8 @@
 		<Schedule>
 			<Id>1771950500906</Id>
 			<Name><![CDATA[eating_time_schedule]]></Name>
-			<X>610</X>
-			<Y>-760</Y>
+			<X>620</X>
+			<Y>-870</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -482,8 +482,8 @@
 		<Schedule>
 			<Id>1772014207717</Id>
 			<Name><![CDATA[waiters_schedule]]></Name>
-			<X>610</X>
-			<Y>-880</Y>
+			<X>320</X>
+			<Y>-830</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -583,8 +583,8 @@ registerWaitersShiftEvent(
 		<Schedule>
 			<Id>1772014350792</Id>
 			<Name><![CDATA[cooks_schedule]]></Name>
-			<X>610</X>
-			<Y>-850</Y>
+			<X>320</X>
+			<Y>-800</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -684,8 +684,8 @@ registerCooksShiftEvent(
 		<Schedule>
 			<Id>1776332307617</Id>
 			<Name><![CDATA[bar_prio_schedule]]></Name>
-			<X>360</X>
-			<Y>-880</Y>
+			<X>70</X>
+			<Y>-790</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -747,8 +747,8 @@ registerCooksShiftEvent(
 		<Schedule>
 			<Id>1776332404624</Id>
 			<Name><![CDATA[inside_prio_schedule]]></Name>
-			<X>360</X>
-			<Y>-850</Y>
+			<X>70</X>
+			<Y>-770</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -810,8 +810,8 @@ registerCooksShiftEvent(
 		<Schedule>
 			<Id>1776332408087</Id>
 			<Name><![CDATA[outside_prio_schedule]]></Name>
-			<X>360</X>
-			<Y>-820</Y>
+			<X>70</X>
+			<Y>-750</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -918,8 +918,8 @@ registerCooksShiftEvent(
 		<EmbeddedObjectPresentation>
 			<Id>1781009865199</Id>
 			<Name><![CDATA[cooks_presentation]]></Name>
-			<X>20</X>
-			<Y>-380</Y>
+			<X>80</X>
+			<Y>-370</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -952,8 +952,8 @@ registerCooksShiftEvent(
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>false</ShowLabel>
 			<Title/>
-			<Width>4620</Width>
-			<Height>2980</Height>
+			<Width>4120</Width>
+			<Height>3200</Height>
 		</Area>
 		<Area>
 			<Id>1780779554865</Id>
@@ -1000,7 +1000,7 @@ registerCooksShiftEvent(
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>false</ShowLabel>
 			<Title/>
-			<Width>2100</Width>
+			<Width>1720</Width>
 			<Height>940</Height>
 		</Area>
 	</Areas>

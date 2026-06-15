@@ -39,8 +39,8 @@
 	<Event>
 		<Id>1780759318822</Id>
 		<Name><![CDATA[statisticsEvent]]></Name>
-		<X>1640</X>
-		<Y>-1060</Y>
+		<X>1420</X>
+		<Y>-690</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -75,8 +75,8 @@
 	<Event>
 		<Id>1780908127908</Id>
 		<Name><![CDATA[TablesEvent]]></Name>
-		<X>1640</X>
-		<Y>-1020</Y>
+		<X>1420</X>
+		<Y>-710</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>

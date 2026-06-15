@@ -6,7 +6,7 @@
 		<Id>1769810442527</Id>
 		<Name><![CDATA[tablesMaxSize]]></Name>
 		<X>360</X>
-		<Y>-340</Y>
+		<Y>-470</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -22,7 +22,7 @@
 		<Id>1770025342170</Id>
 		<Name><![CDATA[tableSelection]]></Name>
 		<X>360</X>
-		<Y>-310</Y>
+		<Y>-440</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -41,8 +41,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1772007563909</Id>
 		<Name><![CDATA[eatingTimeModel]]></Name>
-		<X>1050</X>
-		<Y>-1110</Y>
+		<X>1350</X>
+		<Y>-940</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -62,7 +62,7 @@
 		<Id>1774982011623</Id>
 		<Name><![CDATA[init]]></Name>
 		<X>360</X>
-		<Y>-400</Y>
+		<Y>-550</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -78,7 +78,7 @@
 		<Id>1775044645264</Id>
 		<Name><![CDATA[day_to_string]]></Name>
 		<X>360</X>
-		<Y>-450</Y>
+		<Y>-410</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -89,31 +89,6 @@
 		<Parameter>
 			<Name><![CDATA[day]]></Name>
 			<Type><![CDATA[int]]></Type>
-		</Parameter>
-		<Body xmlns:al="http://anylogic.com"/>
-	</Function>
-	<Function AccessType="default" StaticFunction="false">
-		<ReturnModificator>VOID</ReturnModificator>
-		<ReturnType>double</ReturnType>
-		<Id>1775044771309</Id>
-		<Name><![CDATA[register_waiter_shift]]></Name>
-		<ExcludeFromBuild>true</ExcludeFromBuild>
-		<X>-240</X>
-		<Y>130</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Parameter>
-			<Name><![CDATA[start]]></Name>
-			<Type><![CDATA[Date]]></Type>
-		</Parameter>
-		<Parameter>
-			<Name><![CDATA[end]]></Name>
-			<Type><![CDATA[Date]]></Type>
 		</Parameter>
 		<Body xmlns:al="http://anylogic.com"/>
 	</Function>
@@ -147,31 +122,6 @@
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
 		<ShowLabel>true</ShowLabel>
-		<Body xmlns:al="http://anylogic.com"/>
-	</Function>
-	<Function AccessType="default" StaticFunction="false">
-		<ReturnModificator>VOID</ReturnModificator>
-		<ReturnType>double</ReturnType>
-		<Id>1776172006330</Id>
-		<Name><![CDATA[register_cook_shift]]></Name>
-		<ExcludeFromBuild>true</ExcludeFromBuild>
-		<X>-240</X>
-		<Y>160</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Parameter>
-			<Name><![CDATA[start]]></Name>
-			<Type><![CDATA[Date]]></Type>
-		</Parameter>
-		<Parameter>
-			<Name><![CDATA[end]]></Name>
-			<Type><![CDATA[Date]]></Type>
-		</Parameter>
 		<Body xmlns:al="http://anylogic.com"/>
 	</Function>
 	<Function AccessType="default" StaticFunction="false">
@@ -260,7 +210,7 @@
 		<Id>1779227005235</Id>
 		<Name><![CDATA[getMaxWaiters]]></Name>
 		<X>360</X>
-		<Y>-370</Y>
+		<Y>-520</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -275,8 +225,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1779701422068</Id>
 		<Name><![CDATA[menuReadingModel]]></Name>
-		<X>790</X>
-		<Y>-1110</Y>
+		<X>1110</X>
+		<Y>-830</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -295,8 +245,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1779873697186</Id>
 		<Name><![CDATA[payTimeModel]]></Name>
-		<X>570</X>
-		<Y>-1100</Y>
+		<X>1350</X>
+		<Y>-830</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -315,8 +265,8 @@
 		<ReturnType>int</ReturnType>
 		<Id>1780666597930</Id>
 		<Name><![CDATA[groupSizeModel]]></Name>
-		<X>340</X>
-		<Y>-1100</Y>
+		<X>1110</X>
+		<Y>-940</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -331,8 +281,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1780734091041</Id>
 		<Name><![CDATA[registerPaymentEvent]]></Name>
-		<X>1400</X>
-		<Y>-620</Y>
+		<X>1420</X>
+		<Y>-470</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -359,8 +309,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1780735636798</Id>
 		<Name><![CDATA[paymentEventsUpdater]]></Name>
-		<X>1400</X>
-		<Y>-580</Y>
+		<X>1420</X>
+		<Y>-490</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -375,8 +325,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1780759689915</Id>
 		<Name><![CDATA[registerCustomerWaitEntranceEvent]]></Name>
-		<X>1720</X>
-		<Y>-900</Y>
+		<X>1110</X>
+		<Y>-560</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -399,8 +349,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1780760523532</Id>
 		<Name><![CDATA[registerCustomerWaitTableEvent]]></Name>
-		<X>1720</X>
-		<Y>-860</Y>
+		<X>1110</X>
+		<Y>-580</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -423,8 +373,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1780761019562</Id>
 		<Name><![CDATA[registerCustomerWaitPayEvent]]></Name>
-		<X>1720</X>
-		<Y>-820</Y>
+		<X>1110</X>
+		<Y>-600</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -447,8 +397,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1780762327897</Id>
 		<Name><![CDATA[customerEventsUpdater]]></Name>
-		<X>1720</X>
-		<Y>-730</Y>
+		<X>1110</X>
+		<Y>-640</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -463,8 +413,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1780765479315</Id>
 		<Name><![CDATA[registerCustomerStayEvent]]></Name>
-		<X>1720</X>
-		<Y>-940</Y>
+		<X>1110</X>
+		<Y>-540</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -487,8 +437,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1780776464516</Id>
 		<Name><![CDATA[registerWaiterIdlevent]]></Name>
-		<X>1720</X>
-		<Y>-610</Y>
+		<X>1420</X>
+		<Y>-340</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -511,8 +461,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1780776729342</Id>
 		<Name><![CDATA[waiterEventsUpdater]]></Name>
-		<X>1720</X>
-		<Y>-570</Y>
+		<X>1420</X>
+		<Y>-380</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -527,8 +477,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1780905019206</Id>
 		<Name><![CDATA[registerCookIdlevent]]></Name>
-		<X>1410</X>
-		<Y>-380</Y>
+		<X>1110</X>
+		<Y>-340</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -551,8 +501,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1780905104134</Id>
 		<Name><![CDATA[cooksEventsUpdater]]></Name>
-		<X>1410</X>
-		<Y>-350</Y>
+		<X>1110</X>
+		<Y>-380</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -567,8 +517,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1780906745364</Id>
 		<Name><![CDATA[registerTablesUsage]]></Name>
-		<X>1720</X>
-		<Y>-440</Y>
+		<X>1420</X>
+		<Y>-630</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -583,8 +533,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1780907226546</Id>
 		<Name><![CDATA[tablesEventsUpdater]]></Name>
-		<X>1720</X>
-		<Y>-400</Y>
+		<X>1420</X>
+		<Y>-650</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -599,8 +549,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1780937675928</Id>
 		<Name><![CDATA[registerCustomersServedEvent]]></Name>
-		<X>1720</X>
-		<Y>-780</Y>
+		<X>1110</X>
+		<Y>-620</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -627,8 +577,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1780995917002</Id>
 		<Name><![CDATA[registerWaiterOvertimeEvent]]></Name>
-		<X>1720</X>
-		<Y>-640</Y>
+		<X>1420</X>
+		<Y>-360</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -655,8 +605,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1781000084410</Id>
 		<Name><![CDATA[registerCookOvertimeEvent]]></Name>
-		<X>1410</X>
-		<Y>-410</Y>
+		<X>1110</X>
+		<Y>-360</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -684,7 +634,7 @@
 		<Id>1781003606894</Id>
 		<Name><![CDATA[getMaxCooks]]></Name>
 		<X>360</X>
-		<Y>-270</Y>
+		<Y>-500</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -700,8 +650,8 @@
 		<Id>1781278926240</Id>
 		<Name><![CDATA[tablesInit]]></Name>
 		<ExcludeFromBuild>true</ExcludeFromBuild>
-		<X>360</X>
-		<Y>-510</Y>
+		<X>350</X>
+		<Y>-360</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -716,8 +666,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1781292445708</Id>
 		<Name><![CDATA[registerWaitersShiftEvent]]></Name>
-		<X>1720</X>
-		<Y>-670</Y>
+		<X>1420</X>
+		<Y>-320</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -744,8 +694,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1781292549595</Id>
 		<Name><![CDATA[registerCooksShiftEvent]]></Name>
-		<X>1410</X>
-		<Y>-250</Y>
+		<X>1110</X>
+		<Y>-320</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -765,6 +715,22 @@
 			<Name><![CDATA[amount]]></Name>
 			<Type><![CDATA[double]]></Type>
 		</Parameter>
+		<Body xmlns:al="http://anylogic.com"/>
+	</Function>
+	<Function AccessType="default" StaticFunction="false">
+		<ReturnModificator>VOID</ReturnModificator>
+		<ReturnType>double</ReturnType>
+		<Id>1781357683305</Id>
+		<Name><![CDATA[moneyEventsUpdater]]></Name>
+		<X>1110</X>
+		<Y>-230</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
 		<Body xmlns:al="http://anylogic.com"/>
 	</Function>
 </Functions>
