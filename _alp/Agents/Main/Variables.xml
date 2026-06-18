@@ -221,7 +221,7 @@
 		<Id>1780753382216</Id>
 		<Name><![CDATA[paymentChartItems]]></Name>
 		<X>1420</X>
-		<Y>-440</Y>
+		<Y>-510</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -271,7 +271,7 @@
 		<Id>1780764548423</Id>
 		<Name><![CDATA[customerWaitTableChartItems]]></Name>
 		<X>1110</X>
-		<Y>-470</Y>
+		<Y>-580</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -293,7 +293,7 @@
 		<Id>1780764665925</Id>
 		<Name><![CDATA[customerWaitEntranceChartItems]]></Name>
 		<X>1110</X>
-		<Y>-450</Y>
+		<Y>-560</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -315,7 +315,7 @@
 		<Id>1780764666868</Id>
 		<Name><![CDATA[customerWaitPayChartItems]]></Name>
 		<X>1110</X>
-		<Y>-490</Y>
+		<Y>-600</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -337,7 +337,7 @@
 		<Id>1780770056386</Id>
 		<Name><![CDATA[customerStayChartItems]]></Name>
 		<X>1110</X>
-		<Y>-430</Y>
+		<Y>-540</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -359,7 +359,7 @@
 		<Id>1780777576498</Id>
 		<Name><![CDATA[waiterIdleChartItems]]></Name>
 		<X>1420</X>
-		<Y>-290</Y>
+		<Y>-360</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -381,7 +381,7 @@
 		<Id>1780905104136</Id>
 		<Name><![CDATA[cookIdleChartItems]]></Name>
 		<X>1110</X>
-		<Y>-290</Y>
+		<Y>-310</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -403,7 +403,7 @@
 		<Id>1780907226548</Id>
 		<Name><![CDATA[insideTablesChartItems]]></Name>
 		<X>1420</X>
-		<Y>-600</Y>
+		<Y>-680</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -425,7 +425,7 @@
 		<Id>1780909163723</Id>
 		<Name><![CDATA[outsideTablesChartItems]]></Name>
 		<X>1420</X>
-		<Y>-560</Y>
+		<Y>-640</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -447,7 +447,7 @@
 		<Id>1780909164509</Id>
 		<Name><![CDATA[barTablesChartItems]]></Name>
 		<X>1420</X>
-		<Y>-580</Y>
+		<Y>-660</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -495,7 +495,7 @@
 		<Id>1780910441820</Id>
 		<Name><![CDATA[spacerTablesChartItems]]></Name>
 		<X>1420</X>
-		<Y>-540</Y>
+		<Y>-620</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -517,7 +517,7 @@
 		<Id>1780937812770</Id>
 		<Name><![CDATA[customersServedChartItems]]></Name>
 		<X>1110</X>
-		<Y>-510</Y>
+		<Y>-620</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -539,7 +539,7 @@
 		<Id>1780998883253</Id>
 		<Name><![CDATA[waiterOvertimeChartItems]]></Name>
 		<X>1420</X>
-		<Y>-270</Y>
+		<Y>-340</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -561,7 +561,7 @@
 		<Id>1781000215116</Id>
 		<Name><![CDATA[cookOvertimeChartItems]]></Name>
 		<X>1110</X>
-		<Y>-270</Y>
+		<Y>-290</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -577,6 +577,234 @@
 			<InitialValue Class="CodeValue">
 				<Code><![CDATA[new LinkedHashMap<>();]]></Code>
 			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1781785578200</Id>
+		<Name><![CDATA[customersServedCsv]]></Name>
+		<X>1110</X>
+		<Y>-520</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[String]]></Type>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1781785623210</Id>
+		<Name><![CDATA[customerStayCsv]]></Name>
+		<X>1110</X>
+		<Y>-440</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[String]]></Type>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1781785623384</Id>
+		<Name><![CDATA[customerWaitEntranceCsv]]></Name>
+		<X>1110</X>
+		<Y>-460</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[String]]></Type>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1781785623572</Id>
+		<Name><![CDATA[customerWaitTableCsv]]></Name>
+		<X>1110</X>
+		<Y>-480</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[String]]></Type>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1781785623764</Id>
+		<Name><![CDATA[customerWaitPayCsv]]></Name>
+		<X>1110</X>
+		<Y>-500</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[String]]></Type>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1781786685011</Id>
+		<Name><![CDATA[tablesUsageCsv]]></Name>
+		<X>1420</X>
+		<Y>-600</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[String]]></Type>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1781786948947</Id>
+		<Name><![CDATA[paymentCsv]]></Name>
+		<X>1420</X>
+		<Y>-490</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[String]]></Type>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1781787047228</Id>
+		<Name><![CDATA[waiterIdleCsv]]></Name>
+		<X>1420</X>
+		<Y>-320</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[String]]></Type>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1781787048117</Id>
+		<Name><![CDATA[waiterOvertimeCsv]]></Name>
+		<X>1420</X>
+		<Y>-300</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[String]]></Type>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1781787313174</Id>
+		<Name><![CDATA[cookIdleCsv]]></Name>
+		<X>1110</X>
+		<Y>-270</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[String]]></Type>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1781787318440</Id>
+		<Name><![CDATA[cookOvertimeCsv]]></Name>
+		<X>1110</X>
+		<Y>-250</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[String]]></Type>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1781787524690</Id>
+		<Name><![CDATA[moneyCsv]]></Name>
+		<X>1420</X>
+		<Y>-240</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[String]]></Type>
 		</Properties>
 	</Variable>
 	<Variable Class="Parameter">
@@ -639,7 +867,7 @@
 		<Id>1779886765152</Id>
 		<Name><![CDATA[muPayTime]]></Name>
 		<X>1350</X>
-		<Y>-800</Y>
+		<Y>-890</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -667,7 +895,7 @@
 		<Id>1779886779592</Id>
 		<Name><![CDATA[sigmaPayTime]]></Name>
 		<X>1350</X>
-		<Y>-780</Y>
+		<Y>-870</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -695,7 +923,7 @@
 		<Id>1779887040276</Id>
 		<Name><![CDATA[kMenuReadingModel]]></Name>
 		<X>1110</X>
-		<Y>-800</Y>
+		<Y>-890</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -723,7 +951,7 @@
 		<Id>1779887174778</Id>
 		<Name><![CDATA[growthEatingTimeModel]]></Name>
 		<X>1350</X>
-		<Y>-910</Y>
+		<Y>-1000</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -751,7 +979,7 @@
 		<Id>1779887194149</Id>
 		<Name><![CDATA[maxIncreaseEatingTimeModel]]></Name>
 		<X>1350</X>
-		<Y>-890</Y>
+		<Y>-980</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -779,7 +1007,7 @@
 		<Id>1779887875460</Id>
 		<Name><![CDATA[pPayTimeModel]]></Name>
 		<X>1350</X>
-		<Y>-760</Y>
+		<Y>-850</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -807,7 +1035,7 @@
 		<Id>1779978419352</Id>
 		<Name><![CDATA[muMenuReading]]></Name>
 		<X>1110</X>
-		<Y>-780</Y>
+		<Y>-870</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -835,7 +1063,7 @@
 		<Id>1779978450349</Id>
 		<Name><![CDATA[sigmaMenuReading]]></Name>
 		<X>1110</X>
-		<Y>-760</Y>
+		<Y>-850</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -863,7 +1091,7 @@
 		<Id>1780666634035</Id>
 		<Name><![CDATA[minGroupSize]]></Name>
 		<X>1110</X>
-		<Y>-910</Y>
+		<Y>-1000</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -891,7 +1119,7 @@
 		<Id>1780666655336</Id>
 		<Name><![CDATA[maxGroupsize]]></Name>
 		<X>1110</X>
-		<Y>-890</Y>
+		<Y>-980</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -919,7 +1147,7 @@
 		<Id>1780666686346</Id>
 		<Name><![CDATA[sigmaGroupSize]]></Name>
 		<X>1110</X>
-		<Y>-870</Y>
+		<Y>-960</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -1301,6 +1529,90 @@
 			<ParameterEditor>
 				<Id>1781008709910</Id>
 				<EditorContolType>TEXT_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1781704041474</Id>
+		<Name><![CDATA[simulationFolder]]></Name>
+		<X>870</X>
+		<Y>-520</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[String]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA["experiments"]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1781704041472</Id>
+				<EditorContolType>TEXT_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1781704592632</Id>
+		<Name><![CDATA[simulationName]]></Name>
+		<X>870</X>
+		<Y>-500</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[String]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA["not_specified"]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1781704592630</Id>
+				<EditorContolType>TEXT_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1781785025176</Id>
+		<Name><![CDATA[livePlots]]></Name>
+		<X>870</X>
+		<Y>-470</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[boolean]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[true]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1781785025174</Id>
+				<EditorContolType>CHECK_BOX</EditorContolType>
 				<MinSliderValue>0</MinSliderValue>
 				<MaxSliderValue>100</MaxSliderValue>
 				<DelimeterType>NO_DELIMETER</DelimeterType>

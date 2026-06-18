@@ -3,7 +3,7 @@
 	<Connector>
 		<Id>1756742691374</Id>
 		<Name><![CDATA[connector]]></Name>
-		<X>130</X>
+		<X>110</X>
 		<Y>1290</Y>
 		<Label>
 			<X>10</X>
@@ -15,7 +15,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>customer_source</ItemName>
+			<ItemName>customerSource</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -25,7 +25,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>queue_queue</ItemName>
+			<ItemName>preEntranceQueue</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -46,7 +46,7 @@
 	<Connector>
 		<Id>1756742694309</Id>
 		<Name><![CDATA[connector1]]></Name>
-		<X>290</X>
+		<X>270</X>
 		<Y>1290</Y>
 		<Label>
 			<X>10</X>
@@ -58,7 +58,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>queue_queue</ItemName>
+			<ItemName>preEntranceQueue</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -68,7 +68,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>entrance_queue</ItemName>
+			<ItemName>entranceQueue</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -81,7 +81,7 @@
 				<Y>0</Y>
 			</Point>
 			<Point>
-				<X>100</X>
+				<X>120</X>
 				<Y>0</Y>
 			</Point>
 		</Points>
@@ -101,7 +101,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>welcoming_wait</ItemName>
+			<ItemName>welcomingWait</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -111,7 +111,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>seize_waiter</ItemName>
+			<ItemName>seizeWaiter</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -154,7 +154,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>checkout_release</ItemName>
+			<ItemName>checkoutRelease</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -187,7 +187,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>already_done</ItemName>
+			<ItemName>alreadyDone</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -197,7 +197,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>entrance_queue</ItemName>
+			<ItemName>entranceQueue</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -240,7 +240,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>inside_restaurant</ItemName>
+			<ItemName>insideRestaurant</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -273,7 +273,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>inside_restaurant</ItemName>
+			<ItemName>insideRestaurant</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -283,7 +283,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>seize_waiter</ItemName>
+			<ItemName>seizeWaiter</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -316,7 +316,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>ordering_wait</ItemName>
+			<ItemName>orderingWait</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -326,7 +326,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>eating_wait</ItemName>
+			<ItemName>eatingWait</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -359,7 +359,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>menu_reading</ItemName>
+			<ItemName>menuReading</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -369,7 +369,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>ordering_seize</ItemName>
+			<ItemName>orderingSeize</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -402,7 +402,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>eating_wait</ItemName>
+			<ItemName>eatingWait</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -412,7 +412,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>checkout_seize</ItemName>
+			<ItemName>checkoutSeize</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -445,7 +445,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>no_table</ItemName>
+			<ItemName>noTable</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -455,7 +455,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>table_check</ItemName>
+			<ItemName>tableCheck</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -498,7 +498,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>has_table</ItemName>
+			<ItemName>hasTable</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -531,7 +531,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>has_table</ItemName>
+			<ItemName>hasTable</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -541,7 +541,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>menu_reading</ItemName>
+			<ItemName>menuReading</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -578,7 +578,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>has_table</ItemName>
+			<ItemName>hasTable</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -588,7 +588,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>table_check</ItemName>
+			<ItemName>tableCheck</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -637,7 +637,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>orders_queue</ItemName>
+			<ItemName>ordersQueue</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -647,7 +647,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>kitchen_enter</ItemName>
+			<ItemName>kitchenEnter</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -680,7 +680,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>cook_request</ItemName>
+			<ItemName>cookRequest</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -690,7 +690,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>orders_queue</ItemName>
+			<ItemName>ordersQueue</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -733,7 +733,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>cook_request</ItemName>
+			<ItemName>cookRequest</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -766,7 +766,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>cook_release</ItemName>
+			<ItemName>cookRelease</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -809,7 +809,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>ready_queue</ItemName>
+			<ItemName>readyQueue</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -819,7 +819,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>cook_release</ItemName>
+			<ItemName>cookRelease</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -852,7 +852,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>waiter_seize</ItemName>
+			<ItemName>waiterSeize</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -862,7 +862,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>ready_queue</ItemName>
+			<ItemName>readyQueue</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -895,7 +895,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>bring_food</ItemName>
+			<ItemName>bringFood</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -905,7 +905,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>waiter_seize</ItemName>
+			<ItemName>waiterSeize</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -938,7 +938,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>waiter_release</ItemName>
+			<ItemName>waiterRelease</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -948,7 +948,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>bring_food</ItemName>
+			<ItemName>bringFood</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -981,7 +981,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>ordering_seize</ItemName>
+			<ItemName>orderingSeize</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -991,7 +991,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>give_order</ItemName>
+			<ItemName>giveOrder</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -1024,7 +1024,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>give_order</ItemName>
+			<ItemName>giveOrder</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -1034,7 +1034,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>ordering_release</ItemName>
+			<ItemName>orderingRelease</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -1067,7 +1067,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>ordering_release</ItemName>
+			<ItemName>orderingRelease</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -1077,7 +1077,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>ordering_wait</ItemName>
+			<ItemName>orderingWait</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -1110,7 +1110,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>kitchen_exit</ItemName>
+			<ItemName>kitchenExit</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -1120,7 +1120,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>waiter_release</ItemName>
+			<ItemName>waiterRelease</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -1153,7 +1153,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>wait_retry</ItemName>
+			<ItemName>waitRetry</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -1163,7 +1163,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>entrance_queue</ItemName>
+			<ItemName>entranceQueue</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -1212,7 +1212,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>wait_retry</ItemName>
+			<ItemName>waitRetry</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -1222,7 +1222,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>table_check</ItemName>
+			<ItemName>tableCheck</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -1259,7 +1259,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>checkout_seize</ItemName>
+			<ItemName>checkoutSeize</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -1302,7 +1302,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>checkout_release</ItemName>
+			<ItemName>checkoutRelease</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -1312,7 +1312,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>invalid_population</ItemName>
+			<ItemName>invalidPopulation</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -1345,7 +1345,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>too_late</ItemName>
+			<ItemName>tooLate</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -1355,7 +1355,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>time_check</ItemName>
+			<ItemName>timeCheck</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -1392,7 +1392,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>time_check</ItemName>
+			<ItemName>timeCheck</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -1435,7 +1435,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>welcoming_wait</ItemName>
+			<ItemName>welcomingWait</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -1478,7 +1478,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>invalid_state</ItemName>
+			<ItemName>invalidState</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -1488,7 +1488,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>invalid_population</ItemName>
+			<ItemName>invalidPopulation</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -1525,7 +1525,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>invalid_state</ItemName>
+			<ItemName>invalidState</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -1576,7 +1576,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>invalid_population</ItemName>
+			<ItemName>invalidPopulation</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -1619,7 +1619,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>already_done</ItemName>
+			<ItemName>alreadyDone</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -1629,7 +1629,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>time_check</ItemName>
+			<ItemName>timeCheck</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -1662,7 +1662,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>already_done</ItemName>
+			<ItemName>alreadyDone</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -1672,7 +1672,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>invalid_state</ItemName>
+			<ItemName>invalidState</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>

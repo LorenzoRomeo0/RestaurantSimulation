@@ -13,12 +13,8 @@ moneyDebugTextUpdater();
 
 void statisticsEvent()
 {/*ALCODESTART::1780759318822*/
-paymentEventsUpdater();
-customerEventsUpdater();
-waiterEventsUpdater();
-cooksEventsUpdater();
-tablesEventsUpdater();
-moneyEventsUpdater();
+if(livePlots) statisticsUpdater();
+
 /*ALCODEEND*/}
 
 void TablesEvent()

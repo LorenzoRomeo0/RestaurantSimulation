@@ -186,7 +186,7 @@
 		<Id>1781513009581</Id>
 		<Name><![CDATA[rectangle6]]></Name>
 		<X>1090</X>
-		<Y>-1010</Y>
+		<Y>-1100</Y>
 		<Label>
 			<X>10</X>
 			<Y>10</Y>
@@ -212,7 +212,7 @@
 		<Id>1781512845496</Id>
 		<Name><![CDATA[rectangle5]]></Name>
 		<X>1090</X>
-		<Y>-730</Y>
+		<Y>-820</Y>
 		<Label>
 			<X>10</X>
 			<Y>10</Y>
@@ -229,7 +229,7 @@
 		<LineMaterial>null</LineMaterial>
 		<LineStyle>SOLID</LineStyle>
 		<Width>590</Width>
-		<Height>520</Height>
+		<Height>610</Height>
 		<Rotation>0.0</Rotation>
 		<FillColor>-1</FillColor>
 		<FillMaterial>null</FillMaterial>
@@ -354,7 +354,7 @@
 		<Presentation>
 			<RectangleNode>
 				<Id>1756500551321</Id>
-				<Name><![CDATA[tables_node]]></Name>
+				<Name><![CDATA[tablesNode]]></Name>
 				<X>230</X>
 				<Y>340</Y>
 				<Label>
@@ -1101,7 +1101,7 @@
 				<Sloped>false</Sloped>
 				<Slope>
 					<Id>1756500551319</Id>
-					<Name><![CDATA[tables_node]]></Name>
+					<Name><![CDATA[tablesNode]]></Name>
 					<X>0</X>
 					<Y>10</Y>
 					<PublicFlag>false</PublicFlag>
@@ -1183,7 +1183,7 @@
 			</Path>
 			<RectangleNode>
 				<Id>1756752236276</Id>
-				<Name><![CDATA[exit_node]]></Name>
+				<Name><![CDATA[exitNode]]></Name>
 				<X>630</X>
 				<Y>280</Y>
 				<Label>
@@ -1288,7 +1288,7 @@
 				<Sloped>false</Sloped>
 				<Slope>
 					<Id>1756752236274</Id>
-					<Name><![CDATA[exit_node]]></Name>
+					<Name><![CDATA[exitNode]]></Name>
 					<X>0</X>
 					<Y>10</Y>
 					<PublicFlag>false</PublicFlag>
@@ -1370,7 +1370,7 @@
 			</Path>
 			<RectangleNode>
 				<Id>1756752619426</Id>
-				<Name><![CDATA[waiters_node]]></Name>
+				<Name><![CDATA[waitersNode]]></Name>
 				<X>160</X>
 				<Y>520</Y>
 				<Label>
@@ -1589,7 +1589,7 @@
 				<Sloped>false</Sloped>
 				<Slope>
 					<Id>1756752619424</Id>
-					<Name><![CDATA[waiters_node]]></Name>
+					<Name><![CDATA[waitersNode]]></Name>
 					<X>0</X>
 					<Y>10</Y>
 					<PublicFlag>false</PublicFlag>
@@ -1671,7 +1671,7 @@
 			</Path>
 			<RectangleNode>
 				<Id>1758114345521</Id>
-				<Name><![CDATA[outside_tables_node]]></Name>
+				<Name><![CDATA[outsideTablesNode]]></Name>
 				<X>780</X>
 				<Y>370</Y>
 				<Label>
@@ -1938,7 +1938,7 @@
 				<Sloped>false</Sloped>
 				<Slope>
 					<Id>1758114345519</Id>
-					<Name><![CDATA[outside_tables_node]]></Name>
+					<Name><![CDATA[outsideTablesNode]]></Name>
 					<X>0</X>
 					<Y>10</Y>
 					<PublicFlag>false</PublicFlag>
@@ -2020,7 +2020,7 @@
 			</Path>
 			<RectangleNode>
 				<Id>1756500551271</Id>
-				<Name><![CDATA[entrance_node]]></Name>
+				<Name><![CDATA[entranceNode]]></Name>
 				<X>570</X>
 				<Y>270</Y>
 				<Label>
@@ -2125,7 +2125,7 @@
 				<Sloped>false</Sloped>
 				<Slope>
 					<Id>1756500551269</Id>
-					<Name><![CDATA[entrance_node]]></Name>
+					<Name><![CDATA[entranceNode]]></Name>
 					<X>0</X>
 					<Y>10</Y>
 					<PublicFlag>false</PublicFlag>
@@ -2207,7 +2207,7 @@
 			</Path>
 			<RectangleNode>
 				<Id>1756500551295</Id>
-				<Name><![CDATA[queue_node]]></Name>
+				<Name><![CDATA[queueNode]]></Name>
 				<X>545</X>
 				<Y>180</Y>
 				<Label>
@@ -2312,7 +2312,7 @@
 				<Sloped>false</Sloped>
 				<Slope>
 					<Id>1756500551293</Id>
-					<Name><![CDATA[queue_node]]></Name>
+					<Name><![CDATA[queueNode]]></Name>
 					<X>0</X>
 					<Y>10</Y>
 					<PublicFlag>false</PublicFlag>
@@ -2327,193 +2327,6 @@
 				</Slope>
 				<Width>80</Width>
 				<Height>60</Height>
-				<Rotation>0.0</Rotation>
-			</RectangleNode>
-			<Path SourceId="1758282368140" TargetId="1756500551321">
-				<Id>1758282381066</Id>
-				<Name><![CDATA[path6]]></Name>
-				<X>210</X>
-				<Y>360</Y>
-				<Label>
-					<X>10</X>
-					<Y>0</Y>
-				</Label>
-				<PublicFlag>true</PublicFlag>
-				<PresentationFlag>true</PresentationFlag>
-				<ShowLabel>false</ShowLabel>
-				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-				<Z>0</Z>
-				<LineColor>-14774017</LineColor>
-				<LineMaterial>null</LineMaterial>
-				<LineWidth>1</LineWidth>
-				<PathType>dashedLine</PathType>
-				<Width Class="UnitValue">
-					<Value Class="Double">1</Value>
-					<Unit Class="LengthUnits">METER</Unit>
-				</Width>
-				<Points>
-					<Point>
-						<X>0</X>
-						<Y>0</Y>
-						<Z>0</Z>
-					</Point>
-					<Point>
-						<X>17.8</X>
-						<Y>0</Y>
-						<Z>0</Z>
-					</Point>
-					<Point>
-						<X>25</X>
-						<Y>0</Y>
-						<Z>0</Z>
-					</Point>
-					<Point>
-						<X>20</X>
-						<Y>5</Y>
-						<Z>0</Z>
-					</Point>
-					<Point>
-						<X>-5</X>
-						<Y>5</Y>
-						<Z>0</Z>
-					</Point>
-					<Point>
-						<X>20</X>
-						<Y>5</Y>
-						<Z>0</Z>
-					</Point>
-				</Points>
-				<Bidirectional>true</Bidirectional>
-				<SpeedLimit>false</SpeedLimit>
-				<SpeedLimitValue Class="CodeUnitValue">
-					<Code><![CDATA[10.0]]></Code>
-					<Unit Class="SpeedUnits">MPS</Unit>
-				</SpeedLimitValue>
-				<LimitNumberOfTransporters>false</LimitNumberOfTransporters>
-				<LimitNumberOfTransportersValue>10</LimitNumberOfTransportersValue>
-			</Path>
-			<RectangleNode>
-				<Id>1758282368140</Id>
-				<Name><![CDATA[bar_node]]></Name>
-				<X>160</X>
-				<Y>345</Y>
-				<Label>
-					<X>10</X>
-					<Y>0</Y>
-				</Label>
-				<PublicFlag>true</PublicFlag>
-				<PresentationFlag>true</PresentationFlag>
-				<ShowLabel>false</ShowLabel>
-				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-				<Z>0</Z>
-				<EmbeddedObject>
-					<Id>1758282368143</Id>
-					<ActiveObjectClass>
-						<PackageName>com.anylogic.libraries.modules.markup_descriptors</PackageName>
-						<ClassName>AreaNodeDescriptor</ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName>com.anylogic.libraries.modules.markup_descriptors</PackageName>
-							<ClassName>AreaNodeDescriptor</ClassName>
-							<ItemName>1574694148121</ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[appliedClass]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[speedRestricted]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[maxSpeed]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[accessRestricted]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[accessRestrictionType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[accessRestrictionCondition]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[capacity]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[throughput]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[schedule]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[avoidedIfClosed]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onEnter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onEnterDenied]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onOpen]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onClose]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>XYZ</InitialLocationType>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<Id>1758282368142</Id>
-						<TableReference/>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn/>
-				</EmbeddedObject>
-				<LineColor>-14774017</LineColor>
-				<FillColor/>
-				<LineWidth>1</LineWidth>
-				<LineMaterial>null</LineMaterial>
-				<FillMaterial>null</FillMaterial>
-				<LineStyle>DASHED</LineStyle>
-				<AttractorsLayout>random</AttractorsLayout>
-				<Sloped>false</Sloped>
-				<Slope>
-					<Id>1758282368138</Id>
-					<Name><![CDATA[bar_node]]></Name>
-					<X>0</X>
-					<Y>10</Y>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Dx>20</Dx>
-					<Dy>0</Dy>
-					<Dz>0</Dz>
-					<AngleX>30</AngleX>
-					<AngleZ>0</AngleZ>
-					<SlopeType>angle</SlopeType>
-				</Slope>
-				<Width>50</Width>
-				<Height>30</Height>
 				<Rotation>0.0</Rotation>
 			</RectangleNode>
 			<Path SourceId="1758282880332" TargetId="1756500551321">
@@ -2581,7 +2394,7 @@
 			</Path>
 			<RectangleNode>
 				<Id>1758282880332</Id>
-				<Name><![CDATA[bar_tables_node]]></Name>
+				<Name><![CDATA[barTablesNode]]></Name>
 				<X>230</X>
 				<Y>220</Y>
 				<Label>
@@ -2848,7 +2661,7 @@
 				<Sloped>false</Sloped>
 				<Slope>
 					<Id>1758282880330</Id>
-					<Name><![CDATA[bar_tables_node]]></Name>
+					<Name><![CDATA[barTablesNode]]></Name>
 					<X>0</X>
 					<Y>10</Y>
 					<PublicFlag>false</PublicFlag>
@@ -2930,7 +2743,7 @@
 			</Path>
 			<RectangleNode>
 				<Id>1758115056461</Id>
-				<Name><![CDATA[kitchen_node]]></Name>
+				<Name><![CDATA[kitchenNode]]></Name>
 				<X>160</X>
 				<Y>410</Y>
 				<Label>
@@ -3149,7 +2962,7 @@
 				<Sloped>false</Sloped>
 				<Slope>
 					<Id>1758115056459</Id>
-					<Name><![CDATA[kitchen_node]]></Name>
+					<Name><![CDATA[kitchenNode]]></Name>
 					<X>0</X>
 					<Y>10</Y>
 					<PublicFlag>false</PublicFlag>
@@ -3231,7 +3044,7 @@
 			</Path>
 			<RectangleNode>
 				<Id>1771948426457</Id>
-				<Name><![CDATA[checkout_node]]></Name>
+				<Name><![CDATA[checkoutNode]]></Name>
 				<X>710</X>
 				<Y>290</Y>
 				<Label>
@@ -3336,7 +3149,7 @@
 				<Sloped>false</Sloped>
 				<Slope>
 					<Id>1771948426455</Id>
-					<Name><![CDATA[checkout_node]]></Name>
+					<Name><![CDATA[checkoutNode]]></Name>
 					<X>0</X>
 					<Y>10</Y>
 					<PublicFlag>false</PublicFlag>
@@ -3718,10 +3531,10 @@
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
 		<Text><![CDATA[text]]></Text>
-		<TextCode>"Arrival rate: "+ arrivals_schedule.getValue() +
-", Avg group size: " + groupsize_schedule.getValue()
-+ "\nActive waiters: " + waiters_schedule.getValue()
-+ "\nActive cooks: " + cooks_schedule.getValue()</TextCode>
+		<TextCode>"Arrival rate: "+ arrivalsSchedule.getValue() +
+", Avg group size: " + groupsizeSchedule.getValue()
++ "\nActive waiters: " + waitersSchedule.getValue()
++ "\nActive cooks: " + cooksSchedule.getValue()</TextCode>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
 			<Size>10</Size>
@@ -4036,8 +3849,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<RectangleNode>
 		<Id>1779382850154</Id>
 		<Name><![CDATA[jail]]></Name>
-		<X>810</X>
-		<Y>220</Y>
+		<X>-610</X>
+		<Y>20</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -5946,7 +5759,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Id>1781512812031</Id>
 		<Name><![CDATA[text18]]></Name>
 		<X>1110</X>
-		<Y>-710</Y>
+		<Y>-800</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -5971,7 +5784,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Id>1781512985902</Id>
 		<Name><![CDATA[text19]]></Name>
 		<X>1110</X>
-		<Y>-990</Y>
+		<Y>-1080</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -6360,6 +6173,57 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
 		<Text><![CDATA[Costs/profit]]></Text>
+		<Font>
+			<Name><![CDATA[SansSerif]]></Name>
+			<Size>14</Size>
+			<Style>1</Style>
+		</Font>
+		<Alignment>LEFT</Alignment>
+	</Text>
+	<Rectangle>
+		<Id>1781786473466</Id>
+		<Name><![CDATA[rectangle14]]></Name>
+		<X>850</X>
+		<Y>-600</Y>
+		<Label>
+			<X>10</X>
+			<Y>10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<ZHeight>10</ZHeight>
+		<LineWidth>1</LineWidth>
+		<LineColor>-16777216</LineColor>
+		<LineMaterial>null</LineMaterial>
+		<LineStyle>SOLID</LineStyle>
+		<Width>200</Width>
+		<Height>170</Height>
+		<Rotation>0.0</Rotation>
+		<FillColor>-1</FillColor>
+		<FillMaterial>null</FillMaterial>
+	</Rectangle>
+	<Text>
+		<Id>1781786483913</Id>
+		<Name><![CDATA[text35]]></Name>
+		<X>870</X>
+		<Y>-590</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D</DrawMode>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Z>0</Z>
+		<Rotation>0.0</Rotation>
+		<Color>-16777216</Color>
+		<Text><![CDATA[Simulation]]></Text>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
 			<Size>14</Size>

@@ -119,7 +119,7 @@ main.registerCustomerWaitEntranceEvent(entranceDate, date());
 tableWaitStartDate = date();
 
 shapeBody.setFillColor(green);
-main.inside_restaurant.free(this);</EntryAction>
+main.insideRestaurant.free(this);</EntryAction>
 				<FillColor>-16744448</FillColor>
 			</Properties>
 		</StatechartElement>
@@ -217,7 +217,7 @@ for (int i = 0; i &lt; main.welcoming_wait.size(); i++) {
     );
 }
 */
-boolean released = main.welcoming_wait.free(this);
+boolean released = main.welcomingWait.free(this);
 
 send("customersArrivedAtTable", table.waiterAssigner);
 /*
@@ -276,7 +276,7 @@ for (int i = 0; i &lt; main.welcoming_wait.size(); i++) {
 //traceln(getId() + " freed table " + table.getId());
 table = null;
 
-this.moveTo(main.exit_node);</EntryAction>
+this.moveTo(main.exitNode);</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
@@ -294,7 +294,7 @@ this.moveTo(main.exit_node);</EntryAction>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
 				<EntryAction>//send("ok", currentWaiter);
-main.ordering_wait.free(this);</EntryAction>
+main.orderingWait.free(this);</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
@@ -353,7 +353,7 @@ send(order, currentWaiter);
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="140" Height="30">
 				<EntryAction>//traceln("?? " + getId() + " received a null table...");
-main.welcoming_wait.free(this);</EntryAction>
+main.welcomingWait.free(this);</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
@@ -378,7 +378,7 @@ main.welcoming_wait.free(this);</EntryAction>
 	
 	main.registerCustomerStayEvent(entranceDate, date());
 	
-	main.eating_wait.free(this);
+	main.eatingWait.free(this);
 	isExitingSystem = true;
 	
 } else {

@@ -111,7 +111,7 @@
 				<EntryAction>//traceln(this +" "+this.getId() + " SEIZED AT ENTRANCE");
 _ps7.setFillColor(gold);
 targetNode = "entrance";
-this.moveTo(main.entrance_node);
+this.moveTo(main.entranceNode);
 //traceln("waiter "+ getId() + " seizedAtEntrance")</EntryAction>
 				<FillColor>-10496</FillColor>
 			</Properties>
@@ -317,7 +317,7 @@ send(this, currentCustomers);</EntryAction>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
 				<EntryAction>targetNode = "kitchen";
-moveTo(main.kitchen_node);
+moveTo(main.kitchenNode);
 //traceln("-----&gt; " +getId()+ " take this order: "+ currentOrder);
 
 //traceln("-----&gt; " +getId()+ " take this order: "+ currentOrder);</EntryAction>
@@ -337,8 +337,8 @@ moveTo(main.kitchen_node);
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
-				<EntryAction>main.kitchen_enter.take(currentOrder);
-main.give_order.free(currentCustomers);</EntryAction>
+				<EntryAction>main.kitchenEnter.take(currentOrder);
+main.giveOrder.free(currentCustomers);</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
@@ -411,7 +411,7 @@ this.moveTo(currentOrder.customerGroup);</EntryAction>
 			<Properties Width="100" Height="30">
 				<EntryAction>targetNode = "none";
 send("foodReady", currentOrder.customerGroup);
-main.bring_food.free(currentOrder);</EntryAction>
+main.bringFood.free(currentOrder);</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
@@ -430,7 +430,7 @@ main.bring_food.free(currentOrder);</EntryAction>
 			<Properties Width="100" Height="30">
 				<EntryAction>//traceln(this +" "+this.getId() + " TAKE FOOD");
 targetNode = "kitchen";
-this.moveTo(main.kitchen_node)</EntryAction>
+this.moveTo(main.kitchenNode)</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
@@ -484,7 +484,7 @@ endShiftRequested = false;
 _ps7.setFillColor(red);
 
 
-this.moveTo(main.waiters_node);</EntryAction>
+this.moveTo(main.waitersNode);</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>

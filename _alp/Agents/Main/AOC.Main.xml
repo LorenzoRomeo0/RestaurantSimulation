@@ -101,7 +101,7 @@
 	<Schedules>
 		<Schedule>
 			<Id>1770220504060</Id>
-			<Name><![CDATA[arrivals_schedule]]></Name>
+			<Name><![CDATA[arrivalsSchedule]]></Name>
 			<X>620</X>
 			<Y>-910</Y>
 			<Label>
@@ -165,7 +165,7 @@
 		</Schedule>
 		<Schedule>
 			<Id>1770633020320</Id>
-			<Name><![CDATA[groupsize_schedule]]></Name>
+			<Name><![CDATA[groupsizeSchedule]]></Name>
 			<X>620</X>
 			<Y>-890</Y>
 			<Label>
@@ -229,7 +229,7 @@
 		</Schedule>
 		<Schedule>
 			<Id>1770643795202</Id>
-			<Name><![CDATA[inside_schedule]]></Name>
+			<Name><![CDATA[insideSchedule]]></Name>
 			<X>70</X>
 			<Y>-720</Y>
 			<Label>
@@ -292,7 +292,7 @@
 		</Schedule>
 		<Schedule>
 			<Id>1770643826624</Id>
-			<Name><![CDATA[outside_schedule]]></Name>
+			<Name><![CDATA[outsideSchedule]]></Name>
 			<X>70</X>
 			<Y>-700</Y>
 			<Label>
@@ -355,7 +355,7 @@
 		</Schedule>
 		<Schedule>
 			<Id>1770643835144</Id>
-			<Name><![CDATA[bar_schedule]]></Name>
+			<Name><![CDATA[barSchedule]]></Name>
 			<X>70</X>
 			<Y>-680</Y>
 			<Label>
@@ -418,7 +418,7 @@
 		</Schedule>
 		<Schedule>
 			<Id>1771950500906</Id>
-			<Name><![CDATA[eating_time_schedule]]></Name>
+			<Name><![CDATA[eatingTimeSchedule]]></Name>
 			<X>620</X>
 			<Y>-870</Y>
 			<Label>
@@ -481,7 +481,7 @@
 		</Schedule>
 		<Schedule>
 			<Id>1772014207717</Id>
-			<Name><![CDATA[waiters_schedule]]></Name>
+			<Name><![CDATA[waitersSchedule]]></Name>
 			<X>320</X>
 			<Y>-830</Y>
 			<Label>
@@ -582,7 +582,7 @@ registerWaitersShiftEvent(
 		</Schedule>
 		<Schedule>
 			<Id>1772014350792</Id>
-			<Name><![CDATA[cooks_schedule]]></Name>
+			<Name><![CDATA[cooksSchedule]]></Name>
 			<X>320</X>
 			<Y>-800</Y>
 			<Label>
@@ -683,7 +683,7 @@ registerCooksShiftEvent(
 		</Schedule>
 		<Schedule>
 			<Id>1776332307617</Id>
-			<Name><![CDATA[bar_prio_schedule]]></Name>
+			<Name><![CDATA[barPrioSchedule]]></Name>
 			<X>70</X>
 			<Y>-790</Y>
 			<Label>
@@ -746,7 +746,7 @@ registerCooksShiftEvent(
 		</Schedule>
 		<Schedule>
 			<Id>1776332404624</Id>
-			<Name><![CDATA[inside_prio_schedule]]></Name>
+			<Name><![CDATA[insidePrioSchedule]]></Name>
 			<X>70</X>
 			<Y>-770</Y>
 			<Label>
@@ -809,7 +809,7 @@ registerCooksShiftEvent(
 		</Schedule>
 		<Schedule>
 			<Id>1776332408087</Id>
-			<Name><![CDATA[outside_prio_schedule]]></Name>
+			<Name><![CDATA[outsidePrioSchedule]]></Name>
 			<X>70</X>
 			<Y>-750</Y>
 			<Label>

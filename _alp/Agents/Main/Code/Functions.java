@@ -35,9 +35,9 @@ System.out.println("Available tables: " + n);
 
 //usare resourcepool?
 
-int insidePrio = inside_prio_schedule.getValue();
-int outsidePrio = outside_prio_schedule.getValue();
-int barPrio = bar_prio_schedule.getValue();
+int insidePrio = insidePrioSchedule.getValue();
+int outsidePrio = outsidePrioSchedule.getValue();
+int barPrio = barPrioSchedule.getValue();
 
 for (int prio = 1; prio <= 3; prio++) {
 
@@ -78,7 +78,7 @@ double eatingTimeModel(int groupSize)
 //Potrebbe essere migliorata in quanto nei pranzi con i colleghi generalmente non si chiacchiera così tanto.
 //Di più con amici e parenti (cena e weekends)
 
-double baseMeanTime = eating_time_schedule.getValue();
+double baseMeanTime = eatingTimeSchedule.getValue();
 
 double minTime = lognormal(baseMeanTime, baseMeanTime*0.2, 5);
 
@@ -102,7 +102,7 @@ menuItems = new MenuItems(this);
 traceln("INIT END-------------");
 /*ALCODEEND*/}
 
-String day_to_string(int day)
+String dayToString(int day)
 {/*ALCODESTART::1775044645264*/
 switch (day) {
     case MONDAY: return "MONDAY";
@@ -332,7 +332,7 @@ int getMaxWaiters()
 {/*ALCODESTART::1779227005235*/
 int maxWaiters = 0;
 for(double t = 0; t < 7 * 24; t += 1) { 
-    int val = waiters_schedule.getValue(t, HOUR); 
+    int val = waitersSchedule.getValue(t, HOUR); 
     if(val > maxWaiters) {
         maxWaiters = val;
     }
@@ -383,7 +383,7 @@ int groupSizeModel()
 {/*ALCODESTART::1780666597930*/
 double min = minGroupSize;
 double max = maxGroupsize;
-double mu = groupsize_schedule.getValue();
+double mu = groupsizeSchedule.getValue();
 double sigma = sigmaGroupSize;
 
 return (int) normal(min, max, mu, sigma);
@@ -406,7 +406,7 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
     for (DayPartUtil.DayPart dayPart : DayPartUtil.DayPart.values()) {
         double total = timeEvents.getValueSumByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.MONEY, openingTime);
 
-		String dayName = day_to_string(day);
+		String dayName = dayToString(day);
         			String key = dayName + "-" + dayPart;
 
         sb.append(dayName)
@@ -430,6 +430,7 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
     }
 }
 
+paymentCsv = sb.toString();
 paymentEventsText.setText(sb.toString());
 /*ALCODEEND*/}
 
@@ -487,7 +488,7 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
 		double totalServed = timeEvents.getValueSumByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.CUSTOMERS_SERVED, openingTime);
 		
 		
-		String dayName = day_to_string(day);
+		String dayName = dayToString(day);
         			String key = dayName + "-" + dayPart;
 
         sbEntrance.append(dayName)
@@ -588,6 +589,12 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
     }
 }
 
+customersServedCsv = sbServed.toString();
+customerWaitPayCsv = sbPay.toString();
+customerWaitTableCsv = sbTable.toString();
+customerWaitEntranceCsv = sbEntrance.toString();
+customerStayCsv = sbStay.toString();
+
 customerWaitEntranceText.setText(sbEntrance.toString());
 customerWaitTableText.setText(sbTable.toString());
 customerWaitPayText.setText(sbPay.toString());
@@ -631,7 +638,7 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
 		double totalOvertime = timeEvents.getValueSumByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.WAITER_OVERTIME, openingTime);
 		
 		
-		String dayName = day_to_string(day);
+		String dayName = dayToString(day);
         String key = dayName + "-" + dayPart;
 
         sbIdle.append(dayName)
@@ -679,6 +686,10 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
     }
 }
 
+
+waiterIdleCsv = sbIdle.toString();
+waiterOvertimeCsv = sbOvertime.toString();
+
 waitersIdleText.setText(sbIdle.toString());
 waitersOvertimeText.setText(sbOvertime.toString());
 
@@ -714,7 +725,7 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
         double averageIdle = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.COOK_IDLE, openingTime);
 		double totalOvertime = timeEvents.getValueSumByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.COOK_OVERTIME, openingTime);
 		
-		String dayName = day_to_string(day);
+		String dayName = dayToString(day);
         String key = dayName + "-" + dayPart;
 
         sbIdle.append(dayName)
@@ -778,8 +789,11 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
     }
 }
 
+
+cookOvertimeCsv = sbOvertime.toString();
+cookIdleCsv = sbIdle.toString();
 cookIdleText.setText(sbIdle.toString());
-cookOvertimeText.setText(sbIdle.toString());
+cookOvertimeText.setText(sbOvertime.toString());
 //cooksShiftText.setText(sbShift.toString());
 
 /*ALCODEEND*/}
@@ -825,7 +839,7 @@ sb.append("weekday,daypart,inside, outside, bar")
 
 for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
 	
-	String dayName = day_to_string(day);
+	String dayName = dayToString(day);
 
     for (DayPartUtil.DayPart dayPart : DayPartUtil.DayPart.values()) {
         Double totalInside = timeEvents.getValueAvgByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.TABLES_USAGE_INSIDE, openingTime) / insideTables.size() * 100;
@@ -913,6 +927,7 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
 		}
 }
 
+tablesUsageCsv = sb.toString();
 tableEventsText.setText(sb.toString());
 /*ALCODEEND*/}
 
@@ -938,7 +953,7 @@ int getMaxCooks()
 {/*ALCODESTART::1781003606894*/
 int maxCooks = 0;
 for(double t = 0; t < 7 * 24; t += 1) { 
-    int val = cooks_schedule.getValue(t, HOUR); 
+    int val = cooksSchedule.getValue(t, HOUR); 
     if(val > maxCooks) {
         maxCooks = val;
     }
@@ -1044,7 +1059,7 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
 		double shiftPayCooks = totalInShiftCooks*shiftLengthCooks*cooksHourlyRate;
 		double overtimePayCooks = totalOvertimeCooks*cooksHourlyRateOvertime;
 		
-		String dayName = day_to_string(day);
+		String dayName = dayToString(day);
         			String key = dayName + "-" + dayPart;
 
         sbShift.append(dayName)
@@ -1080,7 +1095,9 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
 }
 
 
+moneyCsv = sbShift.toString();
 shiftText.setText(sbShift.toString());
+
 
 shiftTotalText.setText(
 	"Waiters total: " + totalWaiters
@@ -1090,5 +1107,129 @@ shiftTotalText.setText(
 	+ "€\nTotal earned: " + totalEarned 
 	+ "€\nNet profit: "+ (totalEarned - totalWaiters + totalCooks + fixedCosts)+ "€"
 );
+/*ALCODEEND*/}
+
+double saveCurrentResults(int currentRunCount)
+{/*ALCODESTART::1781700898927*/
+statisticsUpdater();
+
+java.nio.file.Path baseFolder = java.nio.file.Paths.get(simulationFolder, simulationName);
+
+traceln("Results folder: " + baseFolder.toString());
+try {
+        java.nio.file.Files.createDirectories(baseFolder);
+
+
+		// Customers 
+        java.nio.file.Files.writeString(
+            baseFolder.resolve("customersServed_"+currentRunCount+".csv"),
+            customersServedCsv,
+            java.nio.file.StandardOpenOption.CREATE,
+            java.nio.file.StandardOpenOption.TRUNCATE_EXISTING
+        );
+
+        java.nio.file.Files.writeString(
+            baseFolder.resolve("customerWaitPay_"+currentRunCount+".csv"),
+            customerWaitPayCsv,
+            java.nio.file.StandardOpenOption.CREATE,
+            java.nio.file.StandardOpenOption.TRUNCATE_EXISTING
+        );
+        
+        java.nio.file.Files.writeString(
+            baseFolder.resolve("customerWaitTable_"+currentRunCount+".csv"),
+            customerWaitTableCsv,
+            java.nio.file.StandardOpenOption.CREATE,
+            java.nio.file.StandardOpenOption.TRUNCATE_EXISTING
+        );
+        
+        java.nio.file.Files.writeString(
+            baseFolder.resolve("customerWaitEntrance_"+currentRunCount+".csv"),
+            customerWaitEntranceCsv,
+            java.nio.file.StandardOpenOption.CREATE,
+            java.nio.file.StandardOpenOption.TRUNCATE_EXISTING
+        );
+        
+        java.nio.file.Files.writeString(
+            baseFolder.resolve("customerStay_"+currentRunCount+".csv"),
+            customerStayCsv,
+            java.nio.file.StandardOpenOption.CREATE,
+            java.nio.file.StandardOpenOption.TRUNCATE_EXISTING
+        );
+
+        // Tables
+        
+        java.nio.file.Files.writeString(
+            baseFolder.resolve("tablesUsage_"+currentRunCount+".csv"),
+            tablesUsageCsv,
+            java.nio.file.StandardOpenOption.CREATE,
+            java.nio.file.StandardOpenOption.TRUNCATE_EXISTING
+        );
+
+        // Payments
+        
+        java.nio.file.Files.writeString(
+            baseFolder.resolve("payment_"+currentRunCount+".csv"),
+            paymentCsv,
+            java.nio.file.StandardOpenOption.CREATE,
+            java.nio.file.StandardOpenOption.TRUNCATE_EXISTING
+        );
+
+        // Waiters
+        java.nio.file.Files.writeString(
+            baseFolder.resolve("waiterOvertime_"+currentRunCount+".csv"),
+            waiterOvertimeCsv,
+            java.nio.file.StandardOpenOption.CREATE,
+            java.nio.file.StandardOpenOption.TRUNCATE_EXISTING
+        );
+        
+        java.nio.file.Files.writeString(
+            baseFolder.resolve("waiterIdle_"+currentRunCount+".csv"),
+            waiterIdleCsv,
+            java.nio.file.StandardOpenOption.CREATE,
+            java.nio.file.StandardOpenOption.TRUNCATE_EXISTING
+        );
+
+
+        // Cooks
+
+        java.nio.file.Files.writeString(
+            baseFolder.resolve("cookOvertime_"+currentRunCount+".csv"),
+            cookOvertimeCsv,
+            java.nio.file.StandardOpenOption.CREATE,
+            java.nio.file.StandardOpenOption.TRUNCATE_EXISTING
+        );
+        
+        java.nio.file.Files.writeString(
+            baseFolder.resolve("cookIdle_"+currentRunCount+".csv"),
+            cookIdleCsv,
+            java.nio.file.StandardOpenOption.CREATE,
+            java.nio.file.StandardOpenOption.TRUNCATE_EXISTING
+        );
+
+        // Money
+
+        java.nio.file.Files.writeString(
+            baseFolder.resolve("money_"+currentRunCount+".csv"),
+            moneyCsv,
+            java.nio.file.StandardOpenOption.CREATE,
+            java.nio.file.StandardOpenOption.TRUNCATE_EXISTING
+        );
+        
+    } catch (Exception e) {
+        error("Errore init file: " + e.getMessage());
+    }
+
+    
+    
+/*ALCODEEND*/}
+
+double statisticsUpdater()
+{/*ALCODESTART::1781785081576*/
+paymentEventsUpdater();
+customerEventsUpdater();
+waiterEventsUpdater();
+cooksEventsUpdater();
+tablesEventsUpdater();
+moneyEventsUpdater();
 /*ALCODEEND*/}
 
