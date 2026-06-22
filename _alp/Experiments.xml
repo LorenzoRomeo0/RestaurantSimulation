@@ -2369,8 +2369,8 @@
 			<StopOption>Stop at specified date</StopOption>
 			<InitialDate>370800000</InitialDate>
 			<InitialTime>0.0</InitialTime>
-			<FinalDate>1054800000</FinalDate>
-			<FinalTime>11400.0</FinalTime>
+			<FinalDate>968400000</FinalDate>
+			<FinalTime>9960.0</FinalTime>
 		</ModelTimeProperties>
 		<BypassInitialScreen>true</BypassInitialScreen>
 	</SimulationExperiment>
