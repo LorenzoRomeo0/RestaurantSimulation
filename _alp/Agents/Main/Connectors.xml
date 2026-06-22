@@ -218,7 +218,7 @@
 	<Connector>
 		<Id>1757665545847</Id>
 		<Name><![CDATA[connector3]]></Name>
-		<X>560</X>
+		<X>550</X>
 		<Y>1250</Y>
 		<Label>
 			<X>10</X>
@@ -253,7 +253,7 @@
 				<Y>0</Y>
 			</Point>
 			<Point>
-				<X>25</X>
+				<X>35</X>
 				<Y>0</Y>
 			</Point>
 		</Points>
@@ -1423,7 +1423,7 @@
 				<Y>0</Y>
 			</Point>
 			<Point>
-				<X>45</X>
+				<X>35</X>
 				<Y>0</Y>
 			</Point>
 		</Points>

@@ -2043,7 +2043,7 @@ registerPaymentEvent(date(), date(), agent.order.getTotalPrice());]]></Code>
 	<EmbeddedObject>
 		<Id>1757664710063</Id>
 		<Name><![CDATA[hold]]></Name>
-		<X>540</X>
+		<X>530</X>
 		<Y>1240</Y>
 		<Label>
 			<X>-10</X>
