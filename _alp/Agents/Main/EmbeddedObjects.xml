@@ -4,7 +4,7 @@
 		<Id>1756500551345</Id>
 		<Name><![CDATA[customerSource]]></Name>
 		<X>80</X>
-		<Y>1280</Y>
+		<Y>1180</Y>
 		<Label>
 			<X>-10</X>
 			<Y>-25</Y>
@@ -269,8 +269,8 @@ customerGroupsInRestaurant.add(agent);]]></Code>
 	<EmbeddedObject>
 		<Id>1756500551416</Id>
 		<Name><![CDATA[entranceQueue]]></Name>
-		<X>390</X>
-		<Y>1270</Y>
+		<X>295</X>
+		<Y>1190</Y>
 		<Label>
 			<X>-10</X>
 			<Y>-15</Y>
@@ -398,11 +398,11 @@ agent.canStillCheckout = DayPartUtil.getCurrentDayPart(this, openingTime) != Day
 	<EmbeddedObject>
 		<Id>1756500551438</Id>
 		<Name><![CDATA[exit]]></Name>
-		<X>2780</X>
-		<Y>1360</Y>
+		<X>1890</X>
+		<Y>1375</Y>
 		<Label>
-			<X>-15</X>
-			<Y>-25</Y>
+			<X>-8</X>
+			<Y>-18</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
@@ -457,10 +457,10 @@ customerGroupsInRestaurant.remove(agent);]]></Code>
 	<EmbeddedObject>
 		<Id>1756501544321</Id>
 		<Name><![CDATA[insideRestaurant]]></Name>
-		<X>880</X>
-		<Y>1270</Y>
+		<X>585</X>
+		<Y>1230</Y>
 		<Label>
-			<X>0</X>
+			<X>-5</X>
 			<Y>-15</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
@@ -579,8 +579,8 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 	<EmbeddedObject>
 		<Id>1756742653440</Id>
 		<Name><![CDATA[preEntranceQueue]]></Name>
-		<X>230</X>
-		<Y>1270</Y>
+		<X>150</X>
+		<Y>1190</Y>
 		<Label>
 			<X>-20</X>
 			<Y>-15</Y>
@@ -696,7 +696,7 @@ customersAtEntrance = (CustomerGroup) agent;]]></Code>
 		<Id>1756751742208</Id>
 		<Name><![CDATA[insideTablesPool]]></Name>
 		<X>60</X>
-		<Y>1600</Y>
+		<Y>1260</Y>
 		<Label>
 			<X>-50</X>
 			<Y>-5</Y>
@@ -1027,8 +1027,8 @@ nextInsideTableIdx++;
 	<EmbeddedObject>
 		<Id>1756751918640</Id>
 		<Name><![CDATA[seizeWaiter]]></Name>
-		<X>1040</X>
-		<Y>1270</Y>
+		<X>650</X>
+		<Y>1250</Y>
 		<Label>
 			<X>-5</X>
 			<Y>-15</Y>
@@ -1259,8 +1259,8 @@ nextInsideTableIdx++;
 	<EmbeddedObject>
 		<Id>1756751946163</Id>
 		<Name><![CDATA[menuReading]]></Name>
-		<X>1460</X>
-		<Y>1350</Y>
+		<X>970</X>
+		<Y>1180</Y>
 		<Label>
 			<X>-5</X>
 			<Y>-15</Y>
@@ -1360,8 +1360,8 @@ nextInsideTableIdx++;
 	<EmbeddedObject>
 		<Id>1756752041552</Id>
 		<Name><![CDATA[release]]></Name>
-		<X>1310</X>
-		<Y>1270</Y>
+		<X>790</X>
+		<Y>1285</Y>
 		<Label>
 			<X>-15</X>
 			<Y>-15</Y>
@@ -1475,7 +1475,7 @@ nextInsideTableIdx++;
 		<Id>1756752510753</Id>
 		<Name><![CDATA[waitersPool]]></Name>
 		<X>60</X>
-		<Y>1780</Y>
+		<Y>1440</Y>
 		<Label>
 			<X>-40</X>
 			<Y>-10</Y>
@@ -1819,8 +1819,8 @@ unit.isSeized = true;]]></Code>
 	<EmbeddedObject>
 		<Id>1756760693429</Id>
 		<Name><![CDATA[pay]]></Name>
-		<X>2380</X>
-		<Y>1350</Y>
+		<X>1460</X>
+		<Y>1320</Y>
 		<Label>
 			<X>-5</X>
 			<Y>-15</Y>
@@ -1920,7 +1920,7 @@ registerPaymentEvent(date(), date(), agent.order.getTotalPrice());]]></Code>
 	<EmbeddedObject>
 		<Id>1756815781606</Id>
 		<Name><![CDATA[welcomingWait]]></Name>
-		<X>1160</X>
+		<X>720</X>
 		<Y>1270</Y>
 		<Label>
 			<X>-15</X>
@@ -2043,8 +2043,8 @@ registerPaymentEvent(date(), date(), agent.order.getTotalPrice());]]></Code>
 	<EmbeddedObject>
 		<Id>1757664710063</Id>
 		<Name><![CDATA[hold]]></Name>
-		<X>810</X>
-		<Y>1280</Y>
+		<X>540</X>
+		<Y>1240</Y>
 		<Label>
 			<X>-10</X>
 			<Y>-25</Y>
@@ -2112,8 +2112,8 @@ registerPaymentEvent(date(), date(), agent.order.getTotalPrice());]]></Code>
 	<EmbeddedObject>
 		<Id>1758096223607</Id>
 		<Name><![CDATA[orderingWait]]></Name>
-		<X>2000</X>
-		<Y>1350</Y>
+		<X>1250</X>
+		<Y>1260</Y>
 		<Label>
 			<X>0</X>
 			<Y>-15</Y>
@@ -2217,8 +2217,8 @@ registerPaymentEvent(date(), date(), agent.order.getTotalPrice());]]></Code>
 	<EmbeddedObject>
 		<Id>1758096294486</Id>
 		<Name><![CDATA[orderingSeize]]></Name>
-		<X>1600</X>
-		<Y>1350</Y>
+		<X>1040</X>
+		<Y>1200</Y>
 		<Label>
 			<X>-5</X>
 			<Y>-15</Y>
@@ -2463,8 +2463,8 @@ send(msg, unit);
 	<EmbeddedObject>
 		<Id>1758098167105</Id>
 		<Name><![CDATA[eatingWait]]></Name>
-		<X>2130</X>
-		<Y>1350</Y>
+		<X>1320</X>
+		<Y>1280</Y>
 		<Label>
 			<X>0</X>
 			<Y>-15</Y>
@@ -2572,7 +2572,7 @@ send(msg, unit);
 		<Id>1758114438685</Id>
 		<Name><![CDATA[outsideTablesPool]]></Name>
 		<X>60</X>
-		<Y>1660</Y>
+		<Y>1320</Y>
 		<Label>
 			<X>-50</X>
 			<Y>-5</Y>
@@ -2904,7 +2904,7 @@ nextOutsideTableIdx++;
 		<Id>1758283131307</Id>
 		<Name><![CDATA[barTablesPool]]></Name>
 		<X>60</X>
-		<Y>1720</Y>
+		<Y>1380</Y>
 		<Label>
 			<X>-40</X>
 			<Y>-10</Y>
@@ -3234,8 +3234,8 @@ nextBarTableIdx++;
 	<EmbeddedObject>
 		<Id>1769809995626</Id>
 		<Name><![CDATA[tableCheck]]></Name>
-		<X>1110</X>
-		<Y>1130</Y>
+		<X>610</X>
+		<Y>1060</Y>
 		<Label>
 			<X>-39</X>
 			<Y>-12</Y>
@@ -3315,8 +3315,8 @@ nextBarTableIdx++;
 	<EmbeddedObject>
 		<Id>1769810223407</Id>
 		<Name><![CDATA[noTable]]></Name>
-		<X>1205</X>
-		<Y>1130</Y>
+		<X>705</X>
+		<Y>1060</Y>
 		<Label>
 			<X>-9</X>
 			<Y>-12</Y>
@@ -3374,8 +3374,8 @@ customerGroupsInRestaurant.remove(agent);]]></Code>
 	<EmbeddedObject>
 		<Id>1769812048786</Id>
 		<Name><![CDATA[hasTable]]></Name>
-		<X>1390</X>
-		<Y>1280</Y>
+		<X>860</X>
+		<Y>1295</Y>
 		<Label>
 			<X>-10</X>
 			<Y>-25</Y>
@@ -3467,7 +3467,7 @@ hold.recalculateConditions();
 		<Id>1770364225333</Id>
 		<Name><![CDATA[cooksPool]]></Name>
 		<X>60</X>
-		<Y>1840</Y>
+		<Y>1500</Y>
 		<Label>
 			<X>-40</X>
 			<Y>-10</Y>
@@ -3797,8 +3797,8 @@ if (type == ResourceTaskType.TASK_END_OF_SHIFT && !unit.isOffShift) {
 	<EmbeddedObject>
 		<Id>1770364465678</Id>
 		<Name><![CDATA[ordersQueue]]></Name>
-		<X>1810</X>
-		<Y>1570</Y>
+		<X>1070</X>
+		<Y>1470</Y>
 		<Label>
 			<X>0</X>
 			<Y>-5</Y>
@@ -3908,8 +3908,8 @@ if (type == ResourceTaskType.TASK_END_OF_SHIFT && !unit.isOffShift) {
 	<EmbeddedObject>
 		<Id>1770364486668</Id>
 		<Name><![CDATA[cookRequest]]></Name>
-		<X>1870</X>
-		<Y>1590</Y>
+		<X>1130</X>
+		<Y>1490</Y>
 		<Label>
 			<X>0</X>
 			<Y>-5</Y>
@@ -4122,8 +4122,8 @@ send(new goCook(agent), unit);]]></Code>
 	<EmbeddedObject>
 		<Id>1770364523572</Id>
 		<Name><![CDATA[cooking]]></Name>
-		<X>1930</X>
-		<Y>1610</Y>
+		<X>1190</X>
+		<Y>1510</Y>
 		<Label>
 			<X>0</X>
 			<Y>-5</Y>
@@ -4227,8 +4227,8 @@ send(new goCook(agent), unit);]]></Code>
 	<EmbeddedObject>
 		<Id>1770364542466</Id>
 		<Name><![CDATA[cookRelease]]></Name>
-		<X>1990</X>
-		<Y>1630</Y>
+		<X>1250</X>
+		<Y>1530</Y>
 		<Label>
 			<X>-5</X>
 			<Y>-5</Y>
@@ -4332,8 +4332,8 @@ send(new goCook(agent), unit);]]></Code>
 	<EmbeddedObject>
 		<Id>1770364631151</Id>
 		<Name><![CDATA[readyQueue]]></Name>
-		<X>2050</X>
-		<Y>1650</Y>
+		<X>1310</X>
+		<Y>1550</Y>
 		<Label>
 			<X>0</X>
 			<Y>-5</Y>
@@ -4437,8 +4437,8 @@ send(new goCook(agent), unit);]]></Code>
 	<EmbeddedObject>
 		<Id>1770364684405</Id>
 		<Name><![CDATA[waiterSeize]]></Name>
-		<X>2110</X>
-		<Y>1670</Y>
+		<X>1370</X>
+		<Y>1570</Y>
 		<Label>
 			<X>0</X>
 			<Y>-5</Y>
@@ -4649,8 +4649,8 @@ send(new goCook(agent), unit);]]></Code>
 	<EmbeddedObject>
 		<Id>1770365615080</Id>
 		<Name><![CDATA[kitchenEnter]]></Name>
-		<X>1760</X>
-		<Y>1560</Y>
+		<X>1020</X>
+		<Y>1460</Y>
 		<Label>
 			<X>-10</X>
 			<Y>-10</Y>
@@ -4772,8 +4772,8 @@ send(new goCook(agent), unit);]]></Code>
 	<EmbeddedObject>
 		<Id>1770366034486</Id>
 		<Name><![CDATA[bringFood]]></Name>
-		<X>2170</X>
-		<Y>1690</Y>
+		<X>1430</X>
+		<Y>1590</Y>
 		<Label>
 			<X>0</X>
 			<Y>-5</Y>
@@ -4877,8 +4877,8 @@ send(new goCook(agent), unit);]]></Code>
 	<EmbeddedObject>
 		<Id>1770366057608</Id>
 		<Name><![CDATA[waiterRelease]]></Name>
-		<X>2230</X>
-		<Y>1710</Y>
+		<X>1490</X>
+		<Y>1610</Y>
 		<Label>
 			<X>-5</X>
 			<Y>-5</Y>
@@ -4982,8 +4982,8 @@ send(new goCook(agent), unit);]]></Code>
 	<EmbeddedObject>
 		<Id>1770369442589</Id>
 		<Name><![CDATA[giveOrder]]></Name>
-		<X>1740</X>
-		<Y>1350</Y>
+		<X>1110</X>
+		<Y>1220</Y>
 		<Label>
 			<X>0</X>
 			<Y>-15</Y>
@@ -5087,8 +5087,8 @@ send(new goCook(agent), unit);]]></Code>
 	<EmbeddedObject>
 		<Id>1770369490014</Id>
 		<Name><![CDATA[orderingRelease]]></Name>
-		<X>1860</X>
-		<Y>1350</Y>
+		<X>1180</X>
+		<Y>1240</Y>
 		<Label>
 			<X>-15</X>
 			<Y>-15</Y>
@@ -5189,8 +5189,8 @@ send(new goCook(agent), unit);]]></Code>
 	<EmbeddedObject>
 		<Id>1770372064453</Id>
 		<Name><![CDATA[kitchenExit]]></Name>
-		<X>2300</X>
-		<Y>1750</Y>
+		<X>1560</X>
+		<Y>1650</Y>
 		<Label>
 			<X>-5</X>
 			<Y>-10</Y>
@@ -5243,8 +5243,8 @@ send(new goCook(agent), unit);]]></Code>
 	<EmbeddedObject>
 		<Id>1770374721574</Id>
 		<Name><![CDATA[waitRetry]]></Name>
-		<X>1150</X>
-		<Y>1180</Y>
+		<X>650</X>
+		<Y>1110</Y>
 		<Label>
 			<X>-4</X>
 			<Y>-8</Y>
@@ -5334,8 +5334,8 @@ send(new goCook(agent), unit);]]></Code>
 	<EmbeddedObject>
 		<Id>1771948324936</Id>
 		<Name><![CDATA[checkoutSeize]]></Name>
-		<X>2250</X>
-		<Y>1350</Y>
+		<X>1390</X>
+		<Y>1300</Y>
 		<Label>
 			<X>-5</X>
 			<Y>-15</Y>
@@ -5558,10 +5558,10 @@ send(new goCook(agent), unit);]]></Code>
 	<EmbeddedObject>
 		<Id>1771948599368</Id>
 		<Name><![CDATA[checkoutRelease]]></Name>
-		<X>2470</X>
-		<Y>1350</Y>
+		<X>1530</X>
+		<Y>1340</Y>
 		<Label>
-			<X>-35</X>
+			<X>-10</X>
 			<Y>-15</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
@@ -5660,8 +5660,8 @@ send(new goCook(agent), unit);]]></Code>
 	<EmbeddedObject>
 		<Id>1778860008956</Id>
 		<Name><![CDATA[timeCheck]]></Name>
-		<X>700</X>
-		<Y>1280</Y>
+		<X>465</X>
+		<Y>1240</Y>
 		<Label>
 			<X>-30</X>
 			<Y>-25</Y>
@@ -5738,8 +5738,8 @@ send(new goCook(agent), unit);]]></Code>
 	<EmbeddedObject>
 		<Id>1778860040747</Id>
 		<Name><![CDATA[tooLate]]></Name>
-		<X>750</X>
-		<Y>1350</Y>
+		<X>515</X>
+		<Y>1310</Y>
 		<Label>
 			<X>-10</X>
 			<Y>-10</Y>
@@ -5796,8 +5796,8 @@ customerGroupsInRestaurant.remove(agent);]]></Code>
 	<EmbeddedObject>
 		<Id>1779382730288</Id>
 		<Name><![CDATA[invalidPopulation]]></Name>
-		<X>2620</X>
-		<Y>1360</Y>
+		<X>1650</X>
+		<Y>1375</Y>
 		<Label>
 			<X>-40</X>
 			<Y>-25</Y>
@@ -5874,11 +5874,11 @@ customerGroupsInRestaurant.remove(agent);]]></Code>
 	<EmbeddedObject>
 		<Id>1779382807419</Id>
 		<Name><![CDATA[invalidState]]></Name>
-		<X>2650</X>
-		<Y>1470</Y>
+		<X>1715</X>
+		<Y>1420</Y>
 		<Label>
-			<X>0</X>
-			<Y>-15</Y>
+			<X>-6</X>
+			<Y>-14</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
@@ -5982,8 +5982,8 @@ customerGroupsInRestaurant.remove(agent);]]></Code>
 	<EmbeddedObject>
 		<Id>1779392224867</Id>
 		<Name><![CDATA[alreadyDone]]></Name>
-		<X>570</X>
-		<Y>1280</Y>
+		<X>390</X>
+		<Y>1220</Y>
 		<Label>
 			<X>-40</X>
 			<Y>-25</Y>

@@ -984,8 +984,8 @@ registerCooksShiftEvent(
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>false</ShowLabel>
 			<Title/>
-			<Width>2880</Width>
-			<Height>880</Height>
+			<Width>2000</Width>
+			<Height>680</Height>
 		</Area>
 		<Area>
 			<Id>1780780513733</Id>

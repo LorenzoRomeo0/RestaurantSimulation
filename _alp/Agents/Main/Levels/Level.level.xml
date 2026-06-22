@@ -3172,7 +3172,7 @@
 	<Group>
 		<Id>1770028206143</Id>
 		<Name><![CDATA[clock]]></Name>
-		<X>410</X>
+		<X>310</X>
 		<Y>150</Y>
 		<Label>
 			<X>10</X>
@@ -3516,7 +3516,7 @@
 	<Text>
 		<Id>1770051566110</Id>
 		<Name><![CDATA[scheduleVals]]></Name>
-		<X>470</X>
+		<X>370</X>
 		<Y>140</Y>
 		<Label>
 			<X>0</X>
@@ -3530,7 +3530,7 @@
 		<Z>0</Z>
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
-		<Text><![CDATA[text]]></Text>
+		<Text><![CDATA[scheduleVals]]></Text>
 		<TextCode>"Arrival rate: "+ arrivalsSchedule.getValue() +
 ", Avg group size: " + groupsizeSchedule.getValue()
 + "\nActive waiters: " + waitersSchedule.getValue()
@@ -3545,7 +3545,7 @@
 	<Text>
 		<Id>1770051794926</Id>
 		<Name><![CDATA[Datetime]]></Name>
-		<X>470</X>
+		<X>370</X>
 		<Y>120</Y>
 		<Label>
 			<X>0</X>
@@ -3559,7 +3559,7 @@
 		<Z>0</Z>
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
-		<Text><![CDATA[text]]></Text>
+		<Text><![CDATA[datetime]]></Text>
 		<TextCode>new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm").format(date())</TextCode>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
@@ -3571,8 +3571,8 @@
 	<Text>
 		<Id>1770374931654</Id>
 		<Name><![CDATA[text5]]></Name>
-		<X>1060</X>
-		<Y>1030</Y>
+		<X>420</X>
+		<Y>1440</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3598,8 +3598,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1775058310781</Id>
 		<Name><![CDATA[customersinRestaurant]]></Name>
-		<X>660</X>
-		<Y>200</Y>
+		<X>370</X>
+		<Y>180</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -3749,8 +3749,8 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 	<Text>
 		<Id>1777058799377</Id>
 		<Name><![CDATA[moneySpentText]]></Name>
-		<X>660</X>
-		<Y>220</Y>
+		<X>-1800</X>
+		<Y>-300</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
