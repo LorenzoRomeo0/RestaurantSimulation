@@ -55,7 +55,6 @@ return
 	"size = " + size + "\n" +
 	"table = " + table + "\n" +
 	"currentWaiter = " + (currentWaiter == null ? "null" : currentWaiter.getId()) + "\n" +
-	"celiacs = " + celiacs + "\n" +
 	"entrancePriority = " + entrancePriority + "}";
 /*ALCODEEND*/}
 
