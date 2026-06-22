@@ -307,7 +307,7 @@
 		<LineMaterial>null</LineMaterial>
 		<LineStyle>SOLID</LineStyle>
 		<Width>1320</Width>
-		<Height>1140</Height>
+		<Height>1160</Height>
 		<Rotation>0.0</Rotation>
 		<FillColor>-1</FillColor>
 		<FillMaterial>null</FillMaterial>
@@ -5647,7 +5647,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Z>0</Z>
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
-		<Text><![CDATA[Customer entrance wait times (Minutes)]]></Text>
+		<Text><![CDATA[Customer entrance wait times (Average) (Minutes)]]></Text>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
 			<Size>14</Size>
@@ -5672,7 +5672,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Z>0</Z>
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
-		<Text><![CDATA[Customer table wait times (Minutes)]]></Text>
+		<Text><![CDATA[Customer table wait times (Average) (Minutes)]]></Text>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
 			<Size>14</Size>
@@ -5697,7 +5697,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Z>0</Z>
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
-		<Text><![CDATA[Customer wait times at checkout (Minutes)]]></Text>
+		<Text><![CDATA[Customer wait times at checkout (Average) (Minutes)]]></Text>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
 			<Size>14</Size>
@@ -5722,7 +5722,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Z>0</Z>
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
-		<Text><![CDATA[Customer stay time lengh (Minutes)]]></Text>
+		<Text><![CDATA[Customer stay time lengh (Average) (Minutes)]]></Text>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
 			<Size>14</Size>
@@ -5747,7 +5747,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Z>0</Z>
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
-		<Text><![CDATA[Number of customers served (Minutes)]]></Text>
+		<Text><![CDATA[Number of customers served (Sum) (Minutes)]]></Text>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
 			<Size>14</Size>
@@ -5997,7 +5997,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Z>0</Z>
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
-		<Text><![CDATA[Waiters IDLE times (Minutes)]]></Text>
+		<Text><![CDATA[Waiters IDLE times (Average) (Minutes)]]></Text>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
 			<Size>14</Size>
@@ -6022,7 +6022,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Z>0</Z>
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
-		<Text><![CDATA[Waiters overtime times (Hours)]]></Text>
+		<Text><![CDATA[Waiters overtime times (Sum)	 (Hours)]]></Text>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
 			<Size>14</Size>
@@ -6047,7 +6047,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Z>0</Z>
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
-		<Text><![CDATA[Cooks IDLE times (Minutes)]]></Text>
+		<Text><![CDATA[Cooks IDLE times (Average) (Minutes)]]></Text>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
 			<Size>14</Size>
@@ -6072,7 +6072,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Z>0</Z>
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
-		<Text><![CDATA[Cooks overtime times (Hours)]]></Text>
+		<Text><![CDATA[Cooks overtime times (Sum) (Hours)]]></Text>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
 			<Size>14</Size>
@@ -6122,7 +6122,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Z>0</Z>
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
-		<Text><![CDATA[Earned money]]></Text>
+		<Text><![CDATA[Earned money (Sum)]]></Text>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
 			<Size>14</Size>
@@ -6147,7 +6147,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Z>0</Z>
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
-		<Text><![CDATA[Employees costs]]></Text>
+		<Text><![CDATA[Employees costs (Sum)]]></Text>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
 			<Size>14</Size>

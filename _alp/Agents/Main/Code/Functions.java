@@ -626,7 +626,7 @@ sbIdle.append("weekday,daypart,meanIdleTime")
   .append(System.lineSeparator());
 
 
-sbOvertime.append("weekday,daypart,overtimeHours")
+sbOvertime.append("weekday,daypart,overtimeHours,avgOvertime")
   .append(System.lineSeparator());
   
 
@@ -636,6 +636,7 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
         
         double averageIdle = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.WAITER_IDLE, openingTime);
 		double totalOvertime = timeEvents.getValueSumByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.WAITER_OVERTIME, openingTime);
+		double avgOvertime = timeEvents.getValueAvgByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.WAITER_OVERTIME, openingTime);
 		
 		
 		String dayName = dayToString(day);
@@ -669,6 +670,8 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
 	          .append(dayPart)
 	          .append(",")
 	          .append(totalOvertime)
+	          .append(",")
+	          .append(avgOvertime)
 	          .append(System.lineSeparator());
 	          
 	          item = waiterOvertimeChartItems.get(key);
@@ -712,7 +715,7 @@ StringBuilder sbShift = new StringBuilder();
 sbIdle.append("weekday,daypart,meanIdleTime")
   .append(System.lineSeparator());
 
-sbOvertime.append("weekday,daypart,overtimeHours")
+sbOvertime.append("weekday,daypart,overtimeHours,avgOvertime")
   .append(System.lineSeparator());
 
 sbShift.append("weekday,daypart,cooksInShift,hours,salary,overtimeSalary,totalSalary")
@@ -724,6 +727,7 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
         
         double averageIdle = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.COOK_IDLE, openingTime);
 		double totalOvertime = timeEvents.getValueSumByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.COOK_OVERTIME, openingTime);
+		double avgOvertime = timeEvents.getValueAvgByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.COOK_OVERTIME, openingTime);
 		
 		String dayName = dayToString(day);
         String key = dayName + "-" + dayPart;
@@ -770,6 +774,8 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
 	          .append(dayPart)
 	          .append(",")
 	          .append(totalOvertime)
+	          .append(",")
+	          .append(avgOvertime)
 	          .append(System.lineSeparator());
 	          
 	          item = cookOvertimeChartItems.get(key);

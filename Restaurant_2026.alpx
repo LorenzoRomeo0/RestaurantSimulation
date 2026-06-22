@@ -105,7 +105,7 @@
 					<Password/>
 				</ExternalConnection>
 				<TableImportSettings>
-					<Id>1780931459843</Id>
+					<Id>1782117192673</Id>
 					<TableReference>
 						<PackageName>restaurant_2025</PackageName>
 						<ClassName>arrival_rate_week_groupsize</ClassName>
@@ -125,7 +125,7 @@
 					<AutoImport>false</AutoImport>
 				</TableImportSettings>
 				<TableImportSettings>
-					<Id>1780932436314</Id>
+					<Id>1782118290740</Id>
 					<TableReference>
 						<PackageName>restaurant_2025</PackageName>
 						<ClassName>employees_schedule</ClassName>
