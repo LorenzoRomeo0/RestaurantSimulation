@@ -913,7 +913,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>giveOrder</ItemName>
+			<ItemName>giveOrderWait</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -946,7 +946,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>giveOrder</ItemName>
+			<ItemName>giveOrderWait</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -1388,7 +1388,7 @@
 	<Connector>
 		<Id>1779382811577</Id>
 		<Name><![CDATA[connector11]]></Name>
-		<X>1715</X>
+		<X>1705</X>
 		<Y>1440</Y>
 		<Label>
 			<X>10</X>
@@ -1423,11 +1423,11 @@
 				<Y>0</Y>
 			</Point>
 			<Point>
-				<X>-45</X>
+				<X>-35</X>
 				<Y>0</Y>
 			</Point>
 			<Point>
-				<X>-45</X>
+				<X>-35</X>
 				<Y>-45</Y>
 			</Point>
 		</Points>
@@ -1435,7 +1435,7 @@
 	<Connector>
 		<Id>1779382814457</Id>
 		<Name><![CDATA[connector12]]></Name>
-		<X>1755</X>
+		<X>1745</X>
 		<Y>1440</Y>
 		<Label>
 			<X>10</X>
@@ -1470,15 +1470,15 @@
 				<Y>0</Y>
 			</Point>
 			<Point>
-				<X>70</X>
+				<X>40</X>
 				<Y>0</Y>
 			</Point>
 			<Point>
-				<X>70</X>
+				<X>40</X>
 				<Y>-55</Y>
 			</Point>
 			<Point>
-				<X>135</X>
+				<X>55</X>
 				<Y>-55</Y>
 			</Point>
 		</Points>
@@ -1521,7 +1521,7 @@
 				<Y>0</Y>
 			</Point>
 			<Point>
-				<X>210</X>
+				<X>120</X>
 				<Y>0</Y>
 			</Point>
 		</Points>
@@ -1619,7 +1619,7 @@
 				<Y>200</Y>
 			</Point>
 			<Point>
-				<X>1305</X>
+				<X>1295</X>
 				<Y>200</Y>
 			</Point>
 		</Points>

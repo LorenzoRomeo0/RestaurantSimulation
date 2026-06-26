@@ -19,22 +19,6 @@ return maxSize;
 
 Table tableSelection(CustomerGroup customerGroup)
 {/*ALCODESTART::1770025342170*/
-/*
-int n = 0;
-for (Table t : insideTablesPool){
-	if (t.isFree) n++;
-}
-for (Table t : outsideTablesPool){
-	if (t.isFree) n++;
-}
-for (Table t : barTablesPool){
-	if (t.isFree) n++;
-}
-System.out.println("Available tables: " + n);
-*/
-
-//usare resourcepool?
-
 int insidePrio = insidePrioSchedule.getValue();
 int outsidePrio = outsidePrioSchedule.getValue();
 int barPrio = barPrioSchedule.getValue();
