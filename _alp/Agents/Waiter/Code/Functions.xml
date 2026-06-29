@@ -6,7 +6,7 @@
 		<Id>1775045673368</Id>
 		<Name><![CDATA[requestShiftEnd]]></Name>
 		<X>30</X>
-		<Y>490</Y>
+		<Y>380</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -22,7 +22,7 @@
 		<Id>1775045893926</Id>
 		<Name><![CDATA[requestShiftStart]]></Name>
 		<X>30</X>
-		<Y>520</Y>
+		<Y>400</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -38,7 +38,7 @@
 		<Id>1778861913555</Id>
 		<Name><![CDATA[toString]]></Name>
 		<X>30</X>
-		<Y>90</Y>
+		<Y>420</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>

@@ -4,7 +4,7 @@ void debugTextUpdater()
 //timeEventsDebugTextUpdater();
 menuItemsDebugTextUpdater();
 moneyDebugTextUpdater();
-//menuCopulaGeneratorDebugTextUpdater();
+menuCopulaGeneratorDebugTextUpdater();
 //waitersPoolDebugTextUpdater();
 //customerGroupDebugTextUpdater();
 

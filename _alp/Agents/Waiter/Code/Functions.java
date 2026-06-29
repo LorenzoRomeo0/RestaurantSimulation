@@ -24,9 +24,7 @@ return
 	"currentOrder = " + currentOrder + "\n" +
 	"isSeized = " + isSeized + "\n" +
 	"foundTable = " + foundTable + "\n" +
-	"currentCustomers = " + (currentCustomers == null ? "null" : currentCustomers.getId()) + "\n" +
-	"targetNode = " + targetNode + "\n" +
-	"isWaiting = " + isWaiting;
+	"currentCustomers = " + (currentCustomers == null ? "null" : currentCustomers.getId()) + "\n";
 	
 	
 	

@@ -25,7 +25,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>seizeWaiter</ItemName>
+			<ItemName>waiterSeizeWelcome</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -197,7 +197,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>seizeWaiter</ItemName>
+			<ItemName>waiterSeizeWelcome</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -774,7 +774,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>waiterSeize</ItemName>
+			<ItemName>waiterSeizeReady</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -827,7 +827,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>restaurant_2025</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>waiterSeize</ItemName>
+			<ItemName>waiterSeizeReady</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>

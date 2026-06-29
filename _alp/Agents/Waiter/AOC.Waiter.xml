@@ -98,8 +98,8 @@
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1756758042710</Id>
 			<Name><![CDATA[seizedAtEntrance]]></Name>
-			<X>655</X>
-			<Y>150</Y>
+			<X>595</X>
+			<Y>175</Y>
 			<Label>
 				<X>10</X>
 				<Y>10</Y>
@@ -109,18 +109,18 @@
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="160" Height="30">
 				<EntryAction>//traceln(this +" "+this.getId() + " SEIZED AT ENTRANCE");
+//targetNode = "entrance";
+
 _ps7.setFillColor(gold);
-targetNode = "entrance";
-this.moveTo(main.entranceNode);
-//traceln("waiter "+ getId() + " seizedAtEntrance")</EntryAction>
+this.moveTo(main.entranceNode);</EntryAction>
 				<FillColor>-10496</FillColor>
 			</Properties>
 		</StatechartElement>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1756758054649</Id>
 			<Name><![CDATA[assignTable]]></Name>
-			<X>650</X>
-			<Y>230</Y>
+			<X>590</X>
+			<Y>255</Y>
 			<Label>
 				<X>10</X>
 				<Y>10</Y>
@@ -129,11 +129,10 @@ this.moveTo(main.entranceNode);
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="115" Height="30">
-				<EntryAction>targetNode = "none";
+				<EntryAction>//targetNode = "none";
+
 _ps7.setFillColor(yellow);
 
-CustomerGroup cg = main.customersAtEntrance;
-//System.out.println(getId() + " is welcoming " + cg.getId());
 currentCustomers = main.customersAtEntrance;
 //System.out.println(getId() + " is welcoming " + currentCustomers.getId());
 
@@ -144,8 +143,8 @@ foundTable = main.tableSelection(currentCustomers);</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1756758068267</Id>
 			<Name><![CDATA[taskEnd]]></Name>
-			<X>650</X>
-			<Y>490</Y>
+			<X>590</X>
+			<Y>515</Y>
 			<Label>
 				<X>10</X>
 				<Y>10</Y>
@@ -154,7 +153,7 @@ foundTable = main.tableSelection(currentCustomers);</EntryAction>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="135" Height="30">
-				<EntryAction>targetNode = "none";
+				<EntryAction>//targetNode = "none";
 _ps7.setFillColor(green);</EntryAction>
 				<FillColor>-16744448</FillColor>
 			</Properties>
@@ -162,8 +161,8 @@ _ps7.setFillColor(green);</EntryAction>
 		<StatechartElement Class="FinalState" ParentState="ROOT_NODE">
 			<Id>1756758181551</Id>
 			<Name><![CDATA[finalState]]></Name>
-			<X>710</X>
-			<Y>580</Y>
+			<X>650</X>
+			<Y>605</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -176,8 +175,8 @@ _ps7.setFillColor(green);</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1756758518168</Id>
 			<Name><![CDATA[waiting]]></Name>
-			<X>655</X>
-			<Y>65</Y>
+			<X>595</X>
+			<Y>90</Y>
 			<Label>
 				<X>11</X>
 				<Y>11</Y>
@@ -186,27 +185,7 @@ _ps7.setFillColor(green);</EntryAction>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
-				<EntryAction>/*
-if (getHourOfDay() &gt;= 23) {
-    traceln(
-        "hour=" + getHourOfDay()
-        + "minutes=" + getMinute()
-        + " waiterId=" + getId()
-        + " | !isOffShift=" + (!isOffShift)
-        + " | !isSeized=" + (!isSeized)
-        + " | endShiftRequested=" + endShiftRequested
-        + " | closingTimeReached=" + (getHourOfDay() &gt;= main.closingTime)
-        + " | NEWclosingTimeReached=" + DayPartUtil.getCurrentDayPart(this, main.openingTime) == DayPartUtil.DayPart.CLOSED
-        + " | customersZero=" + (main.customersInRestaurantNr == 0)
-        + " | finalCondition="
-        + (!isOffShift &amp;&amp; !isSeized
-           &amp;&amp; (endShiftRequested
-               || (getHourOfDay() &gt;= main.closingTime
-                   &amp;&amp; main.customersInRestaurantNr == 0)))
-    );
-}
-*/
-this.stop();
+				<EntryAction>this.stop();
 
 idleStartDate = date();
 
@@ -215,24 +194,18 @@ currentCustomers = null;
 currentOrder = null;
 
 //traceln(this +" "+this.getId() + " IS WAITING");
-
 </EntryAction>
-				<ExitAction>//if (idleStartDate.getTime() - date().getTime() &gt;= 60_000)
-if(!isOffShift)
+				<ExitAction>if(!isOffShift)
 	main.registerWaiterIdlevent(idleStartDate, date());
-	
-
-//isWaiting = false;
-
-//traceln(this +" "+ this.getId() + " IS NO MORE WAITING");</ExitAction>
+</ExitAction>
 				<FillColor>-14774017</FillColor>
 			</Properties>
 		</StatechartElement>
 		<StatechartElement Class="Branch" ParentState="ROOT_NODE">
 			<Id>1757583106574</Id>
 			<Name><![CDATA[branch]]></Name>
-			<X>705</X>
-			<Y>310</Y>
+			<X>645</X>
+			<Y>335</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -245,8 +218,8 @@ if(!isOffShift)
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1757583310554</Id>
 			<Name><![CDATA[sendTable]]></Name>
-			<X>665</X>
-			<Y>355</Y>
+			<X>605</X>
+			<Y>380</Y>
 			<Label>
 				<X>10</X>
 				<Y>10</Y>
@@ -255,8 +228,9 @@ if(!isOffShift)
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
-				<EntryAction>targetNode = "table " + foundTable.getId();
+				<EntryAction>//targetNode = "table " + foundTable.getId();
 //traceln(getId() + " Bringing " + currentCustomers.getId() + " to " + foundTable.getId());
+
 foundTable.waiterAssigner = this;
 send(foundTable, currentCustomers);
 moveTo(foundTable);
@@ -267,8 +241,8 @@ moveTo(foundTable);
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1758095672440</Id>
 			<Name><![CDATA[seizedAtTable]]></Name>
-			<X>450</X>
-			<Y>140</Y>
+			<X>390</X>
+			<Y>165</Y>
 			<Label>
 				<X>10</X>
 				<Y>10</Y>
@@ -278,9 +252,10 @@ moveTo(foundTable);
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="135" Height="30">
 				<EntryAction>//traceln(this +" "+this.getId() + " SEIZED AT TABLE");
-_ps7.setFillColor(lavender);
 //traceln("---&gt; Waiter " + getId() + " -&gt; ordering task -&gt; Customer " + currentCustomers.getId());
-targetNode = currentCustomers.getId() +"";
+//targetNode = currentCustomers.getId() +"";
+
+_ps7.setFillColor(lavender);
 this.moveTo(currentCustomers);</EntryAction>
 				<FillColor>-1644806</FillColor>
 			</Properties>
@@ -288,8 +263,8 @@ this.moveTo(currentCustomers);</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1758096946730</Id>
 			<Name><![CDATA[exchange]]></Name>
-			<X>460</X>
-			<Y>225</Y>
+			<X>400</X>
+			<Y>250</Y>
 			<Label>
 				<X>10</X>
 				<Y>10</Y>
@@ -298,7 +273,8 @@ this.moveTo(currentCustomers);</EntryAction>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
-				<EntryAction>targetNode = "none";
+				<EntryAction>//targetNode = "none";
+
 send(this, currentCustomers);</EntryAction>
 				<FillColor/>
 			</Properties>
@@ -306,8 +282,8 @@ send(this, currentCustomers);</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1758283887335</Id>
 			<Name><![CDATA[prepareOrder]]></Name>
-			<X>465</X>
-			<Y>305</Y>
+			<X>405</X>
+			<Y>330</Y>
 			<Label>
 				<X>10</X>
 				<Y>10</Y>
@@ -315,20 +291,19 @@ send(this, currentCustomers);</EntryAction>
 			<PublicFlag>false</PublicFlag>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
-			<Properties Width="100" Height="30">
-				<EntryAction>targetNode = "kitchen";
-moveTo(main.kitchenNode);
-//traceln("-----&gt; " +getId()+ " take this order: "+ currentOrder);
+			<Properties Width="135" Height="30">
+				<EntryAction>//targetNode = "kitchen";
+//traceln("-----&gt; " +getId()+ " took this order: "+ currentOrder);
 
-//traceln("-----&gt; " +getId()+ " take this order: "+ currentOrder);</EntryAction>
+moveTo(main.kitchenNode);</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1758283902548</Id>
 			<Name><![CDATA[giveOrderToKitchen]]></Name>
-			<X>465</X>
-			<Y>380</Y>
+			<X>405</X>
+			<Y>405</Y>
 			<Label>
 				<X>10</X>
 				<Y>10</Y>
@@ -336,7 +311,7 @@ moveTo(main.kitchenNode);
 			<PublicFlag>false</PublicFlag>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
-			<Properties Width="100" Height="30">
+			<Properties Width="175" Height="30">
 				<EntryAction>main.kitchenEnter.take(currentOrder);
 main.giveOrderWait.free(currentCustomers);</EntryAction>
 				<FillColor/>
@@ -345,8 +320,8 @@ main.giveOrderWait.free(currentCustomers);</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1769808342899</Id>
 			<Name><![CDATA[sendNoTable]]></Name>
-			<X>755</X>
-			<Y>405</Y>
+			<X>695</X>
+			<Y>430</Y>
 			<Label>
 				<X>9</X>
 				<Y>10</Y>
@@ -362,8 +337,8 @@ main.giveOrderWait.free(currentCustomers);</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1770367636238</Id>
 			<Name><![CDATA[goBringFood]]></Name>
-			<X>300</X>
-			<Y>225</Y>
+			<X>240</X>
+			<Y>250</Y>
 			<Label>
 				<X>10</X>
 				<Y>10</Y>
@@ -371,8 +346,9 @@ main.giveOrderWait.free(currentCustomers);</EntryAction>
 			<PublicFlag>false</PublicFlag>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
-			<Properties Width="100" Height="30">
-				<EntryAction>targetNode = currentOrder.customerGroup.getId() +"";
+			<Properties Width="130" Height="30">
+				<EntryAction>//targetNode = currentOrder.customerGroup.getId() +"";
+
 this.moveTo(currentOrder.customerGroup);</EntryAction>
 				<FillColor/>
 			</Properties>
@@ -380,8 +356,8 @@ this.moveTo(currentOrder.customerGroup);</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1770367813467</Id>
 			<Name><![CDATA[notifyOrderDone]]></Name>
-			<X>300</X>
-			<Y>305</Y>
+			<X>240</X>
+			<Y>330</Y>
 			<Label>
 				<X>10</X>
 				<Y>10</Y>
@@ -389,8 +365,9 @@ this.moveTo(currentOrder.customerGroup);</EntryAction>
 			<PublicFlag>false</PublicFlag>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
-			<Properties Width="100" Height="30">
-				<EntryAction>targetNode = "none";
+			<Properties Width="155" Height="30">
+				<EntryAction>//targetNode = "none";
+
 send("foodReady", currentOrder.customerGroup);
 main.bringFood.free(currentOrder);</EntryAction>
 				<FillColor/>
@@ -399,8 +376,8 @@ main.bringFood.free(currentOrder);</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1770373705970</Id>
 			<Name><![CDATA[takeFood]]></Name>
-			<X>300</X>
-			<Y>140</Y>
+			<X>240</X>
+			<Y>165</Y>
 			<Label>
 				<X>10</X>
 				<Y>10</Y>
@@ -410,7 +387,7 @@ main.bringFood.free(currentOrder);</EntryAction>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
 				<EntryAction>//traceln(this +" "+this.getId() + " TAKE FOOD");
-targetNode = "kitchen";
+//targetNode = "kitchen";
 this.moveTo(main.kitchenNode)</EntryAction>
 				<FillColor/>
 			</Properties>
@@ -418,8 +395,8 @@ this.moveTo(main.kitchenNode)</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1775060505849</Id>
 			<Name><![CDATA[offShift]]></Name>
-			<X>780</X>
-			<Y>25</Y>
+			<X>720</X>
+			<Y>50</Y>
 			<Label>
 				<X>10</X>
 				<Y>10</Y>
@@ -472,8 +449,8 @@ this.moveTo(main.waitersNode);</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1775060659386</Id>
 			<Name><![CDATA[onShift]]></Name>
-			<X>520</X>
-			<Y>25</Y>
+			<X>460</X>
+			<Y>50</Y>
 			<Label>
 				<X>10</X>
 				<Y>10</Y>
@@ -484,7 +461,7 @@ this.moveTo(main.waitersNode);</EntryAction>
 			<Properties Width="100" Height="30">
 				<EntryAction>isOffShift = false;
 startShiftRequested = false;
-wasOvertime = false;
+//wasOvertime = false;
 lastShiftDay = date().getDay();
 
 shiftStartDate = date();
@@ -496,8 +473,8 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 		<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
 			<Id>1756758039787</Id>
 			<Name><![CDATA[waiter_statechart]]></Name>
-			<X>700</X>
-			<Y>5</Y>
+			<X>640</X>
+			<Y>30</Y>
 			<Label>
 				<X>-54</X>
 				<Y>-19</Y>
@@ -520,8 +497,8 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1756758049889</Id>
 			<Name><![CDATA[transition]]></Name>
-			<X>705</X>
-			<Y>180</Y>
+			<X>645</X>
+			<Y>205</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -560,8 +537,8 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1756758185581</Id>
 			<Name><![CDATA[transition2]]></Name>
-			<X>710</X>
-			<Y>520</Y>
+			<X>650</X>
+			<Y>545</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -600,8 +577,8 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1756758544748</Id>
 			<Name><![CDATA[transition3]]></Name>
-			<X>700</X>
-			<Y>95</Y>
+			<X>640</X>
+			<Y>120</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -640,8 +617,8 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1757345942076</Id>
 			<Name><![CDATA[transition4]]></Name>
-			<X>785</X>
-			<Y>510</Y>
+			<X>725</X>
+			<Y>535</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -688,8 +665,8 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1757583130407</Id>
 			<Name><![CDATA[transition5]]></Name>
-			<X>705</X>
-			<Y>260</Y>
+			<X>645</X>
+			<Y>285</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -728,8 +705,8 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1757583151033</Id>
 			<Name><![CDATA[transition6]]></Name>
-			<X>705</X>
-			<Y>320</Y>
+			<X>645</X>
+			<Y>345</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -768,8 +745,8 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1757583157873</Id>
 			<Name><![CDATA[transition7]]></Name>
-			<X>717</X>
-			<Y>310</Y>
+			<X>657</X>
+			<Y>335</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -812,8 +789,8 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1758095704913</Id>
 			<Name><![CDATA[transition9]]></Name>
-			<X>675</X>
-			<Y>95</Y>
+			<X>615</X>
+			<Y>120</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -861,8 +838,8 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1758096085790</Id>
 			<Name><![CDATA[transition10]]></Name>
-			<X>515</X>
-			<Y>170</Y>
+			<X>455</X>
+			<Y>195</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -901,8 +878,8 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1758096971026</Id>
 			<Name><![CDATA[transition11]]></Name>
-			<X>515</X>
-			<Y>255</Y>
+			<X>455</X>
+			<Y>280</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -923,6 +900,7 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 			<IconOffset>20.0</IconOffset>
 			<Properties Source="1758096946730" Target="1758283887335" Trigger="message">
 				<Action>currentOrder = msg;
+
 //traceln("-----&gt; " +getId()+ "got this order: "+ currentOrder);</Action>
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[10]]></Code>
@@ -943,8 +921,8 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1758283913844</Id>
 			<Name><![CDATA[transition12]]></Name>
-			<X>515</X>
-			<Y>335</Y>
+			<X>455</X>
+			<Y>360</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -983,8 +961,8 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1758284027163</Id>
 			<Name><![CDATA[transition14]]></Name>
-			<X>520</X>
-			<Y>410</Y>
+			<X>460</X>
+			<Y>435</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -1027,8 +1005,8 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1769808372268</Id>
 			<Name><![CDATA[transition16]]></Name>
-			<X>765</X>
-			<Y>440</Y>
+			<X>705</X>
+			<Y>465</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -1067,8 +1045,8 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1770367647325</Id>
 			<Name><![CDATA[transition17]]></Name>
-			<X>670</X>
-			<Y>85</Y>
+			<X>610</X>
+			<Y>110</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -1112,8 +1090,8 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1770367836386</Id>
 			<Name><![CDATA[transition18]]></Name>
-			<X>350</X>
-			<Y>255</Y>
+			<X>290</X>
+			<Y>280</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -1152,8 +1130,8 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1770368055533</Id>
 			<Name><![CDATA[transition15]]></Name>
-			<X>350</X>
-			<Y>335</Y>
+			<X>290</X>
+			<Y>360</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -1196,8 +1174,8 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1770373733198</Id>
 			<Name><![CDATA[transition19]]></Name>
-			<X>350</X>
-			<Y>170</Y>
+			<X>290</X>
+			<Y>195</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -1236,8 +1214,8 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1775060327923</Id>
 			<Name><![CDATA[transition13]]></Name>
-			<X>720</X>
-			<Y>65</Y>
+			<X>660</X>
+			<Y>90</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -1270,7 +1248,6 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 &amp;&amp; (
 	endShiftRequested 
 	|| (
-		//getHourOfDay() &gt;= main.closingTime 
 		DayPartUtil.getCurrentDayPart(this, main.openingTime) == DayPartUtil.DayPart.CLOSED
 		&amp;&amp; main.customersInRestaurantNr == 0
 		)
@@ -1289,8 +1266,8 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1775060569914</Id>
 			<Name><![CDATA[transition20]]></Name>
-			<X>825</X>
-			<Y>55</Y>
+			<X>765</X>
+			<Y>80</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -1333,8 +1310,8 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1775060671120</Id>
 			<Name><![CDATA[transition21]]></Name>
-			<X>675</X>
-			<Y>65</Y>
+			<X>615</X>
+			<Y>90</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -1358,15 +1335,15 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 			</Points>
 			<IconOffset>35.0</IconOffset>
 			<Properties Source="1756758518168" Target="1775060659386" Trigger="condition">
-				<Action>traceln(lastShiftDay + " " + date().getDay())</Action>
+				<Action>//traceln(lastShiftDay + " " + date().getDay())</Action>
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="TimeUnits">MINUTE</Unit>
 				</Timeout>
 				<Condition>startShiftRequested 
 || (
+	// for the extreme case when the waiter had an overtime so long it reached its next shift
 	wasOvertime 
-	//&amp;&amp; getHourOfDay() &gt;= main.openingTime 
 	&amp;&amp; DayPartUtil.getCurrentDayPart(this, main.openingTime) != DayPartUtil.DayPart.CLOSED
 	&amp;&amp; lastShiftDay != date().getDay()
 	)</Condition>
@@ -1384,8 +1361,8 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1775060710965</Id>
 			<Name><![CDATA[transition22]]></Name>
-			<X>565</X>
-			<Y>55</Y>
+			<X>505</X>
+			<Y>80</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -1428,8 +1405,8 @@ _ps7.setFillColor(dodgerBlue);</EntryAction>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1779202127823</Id>
 			<Name><![CDATA[transition23]]></Name>
-			<X>705</X>
-			<Y>385</Y>
+			<X>645</X>
+			<Y>410</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
