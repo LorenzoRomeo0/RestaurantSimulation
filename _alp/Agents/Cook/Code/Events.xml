@@ -3,8 +3,8 @@
 	<Event>
 		<Id>1776171195247</Id>
 		<Name><![CDATA[checkConditions]]></Name>
-		<X>230</X>
-		<Y>25</Y>
+		<X>25</X>
+		<Y>375</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>

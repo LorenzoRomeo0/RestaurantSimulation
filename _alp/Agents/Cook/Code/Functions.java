@@ -37,16 +37,8 @@ String toString()
 {/*ALCODESTART::1781009491189*/
 return
 	"{\nid = " + getId() + "\n" +
-	//"shiftStartDate = " + shiftStartDate + "\n" +
-	//"shiftEndDate = " + shiftEndDate + "\n" +
+
 	"isOffShift = " + isOffShift + "\n" +
-	//"endShiftRequested = " + endShiftRequested + "\n" +
-	//"startShiftRequested = " + startShiftRequested + "\n" +
-	//"lastShiftDay = " + lastShiftDay + "\n" +
-	//"wasOvertime = " + wasOvertime + "\n" +
-	//"currentOrder = " + currentOrder + "\n" +
-	//"idleStartDate = " + idleStartDate + "\n" +
-	//"isSeized = " + isSeized;
 	"}";
 /*ALCODEEND*/}
 

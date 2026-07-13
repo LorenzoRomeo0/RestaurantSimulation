@@ -59,7 +59,7 @@ public class MenuCopulaUpdater {
     private final Agent agent;
 
     
-    //TODO: rendere dinamici (?)
+    
     private final Map<String, List<String>> varsByDayPart = new LinkedHashMap<String, List<String>>() {{
         put("BREAKFAST", Arrays.asList("main", "drink", "combo"));
         put("BREAK", Arrays.asList("main", "drink"));

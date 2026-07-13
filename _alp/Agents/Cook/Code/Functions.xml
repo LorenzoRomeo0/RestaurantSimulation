@@ -5,8 +5,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1776170435234</Id>
 		<Name><![CDATA[requestShiftEnd]]></Name>
-		<X>20</X>
-		<Y>310</Y>
+		<X>25</X>
+		<Y>325</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -21,8 +21,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1776170435239</Id>
 		<Name><![CDATA[requestShiftStart]]></Name>
-		<X>20</X>
-		<Y>340</Y>
+		<X>25</X>
+		<Y>305</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -37,8 +37,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1777049298321</Id>
 		<Name><![CDATA[getTimeToPrepareOrder]]></Name>
-		<X>20</X>
-		<Y>450</Y>
+		<X>25</X>
+		<Y>285</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -57,8 +57,8 @@
 		<ReturnType>String</ReturnType>
 		<Id>1781009491189</Id>
 		<Name><![CDATA[toString]]></Name>
-		<X>-100</X>
-		<Y>50</Y>
+		<X>25</X>
+		<Y>345</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>

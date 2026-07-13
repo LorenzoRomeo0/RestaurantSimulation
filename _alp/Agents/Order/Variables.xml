@@ -19,11 +19,11 @@
 			<Type><![CDATA[Date]]></Type>
 		</Properties>
 	</Variable>
-	<Variable Class="Parameter">
-		<Id>1777022491563</Id>
+	<Variable Class="PlainVariable">
+		<Id>1783954818433</Id>
 		<Name><![CDATA[customerGroup]]></Name>
 		<X>50</X>
-		<Y>50</Y>
+		<Y>60</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -31,25 +31,21 @@
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
 		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
 			<Type><![CDATA[CustomerGroup]]></Type>
-			<UnitType>NONE</UnitType>
-			<SdArray>false</SdArray>
-			<ParameterEditor>
-				<Id>1777022491562</Id>
-				<Label><![CDATA[customerGroup]]></Label>
-				<EditorContolType>TEXT_BOX</EditorContolType>
-				<MinSliderValue>0</MinSliderValue>
-				<MaxSliderValue>100</MaxSliderValue>
-				<DelimeterType>NO_DELIMETER</DelimeterType>
-			</ParameterEditor>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[null]]></Code>
+			</InitialValue>
 		</Properties>
 	</Variable>
-	<Variable Class="Parameter">
-		<Id>1777022491566</Id>
+	<Variable Class="PlainVariable">
+		<Id>1783954855184</Id>
 		<Name><![CDATA[menuItems]]></Name>
 		<X>50</X>
-		<Y>100</Y>
+		<Y>90</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -57,20 +53,14 @@
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
 		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
 			<Type><![CDATA[ArrayList<MenuItem>]]></Type>
-			<UnitType>NONE</UnitType>
-			<SdArray>false</SdArray>
-			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[new ArrayList<MenuItem>()]]></Code>
-			</DefaultValue>
-			<ParameterEditor>
-				<Id>1777022491565</Id>
-				<EditorContolType>TEXT_BOX</EditorContolType>
-				<MinSliderValue>0</MinSliderValue>
-				<MaxSliderValue>100</MaxSliderValue>
-				<DelimeterType>NO_DELIMETER</DelimeterType>
-			</ParameterEditor>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[new ArrayList<MenuItem>();]]></Code>
+			</InitialValue>
 		</Properties>
 	</Variable>
 </Variables>

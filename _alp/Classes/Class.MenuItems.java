@@ -20,7 +20,6 @@ public class MenuItems {
   
     public MenuItems(Main main) {
         this.main = main;
-        //copulaGenerator = new MenuCopulaGenerator(main);
         copulaGenerator = main.menuCopulaGenerator;
         loadFromBuiltInDb();
         itemsByDayPart = getItemsByDayPart();
@@ -35,6 +34,9 @@ public class MenuItems {
         return menuItems;
     }
 
+    /**
+     * Loads the single menuItems from the database
+     */
     private void loadFromBuiltInDb() {
         menuItems.clear();
 
@@ -58,10 +60,6 @@ public class MenuItems {
                 item.price = rs.getDouble("price");
                 item.prepTimeMeanMin = rs.getDouble("prep_time_mean_min");
                 item.prepTimeSdMin = rs.getDouble("prep_time_sd_min");
-                //item.complexity = rs.getInt("complexity");
-                //item.kitchenStation = MenuItem.KitchenStation.valueOf(rs.getString("kitchen_station"));
-                //item.serviceTimeMeanMin = rs.getDouble("service_time_mean_min");
-                //item.eatingTimeMeanMin = rs.getDouble("eating_time_mean_min");
 
                 menuItems.add(item);
             }
@@ -74,7 +72,12 @@ public class MenuItems {
         }
     }
 
+    /**
+     * Groups this instance's MenuItems by dayPart.
+     * @return the grouped MenuItems 
+     */
     private EnumMap<DayPartUtil.DayPart, ArrayList<MenuItem>> getItemsByDayPart() {
+    	
         EnumMap<DayPartUtil.DayPart, ArrayList<MenuItem>> grouped =
                 new EnumMap<>(DayPartUtil.DayPart.class);
 
@@ -90,7 +93,8 @@ public class MenuItems {
 
         return grouped;
     }
-
+    
+    
     public ArrayList<MenuItem> getItemsByDayPart(DayPartUtil.DayPart dayPart) {
         return itemsByDayPart.get(dayPart);
     }
@@ -99,8 +103,15 @@ public class MenuItems {
         return weightedChoice(getItemsByDayPart(dayPart));
     }
 
+    /**
+     * Generates an order given a dayPart. 
+     * Adds the order to the main.Orders population and returns its instance.
+     * It's ensured that the generated Order will have at least one item.
+     * If there are no available menuItems for the specific dayPart then the added/returned order will be empty.
+     * @param dayPart
+     * @return the generated Order
+     */
     public Order generateOrderByDayPart(DayPartUtil.DayPart dayPart) {
-        //OrderNew order = new OrderNew();
     	Order order = main.add_orders();
 
         ArrayList<MenuItem> candidates = getItemsByDayPart(dayPart);
@@ -134,6 +145,13 @@ public class MenuItems {
         return order;
     }
     
+   
+    /**
+     * Generates as many orders as indicated in groupSize.
+     * The generated Oders will be added in the main.Orders population.
+     * It's ensured that there are at least groupSize menuItems in the order but
+     * if there are no available menuItems for the specific dayPart then the added/returned order will be empty.
+     */
     public Order generateGroupOrderByDayPart(DayPartUtil.DayPart dayPart, int groupSize) {
         Order groupOrder = main.add_orders();
 
@@ -149,12 +167,20 @@ public class MenuItems {
             }
 
             main.remove_orders(tempOrder);
-            // oppure: tempOrder.remove(); se Order è un agente e lo rimuovi dal pool
         }
 
         return groupOrder;
     }
+    
 
+    /**
+     * Adds into the order some breakfast candidates using the copula and the popularityScore of the candidate menuItems.
+     * The copula needs to generate these variables: "combo", "main", "drink".
+     * If "combo" is extracted the other options are automatically skipped.
+     * It's ensured that the order cannot have multiples of the same item.
+     * @param order
+     * @param candidates
+     */
     private void generateBreakfast(Order order, List<MenuItem> candidates) {
         MenuCopulaGenerator.CopulaSample sample =
                 copulaGenerator.sample(DayPartUtil.DayPart.BREAKFAST);
@@ -176,6 +202,13 @@ public class MenuItems {
         }
     }
     
+    /**
+     * Adds into the order some break candidates using the copula and the popularityScore of the candidate menuItems.
+     * The copula needs to generate these variables: "main", "drink".
+     * It's ensured that the order cannot have multiples of the same item.
+     * @param order
+     * @param candidates
+     */
     private void generateBreak(Order order, List<MenuItem> candidates) {
         MenuCopulaGenerator.CopulaSample sample =
                 copulaGenerator.sample(DayPartUtil.DayPart.BREAK);
@@ -189,6 +222,14 @@ public class MenuItems {
         }
     }
     
+    /**
+     * Adds into the order some lunch candidates using the copula and the popularityScore of the candidate menuItems.
+     * The copula needs to generate these variables: "fixed_menu", "course1", "course2", "side", "drink", "dessert".
+     * If "fixed_menu" is extracted the other options are automatically skipped.
+     * It's ensured that the order cannot have multiples of the same item.
+     * @param order
+     * @param candidates
+     */
     private void generateLunch(Order order, List<MenuItem> candidates) {
         MenuCopulaGenerator.CopulaSample sample =
                 copulaGenerator.sample(DayPartUtil.DayPart.LUNCH);
@@ -221,6 +262,15 @@ public class MenuItems {
         }
     }
     
+    
+    /**
+     * Adds into the order some lunch candidates using the copula and the popularityScore of the candidate menuItems.
+     * The copula needs to generate these variables: "fixed_menu", "course1", "course2", "side", "drink", "dessert".
+     * If "fixed_menu" is extracted the other options are automatically skipped.
+     * It's ensured that the order cannot have multiples of the same item.
+     * @param order
+     * @param candidates
+     */
     private void generateDinner(Order order, List<MenuItem> candidates) {
         MenuCopulaGenerator.CopulaSample sample =
                 copulaGenerator.sample(DayPartUtil.DayPart.DINNER);
@@ -251,12 +301,22 @@ public class MenuItems {
         }
     }
 
+    /**
+     * if order is empty then performs a weightd choice over the candidates and adds it to the order.
+     * @param order
+     * @param candidates
+     */
     private void ensureAtLeastOneItem(Order order, List<MenuItem> candidates) {
         if (order.menuItems.isEmpty()) {
             addIfAbsent(order, weightedChoice(candidates));
         }
     }
 
+    /**
+     * Adds item to order only if it's not alredy present
+     * @param order
+     * @param item
+     */
     private void addIfAbsent(Order order, MenuItem item) {
         if (item == null) {
             return;
@@ -274,6 +334,13 @@ public class MenuItems {
         order.menuItems.add(item);
     }
 
+    
+    /**
+     * Selects only the items of a course and performs a weighted choice using the popularity of the items 
+     * @param items
+     * @param course
+     * @return the extracted menuItem
+     */
     private MenuItem weightedChoiceByCourse(List<MenuItem> items, int course) {
         ArrayList<MenuItem> filtered = new ArrayList<>();
         for (MenuItem item : items) {
@@ -284,6 +351,13 @@ public class MenuItems {
         return weightedChoice(filtered);
     }
 
+    
+    /**
+     * Selects only the items of a category and performs a weighted random choice using the popularity of the items 
+     * @param items
+     * @param course
+     * @return the extracted menuItem
+     */
     private MenuItem weightedChoiceByCategory(List<MenuItem> items, MenuItem.FoodCategory category) {
         ArrayList<MenuItem> filtered = new ArrayList<>();
         for (MenuItem item : items) {
@@ -293,7 +367,12 @@ public class MenuItems {
         }
         return weightedChoice(filtered);
     }
-
+    
+    /**
+     * Performs a weighted random choice over the items using the popularity as weight.
+     * @param items
+     * @return the extracted MenuItem
+     */
     private MenuItem weightedChoice(List<MenuItem> items) {
         if (items == null || items.isEmpty()) {
             return null;

@@ -6054,14 +6054,7 @@ customerGroupsInRestaurant.remove(agent);]]></Code>
 				<ItemName>1777022491559</ItemName>
 			</GenericParameterSubstituteReference>
 		</GenericParameterSubstitute>
-		<Parameters>
-			<Parameter>
-				<Name><![CDATA[customerGroup]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[menuItems]]></Name>
-			</Parameter>
-		</Parameters>
+		<Parameters/>
 		<ReplicationFlag>true</ReplicationFlag>
 		<Replication Class="CodeValue">
 			<Code><![CDATA[100]]></Code>

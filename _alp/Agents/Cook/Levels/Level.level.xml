@@ -75,7 +75,7 @@
 		<Z>0</Z>
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
-		<Text/>
+		<Text><![CDATA[debugText]]></Text>
 		<TextCode>cook_statechart.getActiveSimpleState().name() 
 //+ " " + (isOffShift? "OFF":"ON")</TextCode>
 		<Font>
