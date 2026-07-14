@@ -8,17 +8,17 @@ import java.util.Calendar;
 public class TimeEvent {
 	
 	public enum EventType {
-        COOK_END,
+        //COOK_END,
         COOK_SHIFT,
         COOK_IDLE,
         COOK_OVERTIME,
         COOKS_IN_SHIFT,
-        WAITER_END,
+        //WAITER_END,
         WAITER_SHIFT,
         WAITER_IDLE,
         WAITER_OVERTIME,
         WAITERS_IN_SHIFT,
-        CUSTOMER_WAIT,
+        //CUSTOMER_WAIT,
         CUSTOMER_WAIT_ENTRANCE,
         CUSTOMER_WAIT_TABLE,
         CUSTOMER_WAIT_PAY,
@@ -50,25 +50,31 @@ public class TimeEvent {
     }
     
     
+    /*
     public int getStartDayOfWeek() {
         return startTime != null ? getDayOfWeek(startTime) : -1;
-    }
+    }*/
 
+    /*
     public int getEndDayOfWeek() {
         return endTime != null ? getDayOfWeek(endTime) : -1;
     }
+    */
 
+    /*
     public int getStartHourOfDay() {
         return startTime != null ? getHourOfDay(startTime) : -1;
-    }
+    }*/
     
+    /*
     public int getStartMinuteOfHour() {
         return startTime != null ? getMinuteOfHour(startTime) : -1;
-    }
+    }*/
 
+    /*
     public int getEndHourOfDay() {
         return endTime != null ? getHourOfDay(endTime) : -1;
-    }
+    }*/
     
     public long getDurationMillis() {
         if (startTime == null || endTime == null) {
@@ -90,26 +96,31 @@ public class TimeEvent {
     }
     
     
+    /*
     private int getMinuteOfHour(Date date) {
         Calendar cal = Calendar.getInstance();
         cal.setTime(date);
         return cal.get(Calendar.MINUTE);
-    }
+    }*/
     
+    /*
     public double getDurationSeconds() {
         long ms = getDurationMillis();
         return ms >= 0 ? ms / 1000.0 : -1;
     }
-
+    */
+    
+    
     public double getDurationMinutes() {
         long ms = getDurationMillis();
         return ms >= 0 ? ms / 60000.0 : -1;
     }
-
+    
+/*
     public double getDurationHours() {
         long ms = getDurationMillis();
         return ms >= 0 ? ms / 3600000.0 : -1;
-    }
+    }*/
     
     public long getDurationAfterHourMillis(int thresholdHour) {
         if (startTime == null || endTime == null) {
@@ -156,7 +167,7 @@ public class TimeEvent {
         return "TimeEvent{eventType=" + t
             + ", startTime=" + s
             + ", endTime=" + e
-            + ", durationHours=" + getDurationHours()
+            //+ ", durationHours=" + getDurationHours()
             + "}";
     }
 

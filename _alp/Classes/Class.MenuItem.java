@@ -12,14 +12,6 @@ public class MenuItem {
         FIXED_MENU
     }
 
-    /*
-    public enum KitchenStation {
-        BAR,
-        HOT,
-        COLD
-    }
-    */
-
     String name;
     DayPartUtil.DayPart dayPart;
     FoodCategory foodCategory;
@@ -28,11 +20,6 @@ public class MenuItem {
     double price;
     double prepTimeMeanMin;
     double prepTimeSdMin;
-    //int complexity;
-    //KitchenStation kitchenStation;
-    //double serviceTimeMeanMin;
-    //double eatingTimeMeanMin;
-
     /**
      * Default constructor
      */
@@ -50,10 +37,6 @@ public class MenuItem {
                 //", popularityWeight=" + popularityWeight +
                 //", prepMeanMin=" + prepTimeMeanMin +
                 //", prepSdMin=" + prepTimeSdMin +
-                //", complexity=" + complexity +
-                //", station=" + kitchenStation +
-                //", serviceMin=" + serviceTimeMeanMin +
-                //", eatingMin=" + eatingTimeMeanMin +
                 "]\n";
     }
 }

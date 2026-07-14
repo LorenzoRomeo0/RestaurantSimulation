@@ -385,10 +385,12 @@ public class MenuItems {
             }
         }
 
+        // if there are no weights perform a discrete uniform extraction
         if (totalWeight <= 0) {
             return items.get(rnd.nextInt(items.size()));
         }
 
+        // extracts a number between 0 and the sum
         double r = rnd.nextDouble() * totalWeight;
         double cumulative = 0.0;
 

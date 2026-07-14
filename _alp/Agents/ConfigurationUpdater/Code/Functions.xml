@@ -5,8 +5,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1777449595901</Id>
 		<Name><![CDATA[menuCopulaGeneratorTextUpdater]]></Name>
-		<X>260</X>
-		<Y>-180</Y>
+		<X>310</X>
+		<Y>-20</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -21,8 +21,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1777450118608</Id>
 		<Name><![CDATA[init]]></Name>
-		<X>260</X>
-		<Y>-150</Y>
+		<X>230</X>
+		<Y>-20</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -37,8 +37,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1777454493180</Id>
 		<Name><![CDATA[readOrdersDebugTextUpdater]]></Name>
-		<X>580</X>
-		<Y>-180</Y>
+		<X>310</X>
+		<Y>-40</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
