@@ -56,4 +56,30 @@ public class DayPartUtil {
         cal.setTime(date);
         return getDayPart(cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE), openingHour);
     }
+    
+    public static double getBusinessHour(Date date, int openingHour) {
+        if (date == null) {
+            return -1;
+        }
+
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+
+        int hour = cal.get(Calendar.HOUR_OF_DAY);
+        int minute = cal.get(Calendar.MINUTE);
+        int second = cal.get(Calendar.SECOND);
+        int millisecond = cal.get(Calendar.MILLISECOND);
+
+        double decimalHour =
+                hour
+                + minute / 60.0
+                + second / 3600.0
+                + millisecond / 3600000.0;
+
+        if (hour < openingHour) {
+            decimalHour += 24.0;
+        }
+
+        return decimalHour;
+    }
 }

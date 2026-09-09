@@ -63,7 +63,7 @@
 		<MaximumMemory>512</MaximumMemory>
 		<RandomNumberGenerationType>randomSeed</RandomNumberGenerationType>
 		<CustomGeneratorCode>new Random()</CustomGeneratorCode>
-		<AfterSimulationRunCode>root.saveCurrentResults(getEngine().getRunCount());</AfterSimulationRunCode>
+		<AfterSimulationRunCode>root.saveCurrentResults(getRunCount());</AfterSimulationRunCode>
 		<SeedValue>1</SeedValue>
 		<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
 		<VmArgs/>
@@ -2056,9 +2056,6 @@
 		</FreeformParamValue>
 		<FreeformParamValue>
 			<Id>1780698941824</Id>
-			<Expression Class="CodeValue">
-				<Code><![CDATA[1]]></Code>
-			</Expression>
 		</FreeformParamValue>
 		<FreeformParamValue>
 			<Id>1780699123043</Id>
@@ -2210,8 +2207,8 @@
 			<StopOption>Stop at specified date</StopOption>
 			<InitialDate>370800000</InitialDate>
 			<InitialTime>0.0</InitialTime>
-			<FinalDate>1054800000</FinalDate>
-			<FinalTime>11400.0</FinalTime>
+			<FinalDate>968400000</FinalDate>
+			<FinalTime>9960.0</FinalTime>
 		</ModelTimeProperties>
 		<PresentationProperties>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>

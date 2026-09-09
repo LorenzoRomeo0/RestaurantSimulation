@@ -3569,33 +3569,6 @@
 		<Alignment>LEFT</Alignment>
 	</Text>
 	<Text>
-		<Id>1770374931654</Id>
-		<Name><![CDATA[text5]]></Name>
-		<X>420</X>
-		<Y>1440</Y>
-		<Label>
-			<X>0</X>
-			<Y>-10</Y>
-		</Label>
-		<PublicFlag>true</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>false</ShowLabel>
-		<DrawMode>SHAPE_DRAW_2D</DrawMode>
-		<EmbeddedIcon>false</EmbeddedIcon>
-		<Z>0</Z>
-		<Rotation>0.0</Rotation>
-		<Color>-16777216</Color>
-		<Text><![CDATA[questo serve per reinserire nella queue i gruppi che non hanno trovato un tavolo (dandogli priorità maggiore nella coda).
-Il wait serve  a non bloccare la coda (perché altrimenti continueremmo a riprovare quelli con priorità maggiore. 
-Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di tavoli più piccoli)]]></Text>
-		<Font>
-			<Name><![CDATA[SansSerif]]></Name>
-			<Size>10</Size>
-			<Style>0</Style>
-		</Font>
-		<Alignment>LEFT</Alignment>
-	</Text>
-	<Text>
 		<Id>1775058310781</Id>
 		<Name><![CDATA[customersinRestaurant]]></Name>
 		<X>370</X>
@@ -5584,7 +5557,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Id>1781358557729</Id>
 		<Name><![CDATA[shiftTotalText]]></Name>
 		<X>7000</X>
-		<Y>2170</Y>
+		<Y>2270</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>
@@ -6134,7 +6107,7 @@ Con il delay diamo possibilità ad altri guppi in coda che magari necessitano di
 		<Id>1781515236616</Id>
 		<Name><![CDATA[text34]]></Name>
 		<X>7010</X>
-		<Y>2140</Y>
+		<Y>2240</Y>
 		<Label>
 			<X>0</X>
 			<Y>-10</Y>

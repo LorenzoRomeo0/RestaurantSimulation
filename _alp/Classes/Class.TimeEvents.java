@@ -28,147 +28,6 @@ public class TimeEvents {
         return events.size();
     }
     
-    /**
-    public List<TimeEvent> filter(Predicate<TimeEvent> predicate) {
-        return events.stream()
-                .filter(predicate)
-                .collect(Collectors.toList());
-    }
-    */
-    
-    /*
-    public List<TimeEvent> filterByType(TimeEvent.EventType type) {
-        return events.stream()
-                .filter(e -> e.eventType == type)
-                .collect(Collectors.toList());
-    }
-    */
-
-    /*
-    public List<TimeEvent> filterByStartDay(int dayOfWeek) {
-        return events.stream()
-                .filter(e -> e.getStartDayOfWeek() == dayOfWeek)
-                .collect(Collectors.toList());
-    }
-    
-
-    public List<TimeEvent> filterByEndDay(int dayOfWeek) {
-        return events.stream()
-                .filter(e -> e.getEndDayOfWeek() == dayOfWeek)
-                .collect(Collectors.toList());
-    }
-
-	
-    
-    public List<TimeEvent> filterByStartHourGreaterOrEqual(int hour) {
-        return events.stream()
-                .filter(e -> e.getStartHourOfDay() >= hour)
-                .collect(Collectors.toList());
-    }
-
-
-    public List<TimeEvent> filterByEndHourGreaterOrEqual(int hour) {
-        return events.stream()
-                .filter(e -> e.getEndHourOfDay() >= hour)
-                .collect(Collectors.toList());
-    }
-    
-    
-
-    public List<TimeEvent> filterByTypeDayAndEndHour(TimeEvent.EventType type, int dayOfWeek, int minHour) {
-        return events.stream()
-                .filter(e -> e.eventType == type)
-                .filter(e -> e.getEndDayOfWeek() == dayOfWeek)
-                .filter(e -> e.getEndHourOfDay() >= minHour)
-                .collect(Collectors.toList());
-    }
-    
-
-    public double getAverageDurationHours() {
-        return events.stream()
-                .mapToDouble(TimeEvent::getDurationHours)
-                .filter(d -> d >= 0)
-                .average()
-                .orElse(-1);
-    }
-    
-    
-
-    public double getTotalDurationHoursByType(TimeEvent.EventType type) {
-        return events.stream()
-                .filter(e -> e.eventType == type)
-                .mapToDouble(TimeEvent::getDurationHours)
-                .filter(d -> d >= 0)
-                .sum();
-    }
-        
-       
-    
-    public List<TimeEvent> filterByTypeAndEndHour(TimeEvent.EventType type, int hour){
-    	 return events.stream()
-                 .filter(e -> e.eventType == type)
-                 .filter(e -> e.getEndHourOfDay() >= hour)
-                 .collect(Collectors.toList());
-    }
-    
-
-
-    
-    public Map<Integer, List<TimeEvent>> groupByDayAndFilterByEndHourAndEventType(int endHour, TimeEvent.EventType eventType) {
-        return events.stream()
-                .filter(e -> e.eventType == eventType)
-                .filter(e -> e.getEndHourOfDay() >= endHour)
-                .collect(Collectors.groupingBy(TimeEvent::getEndDayOfWeek));
-    }
-    
-    
-    public Map<Integer, Long> groupByDayAndFilterByEndHourAndEventTypeCount(int endHour, TimeEvent.EventType eventType) {
-        return events.stream()
-                .filter(e -> e.eventType == eventType)
-                .filter(e -> e.getEndHourOfDay() >= endHour)
-                .collect(Collectors.groupingBy(
-                        TimeEvent::getStartDayOfWeek,
-                        Collectors.counting()
-                ));
-    }
-    
-    public Map<Integer, Double> groupByDayAndFilterByEndHourAndEventTypeAvgDuration(int endHour, TimeEvent.EventType eventType) {
-        return events.stream()
-                .filter(e -> e.eventType == eventType)
-                .filter(e -> e.getEndHourOfDay() >= endHour)
-                .collect(Collectors.groupingBy(
-                        TimeEvent::getStartDayOfWeek,
-                        Collectors.averagingDouble(TimeEvent::getDurationHours)
-                ));
-    }
-    
-    public Map<Integer, List<TimeEvent>> groupByDayAndfilterDelaysAfterEndHourByEventType(int thresholdHour, TimeEvent.EventType eventType) {
-        return events.stream()
-                .filter(e -> e != null)
-                .filter(e -> e.eventType == eventType)
-                .filter(e -> e.getDurationAfterHourMillis(thresholdHour) > 0)
-                .collect(Collectors.groupingBy(
-                        TimeEvent::getStartDayOfWeek
-                ));
-    }
-    
-    public Map<Integer, Double> groupByDayAndFilterDelaysAfterEndHourByEventTypeAvgMinutes(int thresholdHour, TimeEvent.EventType eventType) {
-        return events.stream()
-                .filter(e -> e != null)
-                .filter(e -> e.eventType == eventType)
-                .filter(e -> e.getDurationAfterHourMillis(thresholdHour) > 0)
-                .collect(Collectors.groupingBy(
-                        TimeEvent::getStartDayOfWeek,
-                        Collectors.averagingDouble(e -> e.getDurationAfterHourMinutes(thresholdHour))
-                ));
-    }
-    
-    */
-    
-    
-    
-    
-    /////
     public double getValueSumByWeekdayAndDayPart(int dayOfWeek, DayPartUtil.DayPart dayPart, TimeEvent.EventType event, int openingHour) {
         return events.stream()
                 .filter(e -> e != null)
@@ -200,6 +59,17 @@ public class TimeEvents {
                 .filter(d -> d >= 0)
                 .average()
                 .orElse(0);
+    }
+    
+    public TimeEvent getLastEventByWeekdayAndDayPart(int dayOfWeek, DayPartUtil.DayPart dayPart, TimeEvent.EventType eventType, int openingHour) {
+        return events.stream()
+                .filter(e -> e != null)
+                .filter(e -> e.startTime != null)
+                .filter(e -> e.eventType == eventType)
+                .filter(e -> e.getBusinessStartDayOfWeek(openingHour) == dayOfWeek)
+                .filter(e -> e.getBusinessStartDayPart(openingHour) == dayPart)
+                .max(Comparator.comparing(e -> e.startTime))
+                .orElse(null);
     }
     
     /*public double getTotalDurationHoursByWeekdayDayPartAndType(int dayOfWeek, DayPartUtil.DayPart dayPart, TimeEvent.EventType eventType, int openingHour) {

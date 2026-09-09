@@ -455,7 +455,7 @@ sbTable.append("weekday,daypart,waitTimeTable")
 sbPay.append("weekday,daypart,waitTimePay")
   .append(System.lineSeparator());
   
-sbStay.append("weekday,daypart,stayTime")
+sbStay.append("weekday,daypart,stayTime,lastCustomerHour")
   .append(System.lineSeparator());
     
 sbServed.append("weekday,daypart,totalServed")
@@ -471,6 +471,15 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
 		double averageStay = timeEvents.getAverageTimeByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.CUSTOMER_STAY, openingTime);
 		double totalServed = timeEvents.getValueSumByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.CUSTOMERS_SERVED, openingTime);
 		
+		TimeEvent lastCustomer = (dayPart == dayPart.CLOSED) ?
+			timeEvents.getLastEventByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.CUSTOMERS_SERVED, openingTime)
+				:
+			null;
+		double lastPaymentHour = -1;
+
+		if (lastCustomer != null) {
+		    lastPaymentHour = DayPartUtil.getBusinessHour(lastCustomer.endTime,openingTime);
+		}
 		
 		String dayName = dayToString(day);
         			String key = dayName + "-" + dayPart;
@@ -501,6 +510,8 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
           .append(dayPart)
           .append(",")
           .append(averageStay)
+          .append(",")
+          .append(lastPaymentHour)
           .append(System.lineSeparator());
           
         sbServed.append(dayName)
@@ -824,7 +835,7 @@ double tablesEventsUpdater()
 {/*ALCODESTART::1780907226546*/
 StringBuilder sb = new StringBuilder();
 
-sb.append("weekday,daypart,inside, outside, bar")
+sb.append("weekday,daypart,inside,outside,bar")
   .append(System.lineSeparator());
 
 for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
@@ -1021,16 +1032,25 @@ double moneyEventsUpdater()
 {/*ALCODESTART::1781357683305*/
 StringBuilder sbShift = new StringBuilder();
 
-
-sbShift.append("weekday,daypart,waitersInShift,waitersHours,waitersSalary,waitersOvertimeSalary,waitersTotalSalary,cooksInShift,cooksHours,cooksSalary,cooksOvertimeSalary,cooksTotalSalary")
+sbShift.append("weekday,daypart,waitersInShift,waitersHours,waitersSalary,waitersOvertimeSalary,waitersTotalSalary,cooksInShift,cooksHours,cooksSalary,cooksOvertimeSalary,cooksTotalSalary,earned,netProfit,cumulativeNetProfit")
   .append(System.lineSeparator());
-
 
 double totalWaiters = 0.0;
 double totalCooks = 0.0;
 double totalEarned = 0.0;
+double totalSpent = 0.0;
 
-for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
+int[] weekDays = {
+    Calendar.MONDAY,
+    Calendar.TUESDAY,
+    Calendar.WEDNESDAY,
+    Calendar.THURSDAY,
+    Calendar.FRIDAY,
+    Calendar.SATURDAY,
+    Calendar.SUNDAY
+};
+
+for (int day : weekDays) {
     for (DayPartUtil.DayPart dayPart : DayPartUtil.DayPart.values()) {
     
         double totalInShiftWaiters = timeEvents.getValueSumByWeekdayAndDayPart(day, dayPart, TimeEvent.EventType.WAITERS_IN_SHIFT, openingTime);
@@ -1049,6 +1069,16 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
 		double shiftPayCooks = totalInShiftCooks*shiftLengthCooks*cooksHourlyRate;
 		double overtimePayCooks = totalOvertimeCooks*cooksHourlyRateOvertime;
 		
+		double spent = shiftPayWaiters + overtimePayWaiters + shiftPayCooks + overtimePayCooks;
+		
+		
+		
+		totalEarned += earned;
+        totalSpent += spent;
+        totalWaiters += shiftPayWaiters + overtimePayWaiters;
+        totalCooks += shiftPayCooks + overtimePayCooks;
+        
+        
 		String dayName = dayToString(day);
         			String key = dayName + "-" + dayPart;
 
@@ -1076,11 +1106,19 @@ for (int day = Calendar.SUNDAY; day <= Calendar.SATURDAY; day++) {
           .append(overtimePayCooks)
           .append(",")
           .append(shiftPayCooks + overtimePayCooks)
+          
+          .append(",")
+          .append(earned)
+          
+          .append(",")
+          .append(earned - spent)
+          
+          .append(",")
+          .append(totalEarned - totalSpent - fixedCosts)
+          
           .append(System.lineSeparator());
         
-        totalEarned += earned;
-        totalWaiters += shiftPayWaiters + overtimePayWaiters + shiftPayCooks + overtimePayCooks;
-        totalCooks += shiftPayCooks + overtimePayCooks;
+        
     }
 }
 
@@ -1095,7 +1133,7 @@ shiftTotalText.setText(
 	+ "€\nSalaries total: "+ (totalWaiters + totalCooks) 
 	+ "€\nTotal expenses: "+ (totalWaiters + totalCooks + fixedCosts) 
 	+ "€\nTotal earned: " + totalEarned 
-	+ "€\nNet profit: "+ (totalEarned - totalWaiters + totalCooks + fixedCosts)+ "€"
+	+ "€\nNet profit: "+ (totalEarned - (totalWaiters + totalCooks + fixedCosts))+ "€"
 );
 /*ALCODEEND*/}
 
@@ -1106,6 +1144,7 @@ statisticsUpdater();
 java.nio.file.Path baseFolder = java.nio.file.Paths.get(simulationFolder, simulationName);
 
 traceln("Results folder: " + baseFolder.toString());
+traceln("Run: " + currentRunCount);
 try {
         java.nio.file.Files.createDirectories(baseFolder);
 
