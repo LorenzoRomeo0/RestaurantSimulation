@@ -1,0 +1,6 @@
+﻿start_timestamp;end_timestamp;period;bar_on;inside_on;outside_on;bar_prio;inside_prio;outside_prio
+05/01/1970 07:00;05/01/1970 11:00;breakfast;VERO;FALSO;FALSO;1;2;3
+05/01/1970 11:00;05/01/1970 15:00;lunch;FALSO;VERO;VERO;3;1;2
+05/01/1970 15:00;05/01/1970 19:00;break;VERO;VERO;FALSO;1;2;3
+05/01/1970 19:00;05/01/1970 23:00;dinner;FALSO;VERO;VERO;3;1;2
+05/01/1970 23:00;06/01/1970 07:00;closed;FALSO;FALSO;FALSO;1;2;3

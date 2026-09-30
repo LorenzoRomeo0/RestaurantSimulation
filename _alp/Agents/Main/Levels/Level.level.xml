@@ -5695,7 +5695,7 @@
 		<Z>0</Z>
 		<Rotation>0.0</Rotation>
 		<Color>-16777216</Color>
-		<Text><![CDATA[Number of customers served (Sum) (Minutes)]]></Text>
+		<Text><![CDATA[Number of customers served (Sum)]]></Text>
 		<Font>
 			<Name><![CDATA[SansSerif]]></Name>
 			<Size>14</Size>
